@@ -4,8 +4,11 @@ import {drawForecast, drawYield, dyeColor} from './charts.js';
 const $ = id => document.getElementById(id);
 const fmt = (number, decimals=1) => Number(number).toLocaleString('en-US', {maximumFractionDigits:decimals});
 const pair = ['JF630b','JF635b'];
-const titles = {compare:'Fluorophore comparison',pilot:'Pilot recording',precision:'Precision evidence',methods:'Methods & data'};
-const evidenceViews = {precision: () => import('./precision-view.js').then(m => m.renderPrecision($('precision-content')))};
+const titles = {compare:'Fluorophore comparison',pilot:'Pilot recording',precision:'Precision evidence','dna-paint':'DNA-PAINT dye palette',methods:'Methods & data'};
+const evidenceViews = {
+  precision: () => import('./precision-view.js?v=palette-1').then(m => m.renderPrecision($('precision-content'))),
+  'dna-paint': () => import('./palette-view.js').then(m => m.renderPalette($('dna-paint-content')))
+};
 const openedEvidence = new Set();
 const store = {page:null,config:null,dyes:null,s21:null,epfl:null,gpu:null,frames:null,settings:{},pilot:null,
   result:null,points:[],hover:null,chartBounds:null,importNotice:'',traceDye:'JF630b'};
@@ -32,22 +35,31 @@ function saveJSON(name, value) {
   link.download=name; document.body.append(link); link.click(); link.remove();
   setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
+function mountEvidence(page) {
+  if (openedEvidence.has(page)) return;
+  openedEvidence.add(page);
+  evidenceViews[page]().catch(error => {
+    openedEvidence.delete(page);
+    const retry=element('button','Retry','button secondary');
+    retry.type='button';
+    retry.onclick=()=>mountEvidence(page);
+    $(page+'-content').replaceChildren(element('p','Unable to load this view. '+error.message),retry);
+  });
+}
 function navigate(scroll) {
   const name=location.hash.slice(1);
-  store.page=Object.hasOwn(titles,name) ? name : 'compare';
-  for (const key of Object.keys(titles)) $('view-'+key).hidden = key !== store.page;
+  store.page=Object.hasOwn(titles,name) && $('view-'+name) ? name : 'compare';
+  const independent=Object.hasOwn(evidenceViews,store.page), ready=independent || store.config!==null;
+  $('loading').hidden=ready;
+  for (const key of Object.keys(titles)) {
+    const view=$('view-'+key);
+    if (view) view.hidden=!ready || key !== store.page;
+  }
   document.querySelectorAll('[data-nav]').forEach(link=>{
     if (link.dataset.nav === store.page) link.setAttribute('aria-current','page'); else link.removeAttribute('aria-current');
   });
   document.title = 'Blink Atlas · '+titles[store.page];
-  const page = store.page;
-  if (Object.hasOwn(evidenceViews, page) && !openedEvidence.has(page)) {
-    openedEvidence.add(page);
-    evidenceViews[page]().catch(error => {
-      openedEvidence.delete(page);
-      $(page+'-content').textContent = 'Unable to load this view. Open the tab again to retry. ' + error.message;
-    });
-  }
+  if (independent) mountEvidence(store.page);
   if(scroll) window.scrollTo(0,0);
   requestAnimationFrame(redrawVisible);
 }
@@ -230,7 +242,6 @@ function showHover(index) {
   redrawVisible();
 }
 function hookEvents() {
-  window.addEventListener('hashchange',()=>navigate(true));
   new ResizeObserver(redrawVisible).observe($('yield-container'));
   new ResizeObserver(redrawVisible).observe($('forecast-chart').parentElement);
   document.fonts.ready.then(redrawVisible);
@@ -304,4 +315,9 @@ async function start() {
   renderReference();renderMethods();renderPilot();setFields();hookEvents();
   $('loading').hidden=true;navigate(false);updateComparison();
 }
-start().catch(error=>{$('loading').hidden=false;$('loading').textContent='The data could not be opened. Reload the site or download the analysis from Source code. '+error.message;});
+window.addEventListener('hashchange',()=>navigate(true));
+navigate(false);
+start().catch(error=>{
+  $('loading').textContent='The data could not be opened. Reload the site or download the analysis from Source code. '+error.message;
+  if (!Object.hasOwn(evidenceViews,store.page)) $('loading').hidden=false;
+});

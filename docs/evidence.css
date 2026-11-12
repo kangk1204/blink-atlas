@@ -16,7 +16,7 @@
 .ev-card summary { color: var(--teal); font-size: 13px; font-weight: 600; }
 .ev-card .table-wrap { margin: 13px 0; }
 .ev-card td, .ev-card th { padding: 8px 9px; }
-.ev-card .ev-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-top: 14px; }
+.evidence-content .ev-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-top: 14px; }
 .ev-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 16px; margin: 12px 0; }
 .ev-controls label { display: grid; gap: 4px; color: var(--muted); font-size: 12px; }
 .ev-controls select { background: var(--white); border: 1px solid #c8d1c5; border-radius: 5px; padding: 6px; }
@@ -30,7 +30,7 @@
   .nav-inner { gap:18px; }
   .site-nav { gap:16px; }
 }
-@media(max-width:850px) {
+@media(max-width:940px) {
   .nav-inner { flex-wrap:wrap; gap:0; }
   .brand { padding:8px 0; }
   .source-link { order:1; }

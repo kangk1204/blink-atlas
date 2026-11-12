@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#112f2e">
-  <meta name="description" content="Compare nine blinking HaloTag dyes using measured photophysics, inspect a real pilot recording, and test how label density affects isolated detections.">
+  <meta name="description" content="Compare nine blinking HaloTag dyes, measure 20 nm localization yield, and explore an independent 18-dye DNA-PAINT benchmark.">
   <title>Blink Atlas · Fluorophore comparison</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="preload" href="assets/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="evidence.css">
+  <link rel="stylesheet" href="evidence.css?v=palette-1">
+  <link rel="stylesheet" href="palette-view.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to workspace</a>
@@ -19,6 +20,7 @@
       <a href="#compare" data-nav="compare">Dye comparison</a>
       <a href="#pilot" data-nav="pilot">Pilot recording</a>
       <a href="#precision" data-nav="precision">Precision evidence</a>
+      <a href="#dna-paint" data-nav="dna-paint">DNA-PAINT</a>
       <a href="#methods" data-nav="methods">Methods &amp; data</a>
     </nav>
     <a class="source-link" href="https://github.com/kangk1204/blink-atlas">Source code <span aria-hidden="true">↗</span></a>
@@ -85,6 +87,12 @@
         <a class="button secondary" href="data/precision.json" download>↓ Download evidence</a></header>
       <div id="precision-content" class="evidence-content"><p role="status">Loading precision measurements…</p></div>
     </section>
+    <section id="view-dna-paint" class="view" hidden aria-labelledby="palette-title">
+      <header class="page-title"><div><div class="context"><span class="context-dot"></span> Steen et al. · deposited localization tables</div>
+        <h1 id="palette-title">DNA-PAINT dye palette</h1><p>Compare 18 imager dyes on DNA origami and nuclear pore complexes. See how each two-dye choice performed on the third nuclear pore acquisition.</p></div>
+        <a class="button secondary" href="data/palette-raw.json" download>↓ Download reanalysis</a></header>
+      <div id="dna-paint-content"><p role="status">Loading the dye palette…</p></div>
+    </section>
     <section id="view-methods" class="view" hidden aria-labelledby="methods-title">
       <header class="page-title"><div><div class="context"><span class="context-dot"></span> Reproducibility &amp; validation</div><h1 id="methods-title">Methods &amp; data</h1><p>Trace the reference measurements, inspect model assumptions, and reproduce each public example.</p></div><a class="button primary" href="media/validation-proposal.pdf">Validation proposal ↗</a></header>
       <article class="card source-table"><div class="panel-head"><div><div class="eyebrow">HOLLAND ET AL. · EXTENDED DATA FIG. 4</div><h2>Measured dye properties</h2></div><a class="inline-link" href="data/dyes.json" download>↓ Source values</a></div>
@@ -98,6 +106,8 @@
         <a href="https://doi.org/10.1038/s41592-026-03062-5"><strong>Blinking dye characterization ↗</strong><span>Holland et al. · Nature Methods, 2026</span></a>
         <a href="https://pmc-oa-opendata.s3.amazonaws.com/PMC13167466.1/41592_2026_3062_MOESM10_ESM.xlsx"><strong>Extended Data Fig. 4 workbook ↓</strong><span>Replicate measurements and distributions</span></a>
         <a href="https://zenodo.org/records/16941576"><strong>S21 recording and localizations ↗</strong><span>Walterspiel et al. · Zenodo, 2025</span></a>
+        <a href="#precision"><strong>20 nm precision evidence →</strong><span>Fixed-cell histogram, live recordings and ground truth</span></a>
+        <a href="#dna-paint"><strong>DNA-PAINT reanalysis →</strong><span>Steen et al. · 18 dyes, published cells and held-out pairs</span></a>
         <a href="media/validation-proposal.pdf"><strong>Joint validation proposal ↓</strong><span>One page · matched fields and equal pilot budgets</span></a>
         <a href="media/walkthrough.mp4" data-watch><strong>Watch the walkthrough →</strong><span>Two-minute narrated demonstration</span></a>
         <a href="https://github.com/kangk1204/blink-atlas"><strong>Analysis code ↗</strong><span>Python models, input formats and verification</span></a>
@@ -110,6 +120,6 @@
     <div class="guide-links"><a href="media/walkthrough.mp4" download>Download MP4</a><a href="media/walkthrough.vtt" download>English captions</a></div>
   </dialog>
   <footer class="container footer"><span>Blink Atlas <i></i> Independent research demo</span><a href="#methods">Data provenance &amp; methods →</a></footer>
-  <script type="module" src="app.js"></script>
+  <script type="module" src="app.js?v=palette-1"></script>
 </body>
 </html>

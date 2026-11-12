@@ -1,0 +1,5663 @@
+{
+  "schema": "dna-paint-palette/1",
+  "article": "https://doi.org/10.1038/s41592-024-02374-8",
+  "record": "https://zenodo.org/records/10960858",
+  "sources": {
+    "origami": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11399092.1/41592_2024_2374_MOESM5_ESM.xlsx",
+      "sha256": "8b05ae442351bae4e7496ed39e951d7f66897495d0d6c474edac09be1892c408",
+      "figure": 2,
+      "sheet": "Sheet1",
+      "local": "data/steen-figure2.xlsx"
+    },
+    "npc": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11399092.1/41592_2024_2374_MOESM6_ESM.xlsx",
+      "sha256": "d619405a80864250b570ac1198b08457b3dbfbaae80d1c643d3b03570eb09940",
+      "figure": 3,
+      "sheet": "Sheet1",
+      "local": "data/steen-figure3.xlsx"
+    }
+  },
+  "metrics": {
+    "nenaNm": {
+      "label": "NeNA precision",
+      "unit": "nm"
+    },
+    "centerPhotons": {
+      "label": "Center-frame photons",
+      "unit": "photons"
+    },
+    "centerSbr": {
+      "label": "Signal-to-background ratio",
+      "unit": "ratio"
+    },
+    "brightTimeS": {
+      "label": "Bright time",
+      "unit": "s"
+    },
+    "dropPct": {
+      "label": "Detection loss",
+      "unit": "%"
+    },
+    "destroyedPct": {
+      "label": "Docking sites destroyed",
+      "unit": "%"
+    },
+    "specificity": {
+      "label": "Specificity relative to Cy3B",
+      "unit": "ratio"
+    }
+  },
+  "dyes": [
+    {
+      "id": "atto488",
+      "name": "Atto488",
+      "wavelength": 488,
+      "systems": {
+        "origami": {
+          "column": "B",
+          "worksheetDye": "Atto488",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 7.01,
+                  "cell": "B7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 7.68,
+                  "cell": "B8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 7.49,
+                  "cell": "B9"
+                }
+              ],
+              "mean": 7.3933333333333335,
+              "sd": 0.34530180036213737,
+              "meanCell": "B10",
+              "computedMean": 7.3933333333333335,
+              "computedSd": 0.34530180036213737
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2358,
+                  "cell": "B12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1964,
+                  "cell": "B13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1897,
+                  "cell": "B14"
+                }
+              ],
+              "mean": 2073,
+              "sd": 249.08030833448075,
+              "meanCell": "B15",
+              "computedMean": 2073,
+              "computedSd": 249.08030833448075
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.28,
+                  "cell": "B17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.28,
+                  "cell": "B18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.24,
+                  "cell": "B19"
+                }
+              ],
+              "mean": 0.26666666666666666,
+              "sd": 0.02309401076758505,
+              "meanCell": "B20",
+              "computedMean": 0.26666666666666666,
+              "computedSd": 0.023094010767585053
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.55,
+                  "cell": "B22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.86,
+                  "cell": "B23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.38,
+                  "cell": "B24"
+                }
+              ],
+              "mean": 1.5966666666666667,
+              "sd": 0.24337899115029155,
+              "meanCell": "B25",
+              "computedMean": 1.5966666666666667,
+              "computedSd": 0.2433789911502909
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 42.6,
+                  "cell": "B27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 47.599999999999994,
+                  "cell": "B28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 42.8,
+                  "cell": "B29"
+                }
+              ],
+              "mean": 44.33333333333333,
+              "sd": 2.830783166074952,
+              "meanCell": "B30",
+              "computedMean": 44.33333333333333,
+              "computedSd": 2.8307831660749496
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 17.400000000000002,
+                  "cell": "B32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 20.5,
+                  "cell": "B33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 13.4,
+                  "cell": "B34"
+                }
+              ],
+              "mean": 17.1,
+              "sd": 3.5594943461115434,
+              "meanCell": "B35",
+              "computedMean": 17.1,
+              "computedSd": 3.559494346111537
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "Trolox"
+        },
+        "npc": {
+          "column": "N",
+          "worksheetDye": "Atto488",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 10.6,
+                  "cell": "N2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 13,
+                  "cell": "N3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 10.7,
+                  "cell": "N4"
+                }
+              ],
+              "mean": 11.433333333333332,
+              "sd": 1.3576941236277538,
+              "meanCell": "N6",
+              "computedMean": 11.433333333333334,
+              "computedSd": 1.3576941236277538
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1372,
+                  "cell": "N8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1216,
+                  "cell": "N9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1576,
+                  "cell": "N10"
+                }
+              ],
+              "mean": 1388,
+              "sd": 180.53254554234812,
+              "meanCell": "N12",
+              "computedMean": 1388,
+              "computedSd": 180.53254554234812
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 12.8,
+                  "cell": "N14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 19.7,
+                  "cell": "N15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 16.8,
+                  "cell": "N16"
+                }
+              ],
+              "mean": 16.433333333333334,
+              "sd": 3.464582706955252,
+              "meanCell": "N18",
+              "computedMean": 16.433333333333334,
+              "computedSd": 3.464582706955244
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.26,
+                  "cell": "N20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.26,
+                  "cell": "N21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.26,
+                  "cell": "N22"
+                }
+              ],
+              "mean": 0.26,
+              "sd": 0,
+              "meanCell": "N24",
+              "computedMean": 0.26,
+              "computedSd": 0.0
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.82,
+                  "cell": "N26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.74,
+                  "cell": "N27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.95,
+                  "cell": "N28"
+                }
+              ],
+              "mean": 0.8366666666666666,
+              "sd": 0.10598742063723142,
+              "meanCell": "N30",
+              "computedMean": 0.8366666666666667,
+              "computedSd": 0.10598742063723095
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.93,
+                  "cell": "N32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.63,
+                  "cell": "N33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.57,
+                  "cell": "N34"
+                }
+              ],
+              "mean": 0.71,
+              "sd": 0.19287301521985942,
+              "meanCell": "N36",
+              "computedMean": 0.71,
+              "computedSd": 0.19287301521985914
+            }
+          },
+          "concentrationPm": 80
+        }
+      }
+    },
+    {
+      "id": "alexafluor488",
+      "name": "AF488",
+      "wavelength": 488,
+      "systems": {
+        "origami": {
+          "column": "C",
+          "worksheetDye": "AF488",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 5.79,
+                  "cell": "C7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 6.76,
+                  "cell": "C8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 6.27,
+                  "cell": "C9"
+                }
+              ],
+              "mean": 6.273333333333333,
+              "sd": 0.48500859098920424,
+              "meanCell": "C10",
+              "computedMean": 6.273333333333333,
+              "computedSd": 0.48500859098920424
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3145,
+                  "cell": "C12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2615,
+                  "cell": "C13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2674,
+                  "cell": "C14"
+                }
+              ],
+              "mean": 2811.3333333333335,
+              "sd": 290.46571800013396,
+              "meanCell": "C15",
+              "computedMean": 2811.3333333333335,
+              "computedSd": 290.46571800013396
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.25,
+                  "cell": "C17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.26,
+                  "cell": "C18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.21,
+                  "cell": "C19"
+                }
+              ],
+              "mean": 0.24,
+              "sd": 0.026457513110645915,
+              "meanCell": "C20",
+              "computedMean": 0.24,
+              "computedSd": 0.026457513110645915
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.8,
+                  "cell": "C22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 3.16,
+                  "cell": "C23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.15,
+                  "cell": "C24"
+                }
+              ],
+              "mean": 2.703333333333333,
+              "sd": 0.5118919156749155,
+              "meanCell": "C25",
+              "computedMean": 2.703333333333333,
+              "computedSd": 0.5118919156749142
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 35.9,
+                  "cell": "C27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 29.5,
+                  "cell": "C28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 35.3,
+                  "cell": "C29"
+                }
+              ],
+              "mean": 33.56666666666666,
+              "sd": 3.53459097114975,
+              "meanCell": "C30",
+              "computedMean": 33.56666666666666,
+              "computedSd": 3.5345909711497487
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 9.0,
+                  "cell": "C32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 5.3999999999999995,
+                  "cell": "C33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 7.9,
+                  "cell": "C34"
+                }
+              ],
+              "mean": 7.433333333333332,
+              "sd": 1.8448125469362322,
+              "meanCell": "C35",
+              "computedMean": 7.433333333333334,
+              "computedSd": 1.8448125469362286
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "Trolox"
+        },
+        "npc": {
+          "column": "M",
+          "worksheetDye": "AF488",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 8.85,
+                  "cell": "M2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 9.62,
+                  "cell": "M3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 9.37,
+                  "cell": "M4"
+                }
+              ],
+              "mean": 9.28,
+              "sd": 0.39281038682804686,
+              "meanCell": "M6",
+              "computedMean": 9.28,
+              "computedSd": 0.39281038682804686
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3149,
+                  "cell": "M8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1940,
+                  "cell": "M9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1484,
+                  "cell": "M10"
+                }
+              ],
+              "mean": 2191,
+              "sd": 860.4109483264377,
+              "meanCell": "M12",
+              "computedMean": 2191,
+              "computedSd": 860.4109483264377
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 25.1,
+                  "cell": "M14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 25.3,
+                  "cell": "M15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 13.100000000000001,
+                  "cell": "M16"
+                }
+              ],
+              "mean": 21.166666666666668,
+              "sd": 6.986653944008784,
+              "meanCell": "M18",
+              "computedMean": 21.166666666666668,
+              "computedSd": 6.986653944008772
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.23,
+                  "cell": "M20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.24,
+                  "cell": "M21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.23,
+                  "cell": "M22"
+                }
+              ],
+              "mean": 0.2333333333333333,
+              "sd": 0.005773502691896247,
+              "meanCell": "M24",
+              "computedMean": 0.23333333333333334,
+              "computedSd": 0.005773502691896247
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.63,
+                  "cell": "M26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.26,
+                  "cell": "M27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.02,
+                  "cell": "M28"
+                }
+              ],
+              "mean": 1.3033333333333332,
+              "sd": 0.3073000705065552,
+              "meanCell": "M30",
+              "computedMean": 1.3033333333333332,
+              "computedSd": 0.3073000705065544
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.26,
+                  "cell": "M32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.49,
+                  "cell": "M33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.5243,
+                  "cell": "M34"
+                }
+              ],
+              "mean": 0.4247666666666667,
+              "sd": 0.14371904304347868,
+              "meanCell": "M36",
+              "computedMean": 0.4247666666666667,
+              "computedSd": 0.14371904304347885
+            }
+          },
+          "concentrationPm": "80-100"
+        }
+      }
+    },
+    {
+      "id": "abberiorstar488",
+      "name": "Abberior STAR 488",
+      "wavelength": 488,
+      "systems": {
+        "origami": {
+          "column": "D",
+          "worksheetDye": "AS488",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 5.68,
+                  "cell": "D7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 6.33,
+                  "cell": "D8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 6.84,
+                  "cell": "D9"
+                }
+              ],
+              "mean": 6.283333333333334,
+              "sd": 0.58140634098136,
+              "meanCell": "D10",
+              "computedMean": 6.283333333333333,
+              "computedSd": 0.58140634098136
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3269,
+                  "cell": "D12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 3074,
+                  "cell": "D13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2563,
+                  "cell": "D14"
+                }
+              ],
+              "mean": 2968.6666666666665,
+              "sd": 364.59612358517103,
+              "meanCell": "D15",
+              "computedMean": 2968.6666666666665,
+              "computedSd": 364.5961235851711
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.21,
+                  "cell": "D17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.22,
+                  "cell": "D18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.19,
+                  "cell": "D19"
+                }
+              ],
+              "mean": 0.20666666666666667,
+              "sd": 0.015275252316519465,
+              "meanCell": "D20",
+              "computedMean": 0.20666666666666667,
+              "computedSd": 0.015275252316519465
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.54,
+                  "cell": "D22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 3.35,
+                  "cell": "D23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.06,
+                  "cell": "D24"
+                }
+              ],
+              "mean": 2.6500000000000004,
+              "sd": 0.6519969325081192,
+              "meanCell": "D25",
+              "computedMean": 2.65,
+              "computedSd": 0.6519969325081215
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 32.1,
+                  "cell": "D27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 27.500000000000004,
+                  "cell": "D28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 23.1,
+                  "cell": "D29"
+                }
+              ],
+              "mean": 27.566666666666666,
+              "sd": 4.50037035513005,
+              "meanCell": "D30",
+              "computedMean": 27.56666666666667,
+              "computedSd": 4.500370355130046
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 11.1,
+                  "cell": "D32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 10.2,
+                  "cell": "D33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 6.1,
+                  "cell": "D34"
+                }
+              ],
+              "mean": 9.133333333333333,
+              "sd": 2.6652079343520807,
+              "meanCell": "D35",
+              "computedMean": 9.133333333333333,
+              "computedSd": 2.6652079343520896
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "Trolox"
+        },
+        "npc": {
+          "column": "C",
+          "worksheetDye": "AS488",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 9.14,
+                  "cell": "C2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 14.7,
+                  "cell": "C3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 10.8,
+                  "cell": "C4"
+                }
+              ],
+              "mean": 11.546666666666667,
+              "sd": 2.8542132599603236,
+              "meanCell": "C6",
+              "computedMean": 11.546666666666667,
+              "computedSd": 2.8542132599603223
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1810,
+                  "cell": "C8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1522,
+                  "cell": "C9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1263,
+                  "cell": "C10"
+                }
+              ],
+              "mean": 1531.6666666666667,
+              "sd": 273.6280930996185,
+              "meanCell": "C12",
+              "computedMean": 1531.6666666666667,
+              "computedSd": 273.62809309961824
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 20.7,
+                  "cell": "C14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0,
+                  "cell": "C15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 13.4,
+                  "cell": "C16"
+                }
+              ],
+              "mean": 11.366666666666665,
+              "sd": 10.498730081935308,
+              "meanCell": "C18",
+              "computedMean": 11.366666666666667,
+              "computedSd": 10.498730081935307
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.25,
+                  "cell": "C20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.19,
+                  "cell": "C21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.24,
+                  "cell": "C22"
+                }
+              ],
+              "mean": 0.22666666666666666,
+              "sd": 0.032145502536643354,
+              "meanCell": "C24",
+              "computedMean": 0.22666666666666666,
+              "computedSd": 0.03214550253664318
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.25,
+                  "cell": "C26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.97,
+                  "cell": "C27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.84,
+                  "cell": "C28"
+                }
+              ],
+              "mean": 1.0199999999999998,
+              "sd": 0.20952326839757027,
+              "meanCell": "C30",
+              "computedMean": 1.02,
+              "computedSd": 0.20952326839756966
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.45,
+                  "cell": "C32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.66,
+                  "cell": "C33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.54259,
+                  "cell": "C34"
+                }
+              ],
+              "mean": 0.5508633333333334,
+              "sd": 0.10524417339374856,
+              "meanCell": "C36",
+              "computedMean": 0.5508633333333334,
+              "computedSd": 0.1052441733937482
+            }
+          },
+          "concentrationPm": "80-100"
+        }
+      }
+    },
+    {
+      "id": "cf488a",
+      "name": "CF488A",
+      "wavelength": 488,
+      "systems": {
+        "origami": {
+          "column": "E",
+          "worksheetDye": "CF488",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 4.73,
+                  "cell": "E7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 5.56,
+                  "cell": "E8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 5.84,
+                  "cell": "E9"
+                }
+              ],
+              "mean": 5.376666666666666,
+              "sd": 0.577263660153082,
+              "meanCell": "E10",
+              "computedMean": 5.376666666666667,
+              "computedSd": 0.577263660153082
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 4666,
+                  "cell": "E12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 3755,
+                  "cell": "E13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 3217,
+                  "cell": "E14"
+                }
+              ],
+              "mean": 3879.3333333333335,
+              "sd": 732.4577348443609,
+              "meanCell": "E15",
+              "computedMean": 3879.3333333333335,
+              "computedSd": 732.4577348443618
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.21,
+                  "cell": "E17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.23,
+                  "cell": "E18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.17,
+                  "cell": "E19"
+                }
+              ],
+              "mean": 0.20333333333333334,
+              "sd": 0.030550504633039068,
+              "meanCell": "E20",
+              "computedMean": 0.20333333333333334,
+              "computedSd": 0.03055050463303893
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3.59,
+                  "cell": "E22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 3.65,
+                  "cell": "E23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.21,
+                  "cell": "E24"
+                }
+              ],
+              "mean": 3.15,
+              "sd": 0.8146164741766535,
+              "meanCell": "E25",
+              "computedMean": 3.15,
+              "computedSd": 0.814616474176652
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 32.0,
+                  "cell": "E27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 24.3,
+                  "cell": "E28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 44.800000000000004,
+                  "cell": "E29"
+                }
+              ],
+              "mean": 33.699999999999996,
+              "sd": 10.355191934483912,
+              "meanCell": "E30",
+              "computedMean": 33.7,
+              "computedSd": 10.355191934483882
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 10.1,
+                  "cell": "E32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 4.199999999999999,
+                  "cell": "E33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 10.7,
+                  "cell": "E34"
+                }
+              ],
+              "mean": 8.333333333333332,
+              "sd": 3.5921210076128176,
+              "meanCell": "E35",
+              "computedMean": 8.333333333333332,
+              "computedSd": 3.592121007612819
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "Trolox"
+        },
+        "npc": {
+          "column": "L",
+          "worksheetDye": "CF488A",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 10.6,
+                  "cell": "L2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 10.7,
+                  "cell": "L3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 10.8,
+                  "cell": "L4"
+                }
+              ],
+              "mean": 10.699999999999998,
+              "sd": 0.10000000000000053,
+              "meanCell": "L6",
+              "computedMean": 10.7,
+              "computedSd": 0.10000000000000053
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2224,
+                  "cell": "L8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2552,
+                  "cell": "L9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1943,
+                  "cell": "L10"
+                }
+              ],
+              "mean": 2239.6666666666665,
+              "sd": 304.8021216024144,
+              "meanCell": "L12",
+              "computedMean": 2239.6666666666665,
+              "computedSd": 304.8021216024149
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 24.099999999999998,
+                  "cell": "L14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 11.5,
+                  "cell": "L15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 11.0,
+                  "cell": "L16"
+                }
+              ],
+              "mean": 15.533333333333331,
+              "sd": 7.423161949825249,
+              "meanCell": "L18",
+              "computedMean": 15.533333333333333,
+              "computedSd": 7.423161949825244
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.2,
+                  "cell": "L20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.2,
+                  "cell": "L21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.22,
+                  "cell": "L22"
+                }
+              ],
+              "mean": 0.20666666666666667,
+              "sd": 0.011547005383792509,
+              "meanCell": "L24",
+              "computedMean": 0.20666666666666667,
+              "computedSd": 0.011547005383792509
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.35,
+                  "cell": "L26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.3,
+                  "cell": "L27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.21,
+                  "cell": "L28"
+                }
+              ],
+              "mean": 1.2866666666666668,
+              "sd": 0.07094598884597594,
+              "meanCell": "L30",
+              "computedMean": 1.2866666666666666,
+              "computedSd": 0.07094598884597594
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.42,
+                  "cell": "L32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.48,
+                  "cell": "L33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.55,
+                  "cell": "L34"
+                }
+              ],
+              "mean": 0.48333333333333334,
+              "sd": 0.06506407098647737,
+              "meanCell": "L36",
+              "computedMean": 0.48333333333333334,
+              "computedSd": 0.06506407098647715
+            }
+          },
+          "concentrationPm": "80-120"
+        }
+      }
+    },
+    {
+      "id": "cy3b",
+      "name": "Cy3B",
+      "wavelength": 560,
+      "systems": {
+        "origami": {
+          "column": "F",
+          "worksheetDye": "Cy3b",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.98,
+                  "cell": "F7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.08,
+                  "cell": "F8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.07,
+                  "cell": "F9"
+                }
+              ],
+              "mean": 2.0433333333333334,
+              "sd": 0.05507570547286102,
+              "meanCell": "F10",
+              "computedMean": 2.0433333333333334,
+              "computedSd": 0.05507570547286102
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 26774,
+                  "cell": "F12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 22602,
+                  "cell": "F13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 20208,
+                  "cell": "F14"
+                }
+              ],
+              "mean": 23194.666666666668,
+              "sd": 3322.8796748202262,
+              "meanCell": "F15",
+              "computedMean": 23194.666666666668,
+              "computedSd": 3322.8796748202203
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.35,
+                  "cell": "F17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.36,
+                  "cell": "F18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.35,
+                  "cell": "F19"
+                }
+              ],
+              "mean": 0.35333333333333333,
+              "sd": 0.005773502691896262,
+              "meanCell": "F20",
+              "computedMean": 0.35333333333333333,
+              "computedSd": 0.005773502691896263
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 12.82,
+                  "cell": "F22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 17.23,
+                  "cell": "F23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 12.8,
+                  "cell": "F24"
+                }
+              ],
+              "mean": 14.283333333333333,
+              "sd": 2.5519077830778625,
+              "meanCell": "F25",
+              "computedMean": 14.283333333333333,
+              "computedSd": 2.551907783077855
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 6.7,
+                  "cell": "F27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0,
+                  "cell": "F28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 4.3999999999999995,
+                  "cell": "F29"
+                }
+              ],
+              "mean": 3.6999999999999997,
+              "sd": 3.4044089061098406,
+              "meanCell": "F30",
+              "computedMean": 3.6999999999999997,
+              "computedSd": 3.4044089061098406
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.02,
+                  "cell": "F32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.9,
+                  "cell": "F33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.487,
+                  "cell": "F34"
+                }
+              ],
+              "mean": 2.135666666666667,
+              "sd": 0.31012309384070924,
+              "meanCell": "F35",
+              "computedMean": 2.135666666666667,
+              "computedSd": 0.3101230938407093
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "PCA PCD Trolox"
+        },
+        "npc": {
+          "column": "R",
+          "worksheetDye": "Cy3b",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 4.4,
+                  "cell": "R2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 4.85,
+                  "cell": "R3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 4.82,
+                  "cell": "R4"
+                },
+                {
+                  "repeat": 4,
+                  "value": 3.92,
+                  "cell": "R5"
+                }
+              ],
+              "mean": 4.4975000000000005,
+              "sd": 0.4363771304731722,
+              "meanCell": "R6",
+              "computedMean": 4.4975000000000005,
+              "computedSd": 0.4363771304731722
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 6287,
+                  "cell": "R8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 5350,
+                  "cell": "R9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 6086,
+                  "cell": "R10"
+                },
+                {
+                  "repeat": 4,
+                  "value": 10240,
+                  "cell": "R11"
+                }
+              ],
+              "mean": 6990.75,
+              "sd": 2203.294710957509,
+              "meanCell": "R12",
+              "computedMean": 6990.75,
+              "computedSd": 2203.294710957509
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 19.0,
+                  "cell": "R14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0,
+                  "cell": "R15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.5,
+                  "cell": "R16"
+                },
+                {
+                  "repeat": 4,
+                  "value": 0,
+                  "cell": "R17"
+                }
+              ],
+              "mean": 4.875,
+              "sd": 9.41961605728528,
+              "meanCell": "R18",
+              "computedMean": 4.875,
+              "computedSd": 9.419616057285278
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.327,
+                  "cell": "R20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.33,
+                  "cell": "R21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.39,
+                  "cell": "R22"
+                },
+                {
+                  "repeat": 4,
+                  "value": 0.31,
+                  "cell": "R23"
+                }
+              ],
+              "mean": 0.33925000000000005,
+              "sd": 0.03496069221282668,
+              "meanCell": "R24",
+              "computedMean": 0.33925,
+              "computedSd": 0.03496069221282668
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 5.32,
+                  "cell": "R26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 4.93,
+                  "cell": "R27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 8.04,
+                  "cell": "R28"
+                },
+                {
+                  "repeat": 4,
+                  "value": 6.93,
+                  "cell": "R29"
+                }
+              ],
+              "mean": 6.305,
+              "sd": 1.4447260409272513,
+              "meanCell": "R30",
+              "computedMean": 6.305,
+              "computedSd": 1.4447260409272522
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.10458,
+                  "cell": "R32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.07110691707209,
+                  "cell": "R33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.93425779638382,
+                  "cell": "R34"
+                }
+              ],
+              "mean": 1.0366482378186366,
+              "sd": 0.09023837151171968,
+              "meanCell": "R36",
+              "computedMean": 1.0366482378186366,
+              "computedSd": 0.09023837151171968
+            }
+          },
+          "concentrationPm": "80-100"
+        }
+      }
+    },
+    {
+      "id": "atto565",
+      "name": "Atto565",
+      "wavelength": 560,
+      "systems": {
+        "origami": {
+          "column": "G",
+          "worksheetDye": "Atto565",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3.06,
+                  "cell": "G7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.77,
+                  "cell": "G8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.9,
+                  "cell": "G9"
+                }
+              ],
+              "mean": 2.91,
+              "sd": 0.14525839046333952,
+              "meanCell": "G10",
+              "computedMean": 2.91,
+              "computedSd": 0.14525839046333952
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 9790,
+                  "cell": "G12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 13572,
+                  "cell": "G13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 11438,
+                  "cell": "G14"
+                }
+              ],
+              "mean": 11600,
+              "sd": 1896.1972471238323,
+              "meanCell": "G15",
+              "computedMean": 11600,
+              "computedSd": 1896.1972471238323
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.23,
+                  "cell": "G17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.24,
+                  "cell": "G18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.25,
+                  "cell": "G19"
+                }
+              ],
+              "mean": 0.24,
+              "sd": 0.009999999999999995,
+              "meanCell": "G20",
+              "computedMean": 0.24,
+              "computedSd": 0.009999999999999995
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 12.81,
+                  "cell": "G22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 12.66,
+                  "cell": "G23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 7.97,
+                  "cell": "G24"
+                }
+              ],
+              "mean": 11.146666666666667,
+              "sd": 2.752096170800246,
+              "meanCell": "G25",
+              "computedMean": 11.146666666666667,
+              "computedSd": 2.7520961708002383
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 17.4,
+                  "cell": "G27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 12.0,
+                  "cell": "G28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 19.8,
+                  "cell": "G29"
+                }
+              ],
+              "mean": 16.400000000000002,
+              "sd": 3.9949968710876362,
+              "meanCell": "G30",
+              "computedMean": 16.4,
+              "computedSd": 3.994996871087636
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.7000000000000003,
+                  "cell": "G32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.6000000000000003,
+                  "cell": "G33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.48,
+                  "cell": "G34"
+                }
+              ],
+              "mean": 1.2600000000000002,
+              "sd": 0.48867166891482455,
+              "meanCell": "G35",
+              "computedMean": 1.2600000000000002,
+              "computedSd": 0.4886716689148246
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "Trolox"
+        },
+        "npc": {
+          "column": "J",
+          "worksheetDye": "Atto565",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 6.61,
+                  "cell": "J2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 6.07,
+                  "cell": "J3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 5.37,
+                  "cell": "J4"
+                }
+              ],
+              "mean": 6.016666666666667,
+              "sd": 0.621718049708494,
+              "meanCell": "J6",
+              "computedMean": 6.016666666666667,
+              "computedSd": 0.6217180497084941
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 7337,
+                  "cell": "J8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 5642,
+                  "cell": "J9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 5883,
+                  "cell": "J10"
+                }
+              ],
+              "mean": 6287.333333333333,
+              "sd": 916.989821826467,
+              "meanCell": "J12",
+              "computedMean": 6287.333333333333,
+              "computedSd": 916.9898218264657
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0,
+                  "cell": "J14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.7,
+                  "cell": "J15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 10.0,
+                  "cell": "J16"
+                }
+              ],
+              "mean": 4.233333333333333,
+              "sd": 5.173329037798905,
+              "meanCell": "J18",
+              "computedMean": 4.233333333333333,
+              "computedSd": 5.173329037798904
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.28,
+                  "cell": "J20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.27,
+                  "cell": "J21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.28,
+                  "cell": "J22"
+                }
+              ],
+              "mean": 0.27666666666666667,
+              "sd": 0.005773502691896262,
+              "meanCell": "J24",
+              "computedMean": 0.27666666666666667,
+              "computedSd": 0.005773502691896263
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 7.56,
+                  "cell": "J26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 8.37,
+                  "cell": "J27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 9.28,
+                  "cell": "J28"
+                }
+              ],
+              "mean": 8.403333333333334,
+              "sd": 0.8604843597261562,
+              "meanCell": "J30",
+              "computedMean": 8.403333333333332,
+              "computedSd": 0.8604843597261563
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.32,
+                  "cell": "J32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.62,
+                  "cell": "J33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.67,
+                  "cell": "J34"
+                }
+              ],
+              "mean": 0.87,
+              "sd": 0.3905124837953331,
+              "meanCell": "J36",
+              "computedMean": 0.87,
+              "computedSd": 0.39051248379533277
+            }
+          },
+          "concentrationPm": "80-100"
+        }
+      }
+    },
+    {
+      "id": "janeliafluor585",
+      "name": "JF585",
+      "wavelength": 560,
+      "systems": {
+        "origami": {
+          "column": "H",
+          "worksheetDye": "JF585",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 7.98,
+                  "cell": "H7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 6.9,
+                  "cell": "H8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 5.84,
+                  "cell": "H9"
+                }
+              ],
+              "mean": 6.906666666666666,
+              "sd": 1.070015576210625,
+              "meanCell": "H10",
+              "computedMean": 6.906666666666667,
+              "computedSd": 1.0700155762106147
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1632,
+                  "cell": "H12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1925,
+                  "cell": "H13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 3731,
+                  "cell": "H14"
+                }
+              ],
+              "mean": 2429.3333333333335,
+              "sd": 1136.756057091113,
+              "meanCell": "H15",
+              "computedMean": 2429.3333333333335,
+              "computedSd": 1136.7560570911128
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.26,
+                  "cell": "H17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.27,
+                  "cell": "H18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.24,
+                  "cell": "H19"
+                }
+              ],
+              "mean": 0.25666666666666665,
+              "sd": 0.01527525231651948,
+              "meanCell": "H20",
+              "computedMean": 0.25666666666666665,
+              "computedSd": 0.01527525231651948
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3.72,
+                  "cell": "H22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 3.82,
+                  "cell": "H23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 3.21,
+                  "cell": "H24"
+                }
+              ],
+              "mean": 3.5833333333333335,
+              "sd": 0.3271594921950658,
+              "meanCell": "H25",
+              "computedMean": 3.5833333333333335,
+              "computedSd": 0.32715949219506585
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.6,
+                  "cell": "H27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 49.4,
+                  "cell": "H28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 54.800000000000004,
+                  "cell": "H29"
+                }
+              ],
+              "mean": 35.6,
+              "sd": 28.706096913373646,
+              "meanCell": "H30",
+              "computedMean": 35.6,
+              "computedSd": 28.70609691337365
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.6,
+                  "cell": "H32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 27.999999999999996,
+                  "cell": "H33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 22.5,
+                  "cell": "H34"
+                }
+              ],
+              "mean": 17.700000000000003,
+              "sd": 13.363008643265928,
+              "meanCell": "H35",
+              "computedMean": 17.7,
+              "computedSd": 13.36300864326593
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "Trolox"
+        },
+        "npc": {
+          "column": "D",
+          "worksheetDye": "JF585",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 14.9,
+                  "cell": "D2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 17.3,
+                  "cell": "D3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 19.9,
+                  "cell": "D4"
+                }
+              ],
+              "mean": 17.366666666666667,
+              "sd": 2.5006665778014616,
+              "meanCell": "D6",
+              "computedMean": 17.366666666666667,
+              "computedSd": 2.5006665778014727
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 973,
+                  "cell": "D8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 713,
+                  "cell": "D9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 538,
+                  "cell": "D10"
+                }
+              ],
+              "mean": 741.3333333333334,
+              "sd": 218.87972344037118,
+              "meanCell": "D12",
+              "computedMean": 741.3333333333334,
+              "computedSd": 218.8797234403711
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 21.2,
+                  "cell": "D14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.7999999999999998,
+                  "cell": "D15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 3.4000000000000004,
+                  "cell": "D16"
+                }
+              ],
+              "mean": 8.8,
+              "sd": 10.768472500777442,
+              "meanCell": "D18",
+              "computedMean": 8.8,
+              "computedSd": 10.768472500777444
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.23,
+                  "cell": "D20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.21,
+                  "cell": "D21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.23,
+                  "cell": "D22"
+                }
+              ],
+              "mean": 0.22333333333333336,
+              "sd": 0.011547005383792526,
+              "meanCell": "D24",
+              "computedMean": 0.22333333333333333,
+              "computedSd": 0.011547005383792526
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.82,
+                  "cell": "D26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.74,
+                  "cell": "D27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.55,
+                  "cell": "D28"
+                }
+              ],
+              "mean": 1.0366666666666668,
+              "sd": 0.685006082698054,
+              "meanCell": "D30",
+              "computedMean": 1.0366666666666666,
+              "computedSd": 0.6850060826980541
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.9,
+                  "cell": "D32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.81,
+                  "cell": "D33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.178,
+                  "cell": "D34"
+                }
+              ],
+              "mean": 1.296,
+              "sd": 0.46633464379134454,
+              "meanCell": "D36",
+              "computedMean": 1.296,
+              "computedSd": 0.46633464379134437
+            }
+          },
+          "concentrationPm": "80-100"
+        }
+      }
+    },
+    {
+      "id": "cf568",
+      "name": "CF568",
+      "wavelength": 560,
+      "systems": {
+        "origami": {
+          "column": "I",
+          "worksheetDye": "CF568",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3.2,
+                  "cell": "I7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.98,
+                  "cell": "I8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.75,
+                  "cell": "I9"
+                }
+              ],
+              "mean": 2.9766666666666666,
+              "sd": 0.2250185177565024,
+              "meanCell": "I10",
+              "computedMean": 2.9766666666666666,
+              "computedSd": 0.22501851775650236
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 11364,
+                  "cell": "I12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 13371,
+                  "cell": "I13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 15430,
+                  "cell": "I14"
+                }
+              ],
+              "mean": 13388.333333333334,
+              "sd": 2033.0554181657994,
+              "meanCell": "I15",
+              "computedMean": 13388.333333333334,
+              "computedSd": 2033.0554181658042
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.21,
+                  "cell": "I17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.22,
+                  "cell": "I18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.21,
+                  "cell": "I19"
+                }
+              ],
+              "mean": 0.21333333333333335,
+              "sd": 0.005773502691896262,
+              "meanCell": "I20",
+              "computedMean": 0.21333333333333332,
+              "computedSd": 0.005773502691896263
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 12.73,
+                  "cell": "I22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 11.89,
+                  "cell": "I23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 8.06,
+                  "cell": "I24"
+                }
+              ],
+              "mean": 10.893333333333333,
+              "sd": 2.489424297570304,
+              "meanCell": "I25",
+              "computedMean": 10.893333333333334,
+              "computedSd": 2.4894242975702903
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 11.899999999999999,
+                  "cell": "I27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 12.3,
+                  "cell": "I28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 10.299999999999999,
+                  "cell": "I29"
+                }
+              ],
+              "mean": 11.5,
+              "sd": 1.0583005244258366,
+              "meanCell": "I30",
+              "computedMean": 11.5,
+              "computedSd": 1.0583005244258368
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.4500000000000006,
+                  "cell": "I32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.37,
+                  "cell": "I33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.15,
+                  "cell": "I34"
+                }
+              ],
+              "mean": 2.3233333333333337,
+              "sd": 0.1553490693030809,
+              "meanCell": "I35",
+              "computedMean": 2.3233333333333337,
+              "computedSd": 0.1553490693030809
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "B"
+        },
+        "npc": {
+          "column": "K",
+          "worksheetDye": "CF568",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 6.9,
+                  "cell": "K2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 5.71,
+                  "cell": "K3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 5.47,
+                  "cell": "K4"
+                }
+              ],
+              "mean": 6.026666666666666,
+              "sd": 0.7657893531078498,
+              "meanCell": "K6",
+              "computedMean": 6.026666666666666,
+              "computedSd": 0.7657893531078463
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 6309,
+                  "cell": "K8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 6403,
+                  "cell": "K9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 6285,
+                  "cell": "K10"
+                }
+              ],
+              "mean": 6332.333333333333,
+              "sd": 62.36451982764987,
+              "meanCell": "K12",
+              "computedMean": 6332.333333333333,
+              "computedSd": 62.364519827649865
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0,
+                  "cell": "K14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 7.3,
+                  "cell": "K15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0,
+                  "cell": "K16"
+                }
+              ],
+              "mean": 2.433333333333333,
+              "sd": 4.214656965084268,
+              "meanCell": "K18",
+              "computedMean": 2.433333333333333,
+              "computedSd": 4.214656965084268
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.26,
+                  "cell": "K20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.23,
+                  "cell": "K21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.22,
+                  "cell": "K22"
+                }
+              ],
+              "mean": 0.23666666666666666,
+              "sd": 0.02081665999466133,
+              "meanCell": "K24",
+              "computedMean": 0.23666666666666666,
+              "computedSd": 0.02081665999466133
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 8.26,
+                  "cell": "K26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 8.68,
+                  "cell": "K27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 4.23,
+                  "cell": "K28"
+                }
+              ],
+              "mean": 7.056666666666666,
+              "sd": 2.4569561113974627,
+              "meanCell": "K30",
+              "computedMean": 7.056666666666667,
+              "computedSd": 2.4569561113974605
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.75,
+                  "cell": "K32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.35,
+                  "cell": "K33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.4447,
+                  "cell": "K34"
+                }
+              ],
+              "mean": 0.5149,
+              "sd": 0.2090359538452653,
+              "meanCell": "K36",
+              "computedMean": 0.5149,
+              "computedSd": 0.20903595384526558
+            }
+          },
+          "concentrationPm": "80-100"
+        }
+      }
+    },
+    {
+      "id": "cy5",
+      "name": "Cy5",
+      "wavelength": 640,
+      "systems": {
+        "origami": {
+          "column": "J",
+          "worksheetDye": "Cy5",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 5.44,
+                  "cell": "J7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 4.44,
+                  "cell": "J8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 4.34,
+                  "cell": "J9"
+                }
+              ],
+              "mean": 4.74,
+              "sd": 0.6082762530298257,
+              "meanCell": "J10",
+              "computedMean": 4.74,
+              "computedSd": 0.6082762530298221
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 6054,
+                  "cell": "J12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 7853,
+                  "cell": "J13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 9496,
+                  "cell": "J14"
+                }
+              ],
+              "mean": 7801,
+              "sd": 1721.5890915081914,
+              "meanCell": "J15",
+              "computedMean": 7801,
+              "computedSd": 1721.5890915081914
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.42,
+                  "cell": "J17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.41,
+                  "cell": "J18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.44,
+                  "cell": "J19"
+                }
+              ],
+              "mean": 0.42333333333333334,
+              "sd": 0.01527525231651948,
+              "meanCell": "J20",
+              "computedMean": 0.42333333333333334,
+              "computedSd": 0.01527525231651948
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.9,
+                  "cell": "J22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.06,
+                  "cell": "J23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.13,
+                  "cell": "J24"
+                }
+              ],
+              "mean": 2.03,
+              "sd": 0.11789826122551597,
+              "meanCell": "J25",
+              "computedMean": 2.03,
+              "computedSd": 0.11789826122551597
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0,
+                  "cell": "J27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0,
+                  "cell": "J28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0,
+                  "cell": "J29"
+                }
+              ],
+              "mean": 0,
+              "sd": 0,
+              "meanCell": "J30",
+              "computedMean": 0,
+              "computedSd": 0.0
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 4.1,
+                  "cell": "J32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.8,
+                  "cell": "J33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.3,
+                  "cell": "J34"
+                }
+              ],
+              "mean": 2.0666666666666664,
+              "sd": 1.7785762095938795,
+              "meanCell": "J35",
+              "computedMean": 2.0666666666666664,
+              "computedSd": 1.7785762095938797
+            }
+          },
+          "concentrationPm": 300,
+          "buffer": "PCA PCD Trolox"
+        },
+        "npc": {
+          "column": "I",
+          "worksheetDye": "Cy5",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 11.8,
+                  "cell": "I2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 10.3,
+                  "cell": "I3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 7.79,
+                  "cell": "I4"
+                }
+              ],
+              "mean": 9.963333333333333,
+              "sd": 2.0260881849843932,
+              "meanCell": "I6",
+              "computedMean": 9.963333333333335,
+              "computedSd": 2.026088184984389
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 5815,
+                  "cell": "I8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 6646,
+                  "cell": "I9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 5632,
+                  "cell": "I10"
+                }
+              ],
+              "mean": 6031,
+              "sd": 540.408179064677,
+              "meanCell": "I12",
+              "computedMean": 6031,
+              "computedSd": 540.408179064677
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 34.699999999999996,
+                  "cell": "I14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 70.0,
+                  "cell": "I15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 58.5,
+                  "cell": "I16"
+                }
+              ],
+              "mean": 54.39999999999999,
+              "sd": 18.00361074895813,
+              "meanCell": "I18",
+              "computedMean": 54.4,
+              "computedSd": 18.003610748958113
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.19,
+                  "cell": "I20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.2,
+                  "cell": "I21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.25,
+                  "cell": "I22"
+                }
+              ],
+              "mean": 0.21333333333333335,
+              "sd": 0.03214550253664314,
+              "meanCell": "I24",
+              "computedMean": 0.21333333333333335,
+              "computedSd": 0.03214550253664318
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.93,
+                  "cell": "I26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.02,
+                  "cell": "I27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.35,
+                  "cell": "I28"
+                }
+              ],
+              "mean": 1.1,
+              "sd": 0.22113344387495917,
+              "meanCell": "I30",
+              "computedMean": 1.1,
+              "computedSd": 0.22113344387495984
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.57,
+                  "cell": "I32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.74,
+                  "cell": "I33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.8367,
+                  "cell": "I34"
+                }
+              ],
+              "mean": 0.7155666666666667,
+              "sd": 0.13501838146464865,
+              "meanCell": "I36",
+              "computedMean": 0.7155666666666667,
+              "computedSd": 0.1350183814646485
+            }
+          },
+          "concentrationPm": "80-100"
+        }
+      }
+    },
+    {
+      "id": "cy5b",
+      "name": "Cy5B",
+      "wavelength": 640,
+      "systems": {
+        "origami": {
+          "column": "K",
+          "worksheetDye": "Cy5b",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3.54,
+                  "cell": "K7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 4.15,
+                  "cell": "K8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 4.39,
+                  "cell": "K9"
+                }
+              ],
+              "mean": 4.026666666666666,
+              "sd": 0.43821608064211115,
+              "meanCell": "K10",
+              "computedMean": 4.026666666666666,
+              "computedSd": 0.43821608064211115
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 17018,
+                  "cell": "K12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 19891,
+                  "cell": "K13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 14362,
+                  "cell": "K14"
+                }
+              ],
+              "mean": 17090.333333333332,
+              "sd": 2765.2096364169774,
+              "meanCell": "K15",
+              "computedMean": 17090.333333333332,
+              "computedSd": 2765.209636416981
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.26,
+                  "cell": "K17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.22,
+                  "cell": "K18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.26,
+                  "cell": "K19"
+                }
+              ],
+              "mean": 0.24666666666666667,
+              "sd": 0.023094010767585032,
+              "meanCell": "K20",
+              "computedMean": 0.24666666666666667,
+              "computedSd": 0.023094010767585035
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.94,
+                  "cell": "K22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 3.36,
+                  "cell": "K23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.3,
+                  "cell": "K24"
+                }
+              ],
+              "mean": 2.8666666666666667,
+              "sd": 0.5337914698956261,
+              "meanCell": "K25",
+              "computedMean": 2.8666666666666667,
+              "computedSd": 0.5337914698956263
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0,
+                  "cell": "K27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.8,
+                  "cell": "K28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0,
+                  "cell": "K29"
+                }
+              ],
+              "mean": 0.26666666666666666,
+              "sd": 0.46188021535170065,
+              "meanCell": "K30",
+              "computedMean": 0.26666666666666666,
+              "computedSd": 0.46188021535170065
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.6,
+                  "cell": "K32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.0,
+                  "cell": "K33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.7000000000000004,
+                  "cell": "K34"
+                }
+              ],
+              "mean": 2.1,
+              "sd": 0.4582575694955837,
+              "meanCell": "K35",
+              "computedMean": 2.1,
+              "computedSd": 0.4582575694955839
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "PCA PCD Trolox"
+        },
+        "npc": {
+          "column": "S",
+          "worksheetDye": "Cy5b",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 5.06,
+                  "cell": "S2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 5.67,
+                  "cell": "S3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 6,
+                  "cell": "S4"
+                }
+              ],
+              "mean": 5.576666666666667,
+              "sd": 0.476899709932113,
+              "meanCell": "S6",
+              "computedMean": 5.576666666666666,
+              "computedSd": 0.476899709932113
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 11012,
+                  "cell": "S8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 10308,
+                  "cell": "S9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 7130,
+                  "cell": "S10"
+                }
+              ],
+              "mean": 9483.333333333334,
+              "sd": 2068.2208134851903,
+              "meanCell": "S12",
+              "computedMean": 9483.333333333334,
+              "computedSd": 2068.220813485188
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0,
+                  "cell": "S14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 28.000000000000004,
+                  "cell": "S15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 34.699999999999996,
+                  "cell": "S16"
+                }
+              ],
+              "mean": 20.9,
+              "sd": 18.4073354943077,
+              "meanCell": "S18",
+              "computedMean": 20.9,
+              "computedSd": 18.407335494307695
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.25,
+                  "cell": "S20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.25,
+                  "cell": "S21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.24,
+                  "cell": "S22"
+                }
+              ],
+              "mean": 0.24666666666666667,
+              "sd": 0.005773502691896263,
+              "meanCell": "S24",
+              "computedMean": 0.24666666666666667,
+              "computedSd": 0.005773502691896263
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.64,
+                  "cell": "S26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.45,
+                  "cell": "S27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.54,
+                  "cell": "S28"
+                }
+              ],
+              "mean": 2.21,
+              "sd": 0.5879625838435654,
+              "meanCell": "S30",
+              "computedMean": 2.21,
+              "computedSd": 0.587962583843564
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.8,
+                  "cell": "S32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.92,
+                  "cell": "S33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.595,
+                  "cell": "S34"
+                }
+              ],
+              "mean": 0.7716666666666668,
+              "sd": 0.16434212282106217,
+              "meanCell": "S36",
+              "computedMean": 0.7716666666666667,
+              "computedSd": 0.16434212282106297
+            }
+          },
+          "concentrationPm": "80-100"
+        }
+      }
+    },
+    {
+      "id": "atto643",
+      "name": "Atto643",
+      "wavelength": 640,
+      "systems": {
+        "origami": {
+          "column": "L",
+          "worksheetDye": "Atto643",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3.1,
+                  "cell": "L7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 3.7,
+                  "cell": "L8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 3.3,
+                  "cell": "L9"
+                }
+              ],
+              "mean": 3.366666666666667,
+              "sd": 0.3055050463303894,
+              "meanCell": "L10",
+              "computedMean": 3.3666666666666667,
+              "computedSd": 0.3055050463303894
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 27626,
+                  "cell": "L12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 16169,
+                  "cell": "L13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 26186,
+                  "cell": "L14"
+                }
+              ],
+              "mean": 23327,
+              "sd": 6240.682895324838,
+              "meanCell": "L15",
+              "computedMean": 23327,
+              "computedSd": 6240.682895324838
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.24,
+                  "cell": "L17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.26,
+                  "cell": "L18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.25,
+                  "cell": "L19"
+                }
+              ],
+              "mean": 0.25,
+              "sd": 0.010000000000000009,
+              "meanCell": "L20",
+              "computedMean": 0.25,
+              "computedSd": 0.010000000000000009
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 4.7,
+                  "cell": "L22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 3.49,
+                  "cell": "L23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 4.74,
+                  "cell": "L24"
+                }
+              ],
+              "mean": 4.3100000000000005,
+              "sd": 0.7104224095564526,
+              "meanCell": "L25",
+              "computedMean": 4.3100000000000005,
+              "computedSd": 0.7104224095564553
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 14.399999999999999,
+                  "cell": "L27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 14.899999999999999,
+                  "cell": "L28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 6.9,
+                  "cell": "L29"
+                }
+              ],
+              "mean": 12.066666666666666,
+              "sd": 4.481443219916251,
+              "meanCell": "L30",
+              "computedMean": 12.066666666666666,
+              "computedSd": 4.481443219916249
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.467,
+                  "cell": "L32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.5000000000000002,
+                  "cell": "L33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.6000000000000003,
+                  "cell": "L34"
+                }
+              ],
+              "mean": 1.855666666666667,
+              "sd": 0.5317859845213414,
+              "meanCell": "L35",
+              "computedMean": 1.8556666666666668,
+              "computedSd": 0.5317859845213422
+            }
+          },
+          "concentrationPm": 300,
+          "buffer": "Trolox"
+        },
+        "npc": {
+          "column": "P",
+          "worksheetDye": "Atto643",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 6.64,
+                  "cell": "P2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 5.34,
+                  "cell": "P3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 3.96,
+                  "cell": "P4"
+                }
+              ],
+              "mean": 5.3133333333333335,
+              "sd": 1.3401989902000833,
+              "meanCell": "P6",
+              "computedMean": 5.3133333333333335,
+              "computedSd": 1.340198990200087
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 11619,
+                  "cell": "P8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 19749,
+                  "cell": "P9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 13040,
+                  "cell": "P10"
+                }
+              ],
+              "mean": 14802.666666666666,
+              "sd": 4342.173457306066,
+              "meanCell": "P12",
+              "computedMean": 14802.666666666666,
+              "computedSd": 4342.1734573060685
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.4,
+                  "cell": "P14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 15.1,
+                  "cell": "P15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0,
+                  "cell": "P16"
+                }
+              ],
+              "mean": 5.833333333333333,
+              "sd": 8.114390509048313,
+              "meanCell": "P18",
+              "computedMean": 5.833333333333333,
+              "computedSd": 8.114390509048313
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.28,
+                  "cell": "P20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.24,
+                  "cell": "P21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.25,
+                  "cell": "P22"
+                }
+              ],
+              "mean": 0.25666666666666665,
+              "sd": 0.020816659994661348,
+              "meanCell": "P24",
+              "computedMean": 0.25666666666666665,
+              "computedSd": 0.020816659994661344
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.27,
+                  "cell": "P26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 3.19,
+                  "cell": "P27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.83,
+                  "cell": "P28"
+                }
+              ],
+              "mean": 2.763333333333333,
+              "sd": 0.4636090306857002,
+              "meanCell": "P30",
+              "computedMean": 2.763333333333333,
+              "computedSd": 0.4636090306856989
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.58,
+                  "cell": "P32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.59,
+                  "cell": "P33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.813,
+                  "cell": "P34"
+                }
+              ],
+              "mean": 0.6609999999999999,
+              "sd": 0.13173078607523736,
+              "meanCell": "P36",
+              "computedMean": 0.6609999999999999,
+              "computedSd": 0.13173078607523755
+            }
+          },
+          "concentrationPm": "40-80"
+        }
+      }
+    },
+    {
+      "id": "atto647n",
+      "name": "Atto647N",
+      "wavelength": 640,
+      "systems": {
+        "origami": {
+          "column": "M",
+          "worksheetDye": "Atto647N",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3.45,
+                  "cell": "M7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 3.31,
+                  "cell": "M8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 3.36,
+                  "cell": "M9"
+                }
+              ],
+              "mean": 3.373333333333333,
+              "sd": 0.07094598884597596,
+              "meanCell": "M10",
+              "computedMean": 3.3733333333333335,
+              "computedSd": 0.07094598884597596
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 18341,
+                  "cell": "M12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 14980,
+                  "cell": "M13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 22023,
+                  "cell": "M14"
+                }
+              ],
+              "mean": 18448,
+              "sd": 3522.7189782893556,
+              "meanCell": "M15",
+              "computedMean": 18448,
+              "computedSd": 3522.7189782893556
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.31,
+                  "cell": "M17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.31,
+                  "cell": "M18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.33,
+                  "cell": "M19"
+                }
+              ],
+              "mean": 0.31666666666666665,
+              "sd": 0.011547005383792526,
+              "meanCell": "M20",
+              "computedMean": 0.31666666666666665,
+              "computedSd": 0.011547005383792526
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 4.08,
+                  "cell": "M22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 4,
+                  "cell": "M23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 3.87,
+                  "cell": "M24"
+                }
+              ],
+              "mean": 3.983333333333333,
+              "sd": 0.10598742063723095,
+              "meanCell": "M25",
+              "computedMean": 3.9833333333333334,
+              "computedSd": 0.10598742063723095
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 24.6,
+                  "cell": "M27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 8.1,
+                  "cell": "M28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 23.3,
+                  "cell": "M29"
+                }
+              ],
+              "mean": 18.666666666666668,
+              "sd": 9.174057626444977,
+              "meanCell": "M30",
+              "computedMean": 18.666666666666668,
+              "computedSd": 9.174057626444982
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 4.000000000000001,
+                  "cell": "M32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.1,
+                  "cell": "M33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 5.8999999999999995,
+                  "cell": "M34"
+                }
+              ],
+              "mean": 4.0,
+              "sd": 1.8999999999999992,
+              "meanCell": "M35",
+              "computedMean": 4.0,
+              "computedSd": 1.8999999999999997
+            }
+          },
+          "concentrationPm": 300,
+          "buffer": "Trolox"
+        },
+        "npc": {
+          "column": "Q",
+          "worksheetDye": "Atto647N",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 6.98,
+                  "cell": "Q2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 5.53,
+                  "cell": "Q3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 5.82,
+                  "cell": "Q4"
+                }
+              ],
+              "mean": 6.11,
+              "sd": 0.7672678802087332,
+              "meanCell": "Q6",
+              "computedMean": 6.11,
+              "computedSd": 0.7672678802087314
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 14524,
+                  "cell": "Q8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 14832,
+                  "cell": "Q9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 16833,
+                  "cell": "Q10"
+                }
+              ],
+              "mean": 15396.333333333334,
+              "sd": 1253.6843036958442,
+              "meanCell": "Q12",
+              "computedMean": 15396.333333333334,
+              "computedSd": 1253.684303695844
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3.4000000000000004,
+                  "cell": "Q14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 8.0,
+                  "cell": "Q15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 3.1,
+                  "cell": "Q16"
+                }
+              ],
+              "mean": 4.833333333333334,
+              "sd": 2.746512940681934,
+              "meanCell": "Q18",
+              "computedMean": 4.833333333333334,
+              "computedSd": 2.7465129406819355
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.26,
+                  "cell": "Q20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.28,
+                  "cell": "Q21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.26,
+                  "cell": "Q22"
+                }
+              ],
+              "mean": 0.26666666666666666,
+              "sd": 0.011547005383792526,
+              "meanCell": "Q24",
+              "computedMean": 0.26666666666666666,
+              "computedSd": 0.011547005383792526
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3.1,
+                  "cell": "Q26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 3.5,
+                  "cell": "Q27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 3.02,
+                  "cell": "Q28"
+                }
+              ],
+              "mean": 3.2066666666666666,
+              "sd": 0.25716402029314545,
+              "meanCell": "Q30",
+              "computedMean": 3.2066666666666666,
+              "computedSd": 0.25716402029314545
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.35,
+                  "cell": "Q32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.4,
+                  "cell": "Q33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.39,
+                  "cell": "Q34"
+                }
+              ],
+              "mean": 0.38000000000000006,
+              "sd": 0.02645751311064593,
+              "meanCell": "Q36",
+              "computedMean": 0.38,
+              "computedSd": 0.02645751311064593
+            }
+          },
+          "concentrationPm": "20-50"
+        }
+      }
+    },
+    {
+      "id": "atto655",
+      "name": "Atto655",
+      "wavelength": 640,
+      "systems": {
+        "origami": {
+          "column": "N",
+          "worksheetDye": "Atto655",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 7.8,
+                  "cell": "N7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 4.89,
+                  "cell": "N8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 4.7,
+                  "cell": "N9"
+                }
+              ],
+              "mean": 5.796666666666667,
+              "sd": 1.7375365703585424,
+              "meanCell": "N10",
+              "computedMean": 5.796666666666667,
+              "computedSd": 1.7375365703585444
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 5361,
+                  "cell": "N12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 8678,
+                  "cell": "N13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 10779,
+                  "cell": "N14"
+                }
+              ],
+              "mean": 8272.666666666666,
+              "sd": 2731.6482814105716,
+              "meanCell": "N15",
+              "computedMean": 8272.666666666666,
+              "computedSd": 2731.6482814105725
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.26,
+                  "cell": "N17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.31,
+                  "cell": "N18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.24,
+                  "cell": "N19"
+                }
+              ],
+              "mean": 0.27,
+              "sd": 0.03605551275463964,
+              "meanCell": "N20",
+              "computedMean": 0.27,
+              "computedSd": 0.0360555127546399
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.68,
+                  "cell": "N22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.91,
+                  "cell": "N23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.65,
+                  "cell": "N24"
+                }
+              ],
+              "mean": 1.7466666666666668,
+              "sd": 0.14224392195567911,
+              "meanCell": "N25",
+              "computedMean": 1.7466666666666666,
+              "computedSd": 0.14224392195567911
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 4.8,
+                  "cell": "N27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 9.3,
+                  "cell": "N28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 12.7,
+                  "cell": "N29"
+                }
+              ],
+              "mean": 8.933333333333334,
+              "sd": 3.96274315762873,
+              "meanCell": "N30",
+              "computedMean": 8.933333333333334,
+              "computedSd": 3.962743157628732
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.3,
+                  "cell": "N32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 6.7,
+                  "cell": "N33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 4.109999999999999,
+                  "cell": "N34"
+                }
+              ],
+              "mean": 4.036666666666667,
+              "sd": 2.700746810297725,
+              "meanCell": "N35",
+              "computedMean": 4.036666666666666,
+              "computedSd": 2.7007468102977246
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "B"
+        },
+        "npc": {
+          "column": "H",
+          "worksheetDye": "Atto655",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 7.1,
+                  "cell": "H2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 7.91,
+                  "cell": "H3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 6.93,
+                  "cell": "H4"
+                }
+              ],
+              "mean": 7.313333333333333,
+              "sd": 0.5236729259120941,
+              "meanCell": "H6",
+              "computedMean": 7.3133333333333335,
+              "computedSd": 0.5236729259120941
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 7645,
+                  "cell": "H8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 4226,
+                  "cell": "H9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 5417,
+                  "cell": "H10"
+                }
+              ],
+              "mean": 5762.666666666667,
+              "sd": 1735.5127004240953,
+              "meanCell": "H12",
+              "computedMean": 5762.666666666667,
+              "computedSd": 1735.5127004240946
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0,
+                  "cell": "H14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0,
+                  "cell": "H15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 7.000000000000001,
+                  "cell": "H16"
+                }
+              ],
+              "mean": 2.3333333333333335,
+              "sd": 4.041451884327381,
+              "meanCell": "H18",
+              "computedMean": 2.3333333333333335,
+              "computedSd": 4.041451884327381
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.26,
+                  "cell": "H20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.33,
+                  "cell": "H21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.34,
+                  "cell": "H22"
+                }
+              ],
+              "mean": 0.31000000000000005,
+              "sd": 0.04358898943540625,
+              "meanCell": "H24",
+              "computedMean": 0.31,
+              "computedSd": 0.04358898943540674
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.26,
+                  "cell": "H26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.1,
+                  "cell": "H27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.37,
+                  "cell": "H28"
+                }
+              ],
+              "mean": 1.2433333333333334,
+              "sd": 0.13576941236277534,
+              "meanCell": "H30",
+              "computedMean": 1.2433333333333334,
+              "computedSd": 0.13576941236277534
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.92,
+                  "cell": "H32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.27,
+                  "cell": "H33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.14,
+                  "cell": "H34"
+                }
+              ],
+              "mean": 1.4433333333333334,
+              "sd": 0.4178915329763615,
+              "meanCell": "H36",
+              "computedMean": 1.4433333333333334,
+              "computedSd": 0.4178915329763614
+            }
+          },
+          "concentrationPm": "80-100"
+        }
+      }
+    },
+    {
+      "id": "cf640r",
+      "name": "CF640R",
+      "wavelength": 640,
+      "systems": {
+        "origami": {
+          "column": "O",
+          "worksheetDye": "CF640R",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 6.61,
+                  "cell": "O7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 5.24,
+                  "cell": "O8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 4.78,
+                  "cell": "O9"
+                }
+              ],
+              "mean": 5.543333333333334,
+              "sd": 0.9519628844305426,
+              "meanCell": "O10",
+              "computedMean": 5.543333333333334,
+              "computedSd": 0.9519628844305503
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 9302,
+                  "cell": "O12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 11162,
+                  "cell": "O13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 15608,
+                  "cell": "O14"
+                }
+              ],
+              "mean": 12024,
+              "sd": 3240.168514136263,
+              "meanCell": "O15",
+              "computedMean": 12024,
+              "computedSd": 3240.168514136263
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.23,
+                  "cell": "O17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.23,
+                  "cell": "O18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.21,
+                  "cell": "O19"
+                }
+              ],
+              "mean": 0.22333333333333336,
+              "sd": 0.011547005383792526,
+              "meanCell": "O20",
+              "computedMean": 0.22333333333333333,
+              "computedSd": 0.011547005383792526
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.42,
+                  "cell": "O22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.02,
+                  "cell": "O23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.26,
+                  "cell": "O24"
+                }
+              ],
+              "mean": 2.233333333333333,
+              "sd": 0.2013289182738866,
+              "meanCell": "O25",
+              "computedMean": 2.2333333333333334,
+              "computedSd": 0.2013289182738866
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 4.6,
+                  "cell": "O27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 9.2,
+                  "cell": "O28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 8.6,
+                  "cell": "O29"
+                }
+              ],
+              "mean": 7.466666666666668,
+              "sd": 2.500666577801471,
+              "meanCell": "O30",
+              "computedMean": 7.466666666666666,
+              "computedSd": 2.5006665778014736
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3.8000000000000007,
+                  "cell": "O32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.9000000000000004,
+                  "cell": "O33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.37,
+                  "cell": "O34"
+                }
+              ],
+              "mean": 2.6900000000000004,
+              "sd": 1.2285357137665966,
+              "meanCell": "O35",
+              "computedMean": 2.6900000000000004,
+              "computedSd": 1.2285357137665964
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "B"
+        },
+        "npc": {
+          "column": "E",
+          "worksheetDye": "CF640R",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 7.83,
+                  "cell": "E2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 6.36,
+                  "cell": "E3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 7.73,
+                  "cell": "E4"
+                }
+              ],
+              "mean": 7.3066666666666675,
+              "sd": 0.8213606597185753,
+              "meanCell": "E6",
+              "computedMean": 7.306666666666667,
+              "computedSd": 0.8213606597185753
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 9144,
+                  "cell": "E8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 8328,
+                  "cell": "E9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 5144,
+                  "cell": "E10"
+                }
+              ],
+              "mean": 7538.666666666667,
+              "sd": 2113.595357047637,
+              "meanCell": "E12",
+              "computedMean": 7538.666666666667,
+              "computedSd": 2113.595357047638
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 9.2,
+                  "cell": "E14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 8.1,
+                  "cell": "E15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0,
+                  "cell": "E16"
+                }
+              ],
+              "mean": 5.766666666666667,
+              "sd": 5.024274408641843,
+              "meanCell": "E18",
+              "computedMean": 5.766666666666667,
+              "computedSd": 5.024274408641842
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.2,
+                  "cell": "E20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.22,
+                  "cell": "E21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.2,
+                  "cell": "E22"
+                }
+              ],
+              "mean": 0.2066666666666667,
+              "sd": 0.011547005383792509,
+              "meanCell": "E24",
+              "computedMean": 0.20666666666666667,
+              "computedSd": 0.011547005383792509
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.23,
+                  "cell": "E26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.64,
+                  "cell": "E27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.1,
+                  "cell": "E28"
+                }
+              ],
+              "mean": 1.3233333333333335,
+              "sd": 0.281839197652372,
+              "meanCell": "E30",
+              "computedMean": 1.3233333333333333,
+              "computedSd": 0.28183919765237286
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.56,
+                  "cell": "E32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.1,
+                  "cell": "E33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.7929,
+                  "cell": "E34"
+                }
+              ],
+              "mean": 1.1509666666666667,
+              "sd": 0.3860813428972363,
+              "meanCell": "E36",
+              "computedMean": 1.1509666666666667,
+              "computedSd": 0.3860813428972363
+            }
+          },
+          "concentrationPm": "80-100"
+        }
+      }
+    },
+    {
+      "id": "cf660r",
+      "name": "CF660R",
+      "wavelength": 640,
+      "systems": {
+        "origami": {
+          "column": "P",
+          "worksheetDye": "CF660R",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 7.16,
+                  "cell": "P7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 5.59,
+                  "cell": "P8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 7.02,
+                  "cell": "P9"
+                }
+              ],
+              "mean": 6.59,
+              "sd": 0.8688498144098278,
+              "meanCell": "P10",
+              "computedMean": 6.59,
+              "computedSd": 0.8688498144098323
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 10269,
+                  "cell": "P12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 11768,
+                  "cell": "P13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 9160,
+                  "cell": "P14"
+                }
+              ],
+              "mean": 10399,
+              "sd": 1308.851022844082,
+              "meanCell": "P15",
+              "computedMean": 10399,
+              "computedSd": 1308.851022844082
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.2,
+                  "cell": "P17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.23,
+                  "cell": "P18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.19,
+                  "cell": "P19"
+                }
+              ],
+              "mean": 0.2066666666666667,
+              "sd": 0.02081665999466133,
+              "meanCell": "P20",
+              "computedMean": 0.20666666666666667,
+              "computedSd": 0.02081665999466133
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.5,
+                  "cell": "P22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.35,
+                  "cell": "P23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.9,
+                  "cell": "P24"
+                }
+              ],
+              "mean": 2.25,
+              "sd": 0.31224989991992014,
+              "meanCell": "P25",
+              "computedMean": 2.25,
+              "computedSd": 0.31224989991991997
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 7.5,
+                  "cell": "P27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0,
+                  "cell": "P28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 5.1,
+                  "cell": "P29"
+                }
+              ],
+              "mean": 4.2,
+              "sd": 3.8301436004411107,
+              "meanCell": "P30",
+              "computedMean": 4.2,
+              "computedSd": 3.8301436004411116
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3.7000000000000006,
+                  "cell": "P32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.5,
+                  "cell": "P33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.19,
+                  "cell": "P34"
+                }
+              ],
+              "mean": 2.796666666666667,
+              "sd": 0.7975169799655261,
+              "meanCell": "P35",
+              "computedMean": 2.796666666666667,
+              "computedSd": 0.7975169799655265
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "B"
+        },
+        "npc": {
+          "column": "G",
+          "worksheetDye": "CF660R",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 6.73,
+                  "cell": "G2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 6.82,
+                  "cell": "G3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 6.71,
+                  "cell": "G4"
+                }
+              ],
+              "mean": 6.753333333333334,
+              "sd": 0.05859465277082324,
+              "meanCell": "G6",
+              "computedMean": 6.753333333333334,
+              "computedSd": 0.05859465277082324
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 7282,
+                  "cell": "G8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 6607,
+                  "cell": "G9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 7769,
+                  "cell": "G10"
+                }
+              ],
+              "mean": 7219.333333333333,
+              "sd": 583.5292052102734,
+              "meanCell": "G12",
+              "computedMean": 7219.333333333333,
+              "computedSd": 583.5292052102734
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0,
+                  "cell": "G14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.0,
+                  "cell": "G15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 3.3000000000000003,
+                  "cell": "G16"
+                }
+              ],
+              "mean": 1.7666666666666668,
+              "sd": 1.6623276853055573,
+              "meanCell": "G18",
+              "computedMean": 1.7666666666666668,
+              "computedSd": 1.6623276853055577
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.24,
+                  "cell": "G20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.24,
+                  "cell": "G21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.23,
+                  "cell": "G22"
+                }
+              ],
+              "mean": 0.23666666666666666,
+              "sd": 0.005773502691896247,
+              "meanCell": "G24",
+              "computedMean": 0.23666666666666666,
+              "computedSd": 0.005773502691896247
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.72,
+                  "cell": "G26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.7,
+                  "cell": "G27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.5,
+                  "cell": "G28"
+                }
+              ],
+              "mean": 1.64,
+              "sd": 0.12165525060596437,
+              "meanCell": "G30",
+              "computedMean": 1.64,
+              "computedSd": 0.12165525060596437
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.69,
+                  "cell": "G32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.06,
+                  "cell": "G33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.73,
+                  "cell": "G34"
+                }
+              ],
+              "mean": 0.8266666666666667,
+              "sd": 0.20305992547357352,
+              "meanCell": "G36",
+              "computedMean": 0.8266666666666667,
+              "computedSd": 0.20305992547357382
+            }
+          },
+          "concentrationPm": 80
+        }
+      }
+    },
+    {
+      "id": "abberiorstar635p",
+      "name": "Abberior STAR 635P",
+      "wavelength": 640,
+      "systems": {
+        "origami": {
+          "column": "Q",
+          "worksheetDye": "AS635p",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 5.27,
+                  "cell": "Q7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 3.94,
+                  "cell": "Q8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 4.23,
+                  "cell": "Q9"
+                }
+              ],
+              "mean": 4.4799999999999995,
+              "sd": 0.6993568473962374,
+              "meanCell": "Q10",
+              "computedMean": 4.48,
+              "computedSd": 0.6993568473962342
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 11580,
+                  "cell": "Q12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 13592,
+                  "cell": "Q13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 13021,
+                  "cell": "Q14"
+                }
+              ],
+              "mean": 12731,
+              "sd": 1036.8755952379245,
+              "meanCell": "Q15",
+              "computedMean": 12731,
+              "computedSd": 1036.8755952379245
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.22,
+                  "cell": "Q17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.24,
+                  "cell": "Q18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.22,
+                  "cell": "Q19"
+                }
+              ],
+              "mean": 0.22666666666666666,
+              "sd": 0.011547005383792509,
+              "meanCell": "Q20",
+              "computedMean": 0.22666666666666666,
+              "computedSd": 0.011547005383792509
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.96,
+                  "cell": "Q22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.55,
+                  "cell": "Q23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.39,
+                  "cell": "Q24"
+                }
+              ],
+              "mean": 2.3000000000000003,
+              "sd": 0.30512292604784524,
+              "meanCell": "Q25",
+              "computedMean": 2.3,
+              "computedSd": 0.30512292604784713
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 80.9,
+                  "cell": "Q27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 46.1,
+                  "cell": "Q28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 33.0,
+                  "cell": "Q29"
+                }
+              ],
+              "mean": 53.333333333333336,
+              "sd": 24.75567275057038,
+              "meanCell": "Q30",
+              "computedMean": 53.333333333333336,
+              "computedSd": 24.755672750570394
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 30.3,
+                  "cell": "Q32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 16.2,
+                  "cell": "Q33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 7.199999999999999,
+                  "cell": "Q34"
+                }
+              ],
+              "mean": 17.899999999999995,
+              "sd": 11.6434530960536,
+              "meanCell": "Q35",
+              "computedMean": 17.9,
+              "computedSd": 11.643453096053594
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "Trolox"
+        },
+        "npc": {
+          "column": "O",
+          "worksheetDye": "AS635p",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 9.09,
+                  "cell": "O2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 6.6,
+                  "cell": "O3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 8.28,
+                  "cell": "O4"
+                }
+              ],
+              "mean": 7.989999999999999,
+              "sd": 1.2700787377166773,
+              "meanCell": "O6",
+              "computedMean": 7.989999999999999,
+              "computedSd": 1.270078737716682
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 12669,
+                  "cell": "O8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 8028,
+                  "cell": "O9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 8129,
+                  "cell": "O10"
+                }
+              ],
+              "mean": 9608.666666666666,
+              "sd": 2650.807487037364,
+              "meanCell": "O12",
+              "computedMean": 9608.666666666666,
+              "computedSd": 2650.807487037362
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 12.0,
+                  "cell": "O14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 8.0,
+                  "cell": "O15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0,
+                  "cell": "O16"
+                }
+              ],
+              "mean": 6.666666666666667,
+              "sd": 6.110100926607785,
+              "meanCell": "O18",
+              "computedMean": 6.666666666666667,
+              "computedSd": 6.110100926607787
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.21,
+                  "cell": "O20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.22,
+                  "cell": "O21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.23,
+                  "cell": "O22"
+                }
+              ],
+              "mean": 0.22,
+              "sd": 0.010000000000000009,
+              "meanCell": "O24",
+              "computedMean": 0.22,
+              "computedSd": 0.010000000000000009
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.4,
+                  "cell": "O26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.9,
+                  "cell": "O27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.68,
+                  "cell": "O28"
+                }
+              ],
+              "mean": 1.66,
+              "sd": 0.25059928172283374,
+              "meanCell": "O30",
+              "computedMean": 1.66,
+              "computedSd": 0.25059928172283336
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.19,
+                  "cell": "O32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.71,
+                  "cell": "O33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.22,
+                  "cell": "O34"
+                }
+              ],
+              "mean": 0.3733333333333333,
+              "sd": 0.29194748386196684,
+              "meanCell": "O36",
+              "computedMean": 0.3733333333333333,
+              "computedSd": 0.29194748386196673
+            }
+          },
+          "concentrationPm": 80
+        }
+      }
+    },
+    {
+      "id": "janeliafluor646",
+      "name": "JF646",
+      "wavelength": 640,
+      "systems": {
+        "origami": {
+          "column": "R",
+          "worksheetDye": "JF646",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 4.15,
+                  "cell": "R7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 4.34,
+                  "cell": "R8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 4.38,
+                  "cell": "R9"
+                }
+              ],
+              "mean": 4.29,
+              "sd": 0.1228820572744448,
+              "meanCell": "R10",
+              "computedMean": 4.29,
+              "computedSd": 0.1228820572744448
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 10828,
+                  "cell": "R12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 14472,
+                  "cell": "R13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 18020,
+                  "cell": "R14"
+                }
+              ],
+              "mean": 14440,
+              "sd": 3596.10678373154,
+              "meanCell": "R15",
+              "computedMean": 14440,
+              "computedSd": 3596.10678373154
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.27,
+                  "cell": "R17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.27,
+                  "cell": "R18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.22,
+                  "cell": "R19"
+                }
+              ],
+              "mean": 0.25333333333333335,
+              "sd": 0.028867513459481298,
+              "meanCell": "R20",
+              "computedMean": 0.25333333333333335,
+              "computedSd": 0.028867513459481298
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3.11,
+                  "cell": "R22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.51,
+                  "cell": "R23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.31,
+                  "cell": "R24"
+                }
+              ],
+              "mean": 2.643333333333333,
+              "sd": 0.416333199893225,
+              "meanCell": "R25",
+              "computedMean": 2.643333333333333,
+              "computedSd": 0.4163331998932265
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 12.8,
+                  "cell": "R27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 28.9,
+                  "cell": "R28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 28.299999999999997,
+                  "cell": "R29"
+                }
+              ],
+              "mean": 23.333333333333332,
+              "sd": 9.127065976168534,
+              "meanCell": "R30",
+              "computedMean": 23.333333333333332,
+              "computedSd": 9.127065976168536
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 3.2,
+                  "cell": "R32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 8.3,
+                  "cell": "R33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 5.4,
+                  "cell": "R34"
+                }
+              ],
+              "mean": 5.633333333333334,
+              "sd": 2.5579940057266244,
+              "meanCell": "R35",
+              "computedMean": 5.633333333333334,
+              "computedSd": 2.557994005726623
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "B"
+        },
+        "npc": {
+          "column": "B",
+          "worksheetDye": "JF646",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 12.6,
+                  "cell": "B2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 8.34,
+                  "cell": "B3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 6.89,
+                  "cell": "B4"
+                }
+              ],
+              "mean": 9.276666666666666,
+              "sd": 2.968001572326627,
+              "meanCell": "B6",
+              "computedMean": 9.276666666666667,
+              "computedSd": 2.9680015723266275
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 6920,
+                  "cell": "B8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 9113,
+                  "cell": "B9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 8630,
+                  "cell": "B10"
+                }
+              ],
+              "mean": 8221,
+              "sd": 1152.2903279989814,
+              "meanCell": "B12",
+              "computedMean": 8221,
+              "computedSd": 1152.2903279989814
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 14.799999999999999,
+                  "cell": "B14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.5,
+                  "cell": "B15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 3.6999999999999997,
+                  "cell": "B16"
+                }
+              ],
+              "mean": 6.999999999999999,
+              "sd": 6.781592733274389,
+              "meanCell": "B18",
+              "computedMean": 7.0,
+              "computedSd": 6.781592733274389
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.27,
+                  "cell": "B20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.25,
+                  "cell": "B21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.25,
+                  "cell": "B22"
+                }
+              ],
+              "mean": 0.25666666666666665,
+              "sd": 0.011547005383792526,
+              "meanCell": "B24",
+              "computedMean": 0.25666666666666665,
+              "computedSd": 0.011547005383792526
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.67,
+                  "cell": "B26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.71,
+                  "cell": "B27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.6,
+                  "cell": "B28"
+                }
+              ],
+              "mean": 1.6600000000000001,
+              "sd": 0.055677643628300154,
+              "meanCell": "B30",
+              "computedMean": 1.66,
+              "computedSd": 0.05567764362830015
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.42,
+                  "cell": "B32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.5,
+                  "cell": "B33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.38,
+                  "cell": "B34"
+                }
+              ],
+              "mean": 0.4333333333333333,
+              "sd": 0.06110100926607859,
+              "meanCell": "B36",
+              "computedMean": 0.43333333333333335,
+              "computedSd": 0.061101009266077866
+            }
+          },
+          "concentrationPm": "50-80"
+        }
+      }
+    },
+    {
+      "id": "alexafluor647",
+      "name": "AF647",
+      "wavelength": 640,
+      "systems": {
+        "origami": {
+          "column": "S",
+          "worksheetDye": "AF647",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 6.25,
+                  "cell": "S7"
+                },
+                {
+                  "repeat": 2,
+                  "value": 6.56,
+                  "cell": "S8"
+                },
+                {
+                  "repeat": 3,
+                  "value": 6.21,
+                  "cell": "S9"
+                }
+              ],
+              "mean": 6.34,
+              "sd": 0.19157244060667994,
+              "meanCell": "S10",
+              "computedMean": 6.34,
+              "computedSd": 0.19157244060667997
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 11221,
+                  "cell": "S12"
+                },
+                {
+                  "repeat": 2,
+                  "value": 8784,
+                  "cell": "S13"
+                },
+                {
+                  "repeat": 3,
+                  "value": 11040,
+                  "cell": "S14"
+                }
+              ],
+              "mean": 10348.333333333334,
+              "sd": 1357.7718266827248,
+              "meanCell": "S15",
+              "computedMean": 10348.333333333334,
+              "computedSd": 1357.7718266827212
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.19,
+                  "cell": "S17"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.2,
+                  "cell": "S18"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.19,
+                  "cell": "S19"
+                }
+              ],
+              "mean": 0.19333333333333336,
+              "sd": 0.005773502691896262,
+              "meanCell": "S20",
+              "computedMean": 0.19333333333333333,
+              "computedSd": 0.005773502691896263
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 2.06,
+                  "cell": "S22"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.31,
+                  "cell": "S23"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.96,
+                  "cell": "S24"
+                }
+              ],
+              "mean": 2.11,
+              "sd": 0.1802775637731995,
+              "meanCell": "S25",
+              "computedMean": 2.11,
+              "computedSd": 0.1802775637731995
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.2,
+                  "cell": "S27"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0,
+                  "cell": "S28"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.9000000000000004,
+                  "cell": "S29"
+                }
+              ],
+              "mean": 1.3666666666666667,
+              "sd": 1.4571661996262928,
+              "meanCell": "S30",
+              "computedMean": 1.3666666666666667,
+              "computedSd": 1.457166199626293
+            },
+            "destroyedPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.3,
+                  "cell": "S32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 1.1000000000000003,
+                  "cell": "S33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 1.2,
+                  "cell": "S34"
+                }
+              ],
+              "mean": 1.2000000000000002,
+              "sd": 0.09999999999999992,
+              "meanCell": "S35",
+              "computedMean": 1.2000000000000002,
+              "computedSd": 0.09999999999999987
+            }
+          },
+          "concentrationPm": 500,
+          "buffer": "PCA PCD Trolox"
+        },
+        "npc": {
+          "column": "F",
+          "worksheetDye": "AF647",
+          "metrics": {
+            "nenaNm": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 11.1,
+                  "cell": "F2"
+                },
+                {
+                  "repeat": 2,
+                  "value": 8.76,
+                  "cell": "F3"
+                },
+                {
+                  "repeat": 3,
+                  "value": 6.79,
+                  "cell": "F4"
+                }
+              ],
+              "mean": 8.883333333333333,
+              "sd": 2.157645321486674,
+              "meanCell": "F6",
+              "computedMean": 8.883333333333333,
+              "computedSd": 2.1576453214866738
+            },
+            "centerPhotons": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 7228,
+                  "cell": "F8"
+                },
+                {
+                  "repeat": 2,
+                  "value": 11512,
+                  "cell": "F9"
+                },
+                {
+                  "repeat": 3,
+                  "value": 11898,
+                  "cell": "F10"
+                }
+              ],
+              "mean": 10212.666666666666,
+              "sd": 2591.9925411415334,
+              "meanCell": "F12",
+              "computedMean": 10212.666666666666,
+              "computedSd": 2591.9925411415315
+            },
+            "dropPct": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 56.99999999999999,
+                  "cell": "F14"
+                },
+                {
+                  "repeat": 2,
+                  "value": 46.7,
+                  "cell": "F15"
+                },
+                {
+                  "repeat": 3,
+                  "value": 50.1,
+                  "cell": "F16"
+                }
+              ],
+              "mean": 51.26666666666666,
+              "sd": 5.248174285723874,
+              "meanCell": "F18",
+              "computedMean": 51.266666666666666,
+              "computedSd": 5.248174285723873
+            },
+            "brightTimeS": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 0.2,
+                  "cell": "F20"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.19,
+                  "cell": "F21"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.19,
+                  "cell": "F22"
+                }
+              ],
+              "mean": 0.19333333333333336,
+              "sd": 0.005773502691896262,
+              "meanCell": "F24",
+              "computedMean": 0.19333333333333333,
+              "computedSd": 0.005773502691896263
+            },
+            "centerSbr": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.05,
+                  "cell": "F26"
+                },
+                {
+                  "repeat": 2,
+                  "value": 2.46,
+                  "cell": "F27"
+                },
+                {
+                  "repeat": 3,
+                  "value": 2.65,
+                  "cell": "F28"
+                }
+              ],
+              "mean": 2.0533333333333332,
+              "sd": 0.8740900029935897,
+              "meanCell": "F30",
+              "computedMean": 2.0533333333333332,
+              "computedSd": 0.8740900029935894
+            },
+            "specificity": {
+              "points": [
+                {
+                  "repeat": 1,
+                  "value": 1.17,
+                  "cell": "F32"
+                },
+                {
+                  "repeat": 2,
+                  "value": 0.47,
+                  "cell": "F33"
+                },
+                {
+                  "repeat": 3,
+                  "value": 0.44,
+                  "cell": "F34"
+                }
+              ],
+              "mean": 0.6933333333333334,
+              "sd": 0.41307787804884105,
+              "meanCell": "F36",
+              "computedMean": 0.6933333333333334,
+              "computedSd": 0.41307787804884116
+            }
+          },
+          "concentrationPm": "80-100"
+        }
+      }
+    }
+  ],
+  "notes": [
+    "Fig. 2 labels CF488A as CF488. The same dye has directory cf488a and is labeled CF488A in Fig. 3.",
+    "Fig. 2 rows 32\u201334 are the three replicate docking-destruction observations. The sheet repeats the label Dest 3 on rows 33 and 34; the original cell addresses are retained.",
+    "Cy3B has an additional NPC acquisition. Its contribution varies by metric."
+  ]
+}

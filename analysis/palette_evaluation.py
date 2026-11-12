@@ -121,4 +121,4 @@ if __name__ == "__main__":
     def load(name):
         return json.loads((args.data / name).read_text(encoding="utf8"))
     out = records(load("palette.json"), load("palette-raw.json"))
-    (args.data / "palette-evaluation.json").write_text(json.dumps(out, indent=2, allow_nan=False) + "\n", encoding="utf8")
+    (args.data / "palette-evaluation.json").write_text(json.dumps(out, indent=2, allow_nan=False) + "\n", encoding="utf8", newline="\n")

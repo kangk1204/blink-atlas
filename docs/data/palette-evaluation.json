@@ -1,0 +1,564 @@
+{
+  "schema": "dna-paint-evaluation/1",
+  "protocol": {
+    "file": "analysis/palette-protocol.md",
+    "primary": "NPC NeNA (nm)",
+    "sha256": "39d57223831e3eb2fcda2c2d740165dbdd6bd34dc107f9f0306d7690febdd3dc",
+    "tuning": "n1 predicts n2",
+    "test": "n1+n2 predict n3",
+    "weights": [
+      0,
+      0.5,
+      1
+    ],
+    "baseline": "NPC training rank, weight 0",
+    "fourthRepeatExcluded": true,
+    "gate": "Lower macro regret and at least two of three channels strictly improved"
+  },
+  "raw": {
+    "status": "evaluated",
+    "weight": 0,
+    "tuning": [
+      {
+        "weight": 0,
+        "macroRegretNm": 0.9519105577971475,
+        "channels": [
+          {
+            "wavelength": 488,
+            "pair": [
+              "alexafluor488",
+              "abberiorstar488"
+            ],
+            "baselinePair": [
+              "alexafluor488",
+              "abberiorstar488"
+            ],
+            "oraclePair": [
+              "alexafluor488",
+              "cf488a"
+            ],
+            "meanNm": 12.764871482549133,
+            "baselineMeanNm": 12.764871482549133,
+            "oracleMeanNm": 10.156372641058457,
+            "regretNm": 2.6084988414906753,
+            "baselineRegretNm": 2.6084988414906753
+          },
+          {
+            "wavelength": 560,
+            "pair": [
+              "cy3b",
+              "atto565"
+            ],
+            "baselinePair": [
+              "cy3b",
+              "atto565"
+            ],
+            "oraclePair": [
+              "cy3b",
+              "cf568"
+            ],
+            "meanNm": 5.598349667389325,
+            "baselineMeanNm": 5.598349667389325,
+            "oracleMeanNm": 5.423990867205166,
+            "regretNm": 0.17435880018415872,
+            "baselineRegretNm": 0.17435880018415872
+          },
+          {
+            "wavelength": 640,
+            "pair": [
+              "cy5b",
+              "atto643"
+            ],
+            "baselinePair": [
+              "cy5b",
+              "atto643"
+            ],
+            "oraclePair": [
+              "atto643",
+              "atto647n"
+            ],
+            "meanNm": 5.503032523794854,
+            "baselineMeanNm": 5.503032523794854,
+            "oracleMeanNm": 5.430158492078245,
+            "regretNm": 0.07287403171660856,
+            "baselineRegretNm": 0.07287403171660856
+          }
+        ]
+      },
+      {
+        "weight": 0.5,
+        "macroRegretNm": 0.9519105577971475,
+        "channels": [
+          {
+            "wavelength": 488,
+            "pair": [
+              "abberiorstar488",
+              "alexafluor488"
+            ],
+            "baselinePair": [
+              "alexafluor488",
+              "abberiorstar488"
+            ],
+            "oraclePair": [
+              "alexafluor488",
+              "cf488a"
+            ],
+            "meanNm": 12.764871482549133,
+            "baselineMeanNm": 12.764871482549133,
+            "oracleMeanNm": 10.156372641058457,
+            "regretNm": 2.6084988414906753,
+            "baselineRegretNm": 2.6084988414906753
+          },
+          {
+            "wavelength": 560,
+            "pair": [
+              "cy3b",
+              "atto565"
+            ],
+            "baselinePair": [
+              "cy3b",
+              "atto565"
+            ],
+            "oraclePair": [
+              "cy3b",
+              "cf568"
+            ],
+            "meanNm": 5.598349667389325,
+            "baselineMeanNm": 5.598349667389325,
+            "oracleMeanNm": 5.423990867205166,
+            "regretNm": 0.17435880018415872,
+            "baselineRegretNm": 0.17435880018415872
+          },
+          {
+            "wavelength": 640,
+            "pair": [
+              "atto643",
+              "cy5b"
+            ],
+            "baselinePair": [
+              "cy5b",
+              "atto643"
+            ],
+            "oraclePair": [
+              "atto643",
+              "atto647n"
+            ],
+            "meanNm": 5.503032523794854,
+            "baselineMeanNm": 5.503032523794854,
+            "oracleMeanNm": 5.430158492078245,
+            "regretNm": 0.07287403171660856,
+            "baselineRegretNm": 0.07287403171660856
+          }
+        ]
+      },
+      {
+        "weight": 1,
+        "macroRegretNm": 1.1071572153123685,
+        "channels": [
+          {
+            "wavelength": 488,
+            "pair": [
+              "cf488a",
+              "abberiorstar488"
+            ],
+            "baselinePair": [
+              "alexafluor488",
+              "abberiorstar488"
+            ],
+            "oraclePair": [
+              "alexafluor488",
+              "cf488a"
+            ],
+            "meanNm": 13.303485486811404,
+            "baselineMeanNm": 12.764871482549133,
+            "oracleMeanNm": 10.156372641058457,
+            "regretNm": 3.1471128457529467,
+            "baselineRegretNm": 2.6084988414906753
+          },
+          {
+            "wavelength": 560,
+            "pair": [
+              "cy3b",
+              "atto565"
+            ],
+            "baselinePair": [
+              "cy3b",
+              "atto565"
+            ],
+            "oraclePair": [
+              "cy3b",
+              "cf568"
+            ],
+            "meanNm": 5.598349667389325,
+            "baselineMeanNm": 5.598349667389325,
+            "oracleMeanNm": 5.423990867205166,
+            "regretNm": 0.17435880018415872,
+            "baselineRegretNm": 0.17435880018415872
+          },
+          {
+            "wavelength": 640,
+            "pair": [
+              "atto643",
+              "atto647n"
+            ],
+            "baselinePair": [
+              "cy5b",
+              "atto643"
+            ],
+            "oraclePair": [
+              "atto643",
+              "atto647n"
+            ],
+            "meanNm": 5.430158492078245,
+            "baselineMeanNm": 5.503032523794854,
+            "oracleMeanNm": 5.430158492078245,
+            "regretNm": 0.0,
+            "baselineRegretNm": 0.07287403171660856
+          }
+        ]
+      }
+    ],
+    "gatePassed": false,
+    "channels": [
+      {
+        "wavelength": 488,
+        "pair": [
+          "alexafluor488",
+          "cf488a"
+        ],
+        "baselinePair": [
+          "alexafluor488",
+          "cf488a"
+        ],
+        "oraclePair": [
+          "alexafluor488",
+          "abberiorstar488"
+        ],
+        "meanNm": 10.343610946505509,
+        "baselineMeanNm": 10.343610946505509,
+        "oracleMeanNm": 10.082240448922057,
+        "regretNm": 0.2613704975834512,
+        "baselineRegretNm": 0.2613704975834512
+      },
+      {
+        "wavelength": 560,
+        "pair": [
+          "cy3b",
+          "cf568"
+        ],
+        "baselinePair": [
+          "cy3b",
+          "cf568"
+        ],
+        "oraclePair": [
+          "janeliafluor585",
+          "cf568"
+        ],
+        "meanNm": 4.790049183678902,
+        "baselineMeanNm": 4.790049183678902,
+        "oracleMeanNm": 4.563269296260526,
+        "regretNm": 0.22677988741837574,
+        "baselineRegretNm": 0.22677988741837574
+      },
+      {
+        "wavelength": 640,
+        "pair": [
+          "cy5b",
+          "atto643"
+        ],
+        "baselinePair": [
+          "cy5b",
+          "atto643"
+        ],
+        "oraclePair": [
+          "atto643",
+          "cf640r"
+        ],
+        "meanNm": 2.44669636564093,
+        "baselineMeanNm": 2.44669636564093,
+        "oracleMeanNm": 1.9801326869192282,
+        "regretNm": 0.466563678721702,
+        "baselineRegretNm": 0.466563678721702
+      }
+    ],
+    "macroRegretNm": 0.31823802124117634,
+    "baselineMacroRegretNm": 0.31823802124117634,
+    "improvedChannels": 0,
+    "reasons": [
+      "The held-out results did not meet both prespecified improvement criteria."
+    ]
+  },
+  "published": {
+    "status": "evaluated",
+    "weight": 0,
+    "tuning": [
+      {
+        "weight": 0,
+        "macroRegretNm": 0.75,
+        "channels": [
+          {
+            "wavelength": 488,
+            "pair": [
+              "alexafluor488",
+              "abberiorstar488"
+            ],
+            "baselinePair": [
+              "alexafluor488",
+              "abberiorstar488"
+            ],
+            "oraclePair": [
+              "alexafluor488",
+              "cf488a"
+            ],
+            "meanNm": 12.16,
+            "baselineMeanNm": 12.16,
+            "oracleMeanNm": 10.16,
+            "regretNm": 2.0,
+            "baselineRegretNm": 2.0
+          },
+          {
+            "wavelength": 560,
+            "pair": [
+              "cy3b",
+              "atto565"
+            ],
+            "baselinePair": [
+              "cy3b",
+              "atto565"
+            ],
+            "oraclePair": [
+              "cy3b",
+              "cf568"
+            ],
+            "meanNm": 5.46,
+            "baselineMeanNm": 5.46,
+            "oracleMeanNm": 5.279999999999999,
+            "regretNm": 0.1800000000000006,
+            "baselineRegretNm": 0.1800000000000006
+          },
+          {
+            "wavelength": 640,
+            "pair": [
+              "cy5b",
+              "atto643"
+            ],
+            "baselinePair": [
+              "cy5b",
+              "atto643"
+            ],
+            "oraclePair": [
+              "atto643",
+              "atto647n"
+            ],
+            "meanNm": 5.505,
+            "baselineMeanNm": 5.505,
+            "oracleMeanNm": 5.4350000000000005,
+            "regretNm": 0.0699999999999994,
+            "baselineRegretNm": 0.0699999999999994
+          }
+        ]
+      },
+      {
+        "weight": 0.5,
+        "macroRegretNm": 0.75,
+        "channels": [
+          {
+            "wavelength": 488,
+            "pair": [
+              "abberiorstar488",
+              "alexafluor488"
+            ],
+            "baselinePair": [
+              "alexafluor488",
+              "abberiorstar488"
+            ],
+            "oraclePair": [
+              "alexafluor488",
+              "cf488a"
+            ],
+            "meanNm": 12.16,
+            "baselineMeanNm": 12.16,
+            "oracleMeanNm": 10.16,
+            "regretNm": 2.0,
+            "baselineRegretNm": 2.0
+          },
+          {
+            "wavelength": 560,
+            "pair": [
+              "cy3b",
+              "atto565"
+            ],
+            "baselinePair": [
+              "cy3b",
+              "atto565"
+            ],
+            "oraclePair": [
+              "cy3b",
+              "cf568"
+            ],
+            "meanNm": 5.46,
+            "baselineMeanNm": 5.46,
+            "oracleMeanNm": 5.279999999999999,
+            "regretNm": 0.1800000000000006,
+            "baselineRegretNm": 0.1800000000000006
+          },
+          {
+            "wavelength": 640,
+            "pair": [
+              "atto643",
+              "cy5b"
+            ],
+            "baselinePair": [
+              "cy5b",
+              "atto643"
+            ],
+            "oraclePair": [
+              "atto643",
+              "atto647n"
+            ],
+            "meanNm": 5.505,
+            "baselineMeanNm": 5.505,
+            "oracleMeanNm": 5.4350000000000005,
+            "regretNm": 0.0699999999999994,
+            "baselineRegretNm": 0.0699999999999994
+          }
+        ]
+      },
+      {
+        "weight": 1,
+        "macroRegretNm": 0.9066666666666666,
+        "channels": [
+          {
+            "wavelength": 488,
+            "pair": [
+              "cf488a",
+              "abberiorstar488"
+            ],
+            "baselinePair": [
+              "alexafluor488",
+              "abberiorstar488"
+            ],
+            "oraclePair": [
+              "alexafluor488",
+              "cf488a"
+            ],
+            "meanNm": 12.7,
+            "baselineMeanNm": 12.16,
+            "oracleMeanNm": 10.16,
+            "regretNm": 2.539999999999999,
+            "baselineRegretNm": 2.0
+          },
+          {
+            "wavelength": 560,
+            "pair": [
+              "cy3b",
+              "atto565"
+            ],
+            "baselinePair": [
+              "cy3b",
+              "atto565"
+            ],
+            "oraclePair": [
+              "cy3b",
+              "cf568"
+            ],
+            "meanNm": 5.46,
+            "baselineMeanNm": 5.46,
+            "oracleMeanNm": 5.279999999999999,
+            "regretNm": 0.1800000000000006,
+            "baselineRegretNm": 0.1800000000000006
+          },
+          {
+            "wavelength": 640,
+            "pair": [
+              "atto643",
+              "atto647n"
+            ],
+            "baselinePair": [
+              "cy5b",
+              "atto643"
+            ],
+            "oraclePair": [
+              "atto643",
+              "atto647n"
+            ],
+            "meanNm": 5.4350000000000005,
+            "baselineMeanNm": 5.505,
+            "oracleMeanNm": 5.4350000000000005,
+            "regretNm": 0.0,
+            "baselineRegretNm": 0.0699999999999994
+          }
+        ]
+      }
+    ],
+    "gatePassed": false,
+    "channels": [
+      {
+        "wavelength": 488,
+        "pair": [
+          "alexafluor488",
+          "cf488a"
+        ],
+        "baselinePair": [
+          "alexafluor488",
+          "cf488a"
+        ],
+        "oraclePair": [
+          "alexafluor488",
+          "atto488"
+        ],
+        "meanNm": 10.085,
+        "baselineMeanNm": 10.085,
+        "oracleMeanNm": 10.035,
+        "regretNm": 0.05000000000000071,
+        "baselineRegretNm": 0.05000000000000071
+      },
+      {
+        "wavelength": 560,
+        "pair": [
+          "cy3b",
+          "cf568"
+        ],
+        "baselinePair": [
+          "cy3b",
+          "cf568"
+        ],
+        "oraclePair": [
+          "cy3b",
+          "atto565"
+        ],
+        "meanNm": 5.145,
+        "baselineMeanNm": 5.145,
+        "oracleMeanNm": 5.095000000000001,
+        "regretNm": 0.049999999999998934,
+        "baselineRegretNm": 0.049999999999998934
+      },
+      {
+        "wavelength": 640,
+        "pair": [
+          "cy5b",
+          "atto643"
+        ],
+        "baselinePair": [
+          "cy5b",
+          "atto643"
+        ],
+        "oraclePair": [
+          "atto643",
+          "atto647n"
+        ],
+        "meanNm": 4.98,
+        "baselineMeanNm": 4.98,
+        "oracleMeanNm": 4.890000000000001,
+        "regretNm": 0.08999999999999986,
+        "baselineRegretNm": 0.08999999999999986
+      }
+    ],
+    "macroRegretNm": 0.06333333333333317,
+    "baselineMacroRegretNm": 0.06333333333333317,
+    "improvedChannels": 0,
+    "reasons": [
+      "The held-out results did not meet both prespecified improvement criteria."
+    ]
+  }
+}

@@ -34,6 +34,33 @@ One local command imports calibrated CSV or Picasso per-event uncertainties. A s
 
 The independent EPFL test processes complete sparse and dense sensor sequences. The single-emitter fitter recovered 91.31% and 7.37% of true emitter positions, respectively, at a 150 nm matching radius. The nominal 95% uncertainty ellipses contained 80.85% and 3.28% of the matched truth positions. [EPFL fitting and matching](analysis/epfl-precision.md) · [Machine-readable outcomes](docs/data/epfl-precision.json)
 
+### DNA-PAINT palette
+
+The palette compares 18 imager dyes within three excitation channels on DNA origami and nuclear pore complexes. Each measurement links to a workbook cell and each recomputed value to a set of deposited Picasso localization tables. In the browser, choose a channel, specimen, metric and dye. Open **Source agreement** to see where the reanalysis differs. The NPC evaluation selects two dyes using repeats 1 and 2 and measures their mean NeNA on repeat 3. Its fixed baseline uses the historical NPC ranks. The test unit is a dye acquisition. [Open the palette](https://kangk1204.github.io/blink-atlas/#dna-paint) · [Frozen decision protocol](analysis/palette-protocol.md) · [Steen et al.](https://doi.org/10.1038/s41592-024-02374-8)
+
+The complete archive has 1,167 files, including 575 HDF5 tables. The two 18-dye panels use 435 of those tables and their 435 YAML sidecars. The analysis covers 108 principal dye/specimen/repeat groups plus an additional Cy3B group that duplicates a reference acquisition. All 653 reported repeat cells have corresponding raw-table estimates, and all 432 workbook means and SDs reproduce from the workbook repeats. Some HDF5 estimates differ from the published cells. For JF585 NPC repeat 3, the deposited target and historical Picasso implementation give 4.3674 nm, and the workbook reports 19.9 nm. The cause is unresolved. [Archive inventory](docs/data/palette-manifest.json) · [Per-metric agreement](docs/data/palette-audit.json) · [Source identity and fit checks](analysis/palette-raw.md#two-nena-discrepancies)
+
+On the tuning repeat, weights 0 and 0.5 tied. The prespecified rule chose 0, so the selected pairs matched the NPC-only baseline in all three channels. Relative to the best two dyes observed in each held-out channel, both policies averaged 0.3182 nm additional NeNA in the HDF5 reanalysis and 0.0633 nm in the separate workbook replay. The display withholds a new pair recommendation. [Held-out results and individual pairs](docs/data/palette-evaluation.json)
+
+For a small replay, the two source workbooks and all computed JSON are included. Install `openpyxl==3.1.5` with Python 3.11 or later and run these commands at the repository root.
+
+```sh
+python -m analysis.palette_catalog
+python -m analysis.palette_audit
+python -m analysis.palette_evaluation
+```
+
+For a complete reanalysis, fetch the 38,156,495,377-byte archive to a POSIX data volume with room for both the RAR and its contents. Use Python 3.11 or later with `libarchive-c==5.3`, `rarfile==4.2`, a system libarchive with RAR5 support and h5py for inventory. The fetch command verifies Zenodo's MD5 and can resume from its range journal. The manifest records each extracted file's path, byte size, CRC32 and SHA-256, plus dataset shape and field names for HDF5. Then run the panel fitter with the environment in the raw analysis guide, followed by the three replay commands above. [Raw fitter, definitions and dependency versions](analysis/palette-raw.md) · [Source archive and license](https://zenodo.org/records/10960858)
+
+```sh
+python -m analysis.palette_archive fetch /data/blink-palette
+python -m analysis.palette_archive extract /data/blink-palette
+python -m analysis.palette_archive inventory /data/blink-palette --output docs/data/palette-manifest.json
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m analysis.palette_raw_run \
+  --root /data/blink-palette/extracted --index docs/data/palette-manifest.json \
+  --cache /data/blink-palette/case-cache --workers 4 --output docs/data/palette-raw.json
+```
+
 ### Original comparison and recording
 
 The static site is served from `docs/`. Start a local preview with `python -m http.server 8000 --directory docs`, then open `http://localhost:8000`. The published site uses the same files.

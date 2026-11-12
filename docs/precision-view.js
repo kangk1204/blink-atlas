@@ -21,6 +21,17 @@ function links(...items) {
   bar.append(...items);
   return bar;
 }
+function saveButton(label, filename, value) {
+  const button=node('button',label,'text-button');
+  button.type='button';
+  button.onclick=()=>{
+    const blob=new Blob([JSON.stringify(value,null,2)+'\n'],{type:'application/json'});
+    const url=URL.createObjectURL(blob), a=node('a');
+    a.href=url; a.download=filename; document.body.append(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  };
+  return button;
+}
 function card(kicker, title) {
   const el = node('article', undefined, 'card ev-card');
   el.append(node('div', kicker, 'eyebrow'), node('h2', title));
@@ -52,7 +63,7 @@ function publicResults(evidence) {
   const h = evidence.holland, f = evidence.s21, model = node('article', undefined, 'card ev-status');
   model.id = 'fixed-comparison';
   model.append(node('h2','Low-density JF639b versus JF630b remains unresolved'),
-    node('p','The public sources examined contain no matched, density-calibrated fixed COS-7 fields for this pair. The dye comparison predicts isolated emissions. Establishing the 20 nm yield requires the same field-area, duration and uncertainty definition for both dyes.'),
+    node('p','The public sources examined contain no matched, density-calibrated fixed COS-7 fields for this pair. The two measurements below use different samples and uncertainty definitions. An observed yield comparison requires calibrated field areas, equal acquisition times and the same uncertainty definition.'),
     links(link('Inspect the source search ↗',repo+'validation/h2b_precision/README.md'),link('Open modeled yields →','#compare')));
   const columns = node('div', undefined, 'ev-columns');
   const fixed = card('FIXED COS-7 · HOLLAND ET AL.', 'JF630b histogram');
@@ -67,7 +78,8 @@ function publicResults(evidence) {
     node('p',number(f.counts.qualified)+' of '+number(f.counts.roi_valid_window)+' localizations have positive fitted uncertainties of at most 20 nm in both x and y.'),
     bar(f.result.fraction),
     node('p','The full '+number(f.denominators.frames)+'-frame field covers '+format(f.denominators.area_um2)+' µm² in an estimated '+format(f.denominators.elapsed_s)+' s. Yield was '+format(f.result.per_um2)+' localizations/µm², or '+format(f.result.per_um2_s,5)+'/µm²/s. The pixel calibration is '+number(f.acquisition.pixel_size_nm)+' nm.','footnote'),
-    links(link('Open S21 source ↗',evidence.source.url),link('View the recording →','#pilot')));
+    links(link('Open S21 source ↗',evidence.source.url),link('View the recording →','#pilot'),
+      saveButton('↓ S21 field JSON','s21-precision-field.json',f)));
   columns.append(fixed, live);
   return [model, columns];
 }
@@ -188,7 +200,8 @@ function importer() {
             if(!a.value || !b.value || a.value===b.value){result.replaceChildren(node('p','Select two distinct dyes from the loaded fields.'));return;}
             const fields=objects.filter(f=>[a.value,b.value].includes(f.acquisition.reference_dye));
             const comparison=compareFields(fields,[a.value,b.value]);
-            result.replaceChildren(displayComparison(comparison));
+            result.replaceChildren(displayComparison(comparison),
+              saveButton('↓ Export comparison JSON','precision-comparison.json',comparison));
           };
           a.onchange=paint; b.onchange=paint; paint();
         }
