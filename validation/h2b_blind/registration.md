@@ -1,0 +1,27 @@
+# Independent fixed H2B–HaloTag test
+
+Registered 12 November 2026 before obtaining any independent matched cellular outcomes. The frozen training set, methods and eligibility interval are from [release 8edc8bf](https://github.com/kangk1204/blink-atlas/tree/8edc8bfdbe8ee51cf5d6f2907353f831f974507c). The primary response is the mean ON:OFF dwell-time ratio of a new ligand on H2B–HaloTag in paraformaldehyde-fixed COS-7 cells.
+
+## First conditional forecast
+
+Tyson and colleagues report a free-parent pKcycl of **3.2** for **Cal664sb**, a hydroxymethyl Si-rhodamine outside the six-dye training set. Figure 3b gives the numerical value and Figure 3e shows its absorbance titration in 0.2 M sodium phosphate at room temperature. This input lies between JF635b (2.95) and JF639b (3.97). The authors' cellular HaloTag conjugate was Yale676sb-CA. We have located neither a Cal664sb HaloTag acquisition on fixed H2B nor a matched-buffer parent titration. The following forecasts assume a corresponding Cal664sb HaloTag ligand and the Holland imaging protocol. [Tyson et al.](https://doi.org/10.1021/acscentsci.1c00670) · [Published Figure 3](https://pmc-oa-opendata.s3.amazonaws.com/PMC8393207.1/oc1c00670_0003.jpg) · [Holland et al., methods](https://doi.org/10.1038/s41592-026-03062-5)
+
+| Method fixed before the cellular outcome | Predicted mean ON:OFF |
+|---|---:|
+| Local interpolation on the log₁₀ scale | 0.000579845004467 |
+| Nearest free-parent pKa, JF635b | 0.000483915 |
+| Original six-dye log-linear regression | 0.000429728198699 |
+
+Under absolute log₁₀ error, adjacent predictions are equally close at their geometric mean. For this fixed input, local interpolation is closest above **0.000529712842337**, nearest pKa is closest between **0.000456017457202** and **0.000529712842337**, and the regression is closest below **0.000456017457202**. Exact boundaries give ties. These thresholds describe the three forecasts. They are not measured dye properties.
+
+The literature-input forecast is a separate cross-buffer experiment. Preserve it even if a laboratory remeasures Cal664sb. Before viewing any cellular outcomes, lock a second, primary prediction using the free-parent pKa measured in the Holland buffer series. Keep each parent's result in its prespecified arm and count a given parent only once per arm. The current number of measured independent fixed H2B test dyes is zero.
+
+## Blinded primary panel
+
+1. A sample custodian checks each parent's structure and aliases against the nine Holland dyes, assigns one blinded ID per distinct new parent, and keeps the identity key and cellular results separately. Include all nominated dyes and record pKa-related abstentions. The predictors receive IDs and independently measured free-parent pKa only. Use the HCl/KCl and citrate/phosphate titration series in the Holland methods. A monotonic, within-range pKa of 1.22–4.48 is required for interpolation.
+2. Before the custodian releases fluorescence measurements, freeze all three predictions, controls, the full roster denominator and the lock's SHA-256 in a dated lab record or version-controlled receipt. Existing measurements can be blind to the analyst if a separate custodian has withheld the outcomes. Provenance and timing of the actual exchange belong in the lab record.
+3. Confirm the native HaloTag conjugate and assay. Follow Holland's fixed COS-7 H2B imaging and blink extraction. ON movies use 20,000 frames at 2 ms exposure and 3 ms cycle time. Sparse OFF movies use 100,000 frames at 25 ms exposure and 27 ms cycle time. Use 647 nm dye excitation, 100 nm grouping and five-frame ON gap closing. Record excitation, fiduciary channel, localization thresholds, labeling regime, instrument and any deviations with the acquisition. Randomize the analogue and its bracketing references within preparation days. OFF times under sparse labeling are upper-bound estimates. [Original acquisition and processing](https://doi.org/10.1038/s41592-026-03062-5)
+4. For each new dye collect three independent preparations. Supply the mean ON and OFF times with explicit units for each preparation and the source locator. Score their arithmetic mean of within-preparation ratios. The independent comparison unit is the parent dye. A missing acquisition or outside-range dye stays in the enrollment denominator. Retain the signed error differences, ties and all non-evaluable cases.
+5. Compare local interpolation against **both** nearest pKa and the frozen global regression on identical dyes using absolute log₁₀ error. A positive paired difference means the local model was closer. Report both means, per-dye results and paired-dye bootstrap intervals. A single dye can distinguish the three predictions for that dye. A model-level advantage requires independent matched dyes, gains against both comparators and uncertainty consistent with those gains. A further independent batch or laboratory is needed for a state-of-the-art claim.
+
+Protein-bound pKa is optional for a future feature study. Holland et al. report that HaloTag was unstable at the low pH needed for these dyes. Measure the primary free-parent pKa regardless. Use a bound titration only over a demonstrated protein-stable transition, with independent binding or activity controls. If the midpoint is inaccessible, record it as unavailable and keep the primary study evaluable. [Holland et al., spectral measurements](https://doi.org/10.1038/s41592-026-03062-5)
