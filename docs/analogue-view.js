@@ -14,7 +14,7 @@ function link(text, href) {
   const node = el('a', text); node.href = href; return node;
 }
 async function load(name) {
-  const res = await fetch('data/' + name + '.json');
+  const res = await fetch('data/' + name + '.json?v=blind-h2b-1');
   if (!res.ok) throw new Error('Could not read ' + name + ' (' + res.status + ').');
   return res.json();
 }
@@ -108,8 +108,11 @@ function show(set, meta, matchedSource) {
         ' to ' + signed(s.omitOneRange[1]) + '. The leave-one-dye-out fits share training data.';
     }
     $('uncertainty').textContent = uncertainty;
-    $('original').textContent = 'The original regression beat nearest pKa for ' + s.regressionVsNearest.wins +
-      ' of ' + s.scored + ' dyes. Its mean improvement was ' + signed(s.regressionVsNearest.delta) + '.';
+    const comparison = s.localVsRegression;
+    $('original').textContent = 'Against the original regression, local interpolation had ' + comparison.wins +
+      ' wins, ' + comparison.ties + ' ties and ' + comparison.losses + ' losses. Its mean improvement was ' +
+      signed(comparison.delta) + (comparison.pairedBootstrap95 ? ' (paired 95% interval ' +
+        comparison.pairedBootstrap95.map(signed).join(' to ') + ').' : '.');
   } else {
     $('contrast').textContent = set.mode === 'primary'
       ? 'A gain in the fixed H2B assay remains unconfirmed.'
@@ -142,11 +145,19 @@ function showTitrations(analysis, source) {
 }
 
 export async function renderAnalogueBenchmark(root) {
-  const [result, meta] = await Promise.all([load('analogue-benchmark'), load('analogue-studies')]);
+  const [result, meta, challenge] = await Promise.all([load('analogue-benchmark'), load('analogue-studies'),
+    load('h2b-cal664sb-lock')]);
   root.innerHTML = `
     <article class="card unseen-headline"><div><div class="eyebrow">PRIMARY ASSAY · FIXED H2B–HALOTAG</div>
       <h2 id="unseen-gate"></h2><p id="unseen-counts"></p></div>
       <a class="button secondary" href="https://github.com/kangk1204/blink-atlas/blob/main/analysis/analogue-benchmark.md">Protocol &amp; development plan ↗</a></article>
+    <article class="card unseen-audit"><div class="eyebrow">REGISTERED FORECAST · AWAITING MEASUREMENT</div>
+      <h2>Cal664sb on H2B–HaloTag</h2>
+      <p id="unseen-challenge-input"></p>
+      <div class="table-wrap"><table><thead><tr><th>Local interpolation</th><th>Nearest pKa</th><th>Original regression</th></tr></thead>
+      <tbody id="unseen-challenge-predictions"></tbody></table></div><p id="unseen-challenge-boundary"></p>
+      <div class="unseen-links"><a id="unseen-registration">Dated registration ↗</a><a href="data/h2b-cal664sb-lock.json" download>Download locked forecasts</a>
+      <a id="unseen-challenge-figure">Source titration ↗</a><a href="https://github.com/kangk1204/blink-atlas/tree/main/validation/h2b_blind">Run an independent panel ↗</a></div></article>
     <div class="card unseen-selectors"><label>Test specimen<select id="unseen-assay"></select></label>
       <label>Training data<select id="unseen-training"></select></label><p id="unseen-scope"></p></div>
     <div class="unseen-grid">
@@ -177,6 +188,14 @@ export async function renderAnalogueBenchmark(root) {
         <a href="data/analogue-benchmark.json" download>Download all predictions (JSON)</a><a id="unseen-freeze">Frozen evaluation protocol ↗</a>
         <a href="#probe-design">Lock a new H2B prediction →</a></div></article>`;
   const primary = result.sets.find(s => s.mode === 'primary');
+  const candidate = challenge.dyes[0];
+  $('challenge-input').textContent = 'Tyson et al. measured a free-parent pKcycl of ' + candidate.pKa +
+    ' in sodium phosphate. These conditional mean ON:OFF predictions use that value. A new titration in the Holland buffer and a matched cellular acquisition are still needed for the primary test.';
+  $('challenge-predictions').replaceChildren(row(Object.keys(labels).map(k => small(candidate.predictions[k]))));
+  $('challenge-boundary').textContent = 'At this input, local interpolation beats both baselines if the observed mean ON:OFF exceeds ' +
+    small(challenge.equalErrorBoundaries[1].ratio) + '. A single dye tests this forecast for that dye.';
+  $('challenge-figure').href = challenge.source.figure;
+  $('registration').href = 'https://github.com/kangk1204/blink-atlas/blob/' + challenge.registrationRevision + '/validation/h2b_blind/registration.md';
   $('gate').textContent = primary.summary.scored ? result.primaryVerdict : 'Independent H2B validation is still open';
   $('counts').textContent = result.uniqueExternalDyes + ' additional parent dyes, ' + result.externalConditions + ' dye–condition measurements from three public studies. ' +
     primary.summary.scored + ' new dyes scored under the matched H2B protocol.';

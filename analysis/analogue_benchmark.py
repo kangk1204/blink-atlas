@@ -90,7 +90,7 @@ def summarize(rows, independent):
     valid = [r for r in rows if r["status"] == "scored"]
     result = {"total": len(rows), "scored": len(valid), "mae": None, "delta": None, "wins": 0,
               "ties": 0, "losses": 0, "omitOneRange": None, "pairedBootstrap95": None,
-              "regressionVsNearest": None}
+              "regressionVsNearest": None, "localVsRegression": None}
     if not valid:
         return result
     differences = [r["delta"] for r in valid]
@@ -107,7 +107,29 @@ def summarize(rows, independent):
     result["regressionVsNearest"] = {"delta": published(mean(regression_delta)),
                                      "wins": sum(d > 1e-12 for d in regression_delta),
                                      "pairedBootstrap95": uncertainty(regression_delta) if independent else None}
+    gains = [r["errors"]["regression"] - r["errors"]["local"] for r in valid]
+    wins = sum(d > 1e-12 for d in gains)
+    losses = sum(d < -1e-12 for d in gains)
+    result["localVsRegression"] = {"delta": published(mean(gains)), "wins": wins, "losses": losses,
+                                   "ties": len(gains)-wins-losses,
+                                   "pairedBootstrap95": uncertainty(gains) if independent else None}
     return result
+
+
+def primary_verdict(summary):
+    nearest = summary["pairedBootstrap95"]
+    regression = (summary["localVsRegression"] or {}).get("pairedBootstrap95")
+    if nearest and regression and min(nearest[0], regression[0]) > 0:
+        return "independent review warranted"
+    return "advantage unconfirmed"
+
+
+def score_predictions(predictions, observed):
+    if number(observed) <= 0:
+        raise ValueError("Expected a positive measured ratio")
+    errors = {m: published(abs(log10(y) - log10(observed))) for m, y in predictions.items()}
+    return {"errors": errors, "delta": published(errors["nearest"]-errors["local"]),
+            "deltaVsRegression": published(errors["regression"]-errors["local"])}
 
 
 def benchmark(key, name, study, mode, targets, reference=None, exclusion=""):
@@ -129,8 +151,7 @@ def benchmark(key, name, study, mode, targets, reference=None, exclusion=""):
         if "measurement" in held:
             row["measurement"] = held["measurement"]
         if result["status"] == "scored":
-            errors = {m: published(abs(log10(y) - log10(held["ratio"]))) for m,y in result["predictions"].items()}
-            row.update(errors=errors, delta=published(errors["nearest"]-errors["local"]))
+            row.update(score_predictions(result["predictions"], held["ratio"]))
         rows.append(row)
     return {"id": key, "label": name, "study": study, "mode": mode, "rows": rows,
             "summary": summarize(rows, independent=(reference is not None))}
@@ -260,15 +281,12 @@ def build(directory=DATA, matched=None):
             if study == "zheng" and mode == "transfer-local":
                 titrations.append(compare_titrations(group, item))
     identities = {r["id"] for group in public.values() for r in group}
-    summary = primary["summary"]
-    interval = summary["pairedBootstrap95"]
-    gate = "independent review warranted" if interval and interval[0] > 0 else "advantage unconfirmed"
     return {"schema": "blink-atlas/analogue-benchmark/1", "method": METHOD_ID,
             "frozenRevision": meta["frozenRevision"], "sourceHashes": {"observations": digest(csv_file),
                 "studies": digest(metadata_file), "hollandWorkbook": catalog["calibration"]["sourceSha256"]},
             "uniqueExternalDyes": len(identities), "externalConditions": sum(len(g) for g in public.values()),
             "matchedSource": source, "matchedProtocol": protocol, "matchedPanelSha256": digest(matched) if matched else None,
-            "primaryVerdict": gate, "sets": sets,
+            "primaryVerdict": primary_verdict(primary["summary"]), "sets": sets,
             "exploratoryTitrations": {"study": "zheng", "status": "post hoc, within-assay",
                                       "endpoint": "whole-recording occupancy odds", "byPower": titrations}}
 

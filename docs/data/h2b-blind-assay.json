@@ -1,0 +1,24 @@
+{
+  "study": "",
+  "acquisitionRef": "",
+  "independentAcquisition": null,
+  "identitiesReviewedAgainstHolland": null,
+  "outcomesWithheldUntilLock": null,
+  "illuminationAndDetectionMatched": null,
+  "freeParentTitrationsMatchHolland": null,
+  "actualProtocol": {
+    "cellLine": null,
+    "target": null,
+    "fixation": null,
+    "dyeExcitationNm": null,
+    "onExposureMs": null,
+    "onCycleMs": null,
+    "onFrames": null,
+    "offExposureMs": null,
+    "offCycleMs": null,
+    "offFrames": null,
+    "offLabeling": null,
+    "onGapFrames": null,
+    "groupingRadiusNm": null
+  }
+}

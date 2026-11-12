@@ -4,7 +4,7 @@
   "frozenRevision": "33951f380301398a0f5e6bfff3d1a1dcca232b98",
   "sourceHashes": {
     "observations": "fc57ecdcaa5fb1e4c49eb60ac79561575434897d23a65f759f139203ec51411e",
-    "studies": "35316ca8851029376752bbaff7e6d49d127eaa7dd633fee584891d9fd24e5dfc",
+    "studies": "e3507e4f0d74fdbdc0afaf329f31082542e3e83a29247b2a249530fc029cee62",
     "hollandWorkbook": "1e26a58d558f7d96518aca0264b0efed6e5574b67ba5f18899965802fedf5031"
   },
   "uniqueExternalDyes": 11,
@@ -30,7 +30,8 @@
         "losses": 0,
         "omitOneRange": null,
         "pairedBootstrap95": null,
-        "regressionVsNearest": null
+        "regressionVsNearest": null,
+        "localVsRegression": null
       }
     },
     {
@@ -94,7 +95,8 @@
             "nearest": 0.0273606615413,
             "regression": 0.243149014813
           },
-          "delta": -0.0612171540111
+          "delta": -0.0612171540111,
+          "deltaVsRegression": 0.154571199261
         },
         {
           "id": "JF635b",
@@ -133,7 +135,8 @@
             "nearest": 0.54017931078,
             "regression": 0.143209470392
           },
-          "delta": 0.229089647332
+          "delta": 0.229089647332,
+          "deltaVsRegression": -0.167880193056
         },
         {
           "id": "JF630b",
@@ -172,7 +175,8 @@
             "nearest": 0.148631391012,
             "regression": 0.392013389356
           },
-          "delta": -0.027462263107
+          "delta": -0.027462263107,
+          "deltaVsRegression": 0.215919735237
         },
         {
           "id": "JF629b",
@@ -211,7 +215,8 @@
             "nearest": 0.148631391012,
             "regression": 0.492469916471
           },
-          "delta": -0.077000340161
+          "delta": -0.077000340161,
+          "deltaVsRegression": 0.266838185298
         },
         {
           "id": "JF626b",
@@ -252,6 +257,13 @@
         "regressionVsNearest": {
           "delta": -0.101509759172,
           "wins": 1,
+          "pairedBootstrap95": null
+        },
+        "localVsRegression": {
+          "delta": 0.117362231685,
+          "wins": 3,
+          "losses": 1,
+          "ties": 0,
           "pairedBootstrap95": null
         }
       }
@@ -300,7 +312,8 @@
             "nearest": 0.340964648815,
             "regression": 0.00949516343089
           },
-          "delta": 0.058397763327
+          "delta": 0.058397763327,
+          "deltaVsRegression": -0.273071722057
         },
         {
           "id": "remmel-2",
@@ -340,7 +353,8 @@
             "nearest": 0.412978844926,
             "regression": 0.236012478017
           },
-          "delta": 0.015708567144
+          "delta": 0.015708567144,
+          "deltaVsRegression": -0.161257799765
         },
         {
           "id": "remmel-3",
@@ -380,7 +394,8 @@
             "nearest": 0.0399859602194,
             "regression": 0.0692499781844
           },
-          "delta": -0.0107296711941
+          "delta": -0.0107296711941,
+          "deltaVsRegression": 0.0185343467709
         },
         {
           "id": "remmel-4",
@@ -420,7 +435,8 @@
             "nearest": 0.435936567456,
             "regression": 0.515639607458
           },
-          "delta": -0.005364835597
+          "delta": -0.005364835597,
+          "deltaVsRegression": 0.074338204405
         },
         {
           "id": "remmel-5",
@@ -488,6 +504,16 @@
             -0.0544835289835,
             0.254217926147
           ]
+        },
+        "localVsRegression": {
+          "delta": -0.0853642426616,
+          "wins": 2,
+          "losses": 2,
+          "ties": 0,
+          "pairedBootstrap95": [
+            -0.217164760911,
+            0.0464362755879
+          ]
         }
       },
       "condition": "IgG"
@@ -553,7 +579,8 @@
             "nearest": 0.372992884706,
             "regression": 0.518481745342
           },
-          "delta": 0.077368301852
+          "delta": 0.077368301852,
+          "deltaVsRegression": 0.222857162488
         },
         {
           "id": "remmel-3",
@@ -592,7 +619,8 @@
             "nearest": 0.503283189217,
             "regression": 0.23010850511
           },
-          "delta": 0.400039077225
+          "delta": 0.400039077225,
+          "deltaVsRegression": 0.126864393118
         },
         {
           "id": "remmel-4",
@@ -631,7 +659,8 @@
             "nearest": 0.503283189217,
             "regression": 0.240666031167
           },
-          "delta": 0.276090262427
+          "delta": 0.276090262427,
+          "deltaVsRegression": 0.013473104377
         },
         {
           "id": "remmel-5",
@@ -670,7 +699,8 @@
             "nearest": 0.062044490989,
             "regression": 0.177938189106
           },
-          "delta": 0.0362726959318
+          "delta": 0.0362726959318,
+          "deltaVsRegression": 0.152166394049
         },
         {
           "id": "remmel-6",
@@ -711,6 +741,13 @@
         "regressionVsNearest": {
           "delta": 0.068602320851,
           "wins": 2,
+          "pairedBootstrap95": null
+        },
+        "localVsRegression": {
+          "delta": 0.128840263508,
+          "wins": 4,
+          "losses": 0,
+          "ties": 0,
           "pairedBootstrap95": null
         }
       },
@@ -760,7 +797,8 @@
             "nearest": 0.780287568161,
             "regression": 0.70058452816
           },
-          "delta": 0.005364835597
+          "delta": 0.005364835597,
+          "deltaVsRegression": -0.074338204404
         }
       ],
       "summary": {
@@ -780,6 +818,13 @@
         "regressionVsNearest": {
           "delta": 0.079703040001,
           "wins": 1,
+          "pairedBootstrap95": null
+        },
+        "localVsRegression": {
+          "delta": -0.074338204404,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
           "pairedBootstrap95": null
         }
       },
@@ -810,7 +855,8 @@
         "losses": 0,
         "omitOneRange": null,
         "pairedBootstrap95": null,
-        "regressionVsNearest": null
+        "regressionVsNearest": null,
+        "localVsRegression": null
       },
       "condition": "HaloTag7"
     },
@@ -858,7 +904,8 @@
             "nearest": 0.300897503943,
             "regression": 0.380600543944
           },
-          "delta": -0.005364835597
+          "delta": -0.005364835597,
+          "deltaVsRegression": 0.074338204404
         }
       ],
       "summary": {
@@ -878,6 +925,13 @@
         "regressionVsNearest": {
           "delta": -0.079703040001,
           "wins": 0,
+          "pairedBootstrap95": null
+        },
+        "localVsRegression": {
+          "delta": 0.074338204404,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
           "pairedBootstrap95": null
         }
       },
@@ -908,7 +962,8 @@
         "losses": 0,
         "omitOneRange": null,
         "pairedBootstrap95": null,
-        "regressionVsNearest": null
+        "regressionVsNearest": null,
+        "localVsRegression": null
       },
       "condition": "Nanobody"
     },
@@ -1009,7 +1064,8 @@
         "losses": 0,
         "omitOneRange": null,
         "pairedBootstrap95": null,
-        "regressionVsNearest": null
+        "regressionVsNearest": null,
+        "localVsRegression": null
       },
       "condition": "500"
     },
@@ -1054,7 +1110,8 @@
             "nearest": 0.274163270353,
             "regression": 0.0474897224326
           },
-          "delta": 0.182188896959
+          "delta": 0.182188896959,
+          "deltaVsRegression": -0.0444846509612
         },
         {
           "id": "srhb",
@@ -1091,7 +1148,8 @@
             "nearest": 0.215469390228,
             "regression": 0.425318457455
           },
-          "delta": -0.073301273184
+          "delta": -0.073301273184,
+          "deltaVsRegression": 0.136547794043
         },
         {
           "id": "pysrh",
@@ -1146,6 +1204,13 @@
         "regressionVsNearest": {
           "delta": 0.0084122403467,
           "wins": 1,
+          "pairedBootstrap95": null
+        },
+        "localVsRegression": {
+          "delta": 0.0460315715409,
+          "wins": 1,
+          "losses": 1,
+          "ties": 0,
           "pairedBootstrap95": null
         }
       },
@@ -1248,7 +1313,8 @@
         "losses": 0,
         "omitOneRange": null,
         "pairedBootstrap95": null,
-        "regressionVsNearest": null
+        "regressionVsNearest": null,
+        "localVsRegression": null
       },
       "condition": "1000"
     },
@@ -1293,7 +1359,8 @@
             "nearest": 0.126700582762,
             "regression": 0.121920015263
           },
-          "delta": 0.0541957862407
+          "delta": 0.0541957862407,
+          "deltaVsRegression": 0.0494152187417
         },
         {
           "id": "srhb",
@@ -1330,7 +1397,8 @@
             "nearest": 0.408663874065,
             "regression": 0.54425201063
           },
-          "delta": -0.064645093601
+          "delta": -0.064645093601,
+          "deltaVsRegression": 0.070943042964
         },
         {
           "id": "pysrh",
@@ -1385,6 +1453,13 @@
         "regressionVsNearest": {
           "delta": -0.065403784533,
           "wins": 1,
+          "pairedBootstrap95": null
+        },
+        "localVsRegression": {
+          "delta": 0.0601791308528,
+          "wins": 2,
+          "losses": 0,
+          "ties": 0,
           "pairedBootstrap95": null
         }
       },
@@ -1487,7 +1562,8 @@
         "losses": 0,
         "omitOneRange": null,
         "pairedBootstrap95": null,
-        "regressionVsNearest": null
+        "regressionVsNearest": null,
+        "localVsRegression": null
       },
       "condition": "1500"
     },
@@ -1532,7 +1608,8 @@
             "nearest": 0.139618078722,
             "regression": 0.141352075701
           },
-          "delta": 0.0512561365407
+          "delta": 0.0512561365407,
+          "deltaVsRegression": 0.0529901335197
         },
         {
           "id": "srhb",
@@ -1569,7 +1646,8 @@
             "nearest": 0.473078227453,
             "regression": 0.587987156823
           },
-          "delta": -0.043738665208
+          "delta": -0.043738665208,
+          "deltaVsRegression": 0.071170264162
         },
         {
           "id": "pysrh",
@@ -1624,6 +1702,13 @@
         "regressionVsNearest": {
           "delta": -0.0583214631745,
           "wins": 0,
+          "pairedBootstrap95": null
+        },
+        "localVsRegression": {
+          "delta": 0.0620801988409,
+          "wins": 2,
+          "losses": 0,
+          "ties": 0,
           "pairedBootstrap95": null
         }
       },
@@ -1726,7 +1811,8 @@
         "losses": 0,
         "omitOneRange": null,
         "pairedBootstrap95": null,
-        "regressionVsNearest": null
+        "regressionVsNearest": null,
+        "localVsRegression": null
       },
       "condition": "2000"
     },
@@ -1771,7 +1857,8 @@
             "nearest": 0.125813448852,
             "regression": 0.128511766351
           },
-          "delta": 0.0467257862822
+          "delta": 0.0467257862822,
+          "deltaVsRegression": 0.0494241037812
         },
         {
           "id": "srhb",
@@ -1808,7 +1895,8 @@
             "nearest": 0.424858288093,
             "regression": 0.547050127604
           },
-          "delta": -0.05427281642
+          "delta": -0.05427281642,
+          "deltaVsRegression": 0.067919023091
         },
         {
           "id": "pysrh",
@@ -1864,6 +1952,13 @@
           "delta": -0.062445078505,
           "wins": 0,
           "pairedBootstrap95": null
+        },
+        "localVsRegression": {
+          "delta": 0.0586715634361,
+          "wins": 2,
+          "losses": 0,
+          "ties": 0,
+          "pairedBootstrap95": null
         }
       },
       "condition": "2000"
@@ -1904,7 +1999,8 @@
         "losses": 0,
         "omitOneRange": null,
         "pairedBootstrap95": null,
-        "regressionVsNearest": null
+        "regressionVsNearest": null,
+        "localVsRegression": null
       },
       "condition": "Glass"
     },
@@ -1933,7 +2029,8 @@
         "losses": 0,
         "omitOneRange": null,
         "pairedBootstrap95": null,
-        "regressionVsNearest": null
+        "regressionVsNearest": null,
+        "localVsRegression": null
       },
       "condition": "Glass"
     }
@@ -1997,7 +2094,8 @@
                 "nearest": 0.274163270353,
                 "regression": 0.0474897224326
               },
-              "delta": 0.182188896959
+              "delta": 0.182188896959,
+              "deltaVsRegression": -0.0444846509612
             },
             "bound": {
               "id": "stmr",
@@ -2034,7 +2132,8 @@
                 "nearest": 0.215469390228,
                 "regression": 0.286339057941
               },
-              "delta": 0.073069825516
+              "delta": 0.073069825516,
+              "deltaVsRegression": 0.143939493229
             }
           },
           {
@@ -2076,7 +2175,8 @@
                 "nearest": 0.215469390228,
                 "regression": 0.425318457455
               },
-              "delta": -0.073301273184
+              "delta": -0.073301273184,
+              "deltaVsRegression": 0.136547794043
             },
             "bound": {
               "id": "srhb",
@@ -2113,7 +2213,8 @@
                 "nearest": 0.489632660581,
                 "regression": 0.378323224108
               },
-              "delta": 0.053702083882
+              "delta": 0.053702083882,
+              "deltaVsRegression": -0.057607352591
             }
           },
           {
@@ -2246,7 +2347,8 @@
                 "nearest": 0.126700582762,
                 "regression": 0.121920015263
               },
-              "delta": 0.0541957862407
+              "delta": 0.0541957862407,
+              "deltaVsRegression": 0.0494152187417
             },
             "bound": {
               "id": "stmr",
@@ -2283,7 +2385,8 @@
                 "nearest": 0.408663874065,
                 "regression": 0.164296426356
               },
-              "delta": 0.403142412255
+              "delta": 0.403142412255,
+              "deltaVsRegression": 0.158774964546
             }
           },
           {
@@ -2325,7 +2428,8 @@
                 "nearest": 0.408663874065,
                 "regression": 0.54425201063
               },
-              "delta": -0.064645093601
+              "delta": -0.064645093601,
+              "deltaVsRegression": 0.070943042964
             },
             "bound": {
               "id": "srhb",
@@ -2362,7 +2466,8 @@
                 "nearest": 0.535364456827,
                 "regression": 0.467410412425
               },
-              "delta": 0.024817639921
+              "delta": 0.024817639921,
+              "deltaVsRegression": -0.043136404481
             }
           },
           {
@@ -2495,7 +2600,8 @@
                 "nearest": 0.139618078722,
                 "regression": 0.141352075701
               },
-              "delta": 0.0512561365407
+              "delta": 0.0512561365407,
+              "deltaVsRegression": 0.0529901335197
             },
             "bound": {
               "id": "stmr",
@@ -2532,7 +2638,8 @@
                 "nearest": 0.473078227453,
                 "regression": 0.0711066324912
               },
-              "delta": 0.368866823115
+              "delta": 0.368866823115,
+              "deltaVsRegression": -0.0331047718468
             }
           },
           {
@@ -2574,7 +2681,8 @@
                 "nearest": 0.473078227453,
                 "regression": 0.587987156823
               },
-              "delta": -0.043738665208
+              "delta": -0.043738665208,
+              "deltaVsRegression": 0.071170264162
             },
             "bound": {
               "id": "srhb",
@@ -2611,7 +2719,8 @@
                 "nearest": 0.612696306174,
                 "regression": 0.552571669899
               },
-              "delta": 0.02734787109
+              "delta": 0.02734787109,
+              "deltaVsRegression": -0.032776765185
             }
           },
           {
@@ -2744,7 +2853,8 @@
                 "nearest": 0.125813448852,
                 "regression": 0.128511766351
               },
-              "delta": 0.0467257862822
+              "delta": 0.0467257862822,
+              "deltaVsRegression": 0.0494241037812
             },
             "bound": {
               "id": "stmr",
@@ -2781,7 +2891,8 @@
                 "nearest": 0.424858288093,
                 "regression": 0.120532134164
               },
-              "delta": 0.384594332421
+              "delta": 0.384594332421,
+              "deltaVsRegression": 0.0802681784918
             }
           },
           {
@@ -2823,7 +2934,8 @@
                 "nearest": 0.424858288093,
                 "regression": 0.547050127604
               },
-              "delta": -0.05427281642
+              "delta": -0.05427281642,
+              "deltaVsRegression": 0.067919023091
             },
             "bound": {
               "id": "srhb",
@@ -2860,7 +2972,8 @@
                 "nearest": 0.550671736945,
                 "regression": 0.488517288876
               },
-              "delta": 0.024643871425
+              "delta": 0.024643871425,
+              "deltaVsRegression": -0.037510576644
             }
           },
           {

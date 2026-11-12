@@ -44,6 +44,11 @@
     }
   },
   "screened": [
+    {"label":"Tyson et al., Cal664sb, Fig. 3b/e", "url":"https://doi.org/10.1021/acscentsci.1c00670", "reason":"An additional in-range parent input, pKcycl 3.2 in sodium phosphate. No matched fixed-H2B response identified. Its dated conditional forecast is separate from the measured test rows."},
+    {"label":"Self-blinking dye on nanobodies", "url":"https://doi.org/10.1021/acs.nanolett.6c02799", "reason":"Studies JF635b on nanobodies. The parent was used in training and the labeling context differs."},
+    {"label":"Single-step expansion SMLM", "url":"https://doi.org/10.1021/cbmi.6c00054", "reason":"JF635b is a training dye. The nuclear-pore measurements are in expanded material."},
+    {"label":"Physicochemical interactions from fluorescence blinking", "url":"https://doi.org/10.1021/acs.jpclett.6c00001", "reason":"Uses blinking descriptors to predict peptide properties. The prediction target differs from the fixed-H2B dye time ratio."},
+    {"label":"Lysosome-directed HMSiR680 and HMSiR680-Me", "url":"https://doi.org/10.1021/acscentsci.3c01173", "reason":"Measured free-dye midpoints are 5.0 and 6.2. Both lie above the Holland range. The cellular readout concerns acidic organelles."},
     {"label":"Holland 2024 preprint", "url":"https://doi.org/10.1101/2024.02.23.581625", "reason":"Earlier version of the development series. The renumbered compounds are duplicate identities."},
     {"label":"Remmel dissertation and preprint", "url":"https://doi.org/10.1101/2022.08.29.505670", "reason":"The six numbered compounds also occur in the final Small article. Counted once."},
     {"label":"Walterspiel et al. and Zenodo S21", "url":"https://zenodo.org/records/16941576", "reason":"Live U2OS H2B recordings, including known JF630b. Localization counts change with illumination. No additional dye with a matched fixed-cell mean ON:OFF measurement."},

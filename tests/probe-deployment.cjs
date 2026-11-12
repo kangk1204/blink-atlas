@@ -13,6 +13,10 @@ const hash = body => createHash('sha256').update(body).digest('hex');
 
 async function verifyUnseen(page, bytes) {
   const result = JSON.parse(await bytes('data/analogue-benchmark.json'));
+  const lockBytes = await bytes('data/h2b-cal664sb-lock.json');
+  const challenge = JSON.parse(lockBytes);
+  assert.equal(hash(lockBytes), 'c4e9ae62123abff64ca703a72b8a3c63e29e2ccec312a85f02f969d19eaaca8f');
+  for (const name of ['h2b-blind-roster.csv','h2b-blind-measurements.csv','h2b-blind-assay.json']) await bytes('data/' + name);
   const workbook = await bytes('data/analogue-observations.csv');
   const studies = await bytes('data/analogue-studies.json');
   assert.equal(hash(workbook), result.sourceHashes.observations);
@@ -23,6 +27,11 @@ async function verifyUnseen(page, bytes) {
   await item('chart').locator('.unseen-bar').first().waitFor();
   assert.match(await item('counts').innerText(), /11 additional parent dyes, 25/);
   assert.match(await item('gate').innerText(), /validation is still open/);
+  assert.match(await item('challenge-input').innerText(), /pKcycl of 3.2/);
+  assert.ok((await item('registration').getAttribute('href')).includes(challenge.registrationRevision));
+  assert.ok((await item('challenge-boundary').innerText()).includes('5.297e-4'));
+  assert.deepEqual(await item('challenge-predictions').locator('td').allTextContents(),
+    ['local', 'nearest', 'regression'].map(k => challenge.dyes[0].predictions[k].toExponential(3)));
   assert.match(await item('conjugate-effect').innerText(), /16.5×/);
   assert.equal(await item('conjugates').locator('tr').count(), 3);
   assert.match(await item('titration-effect').innerText(), /at 1 of 4 laser powers/);

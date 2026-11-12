@@ -1,0 +1,83 @@
+{
+  "schema": "blink-atlas/h2b-blind-lock/1",
+  "study": "Cal664sb",
+  "arm": "literature buffer transfer",
+  "scope": "hydroxymethyl-sir-monotonic-fixed-cos7-h2b",
+  "lockedUTC": "2026-11-12T14:28:31+00:00",
+  "registrationRevision": "4c68d5a39e2559d05e4b8b8144f4fba5bf2341aa",
+  "modelRevision": "8edc8bfdbe8ee51cf5d6f2907353f831f974507c",
+  "candidate": "bracket-logratio-v1",
+  "sourceWorkbookSha256": "1e26a58d558f7d96518aca0264b0efed6e5574b67ba5f18899965802fedf5031",
+  "trainingIds": [
+    "JFX650b",
+    "JF639b",
+    "JF635b",
+    "JF630b",
+    "JF629b",
+    "JF626b"
+  ],
+  "plannedProtocol": {
+    "cellLine": "COS-7",
+    "target": "H2B-HaloTag",
+    "fixation": "paraformaldehyde",
+    "dyeExcitationNm": 647,
+    "onExposureMs": 2,
+    "onCycleMs": 3,
+    "onFrames": 20000,
+    "offExposureMs": 25,
+    "offCycleMs": 27,
+    "offFrames": 100000,
+    "offLabeling": "sparse",
+    "onGapFrames": 5,
+    "groupingRadiusNm": 100
+  },
+  "preparationsPerDye": 3,
+  "dyes": [
+    {
+      "blindId": "Cal664sb",
+      "pKa": 3.2,
+      "status": "forecast locked",
+      "range": [
+        1.22,
+        4.48
+      ],
+      "lower": [
+        "JF635b"
+      ],
+      "upper": [
+        "JF639b"
+      ],
+      "upperWeight": 0.245098039216,
+      "nearestDyes": [
+        "JF635b"
+      ],
+      "predictions": {
+        "local": 0.000579845004467,
+        "nearest": 0.000483915,
+        "regression": 0.000429728198699
+      }
+    }
+  ],
+  "source": {
+    "article": "https://doi.org/10.1021/acscentsci.1c00670",
+    "figure": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8393207.1/oc1c00670_0003.jpg",
+    "figureSha256": "90656c5ee2543aaf2de170398137a60dd7dd41c584365d433fcbab9f8d564e07",
+    "locator": "Fig. 3b, Cal664sb, pKcycl column. Fig. 3e, 2 μM in 0.2 M sodium phosphate at room temperature."
+  },
+  "equalErrorBoundaries": [
+    {
+      "models": [
+        "regression",
+        "nearest"
+      ],
+      "ratio": 0.000456017457202
+    },
+    {
+      "models": [
+        "nearest",
+        "local"
+      ],
+      "ratio": 0.000529712842337
+    }
+  ]
+}
