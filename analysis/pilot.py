@@ -201,15 +201,16 @@ def evaluate(counts, n_pilot, block=100):
     observed = future.reshape(-1, block).sum(axis=1)
     aggregate_model = model.reshape(-1, block).sum(axis=1)
     aggregate_base = baseline.reshape(-1, block).sum(axis=1)
-    model_mae = float(np.abs(aggregate_model - observed).mean())
-    baseline_mae = float(np.abs(aggregate_base - observed).mean())
+    # Report fractional counts at a precision reproducible across numerical libraries.
+    model_mae = round(float(np.abs(aggregate_model - observed).mean()), 9)
+    baseline_mae = round(float(np.abs(aggregate_base - observed).mean()), 9)
     improved = model_mae < baseline_mae
     return {
         "start_frame": n_pilot, "frames": n_future, "block_frames": block,
         "model": "Half-slope damped log-rate trend", "baseline": "Constant pilot mean",
         "unit": f"localizations per {block} frames",
         "blocks": [{"start_frame": n_pilot + i*block, "frames": block,
-                    "observed": int(obs), "prediction": float(pred), "baseline": float(base)}
+                    "observed": int(obs), "prediction": round(float(pred), 9), "baseline": round(float(base), 9)}
                    for i, (obs, pred, base) in enumerate(zip(observed, aggregate_model, aggregate_base))],
         "model_mae": model_mae, "baseline_mae": baseline_mae, "model_improved": improved,
         "selected_forecast": "model" if improved else "baseline",

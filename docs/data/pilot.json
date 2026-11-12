@@ -70,60 +70,60 @@
         "start_frame": 200,
         "frames": 100,
         "observed": 6103,
-        "prediction": 6074.39566672166,
+        "prediction": 6074.395666722,
         "baseline": 6256.5
       },
       {
         "start_frame": 300,
         "frames": 100,
         "observed": 5986,
-        "prediction": 5997.229339565599,
+        "prediction": 5997.229339566,
         "baseline": 6256.5
       },
       {
         "start_frame": 400,
         "frames": 100,
         "observed": 5873,
-        "prediction": 5950.913821244062,
+        "prediction": 5950.913821244,
         "baseline": 6256.5
       },
       {
         "start_frame": 500,
         "frames": 100,
         "observed": 5592,
-        "prediction": 5923.000079922982,
+        "prediction": 5923.000079923,
         "baseline": 6256.5
       },
       {
         "start_frame": 600,
         "frames": 100,
         "observed": 5550,
-        "prediction": 5906.134690315142,
+        "prediction": 5906.134690315,
         "baseline": 6256.5
       },
       {
         "start_frame": 700,
         "frames": 100,
         "observed": 4968,
-        "prediction": 5895.9292047909985,
+        "prediction": 5895.929204791,
         "baseline": 6256.5
       },
       {
         "start_frame": 800,
         "frames": 100,
         "observed": 5116,
-        "prediction": 5889.748036538373,
+        "prediction": 5889.748036538,
         "baseline": 6256.5
       },
       {
         "start_frame": 900,
         "frames": 100,
         "observed": 4742,
-        "prediction": 5886.002191555113,
+        "prediction": 5886.002191555,
         "baseline": 6256.5
       }
     ],
-    "model_mae": 456.32021215132613,
+    "model_mae": 456.320212151,
     "baseline_mae": 765.25,
     "model_improved": true,
     "selected_forecast": "model"
@@ -147,6 +147,7 @@
       "Deo, Claire"
     ],
     "license": "cc-by-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "archive": "Figure S21_H2B_HaloTag1a_labelled with JF630b-HTL(25nM).zip",
     "archive_bytes": 7360792249,
     "archive_md5_reported_by_zenodo": "500a2ce1df2c388228c150db0559edd5",
@@ -176,8 +177,7 @@
         "sha256": "7de1f8c7af5dd333a560ca6dab572e89e5188826a59087cd6a332f0657ffec98",
         "complete": true
       }
-    },
-    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    }
   },
   "media": {
     "preview": "media/s21-preview.webp",

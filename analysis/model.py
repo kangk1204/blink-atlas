@@ -18,7 +18,9 @@ DEFAULTS = {
     "densityMin": 100, "densityMax": 1000, "minPhotons": 100,
     "exposureMs": 25, "frameIntervalMs": 27, "excitationNm": 647,
     "sampleState": "fixed", "cellLine": "COS-7", "target": "H2B", "tag": "HaloTag",
+    "candidatePanel": "all",
 }
+STUDY_DYES = ("JF630b", "JF635b", "JF639b")
 LIMITS = {"density": [1, 100000], "minPhotons": [1, 5000]}
 RADIUS_NM = 250
 AREA_UM2 = math.pi * (RADIUS_NM / 1000) ** 2
@@ -95,6 +97,10 @@ def evaluate_prior(dyes, overrides=None):
         raise ValueError("Invalid exposure, camera cycle or required photon count")
     if not domain_supported(s):
         return {"status": "out_of_scope", "recommendation": [], "ranking": [], "contenders": []}
+    if s["candidatePanel"] == "validation":
+        dyes = [dye for dye in dyes if dye["id"] in STUDY_DYES]
+    elif s["candidatePanel"] != "all":
+        raise ValueError("Unknown candidate panel")
     center = math.sqrt(lo * hi)
     ranking, bounds = [], {}
     for dye in dyes:
@@ -141,6 +147,7 @@ def evaluate_prior(dyes, overrides=None):
 def configuration(dyes):
     return {
         "schema": "smlm-isolation/1", "defaults": DEFAULTS, "limits": LIMITS,
+        "validationDyes": list(STUDY_DYES),
         "collisionRadiusNm": RADIUS_NM, "offTimeScales": list(OFF_SCALES),
         "pilotConfig": {"gridPoints": 181, "credibleMass": 0.9, "maxEffectiveTiles": 512,
                         "maxDeviance": 13.82, "minInformationNats": 0.05},

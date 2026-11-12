@@ -10,7 +10,8 @@
     "sampleState": "fixed",
     "cellLine": "COS-7",
     "target": "H2B",
-    "tag": "HaloTag"
+    "tag": "HaloTag",
+    "candidatePanel": "all"
   },
   "limits": {
     "density": [
@@ -22,6 +23,11 @@
       5000
     ]
   },
+  "validationDyes": [
+    "JF630b",
+    "JF635b",
+    "JF639b"
+  ],
   "collisionRadiusNm": 250,
   "offTimeScales": [
     0.5,

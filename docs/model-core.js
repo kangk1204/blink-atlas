@@ -14,6 +14,7 @@ function emptyResult(settings) {
 }
 
 function settingsError(s, config) {
+  if (!["all","validation"].includes(s.candidatePanel)) return "Choose the full dye panel or the three-ligand validation panel.";
   const numbers = [s.densityMin, s.densityMax, s.minPhotons, s.exposureMs, s.frameIntervalMs, s.excitationNm];
   if (!numbers.every(positive)) return "A finite positive number is required for each acquisition setting.";
   const [lower, upper] = config.limits.density;
@@ -63,6 +64,10 @@ function sensitivity(dye, config, s) {
 
 function area(config) {
   return Math.PI * (config.collisionRadiusNm / 1000) ** 2;
+}
+
+function eligibleDyes(dyeData, config, s) {
+  return s.candidatePanel === "validation" ? dyeData.dyes.filter(d => config.validationDyes.includes(d.id)) : dyeData.dyes;
 }
 
 function rate(rho, p, disc, cycle) {
@@ -221,7 +226,7 @@ export function evaluate(dyeData, config, overrides = {}, pilot = null) {
     result.centerDensity = Math.sqrt(result.density[0] * result.density[1]);
   }
   const bounds = new Map(), disc = area(config);
-  for (const dye of dyeData.dyes) {
+  for (const dye of eligibleDyes(dyeData, config, s)) {
     const { endpoints, row } = dyeBounds(dye, config, s, ...result.density, result.centerDensity, disc);
     bounds.set(dye.id, endpoints);
     result.ranking.push(row);
@@ -258,7 +263,7 @@ export function evaluate(dyeData, config, overrides = {}, pilot = null) {
 export function curve(dyeData, config, overrides = {}, densities = []) {
   const s = { ...config.defaults, ...overrides }, disc = area(config);
   if (settingsError(s, config) || !inMeasuredDomain(s, config.defaults)) return [];
-  const ps = dyeData.dyes.map(d => [d.id, central(d, s)]);
+  const ps = eligibleDyes(dyeData, config, s).map(d => [d.id, central(d, s)]);
   return densities.filter(rho => Number.isFinite(rho) && rho >= config.limits.density[0] && rho <= config.limits.density[1])
     .map(density => ({
       density, rates: Object.fromEntries(ps.map(([id, p]) => [id, rate(density, p, disc, s.frameIntervalMs)]))

@@ -9,6 +9,8 @@ An interactive research demo for selecting the first two spontaneously blinking 
 3. A pair is recommended only if it outranks every alternative for the full density interval at all tested kinetic settings. At 100–1,000 labels/µm² and 100 expected photons, the pair is unresolved. At 10,000–10,500 with the same threshold the model selects JF630b and JF629b. These are input-dependent predictions. Cellular performance requires an independent matched experiment.
 4. To condition the estimate on a known reference dye, process a representative ROI locally and import its summary JSON. The browser checks the specimen, protocol, photon filter and tile counts. A matched informative pilot updates the prior density interval, and its result can be compared with the publication-only estimate. An incompatible pilot withholds the recommendation. Export analysis saves the settings, pilot summary and computed results. Importing a saved analysis recomputes it. The browser processes the local file in memory.
 
+Under **Candidate yields**, choose **Validation panel · 3 ligands** to score the three proposed study reagents only. This recomputes the uncertainty check with JF630b, JF635b and JF639b as the eligible candidates. Set `"candidatePanel":"validation"` in the same settings JSON for CLI use.
+
 The reference-pair images are actual first-frame crops from the published supplementary movie. They retain the authors' display scaling. The source workbook, recorded clip, acquisition metadata and source cells are accessible under **Methods & data**. [Holland et al.](https://doi.org/10.1038/s41592-026-03062-5) · [Crop provenance](docs/data/reference-frames.json)
 
 ## Public results and interpretation
@@ -54,7 +56,7 @@ The importer supports zero- or one-based frame numbering, explicitly calibrated 
 ### Media
 
 - To rebuild the two published fixed-cell micrographs, run `python tools/reference_frames.py` with FFmpeg on PATH. The script retrieves the original supplementary movie and records the source digest and crop coordinates.
-- To rebuild the English film, serve the site locally and use Playwright with an installed Chromium browser. Run `node tools/capture-tour.cjs http://localhost:8000 .qa/tour.webm chrome`, then `pwsh -File tools/narrate.ps1 -OutputDirectory .qa/voice` on Windows with an English SAPI voice. Finally run `python tools/build_video.py .qa/tour.webm .qa/voice`. The narrated MP4 has a selectable English subtitle track and a separate WebVTT track for the web player. The script and on-screen actions are in `tools/`.
+- To rebuild the English film, serve the site locally and use Playwright with an installed Chromium browser and Poppler's `pdftoppm` on PATH. Run `node tools/capture-tour.cjs http://localhost:8000 .qa/tour.webm chrome`, then `pwsh -File tools/narrate.ps1 -OutputDirectory .qa/voice` on Windows with an English SAPI voice. Finally run `python tools/build_video.py .qa/tour.webm .qa/voice`. The narrated MP4 has a selectable English subtitle track and a separate WebVTT track for the web player. The script and on-screen actions are in `tools/`.
 
 ## Prior work and proposed experiment
 

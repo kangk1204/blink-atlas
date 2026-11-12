@@ -46,6 +46,7 @@ function setFields() {
   const s=store.settings;
   $('density-min').value=s.densityMin; $('density-max').value=s.densityMax;
   $('threshold').value=s.minPhotons; $('condition').value=s.sampleState==='fixed' ? 'fixed' : 'live';
+  $('candidate-panel').value=s.candidatePanel;
   $('threshold').max=store.config.limits.minPhotons[1];
   for (const id of ['density-min','density-max']) {
     $(id).min=store.config.limits.density[0]; $(id).max=store.config.limits.density[1];
@@ -72,8 +73,9 @@ function updateComparison() {
   const labels={stable:'Two candidates to test',uncertain:'Several candidates remain plausible',low_signal:'Photon threshold leaves too few candidates',
     out_of_scope:'Recommendation withheld',invalid:'Check the acquisition settings'};
   $('decision-title').textContent=r.status==='stable' ? r.recommendation.join(' + ') : labels[r.status];
-  $('decision-label').textContent=r.status==='stable' ? 'MODEL-SELECTED PAIR' : 'CANDIDATE SELECTION';
-  const contenderText=r.status==='uncertain' && r.contenders.length ? ' Candidates: '+r.contenders.join(', ')+'.' : '';
+  const panelSize=s.candidatePanel==='validation'?' · VALIDATION PANEL':'';
+  $('decision-label').textContent=(r.status==='stable' ? 'MODEL-SELECTED PAIR' : 'CANDIDATE SELECTION')+panelSize;
+  const contenderText=r.status==='uncertain' && r.contenders.length ? ' Plausible choices include '+r.contenders.join(', ')+'.' : '';
   $('decision-copy').textContent=r.reasons.join(' ')+contenderText;
   $('decision-next').textContent=r.nextMeasurement;
   const priorText=$('prior-comparison');
@@ -107,6 +109,9 @@ function updateComparison() {
   });
   const minPower=s.densityMin>0 && s.densityMin<10 ? 0 : 1, maxPower=5;
   const densities=Array.from({length:181},(_,i)=>10**(minPower+(maxPower-minPower)*i/180));
+  const study=s.candidatePanel==='validation';
+  $('chart-mode').options[1].textContent=study?'All three dyes':'All nine dyes';
+  $('other-legend').querySelectorAll('[data-dye]').forEach(item=>{item.hidden=study && !store.config.validationDyes.includes(item.dataset.dye);});
   store.points=r.ranking.length ? curve(store.dyes,store.config,s,densities) : [];
   store.hover=null; $('chart-tooltip').hidden=true;
   const message=$('plot-message'); message.hidden=!!store.points.length;
@@ -141,7 +146,7 @@ function evidenceTable(id) {
 function renderReference() {
   const legend=$('other-legend');
   for(const d of store.dyes.dyes.filter(d=>!pair.includes(d.id))){
-    const item=element('span'), swatch=element('i','','line');swatch.style.color=dyeColor[d.id];
+    const item=element('span'), swatch=element('i','','line');item.dataset.dye=d.id;swatch.style.color=dyeColor[d.id];
     item.append(swatch,document.createTextNode(d.name));legend.append(item);
   }
   const refs=store.dyes.dyes.filter(d=>pair.includes(d.id));
@@ -234,13 +239,14 @@ function hookEvents() {
   });
   $('condition').addEventListener('change',()=>{
     const {defaults}=store.config, a=store.s21.acquisition;
-    const keep={densityMin:store.settings.densityMin,densityMax:store.settings.densityMax,minPhotons:store.settings.minPhotons};
+    const keep={densityMin:store.settings.densityMin,densityMax:store.settings.densityMax,minPhotons:store.settings.minPhotons,candidatePanel:store.settings.candidatePanel};
     store.settings=$('condition').value==='fixed'?{...defaults,...keep}:{...defaults,...keep,sampleState:'live',cellLine:a.cell_line,
       exposureMs:a.exposure_ms,excitationNm:a.excitation_nm,frameIntervalMs:a.frame_interval_ms};
     setFields(); updateComparison();
   });
   $('reset').addEventListener('click',()=>{store.settings={...store.config.defaults};store.pilot=null;store.importNotice='';$('chart-mode').value='reference';setFields();updateComparison();});
   $('chart-mode').addEventListener('change',redrawVisible);
+  $('candidate-panel').addEventListener('change',()=>{store.settings.candidatePanel=$('candidate-panel').value;updateComparison();});
   const canvas=$('yield-chart');
   canvas.addEventListener('pointermove',e=>{if(!store.chartBounds)return;const {left,right}=store.chartBounds;showHover(Math.round((e.clientX-canvas.getBoundingClientRect().left-left)/(right-left)*(store.points.length-1)));});
   function closeTip(){store.hover=null;$('chart-tooltip').hidden=true;redrawVisible();}
@@ -269,6 +275,7 @@ function hookEvents() {
         store.pilot=value;store.importNotice='';
       } else if(value.schema==='blink-atlas-analysis/1' && value.model===store.config.schema && value.measurements===store.dyes.schema && value.settings) {
         const next={};for(const key of Object.keys(store.config.defaults)){
+          if(key==='candidatePanel' && value.settings[key]===undefined){next[key]='all';continue;}
           if(typeof value.settings[key]!==typeof store.config.defaults[key])throw new Error('Saved acquisition has an invalid '+key+' value.');
           next[key]=value.settings[key];
         }

@@ -3,6 +3,7 @@
 const {chromium} = require('playwright');
 const fs = require('node:fs');
 const path = require('node:path');
+const {execFileSync} = require('node:child_process');
 const [url, output, channel] = process.argv.slice(2);
 if (!url || !output) throw Error('Usage: node tools/capture-tour.cjs URL OUTPUT.webm [chrome]');
 
@@ -10,6 +11,10 @@ if (!url || !output) throw Error('Usage: node tools/capture-tour.cjs URL OUTPUT.
   const browser = await chromium.launch({headless:true, ...(channel ? {channel} : {})});
   try {
     const dir=path.dirname(output);fs.mkdirSync(dir,{recursive:true});
+    const proposalImage=path.join(dir,'walkthrough-proposal');
+    execFileSync('pdftoppm',['-png','-singlefile','-scale-to','1350',
+      path.join(__dirname,'../docs/media/validation-proposal.pdf'),proposalImage],{stdio:'ignore'});
+    const proposal=fs.readFileSync(proposalImage+'.png').toString('base64');
     const context=await browser.newContext({viewport:{width:1280,height:800},deviceScaleFactor:1,
       recordVideo:{dir,size:{width:1280,height:800}}});
     const page=await context.newPage();
@@ -46,9 +51,12 @@ if (!url || !output) throw Error('Usage: node tools/capture-tour.cjs URL OUTPUT.
     await at(93);await route('methods');await page.getByRole('button',{name:'JF630b',exact:true}).click();await focus('#trace');
     await at(100);await focus('#epfl-results');
     await at(107);await focus('.evidence');
-    await at(110);await page.getByRole('link',{name:/Joint validation proposal/}).hover();
-    await at(113);await page.evaluate(()=>{location.hash='compare';});await page.waitForTimeout(650);
-    await page.locator('#export').hover();
+    await at(108);await page.getByRole('link',{name:/Joint validation proposal/}).hover();
+    await at(109);
+    await page.setContent('<html lang="en"><title>Joint validation proposal</title><body style="margin:0;background:#26342e;text-align:center">'+
+      '<img alt="One-page joint validation proposal" style="width:830px;max-width:100%;display:block;margin:0 auto" src="data:image/png;base64,'+
+      proposal+'"></body></html>');
+    await at(114);await page.evaluate(()=>window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'}));
     await at(120.8);
     const video=page.video();await context.close();await video.saveAs(output);
     if(path.resolve(await video.path())!==path.resolve(output))await video.delete();

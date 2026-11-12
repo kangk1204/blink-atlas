@@ -19,7 +19,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DYE_DATA = json.loads((DATA / "dyes.json").read_text(encoding="utf-8"))
 DYES = DYE_DATA["dyes"]
 SETTINGS = [{}, {"densityMin": 10000, "densityMax": 10500}, {"minPhotons": 2200},
-            {"sampleState": "live"}, {"densityMin": 1, "densityMax": 100000, "minPhotons": 1500}]
+            {"sampleState": "live"}, {"densityMin": 1, "densityMax": 100000, "minPhotons": 1500},
+            {"candidatePanel": "validation", "densityMin": 10000, "densityMax": 10500}]
 
 
 class PhotophysicsTest(unittest.TestCase):
@@ -113,6 +114,7 @@ class PhotophysicsTest(unittest.TestCase):
             expected, actual = evaluate_prior(DYES, settings), item["r"]
             for key in ("status", "recommendation", "contenders"):
                 self.assertEqual(expected[key], actual[key])
+            self.assertEqual(len(actual["ranking"]), len(expected["ranking"]))
             for a, b in zip(expected["ranking"], actual["ranking"]):
                 self.assertEqual(a["id"], b["id"])
                 for key in ("rate", "low", "high", "detectProbability", "overlapProbability"):
@@ -120,7 +122,8 @@ class PhotophysicsTest(unittest.TestCase):
             if expected["status"] != "out_of_scope":
                 s = DEFAULTS | settings
                 for point in item["c"]:
-                    dye = DYES[0]
+                    self.assertEqual(set(point["rates"]), {row["id"] for row in expected["ranking"]})
+                    dye = next(d for d in DYES if d["id"] == expected["ranking"][0]["id"])
                     p = blink_probabilities(*(dye["metrics"][k]["mean"] for k in ("onMs","offMs","photonsPerMs")),
                                             s["exposureMs"], s["minPhotons"])
                     self.assertAlmostEqual(point["rates"][dye["id"]], event_rate(point["density"], p, s["frameIntervalMs"]))

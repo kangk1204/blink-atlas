@@ -55,7 +55,7 @@
       </div>
       <article class="decision" id="decision" aria-live="polite"><div class="decision-symbol" aria-hidden="true"></div><div><div class="eyebrow" id="decision-label">CANDIDATE SELECTION</div><h2 id="decision-title"></h2><p id="decision-copy"></p><p id="decision-next"></p><p id="prior-comparison" hidden></p></div></article>
       <div class="detail-grid">
-        <article class="card candidate-card"><div class="panel-head"><div><div class="eyebrow">MODEL ESTIMATE</div><h2>Candidate yields</h2></div><span class="unit-label" id="center-density"></span></div>
+        <article class="card candidate-card"><div class="panel-head"><div><div class="eyebrow">MODEL ESTIMATE</div><h2>Candidate yields</h2></div><div class="panel-choice"><label for="candidate-panel" class="sr">Eligible candidates</label><select id="candidate-panel"><option value="all">All nine ligands</option><option value="validation">Validation panel · 3 ligands</option></select><span class="unit-label" id="center-density"></span></div></div>
           <div class="table-wrap"><table><thead><tr><th scope="col">Dye</th><th scope="col" class="num">Isolated yield¹</th><th scope="col" class="num">Sensitivity range¹</th><th scope="col" class="num">Overlap²</th></tr></thead><tbody id="candidate-rows"></tbody></table></div>
           <p class="footnote">¹ Detections/µm²/s. The range spans the density and photophysics scenarios. ² Probability of a neighboring emitter within the exclusion radius.</p>
         </article>

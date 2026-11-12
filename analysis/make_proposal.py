@@ -115,7 +115,7 @@ def create_pdf(output: Path):
     top = paragraph(c,
         "Within each day and density, reserve field 1 of each dye for the pilot. The model sees "
         "only the first 200 frames of reference JF630b. Both strategies receive this same pilot "
-        "budget and two candidate slots. Lock the density-conditioned pair before revealing "
+        "budget and two candidate slots. Rank only JF630b, JF635b and JF639b. Lock the pair before revealing "
         "fields 2 and 3. The comparison pair is always <b>JF630b + JF635b</b>. Use that fixed pair "
         "when the model abstains and record every abstention.", LEFT, top, RIGHT - LEFT) - 13
 
