@@ -1,0 +1,34 @@
+[
+  {"start":0,"end":14,"cues":[
+    "Which dye should you try first?",
+    "Blink Atlas compares nine blinking HaloTag dyes. The curves show isolated detections expected per square micrometre per second in a fixed-cell experiment."
+  ]},
+  {"start":14,"end":30,"cues":[
+    "JF630b emits more photons per millisecond. JF635b stays on longer.",
+    "These are published measurements. The cropped images retain the original display intensities from the authors' recording."
+  ]},
+  {"start":30,"end":47,"cues":[
+    "Change the assumed density. The broad range leaves several candidates.",
+    "In this narrow, high-density example, two dyes stay in the lead across all the sensitivity checks. The range is an assumption you can change."
+  ]},
+  {"start":47,"end":60,"cues":[
+    "A higher photon threshold can leave too few candidates. A different sample protocol also withholds the ranking.",
+    "You can export each analysis and import it again to reproduce the decision."
+  ]},
+  {"start":60,"end":76,"cues":[
+    "The pilot recording comes from a separate live-cell experiment. The cyan rings mark the authors' fitted positions in the original camera frames.",
+    "Here the exposure is one hundred milliseconds. This movie tests forecasting within one recording."
+  ]},
+  {"start":76,"end":93,"cues":[
+    "Only the first two hundred frames fit the forecasts. The next eight hundred are held out.",
+    "The trend's average error was four hundred fifty-six detections per block. The constant baseline missed by seven hundred sixty-five. Both overestimated the final block."
+  ]},
+  {"start":93,"end":107,"cues":[
+    "In Methods and data, select a dye to trace its measurements to the original workbook.",
+    "The tubulin benchmark also shows how clustering increases signal overlap compared with the uniform-density assumption."
+  ]},
+  {"start":107,"end":120,"cues":[
+    "To test whether the recommendation helps in the lab, start with existing matched recordings.",
+    "The one-page proposal specifies equal pilot budgets and a comparison using localizations with uncertainty at or below twenty nanometres."
+  ]}
+]

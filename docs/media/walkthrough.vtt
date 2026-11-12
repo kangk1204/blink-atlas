@@ -1,0 +1,49 @@
+WEBVTT
+
+00:00:00.300 --> 00:00:02.831
+Which dye should you try first?
+
+00:00:03.051 --> 00:00:13.459
+Blink Atlas compares nine blinking HaloTag dyes. The curves show isolated detections expected per square micrometre per second in a fixed-cell experiment.
+
+00:00:14.300 --> 00:00:21.888
+JF630b emits more photons per millisecond. JF635b stays on longer.
+
+00:00:22.108 --> 00:00:29.462
+These are published measurements. The cropped images retain the original display intensities from the authors' recording.
+
+00:00:30.300 --> 00:00:36.056
+Change the assumed density. The broad range leaves several candidates.
+
+00:00:36.276 --> 00:00:46.456
+In this narrow, high-density example, two dyes stay in the lead across all the sensitivity checks. The range is an assumption you can change.
+
+00:00:47.300 --> 00:00:54.791
+A higher photon threshold can leave too few candidates. A different sample protocol also withholds the ranking.
+
+00:00:55.011 --> 00:00:59.463
+You can export each analysis and import it again to reproduce the decision.
+
+00:01:00.300 --> 00:01:08.737
+The pilot recording comes from a separate live-cell experiment. The cyan rings mark the authors' fitted positions in the original camera frames.
+
+00:01:08.957 --> 00:01:15.462
+Here the exposure is one hundred milliseconds. This movie tests forecasting within one recording.
+
+00:01:16.300 --> 00:01:21.848
+Only the first two hundred frames fit the forecasts. The next eight hundred are held out.
+
+00:01:22.068 --> 00:01:32.466
+The trend's average error was four hundred fifty-six detections per block. The constant baseline missed by seven hundred sixty-five. Both overestimated the final block.
+
+00:01:33.300 --> 00:01:38.905
+In Methods and data, select a dye to trace its measurements to the original workbook.
+
+00:01:39.125 --> 00:01:46.459
+The tubulin benchmark also shows how clustering increases signal overlap compared with the uniform-density assumption.
+
+00:01:47.300 --> 00:01:52.245
+To test whether the recommendation helps in the lab, start with existing matched recordings.
+
+00:01:52.465 --> 00:01:59.474
+The one-page proposal specifies equal pilot budgets and a comparison using localizations with uncertainty at or below twenty nanometres.

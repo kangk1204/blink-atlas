@@ -1,0 +1,67 @@
+# Blink Atlas
+
+An interactive research demo for selecting the first two spontaneously blinking HaloTag dyes to test in a fixed-cell SMLM experiment. Begin with fixed COS-7 cells expressing H2B–HaloTag, 647 nm excitation, a 25 ms exposure and a 27 ms camera cycle. The nine dyes, measured properties, site assets and scientific checks load without an account. [Open the comparison](https://kangk1204.github.io/blink-atlas/) · [Watch the two-minute walkthrough](https://kangk1204.github.io/blink-atlas/media/walkthrough.mp4) · [One-page collaboration proposal](https://kangk1204.github.io/blink-atlas/media/validation-proposal.pdf)
+
+## Use the comparison
+
+1. Set a plausible *local* label density interval in labels/µm² and the minimum expected photon count. The slider shifts the interval along a logarithmic scale. Broad range and Dense range are illustrative assumptions.
+2. Inspect the two reference curves or display all nine. The table shows nominal isolated detections per µm²/s at the geometric midpoint, bounds over the selected interval and sensitivity assumptions, and the conditional probability of an active neighbor within 250 nm. Estimates refer to detections, which can include repeated emission from the same molecule.
+3. A pair is recommended only if it outranks every alternative for the full density interval at all tested kinetic settings. At 100–1,000 labels/µm² and 100 expected photons, the pair is unresolved. At 10,000–10,500 with the same threshold the model selects JF630b and JF629b. These are input-dependent predictions. Cellular performance requires an independent matched experiment.
+4. To condition the estimate on a known reference dye, process a representative ROI locally and import its summary JSON. The browser checks the specimen, protocol, photon filter and tile counts. A matched informative pilot updates the prior density interval, and its result can be compared with the publication-only estimate. An incompatible pilot withholds the recommendation. Export analysis saves the settings, pilot summary and computed results. Importing a saved analysis recomputes it. The browser processes the local file in memory.
+
+The reference-pair images are actual first-frame crops from the published supplementary movie. They retain the authors' display scaling. The source workbook, recorded clip, acquisition metadata and source cells are accessible under **Methods & data**. [Holland et al.](https://doi.org/10.1038/s41592-026-03062-5) · [Crop provenance](docs/data/reference-frames.json)
+
+## Public results and interpretation
+
+| Check | Result | Supported interpretation |
+|---|---|---|
+| Fixed-cell source reproduction | All nine ligands. Mean ON times for JF630b and JF635b are 10.14 and 14.53 ms, with 67.2 and 51.5 photons/ms, respectively. | Three cellular imaging experiments per dye. Off-times are upper-bound estimates under the measurement protocol. Detailed units, SDs, replicate values and workbook cells are included. |
+| S21 before-illumination forecast | 12,513 retained author localizations in the first 200 frames. In eight consecutive 100-frame blocks, the damped trend scored 456.32 mean absolute count error and the constant mean scored 765.25. | One live U2OS JF630b recording with approximately 100 ms exposures. It tests within-recording forecasting. The holdout contains 800 frames. |
+| EPFL overlap geometry | At 250 nm, 9.482% of the 100,000 published emitter-frame coordinates have another emitter within the radius. Whole-field homogeneous density predicts 0.553%. Exhaustive and spatial-bin pair checks agree. | Tubulin clustering materially changes the overlap risk. A global density estimate can greatly understate the risk in dense structures. |
+| Independent CUDA check | All 12 checks of finite-exposure and neighbor probabilities passed a prespecified five-standard-error tolerance. | The stochastic check verifies the analytical implementation under the simulated assumptions. |
+
+The camera model uses a first ON segment, exponential dwell times, a hard threshold on expected photons and a spatial Poisson approximation. Individual optically separable events at low SNR, heterogeneous labeling, detector noise, photobleaching and the biological number of distinct molecules can differ from the proxy. The pilot forecast and fixed-cell recommendations have separate inputs and evaluation domains. [Model derivation](analysis/photophysics.md) · [External pilot record](https://zenodo.org/records/16941576) · [EPFL benchmark](docs/data/epfl.json) · [CUDA results](docs/data/gpu-check.json)
+
+## Reproduce the analysis
+
+The static site is served from `docs/`. Start a local preview with `python -m http.server 8000 --directory docs`, then open `http://localhost:8000`. The published site uses the same files.
+
+For analytical regeneration, use Python 3.11 and Node.js 22.7 or later. Install the CPU dependencies in a virtual environment.
+
+```sh
+python -m pip install -r requirements.txt
+python -m analysis.dyes
+python -m analysis.model
+node analysis/predict.mjs
+python -m analysis.s21 --cache .cache/s21 --docs docs
+python -m analysis.epfl
+python -m analysis.make_proposal
+python -m unittest discover -s tests
+node --test tests/model-pilot.mjs
+```
+
+The small publisher workbook is included with its SHA-256. S21 reproduction downloads the complete author HDF5 and YAML and a verified 32 MiB TIFF prefix using HTTP range requests. The public example includes 40 raw camera frames with their author-fitted localization overlays. The EPFL script fetches the 5.5 MB ground-truth archive and checks its hash. No training data or GPU is required to run the site. On a CUDA-enabled PyTorch installation, `python -m analysis.gpu_check` repeats the optional Monte Carlo audit. [File hashes and input formats](analysis/pilot-input.md)
+
+For a CSV or Picasso table, prepare an acquisition metadata JSON, run the importer, and choose **Import pilot or analysis JSON** on the site. For CLI inference supply a JSON containing the acquisition settings, such as `{"densityMin":100,"densityMax":1000,"minPhotons":100}`.
+
+```sh
+python -m analysis.pilot locs.csv --metadata acquisition.json --min-photons 100 --output pilot.json
+node analysis/predict.mjs settings.json pilot.json
+```
+
+The importer supports zero- or one-based frame numbering, explicitly calibrated pixel or nanometre coordinates and a representative ROI. Use actual acquired frame counts, including frames with no detections. [CSV, Picasso and SMAP export instructions](analysis/pilot-input.md)
+
+### Media
+
+- To rebuild the two published fixed-cell micrographs, run `python tools/reference_frames.py` with FFmpeg on PATH. The script retrieves the original supplementary movie and records the source digest and crop coordinates.
+- To rebuild the English film, serve the site locally and use Playwright with an installed Chromium browser. Run `node tools/capture-tour.cjs http://localhost:8000 .qa/tour.webm chrome`, then `pwsh -File tools/narrate.ps1 -OutputDirectory .qa/voice` on Windows with an English SAPI voice. Finally run `python tools/build_video.py .qa/tour.webm .qa/voice`. The narrated MP4 has a selectable English subtitle track and a separate WebVTT track for the web player. The script and on-screen actions are in `tools/`.
+
+## Prior work and proposed experiment
+
+Fluorophore screening has already established the relevance of photon yield, duty cycle and photostability. SMIS simulates fluorophore photophysics and imaging conditions, and autonomous illumination control estimates active-emitter density from images. The question for this demo is whether a short pilot changes the choice of two dyes enough to improve the outcome on matched samples. [Dempsey et al.](https://doi.org/10.1038/nmeth.1768) · [Bittel et al.](https://doi.org/10.1038/srep29687) · [SMIS](https://doi.org/10.1038/s42003-023-04432-x) · [Autonomous illumination control](https://doi.org/10.1364/OE.26.030882)
+
+Start with existing matched fixed-cell recordings or localization tables from at least two candidate dyes. The proposed follow-up uses three dyes, two labeling densities, three independent preparation days and three fields per condition, for 54 movies. Compare the model-selected pair against a fixed JF630b/JF635b pair using the same pilot-time budget. The primary outcome is localizations per µm² passing the prespecified ≤20 nm localization-uncertainty criterion at equal acquisition times. Aggregate fields within each preparation day. [Collaboration proposal](docs/media/validation-proposal.pdf)
+
+## Credits
+
+The dye measurements, workbook and reference movie crops are from Holland et al., *Nature Methods* (2026), under CC BY 4.0. The S21 files are from Walterspiel et al., Zenodo (2025), under CC BY 4.0. The site displays a cropped, contrast-scaled and annotated excerpt. The external experiment is described in *Angewandte Chemie International Edition*. EPFL's Tubulins II coordinates are fetched from the authors' site on demand. The bundled DM Sans and IBM Plex Mono fonts include their SIL Open Font License texts in `docs/assets/`. [Holland et al.](https://doi.org/10.1038/s41592-026-03062-5) · [S21 dataset](https://doi.org/10.5281/zenodo.16941576) · [S21 paper](https://doi.org/10.1002/anie.202424955) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)

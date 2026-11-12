@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#112f2e">
+  <meta name="description" content="Compare nine blinking HaloTag dyes using measured photophysics, inspect a real pilot recording, and test how label density affects isolated detections.">
+  <title>Blink Atlas · Fluorophore comparison</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to workspace</a>
+  <header class="topbar"><div class="nav-inner">
+    <a class="brand" href="#compare" aria-label="Blink Atlas home"><img src="assets/mark.svg" alt="" width="33" height="33">Blink Atlas</a>
+    <nav class="site-nav" aria-label="Workspace">
+      <a href="#compare" data-nav="compare">Dye comparison</a>
+      <a href="#pilot" data-nav="pilot">Pilot recording</a>
+      <a href="#methods" data-nav="methods">Methods &amp; data</a>
+    </nav>
+    <a class="source-link" href="https://github.com/kangk1204/blink-atlas">Source code <span aria-hidden="true">↗</span></a>
+  </div></header>
+  <main id="main" class="container" tabindex="-1">
+    <div id="loading" role="status">Loading published measurements…</div>
+    <section id="view-compare" class="view" hidden aria-labelledby="comparison-title">
+      <header class="page-title"><div><div class="context"><span class="context-dot"></span> Single-molecule localization microscopy</div>
+        <h1 id="comparison-title">Fluorophore comparison</h1>
+        <p>Explore how label density changes the yield of isolated detections across nine HaloTag dyes.</p></div>
+        <div class="title-actions"><a class="button secondary" href="media/walkthrough.mp4" data-watch><span aria-hidden="true">▷</span> Walkthrough</a><button id="export" class="button primary" type="button"><span class="download-icon" aria-hidden="true">↓</span> Export analysis</button></div>
+      </header>
+      <div class="workbench">
+        <article class="plot-card">
+          <div class="plot-head"><div><div class="plot-label"><i></i> MODEL ESTIMATE</div><h2>Isolated detection yield</h2></div>
+            <div class="plot-tools"><label class="sr" for="chart-mode">Curves displayed</label><select id="chart-mode"><option value="reference">Reference pair</option><option value="all">All nine dyes</option></select></div>
+          </div>
+          <div class="plot-unit">Expected isolated detections · µm⁻² s⁻¹</div>
+          <div class="chart-frame" id="yield-container"><canvas id="yield-chart" tabindex="0" role="img" aria-label="Predicted yield by label density. Use the left and right arrow keys to explore. Exact values for the selected density are in the candidate table."></canvas><output id="chart-tooltip" class="chart-tooltip" hidden></output><div class="plot-message" id="plot-message" hidden></div></div>
+          <div class="x-axis">Label density <span>(labels/µm² · log scale)</span></div>
+          <div class="chart-legend"><span><i class="line key-a"></i> JF630b</span><span><i class="line key-b"></i> JF635b</span><span id="other-legend" hidden></span><span class="band-key"><i></i> Selected range</span></div>
+        </article>
+        <aside class="card settings" aria-labelledby="settings-title"><div class="panel-head"><h2 id="settings-title">Acquisition settings</h2><button id="reset" class="text-button" type="button">Reset</button></div>
+          <label for="condition">Sample protocol</label>
+          <select id="condition"><option value="fixed">Fixed COS-7 · H2B–HaloTag</option><option value="live">Live U2OS · H2B–HaloTag</option></select>
+          <div class="protocol-note" id="protocol-note"></div>
+          <div class="field-title">Assumed label density <span>labels/µm²</span></div>
+          <div class="range-fields"><label>Lower<input id="density-min" type="number" min="1" max="100000" step="any" inputmode="decimal"></label><span>–</span><label>Upper<input id="density-max" type="number" min="1" max="100000" step="any" inputmode="decimal"></label></div>
+          <input type="range" id="density-slider" aria-label="Shift the density interval on a logarithmic scale" step="0.005">
+          <div class="presets" aria-label="Illustrative density scenarios"><button type="button" data-preset="broad">Broad range</button><button type="button" data-preset="dense">Dense range</button></div>
+          <label for="threshold">Photon threshold <span>photons/frame</span></label>
+          <input id="threshold" type="number" min="1" max="5000" step="any" inputmode="decimal">
+          <div class="pilot-controls"><button class="button secondary" id="import" type="button"><span aria-hidden="true">↑</span> Import pilot or analysis JSON</button><input type="file" id="import-file" accept=".json,application/json" hidden><button id="remove-pilot" class="text-button" type="button" hidden>Remove pilot</button></div>
+          <p id="import-status" class="feedback" role="status"></p>
+        </aside>
+      </div>
+      <article class="decision" id="decision" aria-live="polite"><div class="decision-symbol" aria-hidden="true"></div><div><div class="eyebrow" id="decision-label">CANDIDATE SELECTION</div><h2 id="decision-title"></h2><p id="decision-copy"></p><p id="decision-next"></p><p id="prior-comparison" hidden></p></div></article>
+      <div class="detail-grid">
+        <article class="card candidate-card"><div class="panel-head"><div><div class="eyebrow">MODEL ESTIMATE</div><h2>Candidate yields</h2></div><span class="unit-label" id="center-density"></span></div>
+          <div class="table-wrap"><table><thead><tr><th scope="col">Dye</th><th scope="col" class="num">Isolated yield¹</th><th scope="col" class="num">Sensitivity range¹</th><th scope="col" class="num">Overlap²</th></tr></thead><tbody id="candidate-rows"></tbody></table></div>
+          <p class="footnote">¹ Detections/µm²/s. The range spans the density and photophysics scenarios. ² Probability of a neighboring emitter within the exclusion radius.</p>
+        </article>
+        <article class="card reference-card"><div class="eyebrow">PUBLISHED MEASUREMENTS</div><h2>Reference pair</h2>
+          <div id="ref-images"></div>
+          <table class="pair-table"><thead><tr><th>Mean property</th><th class="num">JF630b</th><th class="num">JF635b</th></tr></thead><tbody id="pair-rows"></tbody></table>
+          <a class="inline-link" href="#methods">Inspect the source measurements <span>→</span></a>
+        </article>
+      </div>
+    </section>
+    <section id="view-pilot" class="view" hidden aria-labelledby="pilot-title">
+      <header class="page-title"><div><div class="context"><span class="context-dot"></span> Live-cell recording · Figure S21</div><h1 id="pilot-title">Pilot recording</h1><p>Use the first 200 frames to forecast detections in the next 800 frames of the same acquisition.</p></div><button id="export-pilot" class="button secondary" type="button">↓ Download case JSON</button></header>
+      <div class="pilot-grid"><article class="recording-card">
+        <div class="plot-label"><i></i> RECORDED MICROSCOPY</div><h2>H2B–HaloTag · JF630b</h2><div id="pilot-media" class="recording"></div><p id="media-caption"></p>
+      </article><article class="card acquisition"><div class="eyebrow">ACQUISITION</div><h2>Before illumination</h2><dl id="acquisition-rows" class="metadata"></dl><p class="small muted">This live-cell control is used for count forecasting. The dye comparison uses fixed COS-7 measurements.</p><a href="https://zenodo.org/records/16941576" class="inline-link">Open source recording ↗</a></article></div>
+      <article class="card holdout"><div class="panel-head"><div><div class="eyebrow">TEMPORAL HOLDOUT</div><h2>Forecast against observed counts</h2></div><span class="unit-label">100-frame blocks</span></div>
+        <div class="metrics" id="pilot-metrics"></div><div class="forecast-canvas"><canvas id="forecast-chart" role="img" aria-label="Observed count, constant pilot baseline and trend forecast for eight held-out blocks. Values are available in the table below."></canvas></div>
+        <div class="light-legend"><span><i class="line observed"></i>Observed</span><span><i class="line forecast"></i>Trend forecast</span><span><i class="line baseline"></i>Constant baseline</span></div><p class="pilot-verdict" id="pilot-verdict"></p>
+        <details><summary>Inspect counts and absolute errors</summary><div class="table-wrap"><table><thead><tr><th>Frames · one-based</th><th class="num">Observed</th><th class="num">Forecast</th><th class="num">Baseline</th><th class="num">Forecast error</th><th class="num">Baseline error</th></tr></thead><tbody id="forecast-rows"></tbody></table></div></details>
+      </article>
+    </section>
+    <section id="view-methods" class="view" hidden aria-labelledby="methods-title">
+      <header class="page-title"><div><div class="context"><span class="context-dot"></span> Reproducibility &amp; validation</div><h1 id="methods-title">Methods &amp; data</h1><p>Trace the reference measurements, inspect model assumptions, and reproduce each public example.</p></div><a class="button primary" href="media/validation-proposal.pdf">Validation proposal ↗</a></header>
+      <article class="card source-table"><div class="panel-head"><div><div class="eyebrow">HOLLAND ET AL. · EXTENDED DATA FIG. 4</div><h2>Measured dye properties</h2></div><a class="inline-link" href="data/dyes.json" download>↓ Source values</a></div>
+        <div class="table-wrap"><table><thead><tr><th>Ligand</th><th class="num">Mean on · ms</th><th class="num">Median on · ms</th><th class="num">Mean off · s</th><th class="num">Median off · s</th><th class="num">Mean photons/ms</th></tr></thead><tbody id="measured-rows"></tbody></table></div>
+        <p class="footnote">Select a ligand to inspect replicate measurements and source cells. Medians summarize the replicate medians. Off-times are upper-bound estimates for the measurement protocol.</p>
+        <div id="trace" class="trace" aria-live="polite"></div>
+      </article>
+      <div class="methods-grid"><article class="card prose"><div class="eyebrow">COMPUTATIONAL MODEL</div><h2>How to read a recommendation</h2><div id="method-description"></div><a href="https://github.com/kangk1204/blink-atlas#reproduce-the-analysis" class="inline-link">Reproduction instructions ↗</a></article>
+      <article class="card prose"><div class="eyebrow">INDEPENDENT GEOMETRY CHECK</div><h2>Overlap in a clustered sample</h2><div id="epfl-results"></div><a href="https://bigwww.epfl.ch/srm/dataset/challenge-2D-simulation/Tubulins_II/index.html" class="inline-link">EPFL Tubulins II reference ↗</a></article></div>
+      <article class="card evidence"><h2>Sources &amp; collaboration</h2><div class="resource-grid">
+        <a href="https://doi.org/10.1038/s41592-026-03062-5"><strong>Blinking dye characterization ↗</strong><span>Holland et al. · Nature Methods, 2026</span></a>
+        <a href="https://pmc-oa-opendata.s3.amazonaws.com/PMC13167466.1/41592_2026_3062_MOESM10_ESM.xlsx"><strong>Extended Data Fig. 4 workbook ↓</strong><span>Replicate measurements and distributions</span></a>
+        <a href="https://zenodo.org/records/16941576"><strong>S21 recording and localizations ↗</strong><span>Walterspiel et al. · Zenodo, 2025</span></a>
+        <a href="media/validation-proposal.pdf"><strong>Joint validation proposal ↓</strong><span>One page · matched fields and equal pilot budgets</span></a>
+        <a href="media/walkthrough.mp4" data-watch><strong>Watch the walkthrough →</strong><span>Two-minute narrated demonstration</span></a>
+        <a href="https://github.com/kangk1204/blink-atlas"><strong>Analysis code ↗</strong><span>Python models, input formats and verification</span></a>
+      </div></article>
+    </section>
+    <noscript><p>Enable JavaScript to explore the comparison. <a href="data/dyes.json">Download the measurements</a> or <a href="media/validation-proposal.pdf">read the validation proposal</a>.</p></noscript>
+  </main>
+  <dialog id="guide" aria-labelledby="guide-title"><div class="guide-head"><h2 id="guide-title">Blink Atlas walkthrough</h2><button type="button" id="close-guide" class="button secondary">Close</button></div>
+    <video id="guide-video" controls playsinline preload="none"><track kind="captions" srclang="en" label="English" src="media/walkthrough.vtt"></video>
+    <div class="guide-links"><a href="media/walkthrough.mp4" download>Download MP4</a><a href="media/walkthrough.vtt" download>English captions</a></div>
+  </dialog>
+  <footer class="container footer"><span>Blink Atlas <i></i> Independent research demo</span><a href="#methods">Data provenance &amp; methods →</a></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

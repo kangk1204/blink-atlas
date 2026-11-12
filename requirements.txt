@@ -1,0 +1,8 @@
+# CPU reference environment (Python 3.11)
+numpy==1.26.4
+openpyxl==3.1.5
+h5py==3.12.1
+PyYAML==6.0.2
+tifffile==2024.9.20
+Pillow==12.3.0
+reportlab==5.0.0

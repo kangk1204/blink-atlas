@@ -1,0 +1,213 @@
+{
+  "schema": "smlm-pilot/1",
+  "acquisition": {
+    "width_nm": 63600.0,
+    "height_nm": 63600.0,
+    "exposure_ms": 100.01400000000001,
+    "total_frames": 5000,
+    "frame_interval_ms": 100.04205128205129,
+    "excitation_nm": 640.0,
+    "pixel_size_nm": 106.0,
+    "width_px": 600,
+    "height_px": 600,
+    "sample_state": "live",
+    "cell_line": "U2OS",
+    "target": "H2B",
+    "tag": "HaloTag",
+    "reference_dye": "JF630b",
+    "camera_width_nm": 63600.0,
+    "camera_height_nm": 63600.0,
+    "roi_nm": [
+      0,
+      0,
+      63600.0,
+      63600.0
+    ],
+    "localization_source": "picasso",
+    "coordinate_origin": "upper-left outer pixel edge"
+  },
+  "quality_control": {
+    "source_localizations": 214794,
+    "outside_selected_roi_in_source": 0,
+    "negative_photon_fits_in_source": 15,
+    "negative_photon_fits_in_pilot": 0,
+    "negative_photon_fits_in_evaluation_window": 6
+  },
+  "pilot": {
+    "start_frame": 0,
+    "frames": 200,
+    "min_photons": 0.0,
+    "localizations": 12513,
+    "mean_per_frame": 62.565,
+    "area_um2": 4044.96,
+    "four_block_counts": [
+      3287,
+      3072,
+      3093,
+      3061
+    ],
+    "tiles": {
+      "side_nm": 250.0,
+      "area_um2": 0.0625,
+      "tiles_per_frame": 64516,
+      "observations": 12903200,
+      "empty": 12890697,
+      "single": 12493,
+      "multiple": 10,
+      "localizations": 12513,
+      "complete_field_fraction": 0.9968578181242831
+    }
+  },
+  "evaluation": {
+    "start_frame": 200,
+    "frames": 800,
+    "block_frames": 100,
+    "model": "Half-slope damped log-rate trend",
+    "baseline": "Constant pilot mean",
+    "unit": "localizations per 100 frames",
+    "blocks": [
+      {
+        "start_frame": 200,
+        "frames": 100,
+        "observed": 6103,
+        "prediction": 6074.39566672166,
+        "baseline": 6256.5
+      },
+      {
+        "start_frame": 300,
+        "frames": 100,
+        "observed": 5986,
+        "prediction": 5997.229339565599,
+        "baseline": 6256.5
+      },
+      {
+        "start_frame": 400,
+        "frames": 100,
+        "observed": 5873,
+        "prediction": 5950.913821244062,
+        "baseline": 6256.5
+      },
+      {
+        "start_frame": 500,
+        "frames": 100,
+        "observed": 5592,
+        "prediction": 5923.000079922982,
+        "baseline": 6256.5
+      },
+      {
+        "start_frame": 600,
+        "frames": 100,
+        "observed": 5550,
+        "prediction": 5906.134690315142,
+        "baseline": 6256.5
+      },
+      {
+        "start_frame": 700,
+        "frames": 100,
+        "observed": 4968,
+        "prediction": 5895.9292047909985,
+        "baseline": 6256.5
+      },
+      {
+        "start_frame": 800,
+        "frames": 100,
+        "observed": 5116,
+        "prediction": 5889.748036538373,
+        "baseline": 6256.5
+      },
+      {
+        "start_frame": 900,
+        "frames": 100,
+        "observed": 4742,
+        "prediction": 5886.002191555113,
+        "baseline": 6256.5
+      }
+    ],
+    "model_mae": 456.32021215132613,
+    "baseline_mae": 765.25,
+    "model_improved": true,
+    "selected_forecast": "model"
+  },
+  "source": {
+    "record": "https://zenodo.org/records/16941576",
+    "doi": "10.5281/zenodo.16941576",
+    "paper": "https://doi.org/10.1002/anie.202424955",
+    "title": "A Photoswitchable HaloTag for Spatiotemporal Control of Fluorescence in Living Cells",
+    "creators": [
+      "Walterspiel, Franziska",
+      "UGARTE URIBE, BEGOÑA",
+      "Weidenhausen, Jonas",
+      "Vincent, Merrin",
+      "Narayanasamy, Kaarjel Kauslya",
+      "Dimitriadi, Anna",
+      "Khan, Arif ul Maula",
+      "Fritsch, Martin",
+      "Müller, Christoph",
+      "Zimmermann, Timo",
+      "Deo, Claire"
+    ],
+    "license": "cc-by-4.0",
+    "archive": "Figure S21_H2B_HaloTag1a_labelled with JF630b-HTL(25nM).zip",
+    "archive_bytes": 7360792249,
+    "archive_md5_reported_by_zenodo": "500a2ce1df2c388228c150db0559edd5",
+    "retrieval": "HTTP byte ranges from the publisher's ZIP64 archive. Partial TIFF hash covers the uncompressed prefix.",
+    "members": {
+      "tif": {
+        "archive_member": "Figure S21_H2B_HaloTag1a_labelled with JF630b-HTL(25nM)/01_HT_JF630b_25nM_640i20_100ms_before_1/01_HT_JF630b_25nM_640i20_100ms_before_1_MMStack_Default.ome.tif",
+        "full_uncompressed_bytes": 3719168020,
+        "archive_member_crc32": "bb161809",
+        "retrieved_uncompressed_bytes": 33554432,
+        "sha256": "ef88d818b5c20a4d9c147e937d7c6bdae5160cd8663325abf6fe0c437aa374fd",
+        "complete": false
+      },
+      "hdf5": {
+        "archive_member": "Figure S21_H2B_HaloTag1a_labelled with JF630b-HTL(25nM)/01_HT_JF630b_25nM_640i20_100ms_before_1/01_HT_JF630b_25nM_640i20_100ms_before_1_MMStack_Default.ome_locs.hdf5",
+        "full_uncompressed_bytes": 9455032,
+        "archive_member_crc32": "249d9d60",
+        "retrieved_uncompressed_bytes": 9455032,
+        "sha256": "d9839992d9c3e0fc3203db7394ccbc5fc7afccc918ac34a3f1cd898ec1eac0ae",
+        "complete": true
+      },
+      "yaml": {
+        "archive_member": "Figure S21_H2B_HaloTag1a_labelled with JF630b-HTL(25nM)/01_HT_JF630b_25nM_640i20_100ms_before_1/01_HT_JF630b_25nM_640i20_100ms_before_1_MMStack_Default.ome_locs.yaml",
+        "full_uncompressed_bytes": 25105,
+        "archive_member_crc32": "869d209f",
+        "retrieved_uncompressed_bytes": 25105,
+        "sha256": "7de1f8c7af5dd333a560ca6dab572e89e5188826a59087cd6a332f0657ffec98",
+        "complete": true
+      }
+    },
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "media": {
+    "preview": "media/s21-preview.webp",
+    "poster": "media/s21-poster.webp",
+    "field": "media/s21-field.webp",
+    "frame_start": 0,
+    "frames": 40,
+    "frame_interval_ms": 100.04205128205129,
+    "interval_source": "Mean elapsed time step from Micro-Manager TIFF tag 51123 in frames 1–40",
+    "crop_px": [
+      283,
+      287,
+      224,
+      224
+    ],
+    "full_width_px": 600,
+    "full_height_px": 600,
+    "preview_width_px": 448,
+    "preview_height_px": 448,
+    "scale_bar_um": 2,
+    "field_display_limits_adu": [
+      468.0,
+      1185.0
+    ],
+    "clip_display_limits_adu": [
+      585.0,
+      1309.0
+    ],
+    "description": "First 40 raw frames, pre-illumination. The 224-pixel crop maximizes pilot localization count. Cyan rings mark author-fitted positions with nonnegative photons. Linear, fixed 3rd to 99.7th percentile contrast. Full-field image shows the first raw frame.",
+    "attribution": "F. Walterspiel et al. (2025), Zenodo 16941576, Figure S21. CC BY 4.0. Cropped, contrast-scaled and annotated."
+  },
+  "intended_use": "Live-cell measurement and forecast QC, outside the fixed COS-7 dye-ranking protocol."
+}

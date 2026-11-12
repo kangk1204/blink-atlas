@@ -1,0 +1,28 @@
+{
+  "source": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13167466.1/41592_2026_3062_MOESM3_ESM.mov",
+  "doi": "10.1038/s41592-026-03062-5",
+  "credit": "Holland et al., Supplementary Video 1 (CC BY 4.0)",
+  "frame": 0,
+  "source_sha256": "b965b4ceff2a2c7970df0601423d563ff6237d6cce11426c01fb21868c73a0d2",
+  "transformation": "Spatial crop of the decoded first frame; publisher display intensities retained.",
+  "crops": {
+    "JF630b": {
+      "image": "media/h2b-jf630b.png",
+      "xywh": [
+        266,
+        630,
+        294,
+        328
+      ]
+    },
+    "JF635b": {
+      "image": "media/h2b-jf635b.png",
+      "xywh": [
+        1549,
+        231,
+        294,
+        328
+      ]
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "schema": "smlm-isolation/1",
+  "defaults": {
+    "densityMin": 100,
+    "densityMax": 1000,
+    "minPhotons": 100,
+    "exposureMs": 25,
+    "frameIntervalMs": 27,
+    "excitationNm": 647,
+    "sampleState": "fixed",
+    "cellLine": "COS-7",
+    "target": "H2B",
+    "tag": "HaloTag"
+  },
+  "limits": {
+    "density": [
+      1,
+      100000
+    ],
+    "minPhotons": [
+      1,
+      5000
+    ]
+  },
+  "collisionRadiusNm": 250,
+  "offTimeScales": [
+    0.5,
+    1.0
+  ],
+  "pilotConfig": {
+    "gridPoints": 181,
+    "credibleMass": 0.9,
+    "maxEffectiveTiles": 512,
+    "maxDeviance": 13.82,
+    "minInformationNats": 0.05
+  },
+  "rateUnit": "isolated detections per square micrometre per second",
+  "methods": [
+    "Two-state blinking at stationary equilibrium; exponential ON and OFF waits represent each reported mean. Effective projected label density is an input assumption.",
+    "A dye qualifies when its first ON segment overlaps the exposure long enough to supply the chosen expected photon count. Photon shot noise, camera background, and bleaching during a long run are outside this short-exposure proxy.",
+    "Another label with any ON segment during the same exposure and within a 250 nm centre-to-centre disc interferes. Locally uniform independent positions and blinking give a Poisson empty-disc probability. Defining the neighbourhood this way is a modeling choice.",
+    "The nominal estimate uses mean dwell times and emission rate. Sensitivity crosses the three measured means for each of the three kinetic inputs within each dye (27 combinations). Replicates from differing acquisition protocols are not paired. A common dark-time scale of 1 or 0.5 tests protocol sensitivity across dyes; dye-specific shortening or unmeasured extremes remain open.",
+    "Bands span the specified sensitivities and density interval. The rate reaches its maximum at density 1/(disc area × probability of any ON time). Top two are reported only when every other candidate is outscored throughout the interval at both dark-time settings. These are sensitivity bounds.",
+    "A registered fixed-condition pilot is accepted only when its acquisition and photon filter match. For each trial density the likelihood jointly assigns observed tiles to empty, single and multiple localization categories. The total count adds no second likelihood. The working Poisson tile model approximates residual spatial dependence after overlap rejection. One field worth of tiles, capped at 512 effective observations, limits pseudo-replication.",
+    "The pilot starts from a log-uniform density grid and marginalizes equally over the stated reference-dye sensitivity scenarios. The 90% density interval is conditional on the observation model. Multimodal support is retained in the interval. Pilot data inconsistent with all sensitivity scenarios trigger abstention."
+  ],
+  "referenceResult": {
+    "status": "uncertain",
+    "recommendation": [],
+    "contenders": [
+      "JFX650b",
+      "JF639b",
+      "HM-SiR",
+      "JF646b",
+      "JF635b"
+    ],
+    "ranking": [
+      {
+        "id": "JFX650b",
+        "name": "JFX650b",
+        "rate": 22.126937178318812,
+        "low": 5.88557293096045,
+        "high": 51.25212592395946,
+        "detectProbability": 0.0023101247186209537,
+        "anyOnProbability": 0.0032392949847937632,
+        "overlapProbability": 0.18219522902843427
+      },
+      {
+        "id": "JF639b",
+        "name": "JF639b",
+        "rate": 20.44112015091923,
+        "low": 5.646344033198478,
+        "high": 62.896195791738286,
+        "detectProbability": 0.0020033512530978972,
+        "anyOnProbability": 0.0022209066242722024,
+        "overlapProbability": 0.12881306632722017
+      },
+      {
+        "id": "HM-SiR",
+        "name": "HM-SiR",
+        "rate": 16.626795246841205,
+        "low": 4.258208571780059,
+        "high": 47.85428612214784,
+        "detectProbability": 0.0016515962392268187,
+        "anyOnProbability": 0.0024375852917230163,
+        "overlapProbability": 0.14045537774102915
+      },
+      {
+        "id": "JF646b",
+        "name": "JF646b",
+        "rate": 14.17548342794992,
+        "low": 3.9115401223662527,
+        "high": 58.695786599140014,
+        "detectProbability": 0.00133534348531482,
+        "anyOnProbability": 0.0015831631738782463,
+        "overlapProbability": 0.09362347096442486
+      },
+      {
+        "id": "JF635b",
+        "name": "JF635b",
+        "rate": 11.823214448094173,
+        "low": 3.168411353136091,
+        "high": 52.68619176509608,
+        "detectProbability": 0.0010954807319456198,
+        "anyOnProbability": 0.0013166803639498295,
+        "overlapProbability": 0.07850159531058458
+      },
+      {
+        "id": "JF626b",
+        "name": "JF626b",
+        "rate": 8.531679659642007,
+        "low": 2.539862333426672,
+        "high": 42.16120279441714,
+        "detectProbability": 0.0007711801181857911,
+        "anyOnProbability": 0.0009181062272491458,
+        "overlapProbability": 0.055411877731690075
+      },
+      {
+        "id": "JF630b",
+        "name": "JF630b",
+        "rate": 4.543731103557686,
+        "low": 1.3806951185331708,
+        "high": 25.631385033598235,
+        "detectProbability": 0.0003997714390452636,
+        "anyOnProbability": 0.00048340306959877876,
+        "overlapProbability": 0.029569086484746723
+      },
+      {
+        "id": "JF629b",
+        "name": "JF629b",
+        "rate": 3.4475845891581947,
+        "low": 1.0595791007291533,
+        "high": 19.876694089437674,
+        "detectProbability": 0.0003010594706435633,
+        "anyOnProbability": 0.000362443491490152,
+        "overlapProbability": 0.022253204583390158
+      },
+      {
+        "id": "JF614b",
+        "name": "JF614b",
+        "rate": 0.7488725757346523,
+        "low": 0.18016978485643928,
+        "high": 7.369589222331009,
+        "detectProbability": 6.440293025962748e-05,
+        "anyOnProbability": 0.00011621870740160099,
+        "overlapProbability": 0.007190182351683923
+      }
+    ],
+    "density": [
+      100,
+      1000
+    ],
+    "centerDensity": 316.22776601683796
+  }
+}

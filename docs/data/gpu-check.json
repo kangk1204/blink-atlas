@@ -1,0 +1,172 @@
+{
+  "schema": "finite-exposure-cuda-check/1",
+  "checked_utc": "2026-11-12T05:37:08+00:00",
+  "device": "NVIDIA GeForce RTX 3060",
+  "cuda_runtime": "12.1",
+  "torch_version": "2.5.1+cu121",
+  "before": {
+    "name": "NVIDIA GeForce RTX 3060",
+    "utilization_percent": 0,
+    "free_memory_mib": 11203,
+    "driver": "595.91.07"
+  },
+  "wall_seconds": 1.14,
+  "peak_memory_mib": 19.597,
+  "peak_memory_scope": "PyTorch allocated tensors; CUDA context excluded",
+  "seed": 20261112,
+  "single_exposures_per_dye": 8388608,
+  "disks_per_density_per_dye": 65536,
+  "exposure_ms": 25,
+  "frame_interval_ms": 27,
+  "threshold_photons": 100,
+  "exclusion_radius_nm": 250,
+  "off_time_scale": 1,
+  "z_limit": 5.0,
+  "check_count": 12,
+  "passed": true,
+  "conditions": [
+    {
+      "dye": "JF630b",
+      "mean_on_ms": 10.1364897,
+      "mean_off_ms": 72666.66666666667,
+      "photons_per_ms": 67.23992833333334,
+      "any_on": {
+        "monte_carlo": 0.0004904270172119141,
+        "analytic": 0.00048340306959877876,
+        "standard_error": 7.5893530582169636e-06,
+        "absolute_error": 7.023947613135303e-06,
+        "z_score_abs": 0.925500178902667,
+        "passed": true,
+        "successes": 4114,
+        "trials": 8388608
+      },
+      "qualified_first_burst": {
+        "monte_carlo": 0.0004076957702636719,
+        "analytic": 0.0003997714390452637,
+        "standard_error": 6.90198649201771e-06,
+        "absolute_error": 7.924331218408197e-06,
+        "z_score_abs": 1.1481232580754615,
+        "passed": true,
+        "successes": 3420,
+        "trials": 8388608
+      },
+      "densities": [
+        {
+          "density_per_um2": 100.0,
+          "no_active_neighbor": {
+            "monte_carlo": 0.990997314453125,
+            "analytic": 0.990553305951989,
+            "standard_error": 0.00037786693034284815,
+            "absolute_error": 0.0004440085011360173,
+            "z_score_abs": 1.1750393206760836,
+            "passed": true,
+            "successes": 64946,
+            "trials": 65536
+          },
+          "isolated_rate_per_um2_s": {
+            "monte_carlo": 1.4963904201673965,
+            "analytic": 1.4666478539684076,
+            "standard_error": 0.025327609958672455,
+            "absolute_error": 0.029742566198988962,
+            "z_score_abs": 1.1743139699134848,
+            "passed": true
+          }
+        },
+        {
+          "density_per_um2": 1000.0,
+          "no_active_neighbor": {
+            "monte_carlo": 0.9095611572265625,
+            "analytic": 0.9094493515945713,
+            "standard_error": 0.0011209728027010849,
+            "absolute_error": 0.00011180563199120197,
+            "z_score_abs": 0.09973982573153982,
+            "passed": true,
+            "successes": 59609,
+            "trials": 65536
+          },
+          "isolated_rate_per_um2_s": {
+            "monte_carlo": 13.734230985088896,
+            "analytic": 13.465625037990508,
+            "standard_error": 0.2330736403165118,
+            "absolute_error": 0.26860594709838814,
+            "z_score_abs": 1.1524509881667606,
+            "passed": true
+          }
+        }
+      ]
+    },
+    {
+      "dye": "JF635b",
+      "mean_on_ms": 14.529956,
+      "mean_off_ms": 30000,
+      "photons_per_ms": 51.51605766666667,
+      "any_on": {
+        "monte_carlo": 0.0012983083724975586,
+        "analytic": 0.0013166803639498295,
+        "standard_error": 1.2520138334026788e-05,
+        "absolute_error": 1.837199145227086e-05,
+        "z_score_abs": 1.4673952445349674,
+        "passed": true,
+        "successes": 10891,
+        "trials": 8388608
+      },
+      "qualified_first_burst": {
+        "monte_carlo": 0.001076817512512207,
+        "analytic": 0.0010954807319456198,
+        "standard_error": 1.1421401810721875e-05,
+        "absolute_error": 1.8663219433412773e-05,
+        "z_score_abs": 1.634056812176297,
+        "passed": true,
+        "successes": 9033,
+        "trials": 8388608
+      },
+      "densities": [
+        {
+          "density_per_um2": 100.0,
+          "no_active_neighbor": {
+            "monte_carlo": 0.9743499755859375,
+            "analytic": 0.974478367844563,
+            "standard_error": 0.000616027866867199,
+            "absolute_error": 0.0001283922586254871,
+            "z_score_abs": 0.20841956270326553,
+            "passed": true,
+            "successes": 63855,
+            "trials": 65536
+          },
+          "isolated_rate_per_um2_s": {
+            "monte_carlo": 3.885915248247329,
+            "analytic": 3.9537862061908693,
+            "standard_error": 0.04129759867628788,
+            "absolute_error": 0.06787095794354014,
+            "z_score_abs": 1.6434601555298196,
+            "passed": true
+          }
+        },
+        {
+          "density_per_um2": 1000.0,
+          "no_active_neighbor": {
+            "monte_carlo": 0.7688751220703125,
+            "analytic": 0.7721861856548197,
+            "standard_error": 0.0016383665646872297,
+            "absolute_error": 0.003311063584507168,
+            "z_score_abs": 2.0209540745475736,
+            "passed": true,
+            "successes": 50389,
+            "trials": 65536
+          },
+          "isolated_rate_per_um2_s": {
+            "monte_carlo": 30.664377643713827,
+            "analytic": 31.330188439238448,
+            "standard_error": 0.33334224056745776,
+            "absolute_error": 0.6658107955246209,
+            "z_score_abs": 1.9973790132063451,
+            "passed": true
+          }
+        }
+      ]
+    }
+  ],
+  "source_doi": "10.1038/s41592-026-03062-5",
+  "method": "Independent stationary ON/OFF exponential trajectories sample the time to the first bright segment and its exposure-truncated duration. First-burst detection uses deterministic photons accrued in that segment. Independent unthinned Poisson labels are sampled uniformly in a square. Any active neighbor whose coordinates fall in the 250 nm disk counts as interference. Yield combines independent estimates of qualifying and clear-disk probabilities. Each check requires agreement within five null standard errors. Checks share component estimates.",
+  "interpretation": "This tests the analytic implementation under its own stationary kinetics, uniform spatial density and constant photon rate assumptions. Testing dye selection in cells requires matched experimental data."
+}

@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.pdf binary
+*.xlsx binary
+*.mp4 binary
+*.webp binary
+*.png binary
+*.woff2 binary
+docs/assets/*-OFL.txt -whitespace

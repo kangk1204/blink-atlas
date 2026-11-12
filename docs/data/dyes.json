@@ -1,0 +1,830 @@
+{
+  "schema": "smlm-dyes/1",
+  "dyes": [
+    {
+      "id": "HM-SiR",
+      "name": "HM-SiR",
+      "ligand": "1HTL",
+      "conjugate": "HaloTag ligand",
+      "metrics": {
+        "onMs": {
+          "mean": 7.914914433333333,
+          "sd": 0.26953727366582036,
+          "n": 3,
+          "replicates": [
+            8.1315928,
+            7.6130857,
+            8.0000648
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4b-c",
+          "cells": "B2:D2",
+          "median": 3.4000001,
+          "medianSd": 0.0,
+          "medianReplicates": [
+            3.4000001,
+            3.4000001,
+            3.4000001
+          ],
+          "medianCells": "E2:G2"
+        },
+        "offMs": {
+          "mean": 13485.666666666666,
+          "sd": 4142.610449141137,
+          "n": 3,
+          "replicates": [
+            10063,
+            18091,
+            12303
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4e-f",
+          "cells": "B2:D2",
+          "median": 639,
+          "medianSd": 250.87247756579438,
+          "medianReplicates": [
+            432,
+            918,
+            567
+          ],
+          "medianCells": "E2:G2"
+        },
+        "photonsPerMs": {
+          "mean": 40.560582333333336,
+          "sd": 1.0163238939119434,
+          "n": 3,
+          "replicates": [
+            41.5,
+            40.7,
+            39.481747
+          ],
+          "unit": "photons/ms",
+          "sheet": "Extended Data Figure 4l",
+          "cells": "B2:D2"
+        },
+        "blinksPerMolecule": {
+          "mean": 11.70641091,
+          "sd": 1.880253874417194,
+          "n": 3,
+          "replicates": [
+            13.77641753,
+            10.10425764,
+            11.23855756
+          ],
+          "unit": "blinks/molecule",
+          "sheet": "Extended Data Figure 4k",
+          "cells": "B2:D2"
+        },
+        "onOffRatio": {
+          "mean": 0.0005869118092,
+          "sd": 0.00018138986399,
+          "n": 3,
+          "median": 0.00532081393,
+          "medianSd": 0.00208896052,
+          "medianN": 3,
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B3:D3",
+          "medianCells": "E3:G3",
+          "unit": "ratio",
+          "definition": "Reported mean-based and median-based on:off ratios."
+        }
+      }
+    },
+    {
+      "id": "JFX650b",
+      "name": "JFX650b",
+      "ligand": "2HTL",
+      "conjugate": "HaloTag ligand",
+      "metrics": {
+        "onMs": {
+          "mean": 12.427200000000001,
+          "sd": 0.4774116979578522,
+          "n": 3,
+          "replicates": [
+            12.187858,
+            12.976939,
+            12.116803
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4b-c",
+          "cells": "B3:D3",
+          "median": 4.533333466666667,
+          "medianSd": 1.9629909729797546,
+          "medianReplicates": [
+            3.4000001,
+            6.8000002,
+            3.4000001
+          ],
+          "medianCells": "E3:G3"
+        },
+        "offMs": {
+          "mean": 11533.333333333334,
+          "sd": 3768.730997740928,
+          "n": 3,
+          "replicates": [
+            15500,
+            11100,
+            8000
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4e-f",
+          "cells": "B3:D3",
+          "median": 225,
+          "medianSd": 56.20498198558558,
+          "medianReplicates": [
+            162,
+            270,
+            243
+          ],
+          "medianCells": "E3:G3"
+        },
+        "photonsPerMs": {
+          "mean": 32.04486433333334,
+          "sd": 2.0846108330372672,
+          "n": 3,
+          "replicates": [
+            30.6,
+            31.1,
+            34.434593
+          ],
+          "unit": "photons/ms",
+          "sheet": "Extended Data Figure 4l",
+          "cells": "B3:D3"
+        },
+        "blinksPerMolecule": {
+          "mean": 11.669154400666667,
+          "sd": 10.696086244727042,
+          "n": 3,
+          "replicates": [
+            5.103719104,
+            5.892205638,
+            24.01153846
+          ],
+          "unit": "blinks/molecule",
+          "sheet": "Extended Data Figure 4k",
+          "cells": "B3:D3"
+        },
+        "onOffRatio": {
+          "mean": 0.001077915,
+          "sd": 0.000354994,
+          "n": 3,
+          "median": 0.020148148741,
+          "medianSd": 0.010072059354,
+          "medianN": 3,
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B4:D4",
+          "medianCells": "E4:G4",
+          "unit": "ratio",
+          "definition": "Reported mean-based and median-based on:off ratios."
+        }
+      }
+    },
+    {
+      "id": "JF646b",
+      "name": "JF646b",
+      "ligand": "3HTL",
+      "conjugate": "HaloTag ligand",
+      "metrics": {
+        "onMs": {
+          "mean": 17.890816,
+          "sd": 1.9220151064421933,
+          "n": 3,
+          "replicates": [
+            17.787764,
+            16.0224,
+            19.862284
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4b-c",
+          "cells": "B4:D4",
+          "median": 6.8000002,
+          "medianSd": 0.0,
+          "medianReplicates": [
+            6.8000002,
+            6.8000002,
+            6.8000002
+          ],
+          "medianCells": "E4:G4"
+        },
+        "offMs": {
+          "mean": 27066.666666666668,
+          "sd": 4452.340208624374,
+          "n": 3,
+          "replicates": [
+            22100,
+            30700,
+            28400
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4e-f",
+          "cells": "B4:D4",
+          "median": 8802,
+          "medianSd": 210.87674124947966,
+          "medianReplicates": [
+            8667,
+            9045,
+            8694
+          ],
+          "medianCells": "E4:G4"
+        },
+        "photonsPerMs": {
+          "mean": 46.872705333333336,
+          "sd": 4.573322446152834,
+          "n": 3,
+          "replicates": [
+            51.1,
+            47.5,
+            42.018116
+          ],
+          "unit": "photons/ms",
+          "sheet": "Extended Data Figure 4l",
+          "cells": "B4:D4"
+        },
+        "blinksPerMolecule": {
+          "mean": 14.75192714,
+          "sd": 1.8499764836925459,
+          "n": 3,
+          "replicates": [
+            15.88046647,
+            12.61692127,
+            15.75839368
+          ],
+          "unit": "blinks/molecule",
+          "sheet": "Extended Data Figure 4k",
+          "cells": "B4:D4"
+        },
+        "onOffRatio": {
+          "mean": 0.000661402,
+          "sd": 0.000131,
+          "n": 3,
+          "median": 0.00077255172,
+          "medianSd": 1.850866e-05,
+          "medianN": 3,
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B5:D5",
+          "medianCells": "E5:G5",
+          "unit": "ratio",
+          "definition": "Reported mean-based and median-based on:off ratios."
+        }
+      }
+    },
+    {
+      "id": "JF639b",
+      "name": "JF639b",
+      "ligand": "4HTL",
+      "conjugate": "HaloTag ligand",
+      "metrics": {
+        "onMs": {
+          "mean": 20.886232333333332,
+          "sd": 0.7041650984565586,
+          "n": 3,
+          "replicates": [
+            20.984705,
+            20.138014,
+            21.535978
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4b-c",
+          "cells": "B5:D5",
+          "median": 10.2,
+          "medianSd": 0.0,
+          "medianReplicates": [
+            10.2,
+            10.2,
+            10.2
+          ],
+          "medianCells": "E5:G5"
+        },
+        "offMs": {
+          "mean": 20633.333333333332,
+          "sd": 4722.640504350647,
+          "n": 3,
+          "replicates": [
+            20100,
+            16200,
+            25600
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4e-f",
+          "cells": "B5:D5",
+          "median": 5157,
+          "medianSd": 210.87674124947966,
+          "medianReplicates": [
+            5049,
+            5022,
+            5400
+          ],
+          "medianCells": "E5:G5"
+        },
+        "photonsPerMs": {
+          "mean": 67.908615,
+          "sd": 1.9321914125352566,
+          "n": 3,
+          "replicates": [
+            68.6,
+            69.4,
+            65.725845
+          ],
+          "unit": "photons/ms",
+          "sheet": "Extended Data Figure 4l",
+          "cells": "B5:D5"
+        },
+        "blinksPerMolecule": {
+          "mean": 6.234537036,
+          "sd": 0.7056083369777906,
+          "n": 3,
+          "replicates": [
+            6.983505155,
+            5.582261341,
+            6.137844612
+          ],
+          "unit": "blinks/molecule",
+          "sheet": "Extended Data Figure 4k",
+          "cells": "B5:D5"
+        },
+        "onOffRatio": {
+          "mean": 0.001012101,
+          "sd": 0.000236,
+          "n": 3,
+          "median": 0.00197789412,
+          "medianSd": 8.087878e-05,
+          "medianN": 3,
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B6:D6",
+          "medianCells": "E6:G6",
+          "unit": "ratio",
+          "definition": "Reported mean-based and median-based on:off ratios."
+        }
+      }
+    },
+    {
+      "id": "JF635b",
+      "name": "JF635b",
+      "ligand": "5HTL",
+      "conjugate": "HaloTag ligand",
+      "metrics": {
+        "onMs": {
+          "mean": 14.529956,
+          "sd": 1.0985569050727417,
+          "n": 3,
+          "replicates": [
+            15.507094,
+            14.741907,
+            13.340867
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4b-c",
+          "cells": "B6:D6",
+          "median": 6.8000002,
+          "medianSd": 0.0,
+          "medianReplicates": [
+            6.8000002,
+            6.8000002,
+            6.8000002
+          ],
+          "medianCells": "E6:G6"
+        },
+        "offMs": {
+          "mean": 30000,
+          "sd": 5086.255990411808,
+          "n": 3,
+          "replicates": [
+            27900,
+            26300,
+            35800
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4e-f",
+          "cells": "B6:D6",
+          "median": 11047.5,
+          "medianSd": 1184.6458331501444,
+          "medianReplicates": [
+            12406.5,
+            10233,
+            10503
+          ],
+          "medianCells": "E6:G6"
+        },
+        "photonsPerMs": {
+          "mean": 51.51605766666667,
+          "sd": 1.9189150960832886,
+          "n": 3,
+          "replicates": [
+            53.7,
+            50.1,
+            50.748173
+          ],
+          "unit": "photons/ms",
+          "sheet": "Extended Data Figure 4l",
+          "cells": "B6:D6"
+        },
+        "blinksPerMolecule": {
+          "mean": 6.968455458,
+          "sd": 1.5077220146524821,
+          "n": 3,
+          "replicates": [
+            8.114754098,
+            7.53008596,
+            5.260526316
+          ],
+          "unit": "blinks/molecule",
+          "sheet": "Extended Data Figure 4k",
+          "cells": "B6:D6"
+        },
+        "onOffRatio": {
+          "mean": 0.000483915,
+          "sd": 8.99e-05,
+          "n": 3,
+          "median": 0.00061552389,
+          "medianSd": 6.600388e-05,
+          "medianN": 3,
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B7:D7",
+          "medianCells": "E7:G7",
+          "unit": "ratio",
+          "definition": "Reported mean-based and median-based on:off ratios."
+        }
+      }
+    },
+    {
+      "id": "JF630b",
+      "name": "JF630b",
+      "ligand": "6HTL",
+      "conjugate": "HaloTag ligand",
+      "metrics": {
+        "onMs": {
+          "mean": 10.1364897,
+          "sd": 0.6476922024033245,
+          "n": 3,
+          "replicates": [
+            10.683599,
+            9.4213371,
+            10.304533
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4b-c",
+          "cells": "B7:D7",
+          "median": 6.8000002,
+          "medianSd": 0.0,
+          "medianReplicates": [
+            6.8000002,
+            6.8000002,
+            6.8000002
+          ],
+          "medianCells": "E7:G7"
+        },
+        "offMs": {
+          "mean": 72666.66666666667,
+          "sd": 1289.7028081435403,
+          "n": 3,
+          "replicates": [
+            71600,
+            72300,
+            74100
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4e-f",
+          "cells": "B7:D7",
+          "median": 38835,
+          "medianSd": 3156.383531828792,
+          "medianReplicates": [
+            42336,
+            37962,
+            36207
+          ],
+          "medianCells": "E7:G7"
+        },
+        "photonsPerMs": {
+          "mean": 67.23992833333334,
+          "sd": 4.488394625632684,
+          "n": 3,
+          "replicates": [
+            64.8,
+            64.5,
+            72.419785
+          ],
+          "unit": "photons/ms",
+          "sheet": "Extended Data Figure 4l",
+          "cells": "B7:D7"
+        },
+        "blinksPerMolecule": {
+          "mean": 8.549128655,
+          "sd": 1.0386127702248171,
+          "n": 3,
+          "replicates": [
+            7.35016835,
+            9.124378109,
+            9.172839506
+          ],
+          "unit": "blinks/molecule",
+          "sheet": "Extended Data Figure 4k",
+          "cells": "B7:D7"
+        },
+        "onOffRatio": {
+          "mean": 0.000139505,
+          "sd": 9.24e-06,
+          "n": 3,
+          "median": 0.00017509979,
+          "medianSd": 1.423155e-05,
+          "medianN": 3,
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B8:D8",
+          "medianCells": "E8:G8",
+          "unit": "ratio",
+          "definition": "Reported mean-based and median-based on:off ratios."
+        }
+      }
+    },
+    {
+      "id": "JF629b",
+      "name": "JF629b",
+      "ligand": "7HTL",
+      "conjugate": "HaloTag ligand",
+      "metrics": {
+        "onMs": {
+          "mean": 9.4025879,
+          "sd": 0.28939840180014875,
+          "n": 3,
+          "replicates": [
+            9.4845543,
+            9.6421623,
+            9.0810471
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4b-c",
+          "cells": "B8:D8",
+          "median": 6.8000002,
+          "medianSd": 0.0,
+          "medianReplicates": [
+            6.8000002,
+            6.8000002,
+            6.8000002
+          ],
+          "medianCells": "E8:G8"
+        },
+        "offMs": {
+          "mean": 94900,
+          "sd": 1300.0,
+          "n": 3,
+          "replicates": [
+            94200,
+            96400,
+            94100
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4e-f",
+          "cells": "B8:D8",
+          "median": 53712,
+          "medianSd": 1214.7999835363844,
+          "medianReplicates": [
+            53919,
+            52407,
+            54810
+          ],
+          "medianCells": "E8:G8"
+        },
+        "photonsPerMs": {
+          "mean": 73.29594366666667,
+          "sd": 4.619357158904293,
+          "n": 3,
+          "replicates": [
+            77.7,
+            73.7,
+            68.487831
+          ],
+          "unit": "photons/ms",
+          "sheet": "Extended Data Figure 4l",
+          "cells": "B8:D8"
+        },
+        "blinksPerMolecule": {
+          "mean": 9.207678011,
+          "sd": 2.7249919763224044,
+          "n": 3,
+          "replicates": [
+            7.106403013,
+            8.23,
+            12.28663102
+          ],
+          "unit": "blinks/molecule",
+          "sheet": "Extended Data Figure 4k",
+          "cells": "B8:D8"
+        },
+        "onOffRatio": {
+          "mean": 9.90737e-05,
+          "sd": 3.35e-06,
+          "n": 3,
+          "median": 0.0001266011357,
+          "medianSd": 2.8633277e-06,
+          "medianN": 3,
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B9:D9",
+          "medianCells": "E9:G9",
+          "unit": "ratio",
+          "definition": "Reported mean-based and median-based on:off ratios."
+        }
+      }
+    },
+    {
+      "id": "JF626b",
+      "name": "JF626b",
+      "ligand": "8HTL",
+      "conjugate": "HaloTag ligand",
+      "metrics": {
+        "onMs": {
+          "mean": 12.140969,
+          "sd": 0.17876555210386552,
+          "n": 3,
+          "replicates": [
+            12.325954,
+            12.127802,
+            11.969151
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4b-c",
+          "cells": "B9:D9",
+          "median": 6.8000002,
+          "medianSd": 0.0,
+          "medianReplicates": [
+            6.8000002,
+            6.8000002,
+            6.8000002
+          ],
+          "medianCells": "E9:G9"
+        },
+        "offMs": {
+          "mean": 40433.333333333336,
+          "sd": 3426.8547289509274,
+          "n": 3,
+          "replicates": [
+            37500,
+            44200,
+            39600
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4e-f",
+          "cells": "B9:D9",
+          "median": 16942.5,
+          "medianSd": 372.9031375571946,
+          "medianReplicates": [
+            17064,
+            17239.5,
+            16524
+          ],
+          "medianCells": "E9:G9"
+        },
+        "photonsPerMs": {
+          "mean": 63.00289,
+          "sd": 1.804336735839518,
+          "n": 3,
+          "replicates": [
+            61.2,
+            63,
+            64.80867
+          ],
+          "unit": "photons/ms",
+          "sheet": "Extended Data Figure 4l",
+          "cells": "B9:D9"
+        },
+        "blinksPerMolecule": {
+          "mean": 9.439103566,
+          "sd": 1.19712429151771,
+          "n": 3,
+          "replicates": [
+            10.60321101,
+            8.211490425,
+            9.502609263
+          ],
+          "unit": "blinks/molecule",
+          "sheet": "Extended Data Figure 4k",
+          "cells": "B9:D9"
+        },
+        "onOffRatio": {
+          "mean": 0.000289684,
+          "sd": 2.29e-05,
+          "n": 3,
+          "median": 0.00040280185,
+          "medianSd": 1.207171e-05,
+          "medianN": 3,
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B10:D10",
+          "medianCells": "E10:G10",
+          "unit": "ratio",
+          "definition": "Reported mean-based and median-based on:off ratios."
+        }
+      }
+    },
+    {
+      "id": "JF614b",
+      "name": "JF614b",
+      "ligand": "9HTL",
+      "conjugate": "HaloTag ligand",
+      "metrics": {
+        "onMs": {
+          "mean": 4.8699897,
+          "sd": 0.08576484434364716,
+          "n": 3,
+          "replicates": [
+            4.8900094,
+            4.943974,
+            4.7759857
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4b-c",
+          "cells": "B10:D10",
+          "median": 3.4000001,
+          "medianSd": 0.0,
+          "medianReplicates": [
+            3.4000001,
+            3.4000001,
+            3.4000001
+          ],
+          "medianCells": "E10:G10"
+        },
+        "offMs": {
+          "mean": 257000,
+          "sd": 83862.98349093001,
+          "n": 3,
+          "replicates": [
+            294000,
+            316000,
+            161000
+          ],
+          "unit": "ms",
+          "sheet": "Extended Data Figure 4e-f",
+          "cells": "B10:D10",
+          "median": 152982,
+          "medianSd": 66894.85803109234,
+          "medianReplicates": [
+            183897,
+            198828,
+            76221
+          ],
+          "medianCells": "E10:G10"
+        },
+        "photonsPerMs": {
+          "mean": 40.702541000000004,
+          "sd": 3.145916395908035,
+          "n": 3,
+          "replicates": [
+            37.1,
+            42.1,
+            42.907623
+          ],
+          "unit": "photons/ms",
+          "sheet": "Extended Data Figure 4l",
+          "cells": "B10:D10"
+        },
+        "blinksPerMolecule": {
+          "mean": 6.122914073,
+          "sd": 2.3087577698875115,
+          "n": 3,
+          "replicates": [
+            4.939854192,
+            4.645473393,
+            8.783414634
+          ],
+          "unit": "blinks/molecule",
+          "sheet": "Extended Data Figure 4k",
+          "cells": "B10:D10"
+        },
+        "onOffRatio": {
+          "mean": 1.89491e-05,
+          "sd": 6.2e-06,
+          "n": 3,
+          "median": 2.222484e-05,
+          "medianSd": 9.71832e-06,
+          "medianN": 3,
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B11:D11",
+          "medianCells": "E11:G11",
+          "unit": "ratio",
+          "definition": "Reported mean-based and median-based on:off ratios."
+        }
+      }
+    }
+  ],
+  "source": {
+    "title": "A series of spontaneously blinking dyes for super-resolution microscopy",
+    "authors": "Holland, Plutkis, English et al.",
+    "doi": "10.1038/s41592-026-03062-5",
+    "article": "https://doi.org/10.1038/s41592-026-03062-5",
+    "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13167466.1/41592_2026_3062_MOESM10_ESM.xlsx",
+    "local": "data/41592_2026_3062_MOESM10_ESM.xlsx",
+    "sha256": "1e26a58d558f7d96518aca0264b0efed6e5574b67ba5f18899965802fedf5031",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "transformation": "Extended Data Fig. 4 extracted to JSON. Summary means and sample SDs calculated across the three reported experiments. Per-experiment medians and their arithmetic mean use the separate median columns. Ratio summaries are transcribed from panel h-i.",
+    "nameMapping": "Full-text results and Extended Data Fig. 4 map ligands 1HTL through 9HTL to the displayed names."
+  },
+  "acquisition": {
+    "sample": "Fixed COS-7 cells expressing histone H2B–HaloTag",
+    "excitationNm": 647,
+    "onExposureMs": 2,
+    "onCycleMsReportedMethods": 3,
+    "onDistributionFirstBinMs": 3.4,
+    "offExposureMs": 25,
+    "offCycleMs": 27,
+    "independentExperiments": 3,
+    "notes": "Kinetics were measured at subsaturating labeling. Off times were measured at about 100-fold lower labeling concentration than on times, over 45 min. The authors describe off times as upper bounds under these conditions. Methods round the on-time acquisition cycle to 3 ms; panel d starts at 3.4 ms."
+  }
+}
