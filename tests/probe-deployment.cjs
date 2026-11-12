@@ -11,6 +11,65 @@ const screenshotDir = process.argv[4];
 const repo = path.join(__dirname, '..', 'docs');
 const hash = body => createHash('sha256').update(body).digest('hex');
 
+async function verifyUnseen(page, bytes) {
+  const result = JSON.parse(await bytes('data/analogue-benchmark.json'));
+  const workbook = await bytes('data/analogue-observations.csv');
+  const studies = await bytes('data/analogue-studies.json');
+  assert.equal(hash(workbook), result.sourceHashes.observations);
+  assert.equal(hash(studies), result.sourceHashes.studies);
+  const item = key => page.locator('#unseen-' + key);
+  await page.setViewportSize({width:1366,height:900});
+  await page.locator('#view-probe-design .title-actions a[href="#unseen-dyes"]').click();
+  await item('chart').locator('.unseen-bar').first().waitFor();
+  assert.match(await item('counts').innerText(), /11 additional parent dyes, 25/);
+  assert.match(await item('gate').innerText(), /validation is still open/);
+  assert.match(await item('conjugate-effect').innerText(), /16.5×/);
+  assert.equal(await item('conjugates').locator('tr').count(), 3);
+  assert.match(await item('titration-effect').innerText(), /at 1 of 4 laser powers/);
+  assert.equal(await item('titrations').locator('tr').count(), 4);
+  assert.equal(await item('training').inputValue(), 'remmel-igg-frozen');
+  assert.equal(await page.locator('[data-nav=probe-design]').getAttribute('aria-current'), 'location');
+  if (screenshotDir) await page.screenshot({path:path.join(screenshotDir, 'unseen-desktop.png')});
+  for (const set of result.sets) {
+    const group = set.study === 'holland' ? 'holland' : set.id.replace(/-(frozen|local)$/, '');
+    await item('assay').selectOption(group);
+    await item('training').selectOption(set.id);
+    const s = set.summary;
+    assert.equal(await item('coverage').textContent(), s.scored + ' of ' + s.total + ' dyes scored', set.id);
+    assert.equal(await item('chart').locator('.unseen-bar').count(), s.scored);
+    const table = item('rows').locator('tr');
+    assert.equal(await table.count(), Math.max(1, s.total));
+    for (const [i, r] of set.rows.entries()) {
+      const cells = table.nth(i).locator('td');
+      assert.equal(await cells.nth(0).innerText(), r.dye);
+      if (r.status === 'scored') {
+        assert.equal(await cells.nth(3).innerText(), r.predictions.local.toExponential(3));
+        await cells.last().locator('summary').click();
+        assert.ok((await cells.last().innerText()).includes(r.trainingIds.join(', ')));
+      } else {
+        assert.ok((await cells.last().innerText()).includes(r.status));
+      }
+    }
+    assert.deepEqual(await item('metrics').locator('strong').allTextContents(),
+      ['local','nearest','regression'].map(k => s.mae ? s.mae[k].toFixed(3) : '—'));
+  }
+  await item('assay').selectOption('remmel-igg');
+  for (const width of [320,390,760,850,851,940,1060,1191]) {
+    await page.setViewportSize({width,height:844});
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Unseen-dye viewport ' + width);
+  }
+  if (screenshotDir) {
+    await page.setViewportSize({width:390,height:844});
+    await page.evaluate(() => scrollTo(0,0));
+    await page.screenshot({path:path.join(screenshotDir, 'unseen-mobile.png')});
+  }
+  await page.goto(base + '#unseen-dyes');
+  await page.reload();
+  await item('chart').locator('.unseen-bar').first().waitFor();
+  assert.ok((await item('freeze').getAttribute('href')).includes(result.frozenRevision));
+  await page.locator('#view-unseen-dyes .page-title a[href="#probe-design"]').click();
+}
+
 (async () => {
   const browser = await chromium.launch({headless:true, channel});
   try {
@@ -76,6 +135,9 @@ const hash = body => createHash('sha256').update(body).digest('hex');
       return JSON.parse(await fs.readFile(await d.path(), 'utf8'));
     };
     const card = await download(item('lock'));
+    assert.equal(card.plan.schema, 'blink-atlas/probe-trial/2');
+    assert.equal(card.plan.candidate, 'bracket-logratio-v1');
+    assert.ok(card.plan.ratios.local > 0);
     assert.equal(card.plan.nearestDye,'JF635b');
     assert.equal(card.measurement, null);
     assert.equal(await item('pka').isDisabled(),true);
@@ -119,7 +181,9 @@ const hash = body => createHash('sha256').update(body).digest('hex');
     await page.locator('#candidate-rows tr').first().waitFor();
     await page.locator('[data-nav=probe-design]').click();
     await item('outcome').waitFor();
+    await verifyUnseen(page, bytes);
+    await item('outcome').waitFor();
     assert.deepEqual(errors, []);
-    console.log('Verified source workbooks, nine molecules, all ER readouts, lysosome support, blank titrations, abstentions, locked and scored card round trips, navigation and responsive layouts at ' + base);
+    console.log('Verified workbench sources, prospective trial, all unseen-dye evaluations, measured conjugates, responsive layouts and public source hashes at ' + base);
   } finally { await browser.close(); }
 })().catch(e => {console.error(e);process.exitCode=1;});

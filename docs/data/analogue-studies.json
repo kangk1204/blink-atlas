@@ -1,0 +1,58 @@
+{
+  "frozenRevision": "33951f380301398a0f5e6bfff3d1a1dcca232b98",
+  "searchDate": "2026-11-12",
+  "studies": {
+    "holland": {
+      "label": "Holland et al. · fixed COS-7 H2B–HaloTag",
+      "url": "https://doi.org/10.1038/s41592-026-03062-5",
+      "source": "Extended Data Fig. 4j, rows 3–8. Exact free-parent pKa and the reported mean ligand ON:OFF ratio.",
+      "kind": "development"
+    },
+    "remmel": {
+      "label": "Remmel et al. · surface-bound IgG",
+      "url": "https://doi.org/10.1002/smll.202206026",
+      "source": "Published Table 1, PDF page 4, compounds 1–6. Fields are pKa₂, TON (ms) and TOFF (s). The same entries occur in Table 1 on PDF page 13 of the authors’ preprint.",
+      "sourceUrl": "https://pure.mpg.de/rest/items/item_3489427_3/component/file_3506946/content",
+      "kind": "transfer",
+      "chemistry": "Si-rhodamine spirolactams on IgG, immobilized on coverslips in PBS. The upper free-dye pKa₂ describes the fluorescent-form to spirolactam equilibrium. A second protonation produces another dark state at low pH.",
+      "endpoint": "Mean ON:OFF dwell-time ratio from the reported ON time (1 ms confocal sampling) and OFF time (10 ms wide-field sampling). Printed dwell times are rounded.",
+      "transferNote": "A numerical stress test uses free-dye pKa₂ as the ring-opening midpoint. The distinct chemistry, two equilibria, antibody and detection conditions put all these dyes outside the deployed H2B assay.",
+      "conjugateSourceUrl": "https://www.biorxiv.org/content/biorxiv/early/2022/08/29/2022.08.29.505670/DC1/embed/media-1.pdf?download=true",
+      "conditions": {
+        "HaloTag7": {"chemistry": "Compound 4 chloroalkane ligand bound to purified HaloTag7. Its free-parent pKa₂ is shared with the antibody and nanobody conjugates.", "source": "Authors’ supplement, Table S1 and Fig. S7, printed page 8. Mean ON and OFF times are for the HaloTag7 conjugate.", "transferNote": "This surface assay has one parent. Its target protein environment and acquisition differ from fixed H2B."},
+        "Nanobody": {"chemistry": "Compound 4 maleimide conjugate on a nanobody. Its free-parent pKa₂ is shared with the antibody and HaloTag7 conjugates.", "source": "Authors’ supplement, Table S1 and Fig. S7, printed page 8. The published OFF time incorporates the authors’ correction for two labels per nanobody.", "transferNote": "This surface assay has one parent. Linker and protein differ across conjugates."}
+      }
+    },
+    "zheng": {
+      "label": "Zheng et al. · purified HaloTag on glass",
+      "url": "https://doi.org/10.1021/jacs.2c11395",
+      "sourceUrl": "https://doi.org/10.1021/jacs.2c11395.s001",
+      "source": "Supporting Tables S1 (printed S7, PDF 9) and S2 (printed S14, PDF 16). Joined named dyes with an exact unbound pKcycling in S1. All four powers at pH 7.4 are retained. The exploratory input comparison uses S1’s independently measured protein-bound titrations.",
+      "kind": "transfer",
+      "chemistry": "Sulfonamide rhodamines. Free-fluorophore pKcycling in 9:1 PBS:ethanol. Purified HaloTag conjugates are adsorbed on glass in PBS at pH 7.4. Each laser power is its own calibration task.",
+      "endpoint": "Observed occupancy odds f/(1−f), where f is the published mean duty cycle over all 6,000 frames (10 ms each). This includes the entire observation window and is distinct from a ratio of mean event dwell times.",
+      "transferNote": "All four free-dye pKcycling values are above the Holland range. The four repeats across powers represent the same four chemical identities."
+    },
+    "tyson": {
+      "label": "Tyson et al. · Yale676sb on glass",
+      "url": "https://doi.org/10.1021/acscentsci.1c00670",
+      "source": "Fig. 3 and single-molecule kinetics paragraph associated with SI Fig. S4. Yale676sb has measured pKcycl 5.9, ON time 4.5 ms and OFF time 3.8 s.",
+      "kind": "transfer",
+      "chemistry": "Hydroxymethyl Si-rhodamine. Single molecules immobilized on glass, pH 7.4.",
+      "endpoint": "ON:OFF time ratio at pH 7.4.",
+      "transferNote": "Outside the Holland pKa range. Only Yale676sb has both directly reported dwell times in this acquisition."
+    }
+  },
+  "screened": [
+    {"label":"Holland 2024 preprint", "url":"https://doi.org/10.1101/2024.02.23.581625", "reason":"Earlier version of the development series. The renumbered compounds are duplicate identities."},
+    {"label":"Remmel dissertation and preprint", "url":"https://doi.org/10.1101/2022.08.29.505670", "reason":"The six numbered compounds also occur in the final Small article. Counted once."},
+    {"label":"Walterspiel et al. and Zenodo S21", "url":"https://zenodo.org/records/16941576", "reason":"Live U2OS H2B recordings, including known JF630b. Localization counts change with illumination. No additional dye with a matched fixed-cell mean ON:OFF measurement."},
+    {"label":"Qiao et al., HM-DS655-Halo", "url":"https://doi.org/10.1002/anie.202417469", "reason":"The authors compare duty cycles before and after protein binding and image live cells. The reported upper-limit acidity of the Halo ligand cannot serve as an exact free-parent input for a matched H2B test."},
+    {"label":"Chi et al., design of HM-DS dyes", "url":"https://doi.org/10.1002/anie.202010169", "reason":"Predicts spirocyclization equilibrium from molecular energies and demonstrates microscopy. No matched fixed COS-7 H2B ligand mean-ratio series identified."},
+    {"label":"HMSiR analogues and SIM probe 4c", "url":"https://doi.org/10.3762/bjoc.22.72", "reason":"The H2B–HaloTag demonstration uses SIM in live HeLa cells. The localization precision measurements concern other probes and actin."},
+    {"label":"Fluorogenic tetrazine f-HM-SiR", "url":"https://doi.org/10.1002/anie.201906806", "reason":"Live H2A–HaloTag or TOM20 imaging with a click-labeling step."},
+    {"label":"Rational design of JF labels", "url":"https://doi.org/10.1021/acscentsci.9b00676", "reason":"H2B fluorogenic-label contrasts and HM-JF526 microscopy are different readouts from the target mean ON:OFF assay."},
+    {"label":"DFT recruiting-rate screen", "url":"https://doi.org/10.1021/acs.jpca.4c06408", "reason":"Predicts the dark-to-first-bright recruiting rate. Its predicted dyes and calculated rates cannot supply experimental mean ON:OFF labels."},
+    {"label":"Other Zheng Table S2 rows", "url":"https://doi.org/10.1021/jacs.2c11395.s001", "reason":"Rh-Gly, HMSiR, MaP33 and MaP555 lack an exact free-dye acidity entry in the linked Table S1 series. Bound-only values and other pH conditions are kept out of the same-input comparison."}
+  ]
+}

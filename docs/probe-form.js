@@ -1,4 +1,4 @@
-import {lockTrial, methods, predict, restoreTrial, scoreTrial} from './probe-trial.js';
+import {lockTrial, methods, predict, restoreTrial, scoreTrial} from './probe-trial.js?v=unseen-1';
 
 const id = name => document.getElementById('probe-' + name);
 const format = value => value.toExponential(3);
@@ -42,7 +42,7 @@ export function mountTrial(root, data) {
       <div class="probe-readout">
         <h3>Matched H2B measurement</h3>
         <p>Use fixed COS-7 H2B–HaloTag under the published subsaturating labeling protocol. Acquire ON times at 2 ms exposure and OFF times at 25 ms exposure. Include the reference ligands printed on the locked card.</p>
-        <p>Enter one mean ON:OFF time ratio per independent preparation. The card scores the three frozen predictions against the arithmetic mean of the three ratios. OFF times in this assay are upper-bound estimates.</p>
+        <p>Enter one mean ON:OFF time ratio per independent preparation. The card scores each prediction saved before imaging against the arithmetic mean of the three ratios. OFF times in this assay are upper-bound estimates.</p>
         <form id="probe-score-form" hidden novalidate>
           <fieldset id="probe-observations"><legend>Independent preparation ratios</legend><div class="probe-measurements">
             <label>Prep 1<input id="probe-rep-1" type="number" step="any" inputmode="decimal"></label>
@@ -73,9 +73,9 @@ export function mountTrial(root, data) {
     const caption = document.createElement('strong');
     caption.textContent = trial ? 'Locked ON:OFF predictions' : 'Predicted mean ON:OFF time ratios';
     const list = document.createElement('dl');
-    for (const [key, label] of Object.entries(methods)) {
+    for (const key of Object.keys(prediction.ratios)) {
       const term = document.createElement('dt'), value = document.createElement('dd');
-      term.textContent = label + (key === 'nearest' ? ' · ' + prediction.nearestDye : '');
+      term.textContent = methods[key] + (key === 'nearest' ? ' · ' + prediction.nearestDye : '');
       value.textContent = format(prediction.ratios[key]);
       list.append(term, value);
     }
@@ -105,7 +105,7 @@ export function mountTrial(root, data) {
     text.textContent = '';
     if (measured) {
       const m = trial.measurement;
-      const errors = Object.keys(methods).map(k => methods[k] + ' ' + m.error[k].toFixed(3));
+      const errors = Object.keys(m.error).map(k => methods[k] + ' ' + m.error[k].toFixed(3));
       text.textContent = 'Observed mean ' + format(m.observed) + '. Absolute log₁₀ errors — ' + errors.join(' · ') +
         '. Closest for this compound — ' + m.closest.map(k => methods[k]).join(' and ') + '.';
     }

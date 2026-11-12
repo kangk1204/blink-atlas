@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="evidence.css?v=palette-1">
   <link rel="stylesheet" href="palette-view.css">
   <link rel="stylesheet" href="probe-view.css">
+  <link rel="stylesheet" href="analogue-view.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to workspace</a>
@@ -76,8 +77,14 @@
     <section id="view-probe-design" class="view" hidden aria-labelledby="probe-title">
       <header class="page-title"><div><div class="context"><span class="context-dot"></span> Hydroxymethyl Si-rhodamines · Holland et al.</div>
         <h1 id="probe-title">Probe design</h1><p>Compare a change in dye structure across buffer and cell measurements. Test what a new analogue’s pKa can predict.</p></div>
-        <button class="button primary" id="probe-jump" type="button" disabled>Plan an analogue test <span aria-hidden="true">↓</span></button></header>
+        <div class="title-actions"><a class="button secondary" href="#unseen-dyes">Unseen-dye validation →</a><button class="button primary" id="probe-jump" type="button" disabled>Plan an analogue test <span aria-hidden="true">↓</span></button></div></header>
       <div id="probe-design-content"><p role="status">Loading probe chemistry and source measurements…</p></div>
+    </section>
+    <section id="view-unseen-dyes" class="view" hidden aria-labelledby="unseen-title">
+      <header class="page-title"><div><div class="context"><span class="context-dot"></span> Probe design · external validation</div>
+        <h1 id="unseen-title">Unseen-dye validation</h1><p>Can two bracketing dyes predict blinking more accurately than the single dye closest in pKa?</p></div>
+        <a class="button secondary" href="#probe-design">Back to probe design</a></header>
+      <div id="unseen-dyes-content"><p role="status">Loading held-out dye measurements…</p></div>
     </section>
     <section id="view-pilot" class="view" hidden aria-labelledby="pilot-title">
       <header class="page-title"><div><div class="context"><span class="context-dot"></span> Live-cell recording · Figure S21</div><h1 id="pilot-title">Pilot recording</h1><p>Use the first 200 frames to forecast detections in the next 800 frames of the same acquisition.</p></div><button id="export-pilot" class="button secondary" type="button">↓ Download case JSON</button></header>
@@ -117,6 +124,7 @@
         <a href="https://zenodo.org/records/16941576"><strong>S21 recording and localizations ↗</strong><span>Walterspiel et al. · Zenodo, 2025</span></a>
         <a href="#precision"><strong>20 nm precision evidence →</strong><span>Fixed-cell histogram, live recordings and ground truth</span></a>
         <a href="#probe-design"><strong>Probe design →</strong><span>Parent structures, buffer titrations, cellular SOFI and prospective analogue tests</span></a>
+        <a href="#unseen-dyes"><strong>Unseen-dye validation →</strong><span>Frozen predictions, new public measurements and assay-specific holdouts</span></a>
         <a href="#dna-paint"><strong>DNA-PAINT reanalysis →</strong><span>Steen et al. · 18 dyes, published cells and held-out pairs</span></a>
         <a href="media/validation-proposal.pdf"><strong>Joint validation proposal ↓</strong><span>One page · matched fields and equal pilot budgets</span></a>
         <a href="media/walkthrough.mp4" data-watch><strong>Watch the walkthrough →</strong><span>Two-minute narrated demonstration</span></a>
@@ -130,6 +138,6 @@
     <div class="guide-links"><a href="media/walkthrough.mp4" download>Download MP4</a><a href="media/walkthrough.vtt" download>English captions</a></div>
   </dialog>
   <footer class="container footer"><span>Blink Atlas <i></i> Independent research demo</span><a href="#methods">Data provenance &amp; methods →</a></footer>
-  <script type="module" src="app.js?v=probe-1"></script>
+  <script type="module" src="app.js?v=unseen-1"></script>
 </body>
 </html>

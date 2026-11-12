@@ -4,7 +4,9 @@ An interactive research demo for selecting the first two spontaneously blinking 
 
 ## Use the comparison
 
-The [Probe design workbench](https://kangk1204.github.io/blink-atlas/#probe-design) links the nine free-dye structures and pH titrations to the corresponding HaloTag-ligand measurements. Compare live and fixed cellular SOFI, then lock and score a new analogue’s predicted H2B ON:OFF ratio. In four eligible leave-one-dye-out tests the nearest measured pKa had lower average log error (0.216) than regression (0.318) or the training median (0.499). [Data, reproduction commands and prospective protocol](analysis/probe-design.md)
+The probe workbench links the nine free-dye structures and pH titrations to the corresponding HaloTag-ligand measurements. Compare live and fixed cellular SOFI, then lock and score a new analogue’s predicted H2B ON:OFF time ratio. [Open Probe design](https://kangk1204.github.io/blink-atlas/#probe-design) · [Data and prospective protocol](analysis/probe-design.md)
+
+The unseen-dye benchmark adds 25 measurements across 11 additional parent dyes. On four eligible external IgG-conjugated dyes, the frozen local model had mean absolute log₁₀ error 0.293, nearest pKa 0.307 and the original regression 0.208. Local interpolation beat nearest for two dyes. Independent validation on new dyes in the fixed H2B assay remains open. [Explore all predictions and assay changes](https://kangk1204.github.io/blink-atlas/#unseen-dyes) · [Frozen benchmark, results and next experiments](analysis/analogue-benchmark.md)
 
 1. Set a plausible *local* label density interval in labels/µm² and the minimum expected photon count. The slider shifts the interval along a logarithmic scale. Broad range and Dense range are illustrative assumptions.
 2. Inspect the two reference curves or display all nine. The table shows nominal isolated detections per µm²/s at the geometric midpoint, bounds over the selected interval and sensitivity assumptions, and the conditional probability of an active neighbor within 250 nm. Estimates refer to detections, which can include repeated emission from the same molecule.

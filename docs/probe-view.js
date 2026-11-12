@@ -1,4 +1,4 @@
-import {mountTrial} from './probe-form.js';
+import {mountTrial} from './probe-form.js?v=unseen-1';
 
 const metrics = {
   useful: {label: 'Useful pixels', unit: '%', delta: 'percentage points'},
@@ -224,9 +224,12 @@ function drawCalibration(canvas, calibration) {
 }
 
 export async function renderProbeDesign(root) {
-  const res = await fetch('data/probe-design.json');
-  if (!res.ok) throw new Error('Measurement bundle (' + res.status + ').');
-  const data = await res.json();
+  const [data, benchmark] = await Promise.all(['probe-design', 'analogue-benchmark'].map(async name => {
+    const res = await fetch('data/' + name + '.json');
+    if (!res.ok) throw new Error(name + ' (' + res.status + ').');
+    return res.json();
+  }));
+  const development = benchmark.sets.find(s => s.mode === 'development');
   root.innerHTML = `
     <div class="card probe-controls">
       <label>Cellular assay<select id="probe-context" aria-label="Cellular assay"></select></label>
@@ -264,8 +267,9 @@ export async function renderProbeDesign(root) {
         </figure>
         <div id="probe-benchmarks"></div><p class="footnote">Mean absolute log₁₀ error on the same held-out dyes. Lower is better.</p>
         <p id="probe-validation-copy"></p>
+        <p><a class="inline-link" href="#unseen-dyes">Compare local interpolation on unseen dyes →</a></p>
         <details><summary>Six calibration pairs and fitted line</summary><p class="footnote" id="probe-equation"></p><div class="table-wrap"><table><thead><tr><th>Dye</th><th>Parent pKa</th><th>Mean ratio</th><th>SD · n = 3</th><th>Source cells</th></tr></thead><tbody id="probe-pairs"></tbody></table></div><p class="footnote">HM-SiR and JF646b have complex titrations. JF614b has only an upper limit on pKa (&lt;1). Extended Data Fig. 4j omits these three.</p></details>
-        <details><summary>Inspect each held-out dye</summary><div class="table-wrap"><table><thead><tr><th>Held-out dye</th><th>pKa</th><th>Regression error</th><th>Nearest error</th><th>Median error</th></tr></thead><tbody id="probe-folds"></tbody></table></div></details>
+        <details><summary>Inspect each held-out dye</summary><div class="table-wrap"><table><thead><tr><th>Held-out dye</th><th>pKa</th><th>Local error</th><th>Regression error</th><th>Nearest error</th><th>Median error</th></tr></thead><tbody id="probe-folds"></tbody></table></div></details>
       </article>
     </div>
     <article class="card probe-card" id="probe-trial"></article>
@@ -305,18 +309,23 @@ export async function renderProbeDesign(root) {
   const c = data.calibration, val = c.validation;
   new ResizeObserver(() => drawCalibration(ids('calibration'), c)).observe(ids('calibration'));
   ids('equation').textContent = 'The dashed line fits all six dyes with log₁₀(ratio) = ' + c.fit.intercept.toFixed(4) +
-    ' + ' + c.fit.slope.toFixed(4) + ' × pKa. Each test fold refits the regression and both references using the other five dyes.';
+    ' + ' + c.fit.slope.toFixed(4) + ' × pKa. Each test fold uses only the other five dyes for all four forecasts.';
   ids('pairs').replaceChildren(...c.pairs.map(p => cells([p.id, String(p.pKa), String(p.ratio), String(p.sd), sourceCell(data, p.source)])));
-  for (const [label, value] of [['Nearest pKa', val.nearestMae], ['Regression', val.mae], ['Median', val.baselineMae]]) {
+  for (const [label, value] of [['Local interpolation', development.summary.mae.local], ['Nearest pKa', val.nearestMae],
+    ['Regression', val.mae], ['Median', val.baselineMae]]) {
     const tile = el('div');
     tile.append(el('span', label), el('strong', value.toFixed(3)));
     ids('benchmarks').append(tile);
   }
-  ids('validation-copy').textContent = val.scored + ' of ' + val.total + ' dyes fell inside the remaining calibration range. The nearest measured dye had the lowest error on average. Regression beat that reference for ' + val.winsVsNearest + ' of ' + val.scored + ' dyes. Both endpoints were outside the training range.';
+  ids('validation-copy').textContent = val.scored + ' of ' + val.total + ' dyes fell inside the remaining calibration range. Local interpolation had the lowest average error, beating nearest pKa for ' +
+    development.summary.wins + ' of ' + val.scored + ' development dyes. Both endpoint dyes were outside their folds’ ranges.';
   ids('folds').replaceChildren(...c.folds.map(f => {
-    if (f.status === 'scored') return cells([f.held, String(f.pKa), f.error.toFixed(3), f.nearestError.toFixed(3), f.baselineError.toFixed(3)]);
+    if (f.status === 'scored') {
+      const local = development.rows.find(r => r.id === f.held).errors.local;
+      return cells([f.held, String(f.pKa), local.toFixed(3), f.error.toFixed(3), f.nearestError.toFixed(3), f.baselineError.toFixed(3)]);
+    }
     const row = cells([f.held, String(f.pKa), 'Outside training range']);
-    row.lastChild.colSpan = 3; return row;
+    row.lastChild.colSpan = 4; return row;
   }));
   const links = [['Article ↗', data.article], ['Supplementary Note 2 ↗', data.si.url],
     ...Object.values(data.sources).map(s => [s.sheet + ' workbook ↓', s.file]),
