@@ -4,6 +4,8 @@ An interactive research demo for selecting the first two spontaneously blinking 
 
 ## Use the comparison
 
+The [Probe design workbench](https://kangk1204.github.io/blink-atlas/#probe-design) links the nine free-dye structures and pH titrations to the corresponding HaloTag-ligand measurements. Compare live and fixed cellular SOFI, then lock and score a new analogue’s predicted H2B ON:OFF ratio. In four eligible leave-one-dye-out tests the nearest measured pKa had lower average log error (0.216) than regression (0.318) or the training median (0.499). [Data, reproduction commands and prospective protocol](analysis/probe-design.md)
+
 1. Set a plausible *local* label density interval in labels/µm² and the minimum expected photon count. The slider shifts the interval along a logarithmic scale. Broad range and Dense range are illustrative assumptions.
 2. Inspect the two reference curves or display all nine. The table shows nominal isolated detections per µm²/s at the geometric midpoint, bounds over the selected interval and sensitivity assumptions, and the conditional probability of an active neighbor within 250 nm. Estimates refer to detections, which can include repeated emission from the same molecule.
 3. A pair is recommended only if it outranks every alternative for the full density interval at all tested kinetic settings. At 100–1,000 labels/µm² and 100 expected photons, the pair is unresolved. At 10,000–10,500 with the same threshold the model selects JF630b and JF629b. These are input-dependent predictions. Cellular performance requires an independent matched experiment.

@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#112f2e">
-  <meta name="description" content="Compare nine blinking HaloTag dyes, measure 20 nm localization yield, and explore an independent 18-dye DNA-PAINT benchmark.">
+  <meta name="description" content="Explore the chemistry and cellular blinking of nine HaloTag probes, test new analogue predictions, and inspect localization precision and DNA-PAINT evidence.">
   <title>Blink Atlas · Fluorophore comparison</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="preload" href="assets/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="evidence.css?v=palette-1">
   <link rel="stylesheet" href="palette-view.css">
+  <link rel="stylesheet" href="probe-view.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to workspace</a>
@@ -18,6 +19,7 @@
     <a class="brand" href="#compare" aria-label="Blink Atlas home"><img src="assets/mark.svg" alt="" width="33" height="33">Blink Atlas</a>
     <nav class="site-nav" aria-label="Workspace">
       <a href="#compare" data-nav="compare">Dye comparison</a>
+      <a href="#probe-design" data-nav="probe-design">Probe design</a>
       <a href="#pilot" data-nav="pilot">Pilot recording</a>
       <a href="#precision" data-nav="precision">Precision evidence</a>
       <a href="#dna-paint" data-nav="dna-paint">DNA-PAINT</a>
@@ -67,8 +69,15 @@
           <div id="ref-images"></div>
           <table class="pair-table"><thead><tr><th>Mean property</th><th class="num">JF630b</th><th class="num">JF635b</th></tr></thead><tbody id="pair-rows"></tbody></table>
           <a class="inline-link" href="#methods">Inspect the source measurements <span>→</span></a>
+          <a class="inline-link" href="#probe-design">Compare the dye structures and cellular readouts <span>→</span></a>
         </article>
       </div>
+    </section>
+    <section id="view-probe-design" class="view" hidden aria-labelledby="probe-title">
+      <header class="page-title"><div><div class="context"><span class="context-dot"></span> Hydroxymethyl Si-rhodamines · Holland et al.</div>
+        <h1 id="probe-title">Probe design</h1><p>Compare a change in dye structure across buffer and cell measurements. Test what a new analogue’s pKa can predict.</p></div>
+        <button class="button primary" id="probe-jump" type="button" disabled>Plan an analogue test <span aria-hidden="true">↓</span></button></header>
+      <div id="probe-design-content"><p role="status">Loading probe chemistry and source measurements…</p></div>
     </section>
     <section id="view-pilot" class="view" hidden aria-labelledby="pilot-title">
       <header class="page-title"><div><div class="context"><span class="context-dot"></span> Live-cell recording · Figure S21</div><h1 id="pilot-title">Pilot recording</h1><p>Use the first 200 frames to forecast detections in the next 800 frames of the same acquisition.</p></div><button id="export-pilot" class="button secondary" type="button">↓ Download case JSON</button></header>
@@ -107,6 +116,7 @@
         <a href="https://pmc-oa-opendata.s3.amazonaws.com/PMC13167466.1/41592_2026_3062_MOESM10_ESM.xlsx"><strong>Extended Data Fig. 4 workbook ↓</strong><span>Replicate measurements and distributions</span></a>
         <a href="https://zenodo.org/records/16941576"><strong>S21 recording and localizations ↗</strong><span>Walterspiel et al. · Zenodo, 2025</span></a>
         <a href="#precision"><strong>20 nm precision evidence →</strong><span>Fixed-cell histogram, live recordings and ground truth</span></a>
+        <a href="#probe-design"><strong>Probe design →</strong><span>Parent structures, buffer titrations, cellular SOFI and prospective analogue tests</span></a>
         <a href="#dna-paint"><strong>DNA-PAINT reanalysis →</strong><span>Steen et al. · 18 dyes, published cells and held-out pairs</span></a>
         <a href="media/validation-proposal.pdf"><strong>Joint validation proposal ↓</strong><span>One page · matched fields and equal pilot budgets</span></a>
         <a href="media/walkthrough.mp4" data-watch><strong>Watch the walkthrough →</strong><span>Two-minute narrated demonstration</span></a>
@@ -120,6 +130,6 @@
     <div class="guide-links"><a href="media/walkthrough.mp4" download>Download MP4</a><a href="media/walkthrough.vtt" download>English captions</a></div>
   </dialog>
   <footer class="container footer"><span>Blink Atlas <i></i> Independent research demo</span><a href="#methods">Data provenance &amp; methods →</a></footer>
-  <script type="module" src="app.js?v=palette-1"></script>
+  <script type="module" src="app.js?v=probe-1"></script>
 </body>
 </html>

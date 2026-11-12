@@ -1,0 +1,3807 @@
+{
+  "schema": "blink-atlas/probe-design/1",
+  "article": "https://doi.org/10.1038/s41592-026-03062-5",
+  "license": "CC BY 4.0",
+  "si": {
+    "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13167466.1/41592_2026_3062_MOESM1_ESM.pdf",
+    "sha256": "adf5bc338599bf8651ea482f9a31d09545486fc692ab9b713012c2afcf223974"
+  },
+  "sources": {
+    "7": {
+      "file": "data/41592_2026_3062_MOESM7_ESM.xlsx",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13167466.1/41592_2026_3062_MOESM7_ESM.xlsx",
+      "sha256": "2d8e5b9c52d1e38fbc57691695076d15dcec0920de3faef9bb1a09d67a235991",
+      "sheet": "Figure 1a"
+    },
+    "8": {
+      "file": "data/41592_2026_3062_MOESM8_ESM.xlsx",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13167466.1/41592_2026_3062_MOESM8_ESM.xlsx",
+      "sha256": "9f0b5764b0a86978aa8cc02bbf816949be0357ad33234f0f93e239d0d2d2dd4e",
+      "sheet": "Figure 2b-d"
+    },
+    "9": {
+      "file": "data/41592_2026_3062_MOESM9_ESM.xlsx",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13167466.1/41592_2026_3062_MOESM9_ESM.xlsx",
+      "sha256": "c7f90e03b582edcf2618118c7be0e2c9af6481d61960901637b09db4147b5e1a",
+      "sheet": "Extended Data Figure 2j-k"
+    },
+    "10": {
+      "file": "data/41592_2026_3062_MOESM10_ESM.xlsx",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13167466.1/41592_2026_3062_MOESM10_ESM.xlsx",
+      "sha256": "1e26a58d558f7d96518aca0264b0efed6e5574b67ba5f18899965802fedf5031",
+      "sheet": "Extended Data Figure 4j"
+    },
+    "13": {
+      "file": "data/41592_2026_3062_MOESM13_ESM.xlsx",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13167466.1/41592_2026_3062_MOESM13_ESM.xlsx",
+      "sha256": "86acf64ef89ca05f32ad9b385ea0c2859e50bb57bdc5f73ce1aeace258bebf1b",
+      "sheet": "Extended Data Figure 8e-f"
+    }
+  },
+  "dyes": [
+    {
+      "id": "HM-SiR",
+      "compound": 1,
+      "ligand": "1HTL",
+      "auxochrome": "Dimethylamino",
+      "absorptionNm": 656,
+      "emissionNm": 671,
+      "pKaFigure1": "5.15",
+      "structure": {
+        "image": "media/probe-structures/1.png",
+        "pdfPage": 41
+      },
+      "quantumYield": {
+        "readings": [
+          0.5720000000000001,
+          0.602
+        ],
+        "mean": 0.587,
+        "source": {
+          "workbook": "7",
+          "sheet": "Figure 1a",
+          "cells": "B2:C2"
+        }
+      },
+      "titration": [
+        {
+          "pH": 2.23,
+          "readings": [
+            0.284738,
+            0.25585
+          ],
+          "mean": 0.27029400000000003,
+          "cells": "B8:C8",
+          "pHCell": "A8"
+        },
+        {
+          "pH": 2.45,
+          "readings": [
+            0.370729,
+            0.353094
+          ],
+          "mean": 0.3619115,
+          "cells": "B9:C9",
+          "pHCell": "A9"
+        },
+        {
+          "pH": 2.67,
+          "readings": [
+            0.470387,
+            0.439938
+          ],
+          "mean": 0.4551625,
+          "cells": "B10:C10",
+          "pHCell": "A10"
+        },
+        {
+          "pH": 2.87,
+          "readings": [
+            0.589977,
+            0.547062
+          ],
+          "mean": 0.5685195000000001,
+          "cells": "B11:C11",
+          "pHCell": "A11"
+        },
+        {
+          "pH": 3.08,
+          "readings": [
+            0.690205,
+            0.653666
+          ],
+          "mean": 0.6719355,
+          "cells": "B12:C12",
+          "pHCell": "A12"
+        },
+        {
+          "pH": 3.27,
+          "readings": [
+            0.805809,
+            0.75039
+          ],
+          "mean": 0.7780994999999999,
+          "cells": "B13:C13",
+          "pHCell": "A13"
+        },
+        {
+          "pH": 3.45,
+          "readings": [
+            0.880979,
+            0.835153
+          ],
+          "mean": 0.858066,
+          "cells": "B14:C14",
+          "pHCell": "A14"
+        },
+        {
+          "pH": 3.66,
+          "readings": [
+            0.940205,
+            0.918877
+          ],
+          "mean": 0.929541,
+          "cells": "B15:C15",
+          "pHCell": "A15"
+        },
+        {
+          "pH": 3.84,
+          "readings": [
+            0.984055,
+            0.99376
+          ],
+          "mean": 0.9889075,
+          "cells": "B16:C16",
+          "pHCell": "A16"
+        },
+        {
+          "pH": 4.03,
+          "readings": [
+            1,
+            1
+          ],
+          "mean": 1,
+          "cells": "B17:C17",
+          "pHCell": "A17"
+        },
+        {
+          "pH": 4.21,
+          "readings": [
+            0.959567,
+            0.968279
+          ],
+          "mean": 0.963923,
+          "cells": "B18:C18",
+          "pHCell": "A18"
+        },
+        {
+          "pH": 4.41,
+          "readings": [
+            0.905467,
+            0.881955
+          ],
+          "mean": 0.893711,
+          "cells": "B19:C19",
+          "pHCell": "A19"
+        },
+        {
+          "pH": 4.59,
+          "readings": [
+            0.835421,
+            0.821633
+          ],
+          "mean": 0.828527,
+          "cells": "B20:C20",
+          "pHCell": "A20"
+        },
+        {
+          "pH": 4.82,
+          "readings": [
+            0.711845,
+            0.656266
+          ],
+          "mean": 0.6840554999999999,
+          "cells": "B21:C21",
+          "pHCell": "A21"
+        },
+        {
+          "pH": 5,
+          "readings": [
+            0.626424,
+            0.522101
+          ],
+          "mean": 0.5742625,
+          "cells": "B22:C22",
+          "pHCell": "A22"
+        },
+        {
+          "pH": 5.2,
+          "readings": [
+            0.418565,
+            0.456058
+          ],
+          "mean": 0.4373115,
+          "cells": "B23:C23",
+          "pHCell": "A23"
+        },
+        {
+          "pH": 5.39,
+          "readings": [
+            0.355353,
+            0.348414
+          ],
+          "mean": 0.3518835,
+          "cells": "B24:C24",
+          "pHCell": "A24"
+        },
+        {
+          "pH": 5.58,
+          "readings": [
+            0.323462,
+            0.306032
+          ],
+          "mean": 0.314747,
+          "cells": "B25:C25",
+          "pHCell": "A25"
+        },
+        {
+          "pH": 5.91,
+          "readings": [
+            0.17369,
+            0.140406
+          ],
+          "mean": 0.15704800000000002,
+          "cells": "B26:C26",
+          "pHCell": "A26"
+        },
+        {
+          "pH": 5.99,
+          "readings": [
+            0.154328,
+            0.125325
+          ],
+          "mean": 0.1398265,
+          "cells": "B27:C27",
+          "pHCell": "A27"
+        },
+        {
+          "pH": 6.18,
+          "readings": [
+            0.100228,
+            0.086323
+          ],
+          "mean": 0.0932755,
+          "cells": "B28:C28",
+          "pHCell": "A28"
+        },
+        {
+          "pH": 6.37,
+          "readings": [
+            0.057517,
+            0.052002
+          ],
+          "mean": 0.0547595,
+          "cells": "B29:C29",
+          "pHCell": "A29"
+        },
+        {
+          "pH": 6.52,
+          "readings": [
+            0.039863,
+            0.037441
+          ],
+          "mean": 0.038652000000000006,
+          "cells": "B30:C30",
+          "pHCell": "A30"
+        },
+        {
+          "pH": 6.73,
+          "readings": [
+            0.017084,
+            0.019241
+          ],
+          "mean": 0.018162499999999998,
+          "cells": "B31:C31",
+          "pHCell": "A31"
+        },
+        {
+          "pH": 6.95,
+          "readings": [
+            0.005695,
+            0.0078
+          ],
+          "mean": 0.0067475,
+          "cells": "B32:C32",
+          "pHCell": "A32"
+        }
+      ],
+      "ligandRatio": {
+        "mean": 0.0005869118092,
+        "sd": 0.00018138986399,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B3:D3"
+        }
+      }
+    },
+    {
+      "id": "JFX650b",
+      "compound": 2,
+      "ligand": "2HTL",
+      "auxochrome": "Pyrrolidine-d₈",
+      "absorptionNm": 660,
+      "emissionNm": 674,
+      "pKaFigure1": "4.48",
+      "structure": {
+        "image": "media/probe-structures/2.png",
+        "pdfPage": 41
+      },
+      "quantumYield": {
+        "readings": [
+          0.78,
+          0.728
+        ],
+        "mean": 0.754,
+        "source": {
+          "workbook": "7",
+          "sheet": "Figure 1a",
+          "cells": "B3:C3"
+        }
+      },
+      "titration": [
+        {
+          "pH": 2.23,
+          "readings": [
+            1,
+            1
+          ],
+          "mean": 1,
+          "cells": "D8:E8",
+          "pHCell": "A8"
+        },
+        {
+          "pH": 2.45,
+          "readings": [
+            0.966437,
+            0.968617
+          ],
+          "mean": 0.967527,
+          "cells": "D9:E9",
+          "pHCell": "A9"
+        },
+        {
+          "pH": 2.67,
+          "readings": [
+            0.950753,
+            0.961609
+          ],
+          "mean": 0.956181,
+          "cells": "D10:E10",
+          "pHCell": "A10"
+        },
+        {
+          "pH": 2.87,
+          "readings": [
+            0.952635,
+            0.966789
+          ],
+          "mean": 0.959712,
+          "cells": "D11:E11",
+          "pHCell": "A11"
+        },
+        {
+          "pH": 3.08,
+          "readings": [
+            0.883312,
+            0.93053
+          ],
+          "mean": 0.906921,
+          "cells": "D12:E12",
+          "pHCell": "A12"
+        },
+        {
+          "pH": 3.27,
+          "readings": [
+            0.888645,
+            0.939366
+          ],
+          "mean": 0.9140055,
+          "cells": "D13:E13",
+          "pHCell": "A13"
+        },
+        {
+          "pH": 3.45,
+          "readings": [
+            0.88143,
+            0.899452
+          ],
+          "mean": 0.890441,
+          "cells": "D14:E14",
+          "pHCell": "A14"
+        },
+        {
+          "pH": 3.66,
+          "readings": [
+            0.832497,
+            0.85649
+          ],
+          "mean": 0.8444935,
+          "cells": "D15:E15",
+          "pHCell": "A15"
+        },
+        {
+          "pH": 3.84,
+          "readings": [
+            0.801129,
+            0.812919
+          ],
+          "mean": 0.807024,
+          "cells": "D16:E16",
+          "pHCell": "A16"
+        },
+        {
+          "pH": 4.03,
+          "readings": [
+            0.742472,
+            0.763863
+          ],
+          "mean": 0.7531675,
+          "cells": "D17:E17",
+          "pHCell": "A17"
+        },
+        {
+          "pH": 4.21,
+          "readings": [
+            0.646801,
+            0.675503
+          ],
+          "mean": 0.661152,
+          "cells": "D18:E18",
+          "pHCell": "A18"
+        },
+        {
+          "pH": 4.41,
+          "readings": [
+            0.500314,
+            0.541133
+          ],
+          "mean": 0.5207235,
+          "cells": "D19:E19",
+          "pHCell": "A19"
+        },
+        {
+          "pH": 4.59,
+          "readings": [
+            0.446989,
+            0.421999
+          ],
+          "mean": 0.43449400000000005,
+          "cells": "D20:E20",
+          "pHCell": "A20"
+        },
+        {
+          "pH": 4.82,
+          "readings": [
+            0.31399,
+            0.319317
+          ],
+          "mean": 0.31665350000000003,
+          "cells": "D21:E21",
+          "pHCell": "A21"
+        },
+        {
+          "pH": 5,
+          "readings": [
+            0.254078,
+            0.234004
+          ],
+          "mean": 0.244041,
+          "cells": "D22:E22",
+          "pHCell": "A22"
+        },
+        {
+          "pH": 5.2,
+          "readings": [
+            0.190088,
+            0.159963
+          ],
+          "mean": 0.1750255,
+          "cells": "D23:E23",
+          "pHCell": "A23"
+        },
+        {
+          "pH": 5.39,
+          "readings": [
+            0.146173,
+            0.12401
+          ],
+          "mean": 0.1350915,
+          "cells": "D24:E24",
+          "pHCell": "A24"
+        },
+        {
+          "pH": 5.58,
+          "readings": [
+            0.106023,
+            0.094759
+          ],
+          "mean": 0.10039100000000001,
+          "cells": "D25:E25",
+          "pHCell": "A25"
+        },
+        {
+          "pH": 5.91,
+          "readings": [
+            0.059912,
+            0.055149
+          ],
+          "mean": 0.0575305,
+          "cells": "D26:E26",
+          "pHCell": "A26"
+        },
+        {
+          "pH": 5.99,
+          "readings": [
+            0.053011,
+            0.042962
+          ],
+          "mean": 0.0479865,
+          "cells": "D27:E27",
+          "pHCell": "A27"
+        },
+        {
+          "pH": 6.18,
+          "readings": [
+            0.038269,
+            0.031079
+          ],
+          "mean": 0.034673999999999996,
+          "cells": "D28:E28",
+          "pHCell": "A28"
+        },
+        {
+          "pH": 6.37,
+          "readings": [
+            0.020389,
+            0.021938
+          ],
+          "mean": 0.021163500000000002,
+          "cells": "D29:E29",
+          "pHCell": "A29"
+        },
+        {
+          "pH": 6.52,
+          "readings": [
+            0.017252,
+            0.014016
+          ],
+          "mean": 0.015634000000000002,
+          "cells": "D30:E30",
+          "pHCell": "A30"
+        },
+        {
+          "pH": 6.73,
+          "readings": [
+            0.004078,
+            0.005789
+          ],
+          "mean": 0.0049335,
+          "cells": "D31:E31",
+          "pHCell": "A31"
+        },
+        {
+          "pH": 6.95,
+          "readings": [
+            0,
+            0
+          ],
+          "mean": 0,
+          "cells": "D32:E32",
+          "pHCell": "A32"
+        }
+      ],
+      "ligandRatio": {
+        "mean": 0.001077915,
+        "sd": 0.000354994,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B4:D4"
+        }
+      }
+    },
+    {
+      "id": "JF646b",
+      "compound": 3,
+      "ligand": "3HTL",
+      "auxochrome": "Azetidine",
+      "absorptionNm": 657,
+      "emissionNm": 671,
+      "pKaFigure1": "ND",
+      "structure": {
+        "image": "media/probe-structures/3.png",
+        "pdfPage": 42
+      },
+      "quantumYield": {
+        "readings": [
+          0.701,
+          0.697
+        ],
+        "mean": 0.699,
+        "source": {
+          "workbook": "7",
+          "sheet": "Figure 1a",
+          "cells": "B4:C4"
+        }
+      },
+      "titration": [
+        {
+          "pH": 2.23,
+          "readings": [
+            0.879074,
+            0.891241
+          ],
+          "mean": 0.8851575,
+          "cells": "F8:G8",
+          "pHCell": "A8"
+        },
+        {
+          "pH": 2.45,
+          "readings": [
+            0.978988,
+            0.995434
+          ],
+          "mean": 0.9872110000000001,
+          "cells": "F9:G9",
+          "pHCell": "A9"
+        },
+        {
+          "pH": 2.67,
+          "readings": [
+            1,
+            1
+          ],
+          "mean": 1,
+          "cells": "F10:G10",
+          "pHCell": "A10"
+        },
+        {
+          "pH": 2.87,
+          "readings": [
+            0.961835,
+            0.803653
+          ],
+          "mean": 0.882744,
+          "cells": "F11:G11",
+          "pHCell": "A11"
+        },
+        {
+          "pH": 3.08,
+          "readings": [
+            0.48928,
+            0.313823
+          ],
+          "mean": 0.4015515,
+          "cells": "F12:G12",
+          "pHCell": "A12"
+        },
+        {
+          "pH": 3.27,
+          "readings": [
+            0.233276,
+            0.24533
+          ],
+          "mean": 0.239303,
+          "cells": "F13:G13",
+          "pHCell": "A13"
+        },
+        {
+          "pH": 3.45,
+          "readings": [
+            0.176672,
+            0.151515
+          ],
+          "mean": 0.1640935,
+          "cells": "F14:G14",
+          "pHCell": "A14"
+        },
+        {
+          "pH": 3.66,
+          "readings": [
+            0.138079,
+            0.119137
+          ],
+          "mean": 0.128608,
+          "cells": "F15:G15",
+          "pHCell": "A15"
+        },
+        {
+          "pH": 3.84,
+          "readings": [
+            0.088765,
+            0.102117
+          ],
+          "mean": 0.095441,
+          "cells": "F16:G16",
+          "pHCell": "A16"
+        },
+        {
+          "pH": 4.03,
+          "readings": [
+            0.069897,
+            0.085513
+          ],
+          "mean": 0.077705,
+          "cells": "F17:G17",
+          "pHCell": "A17"
+        },
+        {
+          "pH": 4.21,
+          "readings": [
+            0.043739,
+            0.054795
+          ],
+          "mean": 0.049267000000000005,
+          "cells": "F18:G18",
+          "pHCell": "A18"
+        },
+        {
+          "pH": 4.41,
+          "readings": [
+            0.031304,
+            0.034869
+          ],
+          "mean": 0.0330865,
+          "cells": "F19:G19",
+          "pHCell": "A19"
+        },
+        {
+          "pH": 4.59,
+          "readings": [
+            0.028302,
+            0.027812
+          ],
+          "mean": 0.028057,
+          "cells": "F20:G20",
+          "pHCell": "A20"
+        },
+        {
+          "pH": 4.82,
+          "readings": [
+            0.018868,
+            0.018265
+          ],
+          "mean": 0.0185665,
+          "cells": "F21:G21",
+          "pHCell": "A21"
+        },
+        {
+          "pH": 5,
+          "readings": [
+            0.021441,
+            0.01702
+          ],
+          "mean": 0.0192305,
+          "cells": "F22:G22",
+          "pHCell": "A22"
+        },
+        {
+          "pH": 5.2,
+          "readings": [
+            0.006861,
+            0.008302
+          ],
+          "mean": 0.0075815,
+          "cells": "F23:G23",
+          "pHCell": "A23"
+        },
+        {
+          "pH": 5.39,
+          "readings": [
+            0.003859,
+            0.004981
+          ],
+          "mean": 0.00442,
+          "cells": "F24:G24",
+          "pHCell": "A24"
+        },
+        {
+          "pH": 5.58,
+          "readings": [
+            0.000858,
+            0.003736
+          ],
+          "mean": 0.002297,
+          "cells": "F25:G25",
+          "pHCell": "A25"
+        },
+        {
+          "pH": 5.91,
+          "readings": [
+            0,
+            0
+          ],
+          "mean": 0,
+          "cells": "F26:G26",
+          "pHCell": "A26"
+        },
+        {
+          "pH": 5.99,
+          "readings": [
+            0.003431,
+            0.00083
+          ],
+          "mean": 0.0021305,
+          "cells": "F27:G27",
+          "pHCell": "A27"
+        },
+        {
+          "pH": 6.18,
+          "readings": [
+            0.000858,
+            0
+          ],
+          "mean": 0.000429,
+          "cells": "F28:G28",
+          "pHCell": "A28"
+        },
+        {
+          "pH": 6.37,
+          "readings": [
+            0,
+            0.002076
+          ],
+          "mean": 0.001038,
+          "cells": "F29:G29",
+          "pHCell": "A29"
+        },
+        {
+          "pH": 6.52,
+          "readings": [
+            0.003431,
+            0.002906
+          ],
+          "mean": 0.0031685000000000003,
+          "cells": "F30:G30",
+          "pHCell": "A30"
+        },
+        {
+          "pH": 6.73,
+          "readings": [
+            0.000429,
+            0.002906
+          ],
+          "mean": 0.0016675000000000001,
+          "cells": "F31:G31",
+          "pHCell": "A31"
+        },
+        {
+          "pH": 6.95,
+          "readings": [
+            0.001286,
+            0.004151
+          ],
+          "mean": 0.0027185,
+          "cells": "F32:G32",
+          "pHCell": "A32"
+        }
+      ],
+      "ligandRatio": {
+        "mean": 0.000661402,
+        "sd": 0.000131,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B5:D5"
+        }
+      }
+    },
+    {
+      "id": "JF639b",
+      "compound": 4,
+      "ligand": "4HTL",
+      "auxochrome": "3-methoxyazetidine",
+      "absorptionNm": 653,
+      "emissionNm": 666,
+      "pKaFigure1": "3.97",
+      "structure": {
+        "image": "media/probe-structures/4.png",
+        "pdfPage": 42
+      },
+      "quantumYield": {
+        "readings": [
+          0.796,
+          0.787
+        ],
+        "mean": 0.7915000000000001,
+        "source": {
+          "workbook": "7",
+          "sheet": "Figure 1a",
+          "cells": "B5:C5"
+        }
+      },
+      "titration": [
+        {
+          "pH": 2.23,
+          "readings": [
+            1,
+            1
+          ],
+          "mean": 1,
+          "cells": "H8:I8",
+          "pHCell": "A8"
+        },
+        {
+          "pH": 2.45,
+          "readings": [
+            0.995506,
+            0.963032
+          ],
+          "mean": 0.979269,
+          "cells": "H9:I9",
+          "pHCell": "A9"
+        },
+        {
+          "pH": 2.67,
+          "readings": [
+            0.931461,
+            0.921779
+          ],
+          "mean": 0.92662,
+          "cells": "H10:I10",
+          "pHCell": "A10"
+        },
+        {
+          "pH": 2.87,
+          "readings": [
+            0.892978,
+            0.91026
+          ],
+          "mean": 0.901619,
+          "cells": "H11:I11",
+          "pHCell": "A11"
+        },
+        {
+          "pH": 3.08,
+          "readings": [
+            0.84382,
+            0.792928
+          ],
+          "mean": 0.8183739999999999,
+          "cells": "H12:I12",
+          "pHCell": "A12"
+        },
+        {
+          "pH": 3.27,
+          "readings": [
+            0.736236,
+            0.781677
+          ],
+          "mean": 0.7589565,
+          "cells": "H13:I13",
+          "pHCell": "A13"
+        },
+        {
+          "pH": 3.45,
+          "readings": [
+            0.712079,
+            0.687383
+          ],
+          "mean": 0.699731,
+          "cells": "H14:I14",
+          "pHCell": "A14"
+        },
+        {
+          "pH": 3.66,
+          "readings": [
+            0.620506,
+            0.626842
+          ],
+          "mean": 0.6236740000000001,
+          "cells": "H15:I15",
+          "pHCell": "A15"
+        },
+        {
+          "pH": 3.84,
+          "readings": [
+            0.53118,
+            0.544602
+          ],
+          "mean": 0.537891,
+          "cells": "H16:I16",
+          "pHCell": "A16"
+        },
+        {
+          "pH": 4.03,
+          "readings": [
+            0.462921,
+            0.469863
+          ],
+          "mean": 0.46639200000000003,
+          "cells": "H17:I17",
+          "pHCell": "A17"
+        },
+        {
+          "pH": 4.21,
+          "readings": [
+            0.398034,
+            0.40959
+          ],
+          "mean": 0.403812,
+          "cells": "H18:I18",
+          "pHCell": "A18"
+        },
+        {
+          "pH": 4.41,
+          "readings": [
+            0.319101,
+            0.339673
+          ],
+          "mean": 0.329387,
+          "cells": "H19:I19",
+          "pHCell": "A19"
+        },
+        {
+          "pH": 4.59,
+          "readings": [
+            0.244101,
+            0.246451
+          ],
+          "mean": 0.245276,
+          "cells": "H20:I20",
+          "pHCell": "A20"
+        },
+        {
+          "pH": 4.82,
+          "readings": [
+            0.156461,
+            0.156175
+          ],
+          "mean": 0.156318,
+          "cells": "H21:I21",
+          "pHCell": "A21"
+        },
+        {
+          "pH": 5,
+          "readings": [
+            0.104213,
+            0.104474
+          ],
+          "mean": 0.1043435,
+          "cells": "H22:I22",
+          "pHCell": "A22"
+        },
+        {
+          "pH": 5.2,
+          "readings": [
+            0.06882,
+            0.067774
+          ],
+          "mean": 0.068297,
+          "cells": "H23:I23",
+          "pHCell": "A23"
+        },
+        {
+          "pH": 5.39,
+          "readings": [
+            0.041573,
+            0.039646
+          ],
+          "mean": 0.0406095,
+          "cells": "H24:I24",
+          "pHCell": "A24"
+        },
+        {
+          "pH": 5.58,
+          "readings": [
+            0.026685,
+            0.028128
+          ],
+          "mean": 0.0274065,
+          "cells": "H25:I25",
+          "pHCell": "A25"
+        },
+        {
+          "pH": 5.91,
+          "readings": [
+            0.011236,
+            0.009644
+          ],
+          "mean": 0.01044,
+          "cells": "H26:I26",
+          "pHCell": "A26"
+        },
+        {
+          "pH": 5.99,
+          "readings": [
+            0.009551,
+            0.008036
+          ],
+          "mean": 0.0087935,
+          "cells": "H27:I27",
+          "pHCell": "A27"
+        },
+        {
+          "pH": 6.18,
+          "readings": [
+            0.005337,
+            0.004822
+          ],
+          "mean": 0.0050795,
+          "cells": "H28:I28",
+          "pHCell": "A28"
+        },
+        {
+          "pH": 6.37,
+          "readings": [
+            0.003652,
+            0.001607
+          ],
+          "mean": 0.0026295,
+          "cells": "H29:I29",
+          "pHCell": "A29"
+        },
+        {
+          "pH": 6.52,
+          "readings": [
+            0.002247,
+            0.002411
+          ],
+          "mean": 0.002329,
+          "cells": "H30:I30",
+          "pHCell": "A30"
+        },
+        {
+          "pH": 6.73,
+          "readings": [
+            0,
+            0
+          ],
+          "mean": 0,
+          "cells": "H31:I31",
+          "pHCell": "A31"
+        },
+        {
+          "pH": 6.95,
+          "readings": [
+            0.001404,
+            0.000268
+          ],
+          "mean": 0.000836,
+          "cells": "H32:I32",
+          "pHCell": "A32"
+        }
+      ],
+      "ligandRatio": {
+        "mean": 0.001012101,
+        "sd": 0.000236,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B6:D6"
+        }
+      }
+    },
+    {
+      "id": "JF635b",
+      "compound": 5,
+      "ligand": "5HTL",
+      "auxochrome": "3-fluoroazetidine",
+      "absorptionNm": 647,
+      "emissionNm": 661,
+      "pKaFigure1": "2.95",
+      "structure": {
+        "image": "media/probe-structures/5.png",
+        "pdfPage": 42
+      },
+      "quantumYield": {
+        "readings": [
+          0.795,
+          0.783
+        ],
+        "mean": 0.789,
+        "source": {
+          "workbook": "7",
+          "sheet": "Figure 1a",
+          "cells": "B6:C6"
+        }
+      },
+      "titration": [
+        {
+          "pH": 1.14,
+          "readings": [
+            0.978569,
+            0.998021
+          ],
+          "mean": 0.988295,
+          "cells": "J2:K2",
+          "pHCell": "A2"
+        },
+        {
+          "pH": 1.33,
+          "readings": [
+            0.997394,
+            1
+          ],
+          "mean": 0.998697,
+          "cells": "J3:K3",
+          "pHCell": "A3"
+        },
+        {
+          "pH": 1.52,
+          "readings": [
+            1,
+            0.983602
+          ],
+          "mean": 0.9918009999999999,
+          "cells": "J4:K4",
+          "pHCell": "A4"
+        },
+        {
+          "pH": 1.73,
+          "readings": [
+            0.918042,
+            0.9689
+          ],
+          "mean": 0.943471,
+          "cells": "J5:K5",
+          "pHCell": "A5"
+        },
+        {
+          "pH": 1.93,
+          "readings": [
+            0.880973,
+            0.852135
+          ],
+          "mean": 0.866554,
+          "cells": "J6:K6",
+          "pHCell": "A6"
+        },
+        {
+          "pH": 2.12,
+          "readings": [
+            0.795251,
+            0.813118
+          ],
+          "mean": 0.8041845000000001,
+          "cells": "J7:K7",
+          "pHCell": "A7"
+        },
+        {
+          "pH": 2.23,
+          "readings": [
+            0.856357,
+            0.865988
+          ],
+          "mean": 0.8611725,
+          "cells": "J8:K8",
+          "pHCell": "A8"
+        },
+        {
+          "pH": 2.45,
+          "readings": [
+            0.741095,
+            0.742154
+          ],
+          "mean": 0.7416244999999999,
+          "cells": "J9:K9",
+          "pHCell": "A9"
+        },
+        {
+          "pH": 2.67,
+          "readings": [
+            0.651897,
+            0.648007
+          ],
+          "mean": 0.649952,
+          "cells": "J10:K10",
+          "pHCell": "A10"
+        },
+        {
+          "pH": 2.87,
+          "readings": [
+            0.528816,
+            0.542267
+          ],
+          "mean": 0.5355415,
+          "cells": "J11:K11",
+          "pHCell": "A11"
+        },
+        {
+          "pH": 3.08,
+          "readings": [
+            0.447437,
+            0.468759
+          ],
+          "mean": 0.458098,
+          "cells": "J12:K12",
+          "pHCell": "A12"
+        },
+        {
+          "pH": 3.27,
+          "readings": [
+            0.338257,
+            0.339553
+          ],
+          "mean": 0.338905,
+          "cells": "J13:K13",
+          "pHCell": "A13"
+        },
+        {
+          "pH": 3.45,
+          "readings": [
+            0.252244,
+            0.252191
+          ],
+          "mean": 0.2522175,
+          "cells": "J14:K14",
+          "pHCell": "A14"
+        },
+        {
+          "pH": 3.66,
+          "readings": [
+            0.16044,
+            0.160871
+          ],
+          "mean": 0.1606555,
+          "cells": "J15:K15",
+          "pHCell": "A15"
+        },
+        {
+          "pH": 3.84,
+          "readings": [
+            0.108601,
+            0.102347
+          ],
+          "mean": 0.105474,
+          "cells": "J16:K16",
+          "pHCell": "A16"
+        },
+        {
+          "pH": 4.03,
+          "readings": [
+            0.072401,
+            0.068985
+          ],
+          "mean": 0.070693,
+          "cells": "J17:K17",
+          "pHCell": "A17"
+        },
+        {
+          "pH": 4.21,
+          "readings": [
+            0.047205,
+            0.045519
+          ],
+          "mean": 0.046362,
+          "cells": "J18:K18",
+          "pHCell": "A18"
+        },
+        {
+          "pH": 4.41,
+          "readings": [
+            0.02896,
+            0.026859
+          ],
+          "mean": 0.0279095,
+          "cells": "J19:K19",
+          "pHCell": "A19"
+        },
+        {
+          "pH": 4.59,
+          "readings": [
+            0.024906,
+            0.019791
+          ],
+          "mean": 0.0223485,
+          "cells": "J20:K20",
+          "pHCell": "A20"
+        },
+        {
+          "pH": 4.82,
+          "readings": [
+            0.015349,
+            0.012723
+          ],
+          "mean": 0.014036,
+          "cells": "J21:K21",
+          "pHCell": "A21"
+        },
+        {
+          "pH": 5,
+          "readings": [
+            0.013611,
+            0.016398
+          ],
+          "mean": 0.0150045,
+          "cells": "J22:K22",
+          "pHCell": "A22"
+        },
+        {
+          "pH": 5.2,
+          "readings": [
+            0.008109,
+            0.004806
+          ],
+          "mean": 0.0064575,
+          "cells": "J23:K23",
+          "pHCell": "A23"
+        },
+        {
+          "pH": 5.39,
+          "readings": [
+            0.004344,
+            0.000848
+          ],
+          "mean": 0.002596,
+          "cells": "J24:K24",
+          "pHCell": "A24"
+        },
+        {
+          "pH": 5.58,
+          "readings": [
+            0.009267,
+            0.002545
+          ],
+          "mean": 0.005906,
+          "cells": "J25:K25",
+          "pHCell": "A25"
+        },
+        {
+          "pH": 5.91,
+          "readings": [
+            0.004054,
+            0
+          ],
+          "mean": 0.002027,
+          "cells": "J26:K26",
+          "pHCell": "A26"
+        },
+        {
+          "pH": 5.99,
+          "readings": [
+            0.005502,
+            0.000565
+          ],
+          "mean": 0.0030334999999999997,
+          "cells": "J27:K27",
+          "pHCell": "A27"
+        },
+        {
+          "pH": 6.18,
+          "readings": [
+            0.003765,
+            0.001696
+          ],
+          "mean": 0.0027305000000000003,
+          "cells": "J28:K28",
+          "pHCell": "A28"
+        },
+        {
+          "pH": 6.37,
+          "readings": [
+            0,
+            0.001414
+          ],
+          "mean": 0.000707,
+          "cells": "J29:K29",
+          "pHCell": "A29"
+        },
+        {
+          "pH": 6.52,
+          "readings": [
+            0.004344,
+            0.003393
+          ],
+          "mean": 0.0038685,
+          "cells": "J30:K30",
+          "pHCell": "A30"
+        },
+        {
+          "pH": 6.73,
+          "readings": [
+            0.002606,
+            0.008764
+          ],
+          "mean": 0.005684999999999999,
+          "cells": "J31:K31",
+          "pHCell": "A31"
+        },
+        {
+          "pH": 6.95,
+          "readings": [
+            0.004923,
+            0.001696
+          ],
+          "mean": 0.0033095,
+          "cells": "J32:K32",
+          "pHCell": "A32"
+        }
+      ],
+      "ligandRatio": {
+        "mean": 0.000483915,
+        "sd": 8.99e-05,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B7:D7"
+        }
+      }
+    },
+    {
+      "id": "JF630b",
+      "compound": 6,
+      "ligand": "6HTL",
+      "auxochrome": "3-(methylsulfonyl)azetidine",
+      "absorptionNm": 646,
+      "emissionNm": 660,
+      "pKaFigure1": "2.58",
+      "structure": {
+        "image": "media/probe-structures/6.png",
+        "pdfPage": 43
+      },
+      "quantumYield": {
+        "readings": [
+          0.823,
+          0.785
+        ],
+        "mean": 0.804,
+        "source": {
+          "workbook": "7",
+          "sheet": "Figure 1a",
+          "cells": "B7:C7"
+        }
+      },
+      "titration": [
+        {
+          "pH": 1.14,
+          "readings": [
+            1,
+            1
+          ],
+          "mean": 1,
+          "cells": "L2:M2",
+          "pHCell": "A2"
+        },
+        {
+          "pH": 1.33,
+          "readings": [
+            0.939581,
+            0.951933
+          ],
+          "mean": 0.945757,
+          "cells": "L3:M3",
+          "pHCell": "A3"
+        },
+        {
+          "pH": 1.52,
+          "readings": [
+            0.92696,
+            0.904672
+          ],
+          "mean": 0.915816,
+          "cells": "L4:M4",
+          "pHCell": "A4"
+        },
+        {
+          "pH": 1.73,
+          "readings": [
+            0.858754,
+            0.862782
+          ],
+          "mean": 0.860768,
+          "cells": "L5:M5",
+          "pHCell": "A5"
+        },
+        {
+          "pH": 1.93,
+          "readings": [
+            0.770408,
+            0.789205
+          ],
+          "mean": 0.7798065000000001,
+          "cells": "L6:M6",
+          "pHCell": "A6"
+        },
+        {
+          "pH": 2.12,
+          "readings": [
+            0.718045,
+            0.730666
+          ],
+          "mean": 0.7243555,
+          "cells": "L7:M7",
+          "pHCell": "A7"
+        },
+        {
+          "pH": 2.23,
+          "readings": [
+            0.678034,
+            0.684479
+          ],
+          "mean": 0.6812564999999999,
+          "cells": "L8:M8",
+          "pHCell": "A8"
+        },
+        {
+          "pH": 2.45,
+          "readings": [
+            0.552363,
+            0.575456
+          ],
+          "mean": 0.5639095000000001,
+          "cells": "L9:M9",
+          "pHCell": "A9"
+        },
+        {
+          "pH": 2.67,
+          "readings": [
+            0.42696,
+            0.462943
+          ],
+          "mean": 0.4449515,
+          "cells": "L10:M10",
+          "pHCell": "A10"
+        },
+        {
+          "pH": 2.87,
+          "readings": [
+            0.336735,
+            0.364125
+          ],
+          "mean": 0.35043,
+          "cells": "L11:M11",
+          "pHCell": "A11"
+        },
+        {
+          "pH": 3.08,
+          "readings": [
+            0.242213,
+            0.272019
+          ],
+          "mean": 0.257116,
+          "cells": "L12:M12",
+          "pHCell": "A12"
+        },
+        {
+          "pH": 3.27,
+          "readings": [
+            0.182599,
+            0.196294
+          ],
+          "mean": 0.18944650000000002,
+          "cells": "L13:M13",
+          "pHCell": "A13"
+        },
+        {
+          "pH": 3.45,
+          "readings": [
+            0.133727,
+            0.152256
+          ],
+          "mean": 0.1429915,
+          "cells": "L14:M14",
+          "pHCell": "A14"
+        },
+        {
+          "pH": 3.66,
+          "readings": [
+            0.086735,
+            0.102309
+          ],
+          "mean": 0.094522,
+          "cells": "L15:M15",
+          "pHCell": "A15"
+        },
+        {
+          "pH": 3.84,
+          "readings": [
+            0.058271,
+            0.07116
+          ],
+          "mean": 0.06471550000000001,
+          "cells": "L16:M16",
+          "pHCell": "A16"
+        },
+        {
+          "pH": 4.03,
+          "readings": [
+            0.04377,
+            0.049678
+          ],
+          "mean": 0.046724,
+          "cells": "L17:M17",
+          "pHCell": "A17"
+        },
+        {
+          "pH": 4.21,
+          "readings": [
+            0.027927,
+            0.033566
+          ],
+          "mean": 0.0307465,
+          "cells": "L18:M18",
+          "pHCell": "A18"
+        },
+        {
+          "pH": 4.41,
+          "readings": [
+            0.016112,
+            0.020677
+          ],
+          "mean": 0.0183945,
+          "cells": "L19:M19",
+          "pHCell": "A19"
+        },
+        {
+          "pH": 4.59,
+          "readings": [
+            0.015843,
+            0.016917
+          ],
+          "mean": 0.01638,
+          "cells": "L20:M20",
+          "pHCell": "A20"
+        },
+        {
+          "pH": 4.82,
+          "readings": [
+            0.007519,
+            0.011815
+          ],
+          "mean": 0.009667,
+          "cells": "L21:M21",
+          "pHCell": "A21"
+        },
+        {
+          "pH": 5,
+          "readings": [
+            0.008056,
+            0.01101
+          ],
+          "mean": 0.009533,
+          "cells": "L22:M22",
+          "pHCell": "A22"
+        },
+        {
+          "pH": 5.2,
+          "readings": [
+            0.003222,
+            0.005639
+          ],
+          "mean": 0.0044305,
+          "cells": "L23:M23",
+          "pHCell": "A23"
+        },
+        {
+          "pH": 5.39,
+          "readings": [
+            0.013695,
+            0.002148
+          ],
+          "mean": 0.0079215,
+          "cells": "L24:M24",
+          "pHCell": "A24"
+        },
+        {
+          "pH": 5.58,
+          "readings": [
+            0.002954,
+            0.001343
+          ],
+          "mean": 0.0021485000000000002,
+          "cells": "L25:M25",
+          "pHCell": "A25"
+        },
+        {
+          "pH": 5.91,
+          "readings": [
+            0,
+            0.000806
+          ],
+          "mean": 0.000403,
+          "cells": "L26:M26",
+          "pHCell": "A26"
+        },
+        {
+          "pH": 5.99,
+          "readings": [
+            0,
+            0.003222
+          ],
+          "mean": 0.001611,
+          "cells": "L27:M27",
+          "pHCell": "A27"
+        },
+        {
+          "pH": 6.18,
+          "readings": [
+            0.006713,
+            0
+          ],
+          "mean": 0.0033565,
+          "cells": "L28:M28",
+          "pHCell": "A28"
+        },
+        {
+          "pH": 6.37,
+          "readings": [
+            0.003491,
+            0.001343
+          ],
+          "mean": 0.002417,
+          "cells": "L29:M29",
+          "pHCell": "A29"
+        },
+        {
+          "pH": 6.52,
+          "readings": [
+            0.003222,
+            0.003222
+          ],
+          "mean": 0.003222,
+          "cells": "L30:M30",
+          "pHCell": "A30"
+        },
+        {
+          "pH": 6.73,
+          "readings": [
+            0.001611,
+            0.00188
+          ],
+          "mean": 0.0017455,
+          "cells": "L31:M31",
+          "pHCell": "A31"
+        },
+        {
+          "pH": 6.95,
+          "readings": [
+            0.001343,
+            0.001611
+          ],
+          "mean": 0.001477,
+          "cells": "L32:M32",
+          "pHCell": "A32"
+        }
+      ],
+      "ligandRatio": {
+        "mean": 0.000139505,
+        "sd": 9.24e-06,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B8:D8"
+        }
+      }
+    },
+    {
+      "id": "JF629b",
+      "compound": 7,
+      "ligand": "7HTL",
+      "auxochrome": "3-cyanoazetidine",
+      "absorptionNm": 645,
+      "emissionNm": 660,
+      "pKaFigure1": "2.25",
+      "structure": {
+        "image": "media/probe-structures/7.png",
+        "pdfPage": 43
+      },
+      "quantumYield": {
+        "readings": [
+          0.818,
+          0.796
+        ],
+        "mean": 0.8069999999999999,
+        "source": {
+          "workbook": "7",
+          "sheet": "Figure 1a",
+          "cells": "B8:C8"
+        }
+      },
+      "titration": [
+        {
+          "pH": 1.14,
+          "readings": [
+            0.917805,
+            0.931398
+          ],
+          "mean": 0.9246015,
+          "cells": "N2:O2",
+          "pHCell": "A2"
+        },
+        {
+          "pH": 1.33,
+          "readings": [
+            0.852956,
+            0.906478
+          ],
+          "mean": 0.8797170000000001,
+          "cells": "N3:O3",
+          "pHCell": "A3"
+        },
+        {
+          "pH": 1.52,
+          "readings": [
+            0.817274,
+            0.851257
+          ],
+          "mean": 0.8342655,
+          "cells": "N4:O4",
+          "pHCell": "A4"
+        },
+        {
+          "pH": 1.73,
+          "readings": [
+            0.726938,
+            0.809345
+          ],
+          "mean": 0.7681415,
+          "cells": "N5:O5",
+          "pHCell": "A5"
+        },
+        {
+          "pH": 1.93,
+          "readings": [
+            0.649345,
+            0.724956
+          ],
+          "mean": 0.6871505,
+          "cells": "N6:O6",
+          "pHCell": "A6"
+        },
+        {
+          "pH": 2.12,
+          "readings": [
+            0.549381,
+            0.596106
+          ],
+          "mean": 0.5727435000000001,
+          "cells": "N7:O7",
+          "pHCell": "A7"
+        },
+        {
+          "pH": 2.23,
+          "readings": [
+            0.509451,
+            0.580531
+          ],
+          "mean": 0.544991,
+          "cells": "N8:O8",
+          "pHCell": "A8"
+        },
+        {
+          "pH": 2.45,
+          "readings": [
+            0.37069,
+            0.388531
+          ],
+          "mean": 0.3796105,
+          "cells": "N9:O9",
+          "pHCell": "A9"
+        },
+        {
+          "pH": 2.67,
+          "readings": [
+            0.277239,
+            0.258265
+          ],
+          "mean": 0.267752,
+          "cells": "N10:O10",
+          "pHCell": "A10"
+        },
+        {
+          "pH": 2.87,
+          "readings": [
+            0.169062,
+            0.173593
+          ],
+          "mean": 0.1713275,
+          "cells": "N11:O11",
+          "pHCell": "A11"
+        },
+        {
+          "pH": 3.08,
+          "readings": [
+            0.107611,
+            0.111575
+          ],
+          "mean": 0.109593,
+          "cells": "N12:O12",
+          "pHCell": "A12"
+        },
+        {
+          "pH": 3.27,
+          "readings": [
+            0.070513,
+            0.069664
+          ],
+          "mean": 0.0700885,
+          "cells": "N13:O13",
+          "pHCell": "A13"
+        },
+        {
+          "pH": 3.45,
+          "readings": [
+            0.047858,
+            0.049558
+          ],
+          "mean": 0.048708,
+          "cells": "N14:O14",
+          "pHCell": "A14"
+        },
+        {
+          "pH": 3.66,
+          "readings": [
+            0.031717,
+            0.031434
+          ],
+          "mean": 0.0315755,
+          "cells": "N15:O15",
+          "pHCell": "A15"
+        },
+        {
+          "pH": 3.84,
+          "readings": [
+            0.018124,
+            0.020956
+          ],
+          "mean": 0.019540000000000002,
+          "cells": "N16:O16",
+          "pHCell": "A16"
+        },
+        {
+          "pH": 4.03,
+          "readings": [
+            0.015009,
+            0.014442
+          ],
+          "mean": 0.014725499999999999,
+          "cells": "N17:O17",
+          "pHCell": "A17"
+        },
+        {
+          "pH": 4.21,
+          "readings": [
+            0.010761,
+            0.010478
+          ],
+          "mean": 0.0106195,
+          "cells": "N18:O18",
+          "pHCell": "A18"
+        },
+        {
+          "pH": 4.41,
+          "readings": [
+            0.006513,
+            0.005947
+          ],
+          "mean": 0.006229999999999999,
+          "cells": "N19:O19",
+          "pHCell": "A19"
+        },
+        {
+          "pH": 4.59,
+          "readings": [
+            0.00708,
+            0.009062
+          ],
+          "mean": 0.008071,
+          "cells": "N20:O20",
+          "pHCell": "A20"
+        },
+        {
+          "pH": 4.82,
+          "readings": [
+            0.004814,
+            0.005381
+          ],
+          "mean": 0.0050975,
+          "cells": "N21:O21",
+          "pHCell": "A21"
+        },
+        {
+          "pH": 5,
+          "readings": [
+            0.006513,
+            0.004814
+          ],
+          "mean": 0.0056635,
+          "cells": "N22:O22",
+          "pHCell": "A22"
+        },
+        {
+          "pH": 5.2,
+          "readings": [
+            0,
+            0
+          ],
+          "mean": 0,
+          "cells": "N23:O23",
+          "pHCell": "A23"
+        },
+        {
+          "pH": 5.39,
+          "readings": [
+            0.001133,
+            0.000566
+          ],
+          "mean": 0.0008495,
+          "cells": "N24:O24",
+          "pHCell": "A24"
+        },
+        {
+          "pH": 5.58,
+          "readings": [
+            0.002832,
+            0.002549
+          ],
+          "mean": 0.0026905,
+          "cells": "N25:O25",
+          "pHCell": "A25"
+        },
+        {
+          "pH": 5.91,
+          "readings": [
+            0.000283,
+            0.00085
+          ],
+          "mean": 0.0005665,
+          "cells": "N26:O26",
+          "pHCell": "A26"
+        },
+        {
+          "pH": 5.99,
+          "readings": [
+            0.000566,
+            0.002549
+          ],
+          "mean": 0.0015575,
+          "cells": "N27:O27",
+          "pHCell": "A27"
+        },
+        {
+          "pH": 6.18,
+          "readings": [
+            0.001982,
+            0.00085
+          ],
+          "mean": 0.001416,
+          "cells": "N28:O28",
+          "pHCell": "A28"
+        },
+        {
+          "pH": 6.37,
+          "readings": [
+            0.000566,
+            0.003115
+          ],
+          "mean": 0.0018405000000000001,
+          "cells": "N29:O29",
+          "pHCell": "A29"
+        },
+        {
+          "pH": 6.52,
+          "readings": [
+            0.003681,
+            0.003115
+          ],
+          "mean": 0.003398,
+          "cells": "N30:O30",
+          "pHCell": "A30"
+        },
+        {
+          "pH": 6.73,
+          "readings": [
+            0.002832,
+            0.003965
+          ],
+          "mean": 0.0033984999999999996,
+          "cells": "N31:O31",
+          "pHCell": "A31"
+        },
+        {
+          "pH": 6.95,
+          "readings": [
+            0.001982,
+            0.003965
+          ],
+          "mean": 0.0029734999999999996,
+          "cells": "N32:O32",
+          "pHCell": "A32"
+        }
+      ],
+      "ligandRatio": {
+        "mean": 9.90737e-05,
+        "sd": 3.35e-06,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B9:D9"
+        }
+      }
+    },
+    {
+      "id": "JF626b",
+      "compound": 8,
+      "ligand": "8HTL",
+      "auxochrome": "3-(trifluoromethyl)azetidine",
+      "absorptionNm": 646,
+      "emissionNm": 660,
+      "pKaFigure1": "1.22",
+      "structure": {
+        "image": "media/probe-structures/8.png",
+        "pdfPage": 44
+      },
+      "quantumYield": {
+        "readings": [
+          0.819,
+          0.807
+        ],
+        "mean": 0.813,
+        "source": {
+          "workbook": "7",
+          "sheet": "Figure 1a",
+          "cells": "B9:C9"
+        }
+      },
+      "titration": [
+        {
+          "pH": 1.14,
+          "readings": [
+            0.543717,
+            0.562124
+          ],
+          "mean": 0.5529204999999999,
+          "cells": "P2:Q2",
+          "pHCell": "A2"
+        },
+        {
+          "pH": 1.33,
+          "readings": [
+            0.430726,
+            0.462726
+          ],
+          "mean": 0.446726,
+          "cells": "P3:Q3",
+          "pHCell": "A3"
+        },
+        {
+          "pH": 1.52,
+          "readings": [
+            0.323965,
+            0.331894
+          ],
+          "mean": 0.3279295,
+          "cells": "P4:Q4",
+          "pHCell": "A4"
+        },
+        {
+          "pH": 1.73,
+          "readings": [
+            0.221451,
+            0.234478
+          ],
+          "mean": 0.22796450000000001,
+          "cells": "P5:Q5",
+          "pHCell": "A5"
+        },
+        {
+          "pH": 1.93,
+          "readings": [
+            0.159717,
+            0.162832
+          ],
+          "mean": 0.1612745,
+          "cells": "P6:Q6",
+          "pHCell": "A6"
+        },
+        {
+          "pH": 2.12,
+          "readings": [
+            0.114124,
+            0.118372
+          ],
+          "mean": 0.116248,
+          "cells": "P7:Q7",
+          "pHCell": "A7"
+        },
+        {
+          "pH": 2.23,
+          "readings": [
+            0.093735,
+            0.098549
+          ],
+          "mean": 0.096142,
+          "cells": "P8:Q8",
+          "pHCell": "A8"
+        },
+        {
+          "pH": 2.45,
+          "readings": [
+            0.061451,
+            0.06485
+          ],
+          "mean": 0.0631505,
+          "cells": "P9:Q9",
+          "pHCell": "A9"
+        },
+        {
+          "pH": 2.67,
+          "readings": [
+            0.042478,
+            0.041345
+          ],
+          "mean": 0.041911500000000004,
+          "cells": "P10:Q10",
+          "pHCell": "A10"
+        },
+        {
+          "pH": 2.87,
+          "readings": [
+            0.030301,
+            0.030584
+          ],
+          "mean": 0.0304425,
+          "cells": "P11:Q11",
+          "pHCell": "A11"
+        },
+        {
+          "pH": 3.08,
+          "readings": [
+            0.022372,
+            0.020673
+          ],
+          "mean": 0.0215225,
+          "cells": "P12:Q12",
+          "pHCell": "A12"
+        },
+        {
+          "pH": 3.27,
+          "readings": [
+            0.015009,
+            0.012743
+          ],
+          "mean": 0.013876,
+          "cells": "P13:Q13",
+          "pHCell": "A13"
+        },
+        {
+          "pH": 3.45,
+          "readings": [
+            0.010761,
+            0.008496
+          ],
+          "mean": 0.0096285,
+          "cells": "P14:Q14",
+          "pHCell": "A14"
+        },
+        {
+          "pH": 3.66,
+          "readings": [
+            0.010478,
+            0.010761
+          ],
+          "mean": 0.0106195,
+          "cells": "P15:Q15",
+          "pHCell": "A15"
+        },
+        {
+          "pH": 3.84,
+          "readings": [
+            0.00623,
+            0.005381
+          ],
+          "mean": 0.0058055,
+          "cells": "P16:Q16",
+          "pHCell": "A16"
+        },
+        {
+          "pH": 4.03,
+          "readings": [
+            0.008212,
+            0.004814
+          ],
+          "mean": 0.006513,
+          "cells": "P17:Q17",
+          "pHCell": "A17"
+        },
+        {
+          "pH": 4.21,
+          "readings": [
+            0.007363,
+            0.002832
+          ],
+          "mean": 0.0050975,
+          "cells": "P18:Q18",
+          "pHCell": "A18"
+        },
+        {
+          "pH": 4.41,
+          "readings": [
+            0.004531,
+            0.003115
+          ],
+          "mean": 0.003823,
+          "cells": "P19:Q19",
+          "pHCell": "A19"
+        },
+        {
+          "pH": 4.59,
+          "readings": [
+            0.005381,
+            0.003115
+          ],
+          "mean": 0.004248,
+          "cells": "P20:Q20",
+          "pHCell": "A20"
+        },
+        {
+          "pH": 4.82,
+          "readings": [
+            0.003965,
+            0.002832
+          ],
+          "mean": 0.0033984999999999996,
+          "cells": "P21:Q21",
+          "pHCell": "A21"
+        },
+        {
+          "pH": 5,
+          "readings": [
+            0.009345,
+            0.004531
+          ],
+          "mean": 0.006938,
+          "cells": "P22:Q22",
+          "pHCell": "A22"
+        },
+        {
+          "pH": 5.2,
+          "readings": [
+            0.00085,
+            0.001416
+          ],
+          "mean": 0.001133,
+          "cells": "P23:Q23",
+          "pHCell": "A23"
+        },
+        {
+          "pH": 5.39,
+          "readings": [
+            0.004531,
+            0.001416
+          ],
+          "mean": 0.0029735,
+          "cells": "P24:Q24",
+          "pHCell": "A24"
+        },
+        {
+          "pH": 5.58,
+          "readings": [
+            0.004248,
+            0.000566
+          ],
+          "mean": 0.002407,
+          "cells": "P25:Q25",
+          "pHCell": "A25"
+        },
+        {
+          "pH": 5.91,
+          "readings": [
+            0,
+            0
+          ],
+          "mean": 0,
+          "cells": "P26:Q26",
+          "pHCell": "A26"
+        },
+        {
+          "pH": 5.99,
+          "readings": [
+            0.00085,
+            0.002832
+          ],
+          "mean": 0.001841,
+          "cells": "P27:Q27",
+          "pHCell": "A27"
+        },
+        {
+          "pH": 6.18,
+          "readings": [
+            0.002549,
+            0.000566
+          ],
+          "mean": 0.0015575,
+          "cells": "P28:Q28",
+          "pHCell": "A28"
+        },
+        {
+          "pH": 6.37,
+          "readings": [
+            0.003115,
+            0.002265
+          ],
+          "mean": 0.00269,
+          "cells": "P29:Q29",
+          "pHCell": "A29"
+        },
+        {
+          "pH": 6.52,
+          "readings": [
+            0.004248,
+            0.003681
+          ],
+          "mean": 0.0039645,
+          "cells": "P30:Q30",
+          "pHCell": "A30"
+        },
+        {
+          "pH": 6.73,
+          "readings": [
+            0.002549,
+            0.001699
+          ],
+          "mean": 0.002124,
+          "cells": "P31:Q31",
+          "pHCell": "A31"
+        },
+        {
+          "pH": 6.95,
+          "readings": [
+            0.003115,
+            0.003115
+          ],
+          "mean": 0.003115,
+          "cells": "P32:Q32",
+          "pHCell": "A32"
+        }
+      ],
+      "ligandRatio": {
+        "mean": 0.000289684,
+        "sd": 2.29e-05,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B10:D10"
+        }
+      }
+    },
+    {
+      "id": "JF614b",
+      "compound": 9,
+      "ligand": "9HTL",
+      "auxochrome": "3,3-difluoroazetidine",
+      "absorptionNm": 636,
+      "emissionNm": 651,
+      "pKaFigure1": "<1",
+      "structure": {
+        "image": "media/probe-structures/9.png",
+        "pdfPage": 44
+      },
+      "quantumYield": {
+        "readings": [
+          0.8220000000000001,
+          0.826
+        ],
+        "mean": 0.8240000000000001,
+        "source": {
+          "workbook": "7",
+          "sheet": "Figure 1a",
+          "cells": "B10:C10"
+        }
+      },
+      "titration": [
+        {
+          "pH": 1.14,
+          "readings": [
+            0.055788,
+            0.028035
+          ],
+          "mean": 0.0419115,
+          "cells": "R2:S2",
+          "pHCell": "A2"
+        },
+        {
+          "pH": 1.33,
+          "readings": [
+            0.026053,
+            0.018124
+          ],
+          "mean": 0.0220885,
+          "cells": "R3:S3",
+          "pHCell": "A3"
+        },
+        {
+          "pH": 1.52,
+          "readings": [
+            0.017841,
+            0.016425
+          ],
+          "mean": 0.017133,
+          "cells": "R4:S4",
+          "pHCell": "A4"
+        },
+        {
+          "pH": 1.73,
+          "readings": [
+            0.011894,
+            0.009912
+          ],
+          "mean": 0.010903,
+          "cells": "R5:S5",
+          "pHCell": "A5"
+        },
+        {
+          "pH": 1.93,
+          "readings": [
+            0.008779,
+            0.011327
+          ],
+          "mean": 0.010053,
+          "cells": "R6:S6",
+          "pHCell": "A6"
+        },
+        {
+          "pH": 2.12,
+          "readings": [
+            0.009912,
+            0.009345
+          ],
+          "mean": 0.0096285,
+          "cells": "R7:S7",
+          "pHCell": "A7"
+        },
+        {
+          "pH": 2.23,
+          "readings": [
+            0.005664,
+            0.00623
+          ],
+          "mean": 0.005947,
+          "cells": "R8:S8",
+          "pHCell": "A8"
+        },
+        {
+          "pH": 2.45,
+          "readings": [
+            0.00623,
+            0.009628
+          ],
+          "mean": 0.007929,
+          "cells": "R9:S9",
+          "pHCell": "A9"
+        },
+        {
+          "pH": 2.67,
+          "readings": [
+            0.005381,
+            0.005947
+          ],
+          "mean": 0.005664000000000001,
+          "cells": "R10:S10",
+          "pHCell": "A10"
+        },
+        {
+          "pH": 2.87,
+          "readings": [
+            0.022372,
+            0.008496
+          ],
+          "mean": 0.015434,
+          "cells": "R11:S11",
+          "pHCell": "A11"
+        },
+        {
+          "pH": 3.08,
+          "readings": [
+            0.034832,
+            0.007646
+          ],
+          "mean": 0.021239,
+          "cells": "R12:S12",
+          "pHCell": "A12"
+        },
+        {
+          "pH": 3.27,
+          "readings": [
+            0.007363,
+            0.003398
+          ],
+          "mean": 0.0053805,
+          "cells": "R13:S13",
+          "pHCell": "A13"
+        },
+        {
+          "pH": 3.45,
+          "readings": [
+            0.004248,
+            0.005947
+          ],
+          "mean": 0.0050975,
+          "cells": "R14:S14",
+          "pHCell": "A14"
+        },
+        {
+          "pH": 3.66,
+          "readings": [
+            0.003398,
+            0.004531
+          ],
+          "mean": 0.0039645,
+          "cells": "R15:S15",
+          "pHCell": "A15"
+        },
+        {
+          "pH": 3.84,
+          "readings": [
+            0.003398,
+            0.003115
+          ],
+          "mean": 0.0032565,
+          "cells": "R16:S16",
+          "pHCell": "A16"
+        },
+        {
+          "pH": 4.03,
+          "readings": [
+            0.003965,
+            0.004248
+          ],
+          "mean": 0.0041065,
+          "cells": "R17:S17",
+          "pHCell": "A17"
+        },
+        {
+          "pH": 4.21,
+          "readings": [
+            0.004814,
+            0.003965
+          ],
+          "mean": 0.004389499999999999,
+          "cells": "R18:S18",
+          "pHCell": "A18"
+        },
+        {
+          "pH": 4.41,
+          "readings": [
+            0.001416,
+            0.003681
+          ],
+          "mean": 0.0025485,
+          "cells": "R19:S19",
+          "pHCell": "A19"
+        },
+        {
+          "pH": 4.59,
+          "readings": [
+            0.003965,
+            0.004814
+          ],
+          "mean": 0.004389499999999999,
+          "cells": "R20:S20",
+          "pHCell": "A20"
+        },
+        {
+          "pH": 4.82,
+          "readings": [
+            0.004531,
+            0.002832
+          ],
+          "mean": 0.0036815,
+          "cells": "R21:S21",
+          "pHCell": "A21"
+        },
+        {
+          "pH": 5,
+          "readings": [
+            0.007646,
+            0.007646
+          ],
+          "mean": 0.007646,
+          "cells": "R22:S22",
+          "pHCell": "A22"
+        },
+        {
+          "pH": 5.2,
+          "readings": [
+            0.002549,
+            0.002549
+          ],
+          "mean": 0.002549,
+          "cells": "R23:S23",
+          "pHCell": "A23"
+        },
+        {
+          "pH": 5.39,
+          "readings": [
+            0.000283,
+            0
+          ],
+          "mean": 0.0001415,
+          "cells": "R24:S24",
+          "pHCell": "A24"
+        },
+        {
+          "pH": 5.58,
+          "readings": [
+            0.004531,
+            0.001699
+          ],
+          "mean": 0.003115,
+          "cells": "R25:S25",
+          "pHCell": "A25"
+        },
+        {
+          "pH": 5.91,
+          "readings": [
+            0.001416,
+            0.000566
+          ],
+          "mean": 0.000991,
+          "cells": "R26:S26",
+          "pHCell": "A26"
+        },
+        {
+          "pH": 5.99,
+          "readings": [
+            0.003398,
+            0.00085
+          ],
+          "mean": 0.002124,
+          "cells": "R27:S27",
+          "pHCell": "A27"
+        },
+        {
+          "pH": 6.18,
+          "readings": [
+            0.00085,
+            0.003398
+          ],
+          "mean": 0.002124,
+          "cells": "R28:S28",
+          "pHCell": "A28"
+        },
+        {
+          "pH": 6.37,
+          "readings": [
+            0,
+            0.001133
+          ],
+          "mean": 0.0005665,
+          "cells": "R29:S29",
+          "pHCell": "A29"
+        },
+        {
+          "pH": 6.52,
+          "readings": [
+            0.003398,
+            0.003115
+          ],
+          "mean": 0.0032565,
+          "cells": "R30:S30",
+          "pHCell": "A30"
+        },
+        {
+          "pH": 6.73,
+          "readings": [
+            0.002549,
+            0.001699
+          ],
+          "mean": 0.002124,
+          "cells": "R31:S31",
+          "pHCell": "A31"
+        },
+        {
+          "pH": 6.95,
+          "readings": [
+            0.005664,
+            0.004814
+          ],
+          "mean": 0.005239,
+          "cells": "R32:S32",
+          "pHCell": "A32"
+        }
+      ],
+      "ligandRatio": {
+        "mean": 1.89491e-05,
+        "sd": 6.2e-06,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4h-i",
+          "cells": "B11:D11"
+        }
+      }
+    }
+  ],
+  "contexts": {
+    "er": {
+      "name": "ER membrane · Sec61β",
+      "nCells": 4,
+      "metrics": [
+        "useful",
+        "snr",
+        "tau"
+      ],
+      "protocol": "U2OS · 100 nM for 30 min per dye · 10,000 frames at 100 Hz · 637 nm HILO",
+      "fig": "Figure 2b–d",
+      "dyes": {
+        "HM-SiR": {
+          "live": {
+            "snr": {
+              "mean": 1.90486,
+              "sem": 0.674522,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B4:C4"
+              }
+            },
+            "tau": {
+              "mean": 14.3482,
+              "sem": 3.93174,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D4:E4"
+              }
+            },
+            "useful": {
+              "mean": 14.5212,
+              "sem": 2.32677,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F4:G4"
+              }
+            }
+          },
+          "fixed": {
+            "snr": {
+              "mean": 1.22713,
+              "sem": 0.548129,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B18:C18"
+              }
+            },
+            "tau": {
+              "mean": 37.7793,
+              "sem": 0.73515,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D18:E18"
+              }
+            },
+            "useful": {
+              "mean": 9.83389,
+              "sem": 1.01392,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F18:G18"
+              }
+            }
+          }
+        },
+        "JFX650b": {
+          "live": {
+            "snr": {
+              "mean": 2.24236,
+              "sem": 0.505779,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B5:C5"
+              }
+            },
+            "tau": {
+              "mean": 18.1776,
+              "sem": 2.56679,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D5:E5"
+              }
+            },
+            "useful": {
+              "mean": 16.0572,
+              "sem": 1.64114,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F5:G5"
+              }
+            }
+          },
+          "fixed": {
+            "snr": {
+              "mean": 0.74787,
+              "sem": 0.587198,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B19:C19"
+              }
+            },
+            "tau": {
+              "mean": 31.7723,
+              "sem": 0.230218,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D19:E19"
+              }
+            },
+            "useful": {
+              "mean": 8.36554,
+              "sem": 3.39184,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F19:G19"
+              }
+            }
+          }
+        },
+        "JF646b": {
+          "live": {
+            "snr": {
+              "mean": 4.12165,
+              "sem": 0.549558,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B6:C6"
+              }
+            },
+            "tau": {
+              "mean": 8.07695,
+              "sem": 1.04193,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D6:E6"
+              }
+            },
+            "useful": {
+              "mean": 25.689,
+              "sem": 2.65439,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F6:G6"
+              }
+            }
+          },
+          "fixed": {
+            "snr": {
+              "mean": 2.69629,
+              "sem": 0.764534,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B20:C20"
+              }
+            },
+            "tau": {
+              "mean": 24.7418,
+              "sem": 2.67563,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D20:E20"
+              }
+            },
+            "useful": {
+              "mean": 19.5405,
+              "sem": 3.18697,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F20:G20"
+              }
+            }
+          }
+        },
+        "JF639b": {
+          "live": {
+            "snr": {
+              "mean": 5.78121,
+              "sem": 0.478162,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B7:C7"
+              }
+            },
+            "tau": {
+              "mean": 3.52345,
+              "sem": 0.186954,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D7:E7"
+              }
+            },
+            "useful": {
+              "mean": 41.1591,
+              "sem": 5.39909,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F7:G7"
+              }
+            }
+          },
+          "fixed": {
+            "snr": {
+              "mean": 2.44521,
+              "sem": 0.305145,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B21:C21"
+              }
+            },
+            "tau": {
+              "mean": 22.6413,
+              "sem": 1.25657,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D21:E21"
+              }
+            },
+            "useful": {
+              "mean": 15.306,
+              "sem": 1.4118,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F21:G21"
+              }
+            }
+          }
+        },
+        "JF635b": {
+          "live": {
+            "snr": {
+              "mean": 4.06769,
+              "sem": 0.347448,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B8:C8"
+              }
+            },
+            "tau": {
+              "mean": 2.03582,
+              "sem": 0.036679,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D8:E8"
+              }
+            },
+            "useful": {
+              "mean": 33.4449,
+              "sem": 3.0243,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F8:G8"
+              }
+            }
+          },
+          "fixed": {
+            "snr": {
+              "mean": 5.15954,
+              "sem": 0.350752,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B22:C22"
+              }
+            },
+            "tau": {
+              "mean": 7.54209,
+              "sem": 1.03602,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D22:E22"
+              }
+            },
+            "useful": {
+              "mean": 33.1423,
+              "sem": 4.9604,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F22:G22"
+              }
+            }
+          }
+        },
+        "JF630b": {
+          "live": {
+            "snr": {
+              "mean": 3.7684,
+              "sem": 0.428824,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B9:C9"
+              }
+            },
+            "tau": {
+              "mean": 1.10444,
+              "sem": 0.0297279,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D9:E9"
+              }
+            },
+            "useful": {
+              "mean": 29.0161,
+              "sem": 2.33583,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F9:G9"
+              }
+            }
+          },
+          "fixed": {
+            "snr": {
+              "mean": 3.66944,
+              "sem": 0.272083,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B23:C23"
+              }
+            },
+            "tau": {
+              "mean": 2.18909,
+              "sem": 0.0108597,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D23:E23"
+              }
+            },
+            "useful": {
+              "mean": 52.1853,
+              "sem": 4.70806,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F23:G23"
+              }
+            }
+          }
+        },
+        "JF629b": {
+          "live": {
+            "snr": {
+              "mean": 4.59946,
+              "sem": 0.264557,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B10:C10"
+              }
+            },
+            "tau": {
+              "mean": 1.08656,
+              "sem": 0.0350949,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D10:E10"
+              }
+            },
+            "useful": {
+              "mean": 37.1756,
+              "sem": 1.6984,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F10:G10"
+              }
+            }
+          },
+          "fixed": {
+            "snr": {
+              "mean": 4.45811,
+              "sem": 0.26814,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B24:C24"
+              }
+            },
+            "tau": {
+              "mean": 2.0483,
+              "sem": 0.0392413,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D24:E24"
+              }
+            },
+            "useful": {
+              "mean": 42.0347,
+              "sem": 5.1436,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F24:G24"
+              }
+            }
+          }
+        },
+        "JF626b": {
+          "live": {
+            "snr": {
+              "mean": 4.63026,
+              "sem": 0.264005,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B11:C11"
+              }
+            },
+            "tau": {
+              "mean": 1.4645,
+              "sem": 0.0121316,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D11:E11"
+              }
+            },
+            "useful": {
+              "mean": 38.077,
+              "sem": 1.88308,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F11:G11"
+              }
+            }
+          },
+          "fixed": {
+            "snr": {
+              "mean": 4.95625,
+              "sem": 0.243764,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B25:C25"
+              }
+            },
+            "tau": {
+              "mean": 3.87137,
+              "sem": 0.04904,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D25:E25"
+              }
+            },
+            "useful": {
+              "mean": 50.0651,
+              "sem": 2.23341,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F25:G25"
+              }
+            }
+          }
+        },
+        "JF614b": {
+          "live": {
+            "snr": {
+              "mean": 2.03855,
+              "sem": 0.517843,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B12:C12"
+              }
+            },
+            "tau": {
+              "mean": 1.44014,
+              "sem": 0.408584,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D12:E12"
+              }
+            },
+            "useful": {
+              "mean": 11.3652,
+              "sem": 0.91813,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F12:G12"
+              }
+            }
+          },
+          "fixed": {
+            "snr": {
+              "mean": 2.01356,
+              "sem": 0.258546,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "B26:C26"
+              }
+            },
+            "tau": {
+              "mean": 1.37514,
+              "sem": 0.195389,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "D26:E26"
+              }
+            },
+            "useful": {
+              "mean": 17.1535,
+              "sem": 3.23021,
+              "source": {
+                "workbook": "8",
+                "sheet": "Figure 2b-d",
+                "cells": "F26:G26"
+              }
+            }
+          }
+        }
+      }
+    },
+    "lysosome": {
+      "name": "Lysosome",
+      "nCells": 5,
+      "metrics": [
+        "snr",
+        "tau"
+      ],
+      "protocol": "U2OS · 90 min labeling · 20 nM JF639b and 100 nM JF614b · 100 Hz",
+      "fig": "Extended Data Figure 8e–f",
+      "dyes": {
+        "JF639b": {
+          "live": {
+            "snr": {
+              "mean": 0.875926,
+              "sem": 0.438163,
+              "source": {
+                "workbook": "13",
+                "sheet": "Extended Data Figure 8e-f",
+                "cells": "B3:C3"
+              }
+            },
+            "tau": {
+              "mean": 24.9827,
+              "sem": 3.67943,
+              "source": {
+                "workbook": "13",
+                "sheet": "Extended Data Figure 8e-f",
+                "cells": "B6:C6"
+              }
+            }
+          },
+          "fixed": {
+            "snr": {
+              "mean": 5.61271,
+              "sem": 0.590682,
+              "source": {
+                "workbook": "13",
+                "sheet": "Extended Data Figure 8e-f",
+                "cells": "B4:C4"
+              }
+            },
+            "tau": {
+              "mean": 11.3081,
+              "sem": 0.480186,
+              "source": {
+                "workbook": "13",
+                "sheet": "Extended Data Figure 8e-f",
+                "cells": "B7:C7"
+              }
+            }
+          }
+        },
+        "JF614b": {
+          "live": {
+            "snr": {
+              "mean": 3.1436,
+              "sem": 0.135007,
+              "source": {
+                "workbook": "13",
+                "sheet": "Extended Data Figure 8e-f",
+                "cells": "D3:E3"
+              }
+            },
+            "tau": {
+              "mean": 1.14872,
+              "sem": 0.0236617,
+              "source": {
+                "workbook": "13",
+                "sheet": "Extended Data Figure 8e-f",
+                "cells": "D6:E6"
+              }
+            }
+          },
+          "fixed": {
+            "snr": {
+              "mean": 1.65419,
+              "sem": 0.234034,
+              "source": {
+                "workbook": "13",
+                "sheet": "Extended Data Figure 8e-f",
+                "cells": "D4:E4"
+              }
+            },
+            "tau": {
+              "mean": 1.42887,
+              "sem": 0.0904813,
+              "source": {
+                "workbook": "13",
+                "sheet": "Extended Data Figure 8e-f",
+                "cells": "D7:E7"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "calibration": {
+    "id": "holland-h2b-pka-log-ratio-v1",
+    "scope": "hydroxymethyl-sir-monotonic-fixed-cos7-h2b",
+    "target": "Mean ON:OFF time ratio of the HaloTag ligand in fixed COS-7 H2B–HaloTag.",
+    "sourceSha256": "1e26a58d558f7d96518aca0264b0efed6e5574b67ba5f18899965802fedf5031",
+    "pairs": [
+      {
+        "id": "JFX650b",
+        "pKa": 4.48,
+        "ratio": 0.001077915,
+        "sd": 0.000354994,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4j",
+          "cells": "A3:E3"
+        }
+      },
+      {
+        "id": "JF639b",
+        "pKa": 3.97,
+        "ratio": 0.001012101,
+        "sd": 0.000236,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4j",
+          "cells": "A4:E4"
+        }
+      },
+      {
+        "id": "JF635b",
+        "pKa": 2.95,
+        "ratio": 0.000483915,
+        "sd": 8.99e-05,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4j",
+          "cells": "A5:E5"
+        }
+      },
+      {
+        "id": "JF630b",
+        "pKa": 2.58,
+        "ratio": 0.000139505,
+        "sd": 9.24e-06,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4j",
+          "cells": "A6:E6"
+        }
+      },
+      {
+        "id": "JF629b",
+        "pKa": 2.25,
+        "ratio": 9.90737e-05,
+        "sd": 3.35e-06,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4j",
+          "cells": "A7:E7"
+        }
+      },
+      {
+        "id": "JF626b",
+        "pKa": 1.22,
+        "ratio": 0.000289684,
+        "sd": 2.29e-05,
+        "n": 3,
+        "source": {
+          "workbook": "10",
+          "sheet": "Extended Data Figure 4j",
+          "cells": "A8:E8"
+        }
+      }
+    ],
+    "fit": {
+      "slope": 0.27092171402,
+      "intercept": -4.23375563191,
+      "medianLog": -3.42665320356,
+      "pKaRange": [
+        1.22,
+        4.48
+      ]
+    },
+    "folds": [
+      {
+        "held": "JFX650b",
+        "training": [
+          "JF639b",
+          "JF635b",
+          "JF630b",
+          "JF629b",
+          "JF626b"
+        ],
+        "trainingRange": [
+          1.22,
+          3.97
+        ],
+        "observed": 0.001077915,
+        "pKa": 4.48,
+        "status": "outside training range"
+      },
+      {
+        "held": "JF639b",
+        "training": [
+          "JFX650b",
+          "JF635b",
+          "JF630b",
+          "JF629b",
+          "JF626b"
+        ],
+        "trainingRange": [
+          1.22,
+          4.48
+        ],
+        "observed": 0.001012101,
+        "pKa": 3.97,
+        "status": "scored",
+        "predicted": 0.000578195675526,
+        "baseline": 0.000289684,
+        "nearestDye": "JFX650b",
+        "nearestRatio": 0.001077915,
+        "error": 0.243149014814,
+        "baselineError": 0.543299345307,
+        "nearestError": 0.0273606615413
+      },
+      {
+        "held": "JF635b",
+        "training": [
+          "JFX650b",
+          "JF639b",
+          "JF630b",
+          "JF629b",
+          "JF626b"
+        ],
+        "trainingRange": [
+          1.22,
+          4.48
+        ],
+        "observed": 0.000483915,
+        "pKa": 2.95,
+        "status": "scored",
+        "predicted": 0.00034798427075,
+        "baseline": 0.000289684,
+        "nearestDye": "JF630b",
+        "nearestRatio": 0.000139505,
+        "error": 0.143209470393,
+        "baselineError": 0.222844575568,
+        "nearestError": 0.54017931078
+      },
+      {
+        "held": "JF630b",
+        "training": [
+          "JFX650b",
+          "JF639b",
+          "JF635b",
+          "JF629b",
+          "JF626b"
+        ],
+        "trainingRange": [
+          1.22,
+          4.48
+        ],
+        "observed": 0.000139505,
+        "pKa": 2.58,
+        "status": "scored",
+        "predicted": 0.000344035424235,
+        "baseline": 0.000483915,
+        "nearestDye": "JF629b",
+        "nearestRatio": 9.90737e-05,
+        "error": 0.392013389357,
+        "baselineError": 0.54017931078,
+        "nearestError": 0.148631391012
+      },
+      {
+        "held": "JF629b",
+        "training": [
+          "JFX650b",
+          "JF639b",
+          "JF635b",
+          "JF630b",
+          "JF626b"
+        ],
+        "trainingRange": [
+          1.22,
+          4.48
+        ],
+        "observed": 9.90737e-05,
+        "pKa": 2.25,
+        "status": "scored",
+        "predicted": 0.000307913194137,
+        "baseline": 0.000483915,
+        "nearestDye": "JF630b",
+        "nearestRatio": 0.000139505,
+        "error": 0.492469916471,
+        "baselineError": 0.688810701792,
+        "nearestError": 0.148631391012
+      },
+      {
+        "held": "JF626b",
+        "training": [
+          "JFX650b",
+          "JF639b",
+          "JF635b",
+          "JF630b",
+          "JF629b"
+        ],
+        "trainingRange": [
+          2.25,
+          4.48
+        ],
+        "observed": 0.000289684,
+        "pKa": 1.22,
+        "status": "outside training range"
+      }
+    ],
+    "validation": {
+      "scored": 4,
+      "total": 6,
+      "mae": 0.317710447759,
+      "baselineMae": 0.498783483362,
+      "nearestMae": 0.216200688586,
+      "winsVsMedian": 4,
+      "winsVsNearest": 1
+    }
+  }
+}

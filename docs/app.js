@@ -4,8 +4,9 @@ import {drawForecast, drawYield, dyeColor} from './charts.js';
 const $ = id => document.getElementById(id);
 const fmt = (number, decimals=1) => Number(number).toLocaleString('en-US', {maximumFractionDigits:decimals});
 const pair = ['JF630b','JF635b'];
-const titles = {compare:'Fluorophore comparison',pilot:'Pilot recording',precision:'Precision evidence','dna-paint':'DNA-PAINT dye palette',methods:'Methods & data'};
+const titles = {compare:'Fluorophore comparison','probe-design':'Probe design',pilot:'Pilot recording',precision:'Precision evidence','dna-paint':'DNA-PAINT dye palette',methods:'Methods & data'};
 const evidenceViews = {
+  'probe-design': () => import('./probe-view.js').then(m => m.renderProbeDesign($('probe-design-content'))),
   precision: () => import('./precision-view.js?v=palette-1').then(m => m.renderPrecision($('precision-content'))),
   'dna-paint': () => import('./palette-view.js').then(m => m.renderPalette($('dna-paint-content')))
 };
