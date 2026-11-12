@@ -1,0 +1,664 @@
+{
+  "schema": "epfl-image-localization/1",
+  "scope": "Full simulated 2D sensor sequences",
+  "dataset_doi": "10.1038/nmeth.3442",
+  "software_doi": "10.1038/nprot.2017.024",
+  "gaussmle_source": "https://github.com/jungmannlab/picasso/blob/v0.7.5/picasso/gaussmle.py",
+  "versions": {
+    "python": "3.11.16",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "tifffile": "2025.6.11",
+    "numba": "0.61.0",
+    "picassosr": "0.7.5"
+  },
+  "pixel_nm": 100.0,
+  "camera": {
+    "baseline_adu": 100.0,
+    "electrons_per_adu": 1,
+    "quantum_efficiency": 1,
+    "read_noise_e_rms": 5.0,
+    "excess_noise_factor": 1.41
+  },
+  "settings": {
+    "finder": "SciPy difference of Gaussians (1 and 3 px), 3x3 local maxima",
+    "threshold": "Frame median plus 6 times max(1 ADU, 1.4826 times frame MAD) on the bandpass",
+    "fit": "Picasso 0.7.5 gaussmle sigma, 7x7 pixels, single circular pixel-integrated Gaussian plus constant background",
+    "fit_epsilon_px": 0.001,
+    "maximum_iterations": 100,
+    "filter": "Finite fit and positive raw positional CRLB; positive photons, nonnegative background, 0.6 to 3 px width, fit within 2 px of seed on each axis",
+    "coordinates": "1-based TIFF/GT filename IDs; array indexing [y,x], EPFL xy_nm = (zero-based fitted center index + 0.5) * 100",
+    "uncertainty": "5-parameter marginal inverse information from the fitted mean and noise variance 1.41^2*mean+5^2 photoelectron-equivalent units; raw Picasso Poisson CRLB is a separate comparison",
+    "primary_match_radius_nm": 150.0,
+    "match": "Same frame, maximum cardinality then minimum total radial distance; inclusive radius",
+    "scope_20nm": "Both reported axis standard deviations at most 20 nm; ground-truth test separately uses Euclidean radial error at most 20 nm",
+    "coverage95": "Fraction of matched residuals inside the reported joint 95% Gaussian covariance ellipse, squared Mahalanobis radius <=5.99146",
+    "source_note": "Dense landing-page summary reports 168 frames; the numbered sensor and truth archives both contain frames 1 through 361."
+  },
+  "limitations": [
+    "These synthetic tubulin images test a single-emitter estimator under the archived camera conditions.",
+    "Calibration and error distributions condition on matched detections. The matching radius truncates the error distribution and dense same-frame matches can occur by chance.",
+    "Neighboring sources, structured fluorescence and PSF mismatch can bias fits with small predicted uncertainty. The synthetic cases contain no JF dye comparison."
+  ],
+  "datasets": [
+    {
+      "id": "sparse",
+      "dataset": "Bundled_Tubes_Long_Sequence",
+      "frames": 12000,
+      "archive_frame_ids": [
+        1,
+        12000
+      ],
+      "source_url": "https://bigwww.epfl.ch/srm/dataset/challenge-2D-simulation/Bundled_Tubes_Long_Sequence/index.html",
+      "sources": {
+        "sequence.zip": {
+          "url": "https://bigwww.epfl.ch/srm/Data/challenge-2D-simulation/Bundled_Tubes_Long_Sequence/Data/sequence.zip",
+          "sha256": "0c70f0ab2cc73cec7d5ddee80009cd48b2a2e2cec4a223120bc3f0323dd37270",
+          "bytes": 55752091
+        },
+        "fluorophores.zip": {
+          "url": "https://bigwww.epfl.ch/srm/Data/challenge-2D-simulation/Bundled_Tubes_Long_Sequence/Data/fluorophores.zip",
+          "sha256": "337a136ee5434495b8a0dc70f12c33023efa01a0948ce89e42430c3ea1274ac9",
+          "bytes": 6923245
+        },
+        "psf.zip": {
+          "url": "https://bigwww.epfl.ch/srm/Data/challenge-2D-simulation/Bundled_Tubes_Long_Sequence/Data/psf.zip",
+          "sha256": "cba2c63ba2d6ca18e64e78cca479d8e7a81bcb6cfadcaa0ea6b5837be8c996e6",
+          "bytes": 4307112
+        }
+      },
+      "psf": {
+        "archive_member": "psf/psf-10.0nm.tif",
+        "pages": 50,
+        "focal_slice_index": 0,
+        "profile_spacing_nm_from_member_name": 10,
+        "measured_x_fwhm_nm": 258.2978950365768,
+        "nominal_fwhm_nm": 258.21
+      },
+      "candidates": 75483,
+      "rejected_fits": 263,
+      "accepted_at_iteration_cap": 778,
+      "truth_count": 81049,
+      "detection_count": 75220,
+      "matches": 74002,
+      "false_positives": 1218,
+      "false_negatives": 7047,
+      "recall": 0.9130525978112006,
+      "fdr": 0.016192501994150493,
+      "n": 74002,
+      "median_radial_error_nm": 7.756323977768947,
+      "rms_radial_error_nm": 28.73853827644995,
+      "rmse_xy_nm": [
+        20.97395050807215,
+        19.64680590711689
+      ],
+      "mean_signed_error_xy_nm": [
+        -0.04084892050182066,
+        0.058817917334157845
+      ],
+      "median_reported_axis_sigma_nm": [
+        5.260112822563967,
+        5.259504531630528
+      ],
+      "reported_radial_rms_nm": 7.9478077567646865,
+      "coverage_1sigma_axis": [
+        0.560565930650523,
+        0.5643360990243507
+      ],
+      "coverage95": 0.8085186886840896,
+      "fraction_radial_error_le20": 0.8920839977297911,
+      "ambiguous_detections": 3171,
+      "precision20": {
+        "passing_detections": 75196,
+        "passing_matched": 73999,
+        "passing_unmatched": 1197,
+        "matched_actual_radial_le20": 66016,
+        "fraction_actual_radial_le20_given_matched_pass": 0.8921201637859971,
+        "fraction_all_passes_matched_and_radial_le20": 0.8779190382467152
+      },
+      "uncertainty_bins": [
+        {
+          "lower_exclusive_nm": 0,
+          "upper_inclusive_nm": 5,
+          "matched": 28716,
+          "n": 28716,
+          "median_radial_error_nm": 6.579809249724132,
+          "rms_radial_error_nm": 27.015635294808572,
+          "rmse_xy_nm": [
+            19.734594219704075,
+            18.449670494773986
+          ],
+          "mean_signed_error_xy_nm": [
+            -0.052728414026071084,
+            0.018664208403002574
+          ],
+          "median_reported_axis_sigma_nm": [
+            4.53795953458456,
+            4.537366296874378
+          ],
+          "reported_radial_rms_nm": 6.308158417633721,
+          "coverage_1sigma_axis": [
+            0.5513999164229001,
+            0.5563100710405349
+          ],
+          "coverage95": 0.7902911268978966,
+          "fraction_radial_error_le20": 0.8863351441704973
+        },
+        {
+          "lower_exclusive_nm": 5,
+          "upper_inclusive_nm": 10,
+          "matched": 44650,
+          "n": 44650,
+          "median_radial_error_nm": 8.56469982173613,
+          "rms_radial_error_nm": 28.774896956280354,
+          "rmse_xy_nm": [
+            20.994207167510694,
+            19.67836274318045
+          ],
+          "mean_signed_error_xy_nm": [
+            -0.028819307689517973,
+            0.06296672284936965
+          ],
+          "median_reported_axis_sigma_nm": [
+            5.7973126534338855,
+            5.796887328278716
+          ],
+          "reported_radial_rms_nm": 8.68093816072758,
+          "coverage_1sigma_axis": [
+            0.5682642777155655,
+            0.5713773796192609
+          ],
+          "coverage95": 0.8228667413213886,
+          "fraction_radial_error_le20": 0.9017021276595745
+        },
+        {
+          "lower_exclusive_nm": 10,
+          "upper_inclusive_nm": 20,
+          "matched": 633,
+          "n": 633,
+          "median_radial_error_nm": 21.077362378347136,
+          "rms_radial_error_nm": 70.38397204047037,
+          "rmse_xy_nm": [
+            51.17737543457931,
+            48.31955881236739
+          ],
+          "mean_signed_error_xy_nm": [
+            -0.3791689996885045,
+            1.4686238557354596
+          ],
+          "median_reported_axis_sigma_nm": [
+            10.953049622904732,
+            10.93677030833596
+          ],
+          "reported_radial_rms_nm": 16.143528344227278,
+          "coverage_1sigma_axis": [
+            0.43601895734597157,
+            0.4344391785150079
+          ],
+          "coverage95": 0.627172195892575,
+          "fraction_radial_error_le20": 0.4786729857819905
+        },
+        {
+          "lower_exclusive_nm": 20,
+          "upper_inclusive_nm": 40,
+          "matched": 3,
+          "n": 3,
+          "median_radial_error_nm": 145.27558186300377,
+          "rms_radial_error_nm": 134.8044671076511,
+          "rmse_xy_nm": [
+            104.41520238579987,
+            85.26259357367826
+          ],
+          "mean_signed_error_xy_nm": [
+            6.014462445576858,
+            25.193011385599675
+          ],
+          "median_reported_axis_sigma_nm": [
+            20.07975385666314,
+            19.995648282989375
+          ],
+          "reported_radial_rms_nm": 26.49977429530961,
+          "coverage_1sigma_axis": [
+            0.0,
+            0.0
+          ],
+          "coverage95": 0.0,
+          "fraction_radial_error_le20": 0.0
+        },
+        {
+          "lower_exclusive_nm": 40,
+          "upper_inclusive_nm": null,
+          "matched": 0,
+          "n": 0,
+          "median_radial_error_nm": null,
+          "rms_radial_error_nm": null,
+          "coverage95": null,
+          "fraction_radial_error_le20": null
+        }
+      ],
+      "ground_truth_crowding": {
+        "neighbor_within_250nm": {
+          "truth_count": 6335,
+          "matches": 3095,
+          "recall": 0.48855564325177586,
+          "n": 3095,
+          "median_radial_error_nm": 55.333358048697605,
+          "rms_radial_error_nm": 63.29078697211732,
+          "rmse_xy_nm": [
+            45.74988092362029,
+            43.734106953549485
+          ],
+          "mean_signed_error_xy_nm": [
+            0.6217930979690207,
+            -0.5537873414675929
+          ],
+          "median_reported_axis_sigma_nm": [
+            3.6008423903746993,
+            3.598739354158705
+          ],
+          "reported_radial_rms_nm": 5.303796768942218,
+          "coverage_1sigma_axis": [
+            0.07075928917609046,
+            0.08336025848142165
+          ],
+          "coverage95": 0.05072697899838449,
+          "fraction_radial_error_le20": 0.1767366720516963
+        },
+        "no_neighbor_within_250nm": {
+          "truth_count": 74714,
+          "matches": 70907,
+          "recall": 0.9490456942473967,
+          "n": 70907,
+          "median_radial_error_nm": 7.512722387882317,
+          "rms_radial_error_nm": 26.21275441762006,
+          "rmse_xy_nm": [
+            19.176781053426144,
+            17.87063408464906
+          ],
+          "mean_signed_error_xy_nm": [
+            -0.06977239839775809,
+            0.0855573545687237
+          ],
+          "median_reported_axis_sigma_nm": [
+            5.3106648273970745,
+            5.310432909049224
+          ],
+          "reported_radial_rms_nm": 8.04344362694629,
+          "coverage_1sigma_axis": [
+            0.5819453650556362,
+            0.585330080245956
+          ],
+          "coverage95": 0.8415953290930374,
+          "fraction_radial_error_le20": 0.9233079949793391
+        }
+      },
+      "uncorrected_picasso_poisson": {
+        "n": 74002,
+        "median_radial_error_nm": 7.756323977768947,
+        "rms_radial_error_nm": 28.73853827644995,
+        "rmse_xy_nm": [
+          20.97395050807215,
+          19.64680590711689
+        ],
+        "mean_signed_error_xy_nm": [
+          -0.04084892050182066,
+          0.058817917334157845
+        ],
+        "median_reported_axis_sigma_nm": [
+          3.501924190198866,
+          3.5016770431593924
+        ],
+        "reported_radial_rms_nm": 5.273211600153284,
+        "coverage_1sigma_axis": [
+          0.3963811788870571,
+          0.4019756222804789
+        ],
+        "coverage95": 0.5747412232101835,
+        "fraction_radial_error_le20": 0.8920839977297911
+      },
+      "radius_sensitivity": [
+        {
+          "match_radius_nm": 50.0,
+          "matches": 68847,
+          "false_positives": 6373,
+          "false_negatives": 12202,
+          "recall": 0.849449098693383,
+          "fdr": 0.08472480723211911
+        },
+        {
+          "match_radius_nm": 100.0,
+          "matches": 71558,
+          "false_positives": 3662,
+          "false_negatives": 9491,
+          "recall": 0.8828979999753236,
+          "fdr": 0.0486838606753523
+        },
+        {
+          "match_radius_nm": 150.0,
+          "matches": 74002,
+          "false_positives": 1218,
+          "false_negatives": 7047,
+          "recall": 0.9130525978112006,
+          "fdr": 0.016192501994150493
+        },
+        {
+          "match_radius_nm": 250.0,
+          "matches": 75171,
+          "false_positives": 49,
+          "false_negatives": 5878,
+          "recall": 0.927475971325988,
+          "fdr": 0.0006514224940175486
+        }
+      ],
+      "wrong_frame_control": {
+        "shift_frames": 6000,
+        "matches": 3325,
+        "false_positives": 71895,
+        "false_negatives": 77724,
+        "recall": 0.041024565386371205,
+        "fdr": 0.9557963307630949
+      }
+    },
+    {
+      "id": "dense",
+      "dataset": "Bundled_Tubes_High_Density",
+      "frames": 361,
+      "archive_frame_ids": [
+        1,
+        361
+      ],
+      "source_url": "https://bigwww.epfl.ch/srm/dataset/challenge-2D-simulation/Bundled_Tubes_High_Density/index.html",
+      "sources": {
+        "sequence.zip": {
+          "url": "https://bigwww.epfl.ch/srm/Data/challenge-2D-simulation/Bundled_Tubes_High_Density/Data/sequence.zip",
+          "sha256": "d6e303f685a9171d1db858fd3674b09db62d162bca842746e2a0c722d187a719",
+          "bytes": 2077674
+        },
+        "fluorophores.zip": {
+          "url": "https://bigwww.epfl.ch/srm/Data/challenge-2D-simulation/Bundled_Tubes_High_Density/Data/fluorophores.zip",
+          "sha256": "d57316fb663c543c4e9b9baf1152a82912e634ce5949cb59a9f2cfb0db6ecad3",
+          "bytes": 3817424
+        },
+        "psf.zip": {
+          "url": "https://bigwww.epfl.ch/srm/Data/challenge-2D-simulation/Bundled_Tubes_High_Density/Data/psf.zip",
+          "sha256": "60c3a97a6d797d4ccd84842ec3262c3a7c15a28532e3d6f1052ad3377b00bad5",
+          "bytes": 4307112
+        }
+      },
+      "psf": {
+        "archive_member": "psf/psf-10.0nm.tif",
+        "pages": 50,
+        "focal_slice_index": 0,
+        "profile_spacing_nm_from_member_name": 10,
+        "measured_x_fwhm_nm": 258.2978950365768,
+        "nominal_fwhm_nm": 258.21
+      },
+      "candidates": 6044,
+      "rejected_fits": 16,
+      "accepted_at_iteration_cap": 678,
+      "truth_count": 81049,
+      "detection_count": 6028,
+      "matches": 5972,
+      "false_positives": 56,
+      "false_negatives": 75077,
+      "recall": 0.07368382089846882,
+      "fdr": 0.0092899800928998,
+      "n": 5972,
+      "median_radial_error_nm": 42.890965361562095,
+      "rms_radial_error_nm": 60.07602791093287,
+      "rmse_xy_nm": [
+        42.97573389570939,
+        41.97874969172349
+      ],
+      "mean_signed_error_xy_nm": [
+        -0.6724499920240171,
+        -1.1038534763876546
+      ],
+      "median_reported_axis_sigma_nm": [
+        3.1737849425385054,
+        3.167874991814174
+      ],
+      "reported_radial_rms_nm": 4.8169464252580765,
+      "coverage_1sigma_axis": [
+        0.07032819825853985,
+        0.07568653717347622
+      ],
+      "coverage95": 0.03281982585398526,
+      "fraction_radial_error_le20": 0.1855324849296718,
+      "ambiguous_detections": 5812,
+      "precision20": {
+        "passing_detections": 6028,
+        "passing_matched": 5972,
+        "passing_unmatched": 56,
+        "matched_actual_radial_le20": 1108,
+        "fraction_actual_radial_le20_given_matched_pass": 0.1855324849296718,
+        "fraction_all_passes_matched_and_radial_le20": 0.1838088918380889
+      },
+      "uncertainty_bins": [
+        {
+          "lower_exclusive_nm": 0,
+          "upper_inclusive_nm": 5,
+          "matched": 5692,
+          "n": 5692,
+          "median_radial_error_nm": 41.392673813721885,
+          "rms_radial_error_nm": 57.894358370400994,
+          "rmse_xy_nm": [
+            41.33205570331756,
+            40.539091041342836
+          ],
+          "mean_signed_error_xy_nm": [
+            -0.47688115626259764,
+            -0.6646807290028276
+          ],
+          "median_reported_axis_sigma_nm": [
+            3.139304989941738,
+            3.132444319117147
+          ],
+          "reported_radial_rms_nm": 4.5965912150821016,
+          "coverage_1sigma_axis": [
+            0.06992269852424456,
+            0.07765284609978917
+          ],
+          "coverage95": 0.03338018271257906,
+          "fraction_radial_error_le20": 0.19237526352775824
+        },
+        {
+          "lower_exclusive_nm": 5,
+          "upper_inclusive_nm": 10,
+          "matched": 278,
+          "n": 278,
+          "median_radial_error_nm": 87.45384184824296,
+          "rms_radial_error_nm": 93.7322061484346,
+          "rmse_xy_nm": [
+            67.91059165838269,
+            64.60555711439262
+          ],
+          "mean_signed_error_xy_nm": [
+            -5.428237660634435,
+            -10.167849681909129
+          ],
+          "median_reported_axis_sigma_nm": [
+            5.415737639607867,
+            5.358185885228089
+          ],
+          "reported_radial_rms_nm": 7.956495698899478,
+          "coverage_1sigma_axis": [
+            0.07913669064748201,
+            0.03597122302158273
+          ],
+          "coverage95": 0.02158273381294964,
+          "fraction_radial_error_le20": 0.046762589928057555
+        },
+        {
+          "lower_exclusive_nm": 10,
+          "upper_inclusive_nm": 20,
+          "matched": 2,
+          "n": 2,
+          "median_radial_error_nm": 126.57943553743827,
+          "rms_radial_error_nm": 128.62326705984717,
+          "rmse_xy_nm": [
+            109.11039154142841,
+            68.10923055522615
+          ],
+          "mean_signed_error_xy_nm": [
+            103.79312936782821,
+            8.905980033874584
+          ],
+          "median_reported_axis_sigma_nm": [
+            10.483936337564536,
+            15.149991497593732
+          ],
+          "reported_radial_rms_nm": 18.77304688850702,
+          "coverage_1sigma_axis": [
+            0.0,
+            0.0
+          ],
+          "coverage95": 0.0,
+          "fraction_radial_error_le20": 0.0
+        },
+        {
+          "lower_exclusive_nm": 20,
+          "upper_inclusive_nm": 40,
+          "matched": 0,
+          "n": 0,
+          "median_radial_error_nm": null,
+          "rms_radial_error_nm": null,
+          "coverage95": null,
+          "fraction_radial_error_le20": null
+        },
+        {
+          "lower_exclusive_nm": 40,
+          "upper_inclusive_nm": null,
+          "matched": 0,
+          "n": 0,
+          "median_radial_error_nm": null,
+          "rms_radial_error_nm": null,
+          "coverage95": null,
+          "fraction_radial_error_le20": null
+        }
+      ],
+      "ground_truth_crowding": {
+        "neighbor_within_250nm": {
+          "truth_count": 74930,
+          "matches": 5971,
+          "recall": 0.07968770852795942,
+          "n": 5971,
+          "median_radial_error_nm": 42.88599906158974,
+          "rms_radial_error_nm": 60.0698505577811,
+          "rmse_xy_nm": [
+            42.979263003662325,
+            41.96629478160056
+          ],
+          "mean_signed_error_xy_nm": [
+            -0.6715627365450955,
+            -1.0890540852831758
+          ],
+          "median_reported_axis_sigma_nm": [
+            3.173396257239412,
+            3.1676994809743224
+          ],
+          "reported_radial_rms_nm": 4.8166830452412235,
+          "coverage_1sigma_axis": [
+            0.07033997655334115,
+            0.07569921286216715
+          ],
+          "coverage95": 0.032825322391559206,
+          "fraction_radial_error_le20": 0.18556355719309997
+        },
+        "no_neighbor_within_250nm": {
+          "truth_count": 6119,
+          "matches": 1,
+          "recall": 0.00016342539630658605,
+          "n": 1,
+          "median_radial_error_nm": 89.66998903550028,
+          "rms_radial_error_nm": 89.66998903550028,
+          "rmse_xy_nm": [
+            5.970252456664639,
+            89.47101776123054
+          ],
+          "mean_signed_error_xy_nm": [
+            -5.970252456664639,
+            -89.47101776123054
+          ],
+          "median_reported_axis_sigma_nm": [
+            4.297708403229368,
+            4.45902752167855
+          ],
+          "reported_radial_rms_nm": 6.192997978223074,
+          "coverage_1sigma_axis": [
+            0.0,
+            0.0
+          ],
+          "coverage95": 0.0,
+          "fraction_radial_error_le20": 0.0
+        }
+      },
+      "uncorrected_picasso_poisson": {
+        "n": 5972,
+        "median_radial_error_nm": 42.890965361562095,
+        "rms_radial_error_nm": 60.07602791093287,
+        "rmse_xy_nm": [
+          42.97573389570939,
+          41.97874969172349
+        ],
+        "mean_signed_error_xy_nm": [
+          -0.6724499920240171,
+          -1.1038534763876546
+        ],
+        "median_reported_axis_sigma_nm": [
+          2.2065657661611344,
+          2.1987547421967917
+        ],
+        "reported_radial_rms_nm": 3.34317509945835,
+        "coverage_1sigma_axis": [
+          0.05123911587407903,
+          0.052578700602813125
+        ],
+        "coverage95": 0.01707970529135968,
+        "fraction_radial_error_le20": 0.1855324849296718
+      },
+      "radius_sensitivity": [
+        {
+          "match_radius_nm": 50.0,
+          "matches": 3439,
+          "false_positives": 2589,
+          "false_negatives": 77610,
+          "recall": 0.042431121913903934,
+          "fdr": 0.42949568679495687
+        },
+        {
+          "match_radius_nm": 100.0,
+          "matches": 5370,
+          "false_positives": 658,
+          "false_negatives": 75679,
+          "recall": 0.06625621537588372,
+          "fdr": 0.10915726609157266
+        },
+        {
+          "match_radius_nm": 150.0,
+          "matches": 5972,
+          "false_positives": 56,
+          "false_negatives": 75077,
+          "recall": 0.07368382089846882,
+          "fdr": 0.0092899800928998
+        },
+        {
+          "match_radius_nm": 250.0,
+          "matches": 6028,
+          "false_positives": 0,
+          "false_negatives": 75021,
+          "recall": 0.0743747609470814,
+          "fdr": 0.0
+        }
+      ],
+      "wrong_frame_control": {
+        "shift_frames": 180,
+        "matches": 4648,
+        "false_positives": 1380,
+        "false_negatives": 76401,
+        "recall": 0.05734802403484312,
+        "fdr": 0.22893165228931653
+      }
+    }
+  ]
+}

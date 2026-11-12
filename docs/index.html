@@ -9,6 +9,7 @@
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="preload" href="assets/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="evidence.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to workspace</a>
@@ -17,6 +18,7 @@
     <nav class="site-nav" aria-label="Workspace">
       <a href="#compare" data-nav="compare">Dye comparison</a>
       <a href="#pilot" data-nav="pilot">Pilot recording</a>
+      <a href="#precision" data-nav="precision">Precision evidence</a>
       <a href="#methods" data-nav="methods">Methods &amp; data</a>
     </nav>
     <a class="source-link" href="https://github.com/kangk1204/blink-atlas">Source code <span aria-hidden="true">↗</span></a>
@@ -76,6 +78,12 @@
         <div class="light-legend"><span><i class="line observed"></i>Observed</span><span><i class="line forecast"></i>Trend forecast</span><span><i class="line baseline"></i>Constant baseline</span></div><p class="pilot-verdict" id="pilot-verdict"></p>
         <details><summary>Inspect counts and absolute errors</summary><div class="table-wrap"><table><thead><tr><th>Frames · one-based</th><th class="num">Observed</th><th class="num">Forecast</th><th class="num">Baseline</th><th class="num">Forecast error</th><th class="num">Baseline error</th></tr></thead><tbody id="forecast-rows"></tbody></table></div></details>
       </article>
+    </section>
+    <section id="view-precision" class="view" hidden aria-labelledby="precision-title">
+      <header class="page-title"><div><div class="context"><span class="context-dot"></span> H2B–HaloTag · observed localizations</div>
+        <h1 id="precision-title">Precision evidence</h1><p>How many localizations meet a 20 nm cutoff, and which recordings can answer a dye comparison?</p></div>
+        <a class="button secondary" href="data/precision.json" download>↓ Download evidence</a></header>
+      <div id="precision-content" class="evidence-content"><p role="status">Loading precision measurements…</p></div>
     </section>
     <section id="view-methods" class="view" hidden aria-labelledby="methods-title">
       <header class="page-title"><div><div class="context"><span class="context-dot"></span> Reproducibility &amp; validation</div><h1 id="methods-title">Methods &amp; data</h1><p>Trace the reference measurements, inspect model assumptions, and reproduce each public example.</p></div><a class="button primary" href="media/validation-proposal.pdf">Validation proposal ↗</a></header>

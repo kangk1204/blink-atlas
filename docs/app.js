@@ -4,7 +4,9 @@ import {drawForecast, drawYield, dyeColor} from './charts.js';
 const $ = id => document.getElementById(id);
 const fmt = (number, decimals=1) => Number(number).toLocaleString('en-US', {maximumFractionDigits:decimals});
 const pair = ['JF630b','JF635b'];
-const titles = {compare:'Fluorophore comparison',pilot:'Pilot recording',methods:'Methods & data'};
+const titles = {compare:'Fluorophore comparison',pilot:'Pilot recording',precision:'Precision evidence',methods:'Methods & data'};
+const evidenceViews = {precision: () => import('./precision-view.js').then(m => m.renderPrecision($('precision-content')))};
+const openedEvidence = new Set();
 const store = {page:null,config:null,dyes:null,s21:null,epfl:null,gpu:null,frames:null,settings:{},pilot:null,
   result:null,points:[],hover:null,chartBounds:null,importNotice:'',traceDye:'JF630b'};
 
@@ -38,6 +40,14 @@ function navigate(scroll) {
     if (link.dataset.nav === store.page) link.setAttribute('aria-current','page'); else link.removeAttribute('aria-current');
   });
   document.title = 'Blink Atlas · '+titles[store.page];
+  const page = store.page;
+  if (Object.hasOwn(evidenceViews, page) && !openedEvidence.has(page)) {
+    openedEvidence.add(page);
+    evidenceViews[page]().catch(error => {
+      openedEvidence.delete(page);
+      $(page+'-content').textContent = 'Unable to load this view. Open the tab again to retry. ' + error.message;
+    });
+  }
   if(scroll) window.scrollTo(0,0);
   requestAnimationFrame(redrawVisible);
 }

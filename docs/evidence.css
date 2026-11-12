@@ -1,0 +1,45 @@
+.evidence-content { display: grid; gap: 18px; }
+.ev-columns { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+.ev-card { padding: 24px; }
+.ev-card h3 { font-size: 16px; margin: 16px 0 6px; letter-spacing: -.02em; }
+.ev-card p, .ev-status p { font-size: 14px; line-height: 1.55; color: var(--muted); margin: 8px 0; }
+.ev-card .footnote { font-size: 12px; }
+.ev-card a { overflow-wrap: anywhere; }
+.ev-status { border-left: 4px solid #658356; background: #edf3e7; padding: 16px 20px; }
+.ev-status h2 { font-size: 20px; }
+.ev-status p:last-child { margin-bottom: 0; }
+.ev-number { display: block; margin: 20px 0 0; font: 500 clamp(32px,4vw,49px)/1 var(--sans); color: var(--ink); letter-spacing: -.055em; }
+.ev-bar { display: flex; height: 11px; overflow: hidden; border-radius: 5px; background: #e3e9dc; margin: 15px 0 10px; }
+.ev-bar .passed { background: #397452; }
+.ev-bar .boundary { background: repeating-linear-gradient(135deg,#7b672e 0 2px,#f3e4a7 2px 4px); }
+.ev-card details { margin-top: 15px; }
+.ev-card summary { color: var(--teal); font-size: 13px; font-weight: 600; }
+.ev-card .table-wrap { margin: 13px 0; }
+.ev-card td, .ev-card th { padding: 8px 9px; }
+.ev-card .ev-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-top: 14px; }
+.ev-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 16px; margin: 12px 0; }
+.ev-controls label { display: grid; gap: 4px; color: var(--muted); font-size: 12px; }
+.ev-controls select { background: var(--white); border: 1px solid #c8d1c5; border-radius: 5px; padding: 6px; }
+.ev-report { overflow-wrap: anywhere; }
+.ev-report:empty, .ev-status-message:empty { display: none; }
+.ev-report { margin: 14px 0 0; padding: 12px 15px; background: #f4f6ef; border-radius: 6px; }
+.ev-report h3 { margin-top: 0; }
+.ev-report ul { font-size: 13px; line-height: 1.5; padding-left: 20px; }
+.ev-card code { overflow-wrap: anywhere; }
+@media(max-width:1020px) {
+  .nav-inner { gap:18px; }
+  .site-nav { gap:16px; }
+}
+@media(max-width:850px) {
+  .nav-inner { flex-wrap:wrap; gap:0; }
+  .brand { padding:8px 0; }
+  .source-link { order:1; }
+  .site-nav { order:2; width:100%; overflow-x:auto; height:42px; gap:21px; scrollbar-width:thin; }
+  .site-nav a { flex:none; }
+}
+@media(max-width:680px) {
+  .ev-columns { grid-template-columns:minmax(0,1fr); gap:12px; }
+  .evidence-content { display:block; }
+  .evidence-content > * + * { margin-top:12px; }
+  .ev-card { padding:17px; }
+}

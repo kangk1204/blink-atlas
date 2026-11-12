@@ -26,6 +26,16 @@ The camera model uses a first ON segment, exponential dwell times, a hard thresh
 
 ## Reproduce the analysis
 
+### Precision evidence
+
+The precision view reports actual fitted uncertainties. Holland's fixed-cell JF630b histogram puts the passing fraction at 88.51–89.48%. The available bins cannot resolve the 20 nm boundary further. Public matched low-density JF639b fields with the same endpoint are still needed. For the live JF630b S21 control, 110,694 of 214,794 fits pass the two-axis cutoff. Across the 20 eligible live recordings, the pilot trend forecast improves count MAE in 12 and worsens it in eight. Illumination segments can share the same specimen. [Precision evidence](https://kangk1204.github.io/blink-atlas/#precision) · [Source search](validation/h2b_precision/README.md)
+
+One local command imports calibrated CSV or Picasso per-event uncertainties. A second compares two dyes within matched preparations and preserves the area and time denominators. The browser can open either output or a group of field summaries. An absent precision column, a partial field, an unmatched acquisition and a measured count of zero have separate meanings. [Field metadata and commands](analysis/precision-input.md)
+
+The independent EPFL test processes complete sparse and dense sensor sequences. The single-emitter fitter recovered 91.31% and 7.37% of true emitter positions, respectively, at a 150 nm matching radius. The nominal 95% uncertainty ellipses contained 80.85% and 3.28% of the matched truth positions. [EPFL fitting and matching](analysis/epfl-precision.md) · [Machine-readable outcomes](docs/data/epfl-precision.json)
+
+### Original comparison and recording
+
 The static site is served from `docs/`. Start a local preview with `python -m http.server 8000 --directory docs`, then open `http://localhost:8000`. The published site uses the same files.
 
 For analytical regeneration, use Python 3.11 and Node.js 22.7 or later. Install the CPU dependencies in a virtual environment.
