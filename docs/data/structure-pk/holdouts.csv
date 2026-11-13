@@ -1,0 +1,12 @@
+study,dye,inchiKey,measured,nearest,ridge,similarity,neighbors,nearestError,ridgeError
+Holland,JFX650b,WVUBAFYYUQYSJJ-XTUSUFHRSA-N,4.48,9.5,7.7463382782,0.4181818182,"[{""dye"":""HMTMR"",""inchiKey"":""LJKWOBFXDJRPPK-UHFFFAOYSA-N"",""studies"":[""Uno""],""measured"":9.5}]",5.02,3.2663382782
+Holland,JF639b,JOADUXAVAXRYGD-UHFFFAOYSA-N,3.97,9.5,7.6789853732,0.3965517241,"[{""dye"":""HMTMR"",""inchiKey"":""LJKWOBFXDJRPPK-UHFFFAOYSA-N"",""studies"":[""Uno""],""measured"":9.5}]",5.53,3.7089853732
+Holland,JF635b,PLJYNOFLYBISPG-UHFFFAOYSA-N,2.95,9.2,7.6659575801,0.4137931034,"[{""dye"":""HMRB"",""inchiKey"":""CERWZSIHJHUGDW-UHFFFAOYSA-N"",""studies"":[""Uno""],""measured"":9.2}]",6.25,4.7159575801
+Holland,JF630b,IAHCVEZOATVLCK-UHFFFAOYSA-N,2.58,9.5,7.5769153705,0.3833333333,"[{""dye"":""HMTMR"",""inchiKey"":""LJKWOBFXDJRPPK-UHFFFAOYSA-N"",""studies"":[""Uno""],""measured"":9.5}]",6.92,4.9969153705
+Holland,JF629b,ZANAUPKVQCFQIL-UHFFFAOYSA-N,2.25,9.5,7.632155169,0.3898305085,"[{""dye"":""HMTMR"",""inchiKey"":""LJKWOBFXDJRPPK-UHFFFAOYSA-N"",""studies"":[""Uno""],""measured"":9.5}]",7.25,5.382155169
+Holland,JF626b,DUVCNNHTBXDFJY-UHFFFAOYSA-N,1.22,9.2,7.6554558865,0.4237288136,"[{""dye"":""HMRB"",""inchiKey"":""CERWZSIHJHUGDW-UHFFFAOYSA-N"",""studies"":[""Uno""],""measured"":9.2}]",7.98,6.4354558865
+Tyson,HMSiRindol,YOFDWVADSWVZGR-UHFFFAOYSA-N,6.4,4.48,5.8075073854,0.3731343284,"[{""dye"":""JFX650b"",""inchiKey"":""WVUBAFYYUQYSJJ-XTUSUFHRSA-N"",""studies"":[""Holland""],""measured"":4.48}]",1.92,0.5924926146
+Tyson,HMSiRjulol,IVUQTKVBDZLKGB-UHFFFAOYSA-N,9.0,10.8,6.5955909766,0.5,"[{""dye"":""HMR101"",""inchiKey"":""IFBJAPJMWOVUOW-UHFFFAOYSA-N"",""studies"":[""Uno""],""measured"":10.8}]",1.8,2.4044090234
+Tyson,HMSiRTHQ,WRNIKSBOLZDOCG-UHFFFAOYSA-N,6.9,4.48,5.9082521151,0.3676470588,"[{""dye"":""JFX650b"",""inchiKey"":""WVUBAFYYUQYSJJ-XTUSUFHRSA-N"",""studies"":[""Holland""],""measured"":4.48}]",2.42,0.9917478849
+Tyson,Yale676sb,SHVWVGSQTSZQBQ-UHFFFAOYSA-N,5.9,2.95,5.9478486383,0.3513513514,"[{""dye"":""JF635b"",""inchiKey"":""PLJYNOFLYBISPG-UHFFFAOYSA-N"",""studies"":[""Holland""],""measured"":2.95}]",2.95,0.0478486383
+Tyson,Cal664sb,HRUPOHAOJPSJMC-UHFFFAOYSA-N,3.2,2.95,5.9610444354,0.3513513514,"[{""dye"":""JF635b"",""inchiKey"":""PLJYNOFLYBISPG-UHFFFAOYSA-N"",""studies"":[""Holland""],""measured"":2.95}]",0.25,2.7610444354

@@ -1,0 +1,169 @@
+{
+  "retrievedUTC": "2026-11-13",
+  "queries": [
+    {
+      "dye": "HM-SiR-CH2F",
+      "query": "full closed InChIKey",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/ZWEOZVHPQAVXQC-UHFFFAOYSA-N/cids/JSON",
+      "http": 404,
+      "response": "{\n  \"Fault\": {\n    \"Code\": \"PUGREST.NotFound\",\n    \"Message\": \"No CID found\",\n    \"Details\": [\n      \"No CID found that matches the given InChI key\"\n    ]\n  }\n}\n"
+    },
+    {
+      "dye": "HM-SiR-CH2F",
+      "query": "full closed connectivity",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastidentity/smiles/cids/JSON?smiles=C%5BSi%5D1%28C%29c2cc%28N3CC%28CF%29C3%29ccc2C2%28OCc3ccccc32%29c2ccc%28N3CC%28CF%29C3%29cc21&identity_type=same_connectivity",
+      "http": 404,
+      "response": "{\n  \"Fault\": {\n    \"Code\": \"PUGREST.NotFound\",\n    \"Message\": \"Identity search returned no hits\"\n  }\n}\n"
+    },
+    {
+      "dye": "HM-SiR-CH2F",
+      "query": "full open cation connectivity",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastidentity/smiles/cids/JSON?smiles=C%5BSi%5D1%28C%29c2cc%28N3CC%28CF%29C3%29ccc2%5BC%2B%5D%28c2ccccc2CO%29c2ccc%28N3CC%28CF%29C3%29cc21&identity_type=same_connectivity",
+      "http": 404,
+      "response": "{\n  \"Fault\": {\n    \"Code\": \"PUGREST.NotFound\",\n    \"Message\": \"Identity search returned no hits\"\n  }\n}\n"
+    },
+    {
+      "dye": "HM-SiR-CH2F",
+      "query": "literature full key",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%22ZWEOZVHPQAVXQC-UHFFFAOYSA-N%22&format=json&pageSize=50",
+      "http": 200,
+      "count": 0,
+      "articles": []
+    },
+    {
+      "dye": "HM-SiR-CH2F",
+      "query": "literature chemical text",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%22fluoromethylazetidine%22+OR+%22%28fluoromethyl%29azetidine%22+OR+%22fluoromethyl+azetidine%22%29+AND+%28rhodamine+OR+SiR+OR+fluorophore%29&format=json&pageSize=50",
+      "http": 200,
+      "count": 0,
+      "articles": []
+    },
+    {
+      "dye": "HM-SiR-CH2F",
+      "query": "building block control",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/66596287/property/Title,InChIKey/JSON",
+      "http": 200,
+      "response": {
+        "PropertyTable": {
+          "Properties": [
+            {
+              "CID": 66596287,
+              "InChIKey": "XHELGHANYVVRLW-UHFFFAOYSA-N",
+              "Title": "3-(Fluoromethyl)azetidine"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dye": "HM-SiR-CHF2",
+      "query": "full closed InChIKey",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/LEYRCFWXWZRBBO-UHFFFAOYSA-N/cids/JSON",
+      "http": 404,
+      "response": "{\n  \"Fault\": {\n    \"Code\": \"PUGREST.NotFound\",\n    \"Message\": \"No CID found\",\n    \"Details\": [\n      \"No CID found that matches the given InChI key\"\n    ]\n  }\n}\n"
+    },
+    {
+      "dye": "HM-SiR-CHF2",
+      "query": "full closed connectivity",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastidentity/smiles/cids/JSON?smiles=C%5BSi%5D1%28C%29c2cc%28N3CC%28C%28F%29F%29C3%29ccc2C2%28OCc3ccccc32%29c2ccc%28N3CC%28C%28F%29F%29C3%29cc21&identity_type=same_connectivity",
+      "http": 404,
+      "response": "{\n  \"Fault\": {\n    \"Code\": \"PUGREST.NotFound\",\n    \"Message\": \"Identity search returned no hits\"\n  }\n}\n"
+    },
+    {
+      "dye": "HM-SiR-CHF2",
+      "query": "full open cation connectivity",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastidentity/smiles/cids/JSON?smiles=C%5BSi%5D1%28C%29c2cc%28N3CC%28C%28F%29F%29C3%29ccc2%5BC%2B%5D%28c2ccccc2CO%29c2ccc%28N3CC%28C%28F%29F%29C3%29cc21&identity_type=same_connectivity",
+      "http": 404,
+      "response": "{\n  \"Fault\": {\n    \"Code\": \"PUGREST.NotFound\",\n    \"Message\": \"Identity search returned no hits\"\n  }\n}\n"
+    },
+    {
+      "dye": "HM-SiR-CHF2",
+      "query": "literature full key",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%22LEYRCFWXWZRBBO-UHFFFAOYSA-N%22&format=json&pageSize=50",
+      "http": 200,
+      "count": 0,
+      "articles": []
+    },
+    {
+      "dye": "HM-SiR-CHF2",
+      "query": "literature chemical text",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%22difluoromethylazetidine%22+OR+%22%28difluoromethyl%29azetidine%22+OR+%22difluoromethyl+azetidine%22%29+AND+%28rhodamine+OR+SiR+OR+fluorophore%29&format=json&pageSize=50",
+      "http": 200,
+      "count": 0,
+      "articles": []
+    },
+    {
+      "dye": "HM-SiR-CHF2",
+      "query": "building block control",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/55299483/property/Title,InChIKey/JSON",
+      "http": 200,
+      "response": {
+        "PropertyTable": {
+          "Properties": [
+            {
+              "CID": 55299483,
+              "InChIKey": "IMROEAZUSMCUNE-UHFFFAOYSA-N",
+              "Title": "3-(Difluoromethyl)azetidine"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dye": "control",
+      "query": "identity service positive control",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/fastidentity/smiles/cids/JSON?smiles=CCO&identity_type=same_connectivity",
+      "http": 200,
+      "cids": [
+        702,
+        102138,
+        123093,
+        137238,
+        154994,
+        450528,
+        519451,
+        10285773,
+        12201679,
+        12201681,
+        12201684,
+        12201685,
+        12201686,
+        12201687,
+        12201690,
+        12201693,
+        12201694,
+        12201695,
+        12201698,
+        15714852,
+        18655806,
+        23262207,
+        23262232,
+        23262245,
+        23262246,
+        54031105,
+        58150845,
+        58159131,
+        58233034,
+        59096442,
+        59097177,
+        88186682,
+        90476419,
+        90980219,
+        101213162,
+        101911267,
+        101919279,
+        102003372,
+        117064400,
+        117064639,
+        122236651,
+        122364591,
+        138962772,
+        159336914,
+        159336916,
+        159336917,
+        161677703,
+        176197891
+      ]
+    }
+  ]
+}

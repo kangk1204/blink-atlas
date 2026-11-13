@@ -1,4 +1,5 @@
 import {mountTrial} from './probe-form.js?v=unseen-1';
+import {mountStructure} from './structure-view.js';
 
 const metrics = {
   useful: {label: 'Useful pixels', unit: '%', delta: 'percentage points'},
@@ -231,6 +232,7 @@ export async function renderProbeDesign(root) {
   }));
   const development = benchmark.sets.find(s => s.mode === 'development');
   root.innerHTML = `
+    <article class="card probe-card" id="pk-workbench" aria-labelledby="pk-title"><h2 id="pk-title">Which free dye should we titrate?</h2><p role="status">Loading the structure benchmark…</p></article>
     <div class="card probe-controls">
       <label>Cellular assay<select id="probe-context" aria-label="Cellular assay"></select></label>
       <label>First dye<select id="probe-a"></select></label>
@@ -334,6 +336,7 @@ export async function renderProbeDesign(root) {
     ['CC BY 4.0 ↗', 'https://creativecommons.org/licenses/by/4.0/']];
   ids('source-links').replaceChildren(...links.map(([label, href]) => sourceLink(label, href)));
   mountTrial(ids('trial'), data);
+  mountStructure(document.getElementById('pk-workbench'));
   ids('jump').disabled = false;
   ids('jump').onclick = () => {ids('trial-heading').focus({preventScroll:true}); ids('trial').scrollIntoView({block:'start'});};
 }

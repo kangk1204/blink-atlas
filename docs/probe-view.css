@@ -111,3 +111,23 @@
   .probe-readout { padding: 12px; }
   .probe-controls select { padding-left: 4px; }
 }
+#pk-workbench { margin-bottom: 16px; }
+.pk-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; margin: 16px 0; }
+.pk-candidate { min-width: 0; border: 1px solid var(--line); border-radius: 12px; padding: 15px; }
+.pk-candidate h3 { margin: 0; color: var(--dark); }
+.pk-candidate img { display: block; max-width: 100%; width: 100%; height: auto; max-height: 190px; }
+.pk-estimates { display: flex; flex-wrap: wrap; gap: 8px 35px; margin: 0; }
+.pk-estimates dt { font-size: 12px; color: var(--muted); }
+.pk-estimates dd { font: 600 22px var(--mono); margin: 0; }
+.pk-links { display: flex; flex-wrap: wrap; gap: 7px 17px; margin: 9px 0; }
+.pk-links a { font-size: 13px; color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+.pk-control { padding: 12px 16px; border-left: 3px solid var(--teal); background: var(--paper); }
+#pk-workbench details { margin: 10px 0; }
+#pk-workbench details details { padding-left: 10px; }
+#pk-workbench summary { cursor: pointer; }
+#pk-workbench td, #pk-workbench th { white-space: nowrap; }
+#pk-workbench .table-wrap { max-width: 100%; overflow-x: auto; }
+#pk-workbench code { display: block; overflow-wrap: anywhere; font-size: 12px; }
+#pk-file { display: block; max-width: 100%; }
+#pk-file-status { overflow-wrap: anywhere; }
+@media (max-width: 660px) { .pk-grid { grid-template-columns: 1fr; } }

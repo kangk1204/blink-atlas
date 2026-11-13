@@ -6,7 +6,7 @@ const fmt = (number, decimals=1) => Number(number).toLocaleString('en-US', {maxi
 const pair = ['JF630b','JF635b'];
 const titles = {compare:'Fluorophore comparison','probe-design':'Probe design','unseen-dyes':'Unseen-dye validation',pilot:'Pilot recording',precision:'Precision evidence','dna-paint':'DNA-PAINT dye palette',methods:'Methods & data'};
 const evidenceViews = {
-  'probe-design': () => import('./probe-view.js?v=unseen-1').then(m => m.renderProbeDesign($('probe-design-content'))),
+  'probe-design': () => import('./probe-view.js?v=structure-1').then(m => m.renderProbeDesign($('probe-design-content'))),
   'unseen-dyes': () => import('./analogue-view.js?v=ratio-2').then(m => m.renderAnalogueBenchmark($('unseen-dyes-content'))),
   precision: () => import('./precision-view.js?v=palette-1').then(m => m.renderPrecision($('precision-content'))),
   'dna-paint': () => import('./palette-view.js').then(m => m.renderPalette($('dna-paint-content')))

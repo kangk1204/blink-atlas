@@ -1,5 +1,7 @@
 # Blink Atlas
 
+**Design a free dye for titration.** Probe design now accepts local structure-result JSON and includes two fluorinated Si-rhodamine candidates, downloadable SDFs, held-out study errors and the matched JF626b control. [Open the workbench](https://kangk1204.github.io/blink-atlas/#probe-design) · [Reproduce the structure benchmark](analysis/structure-pk.md) · [Paired titration protocol](validation/structure_pk/titration.md)
+
 An interactive research demo for selecting the first two spontaneously blinking HaloTag dyes to test in a fixed-cell SMLM experiment. Begin with fixed COS-7 cells expressing H2B–HaloTag, 647 nm excitation, a 25 ms exposure and a 27 ms camera cycle. The nine dyes, measured properties, site assets and scientific checks load without an account. [Open the comparison](https://kangk1204.github.io/blink-atlas/) · [Watch the two-minute walkthrough](https://kangk1204.github.io/blink-atlas/media/walkthrough.mp4) · [One-page collaboration proposal](https://kangk1204.github.io/blink-atlas/media/validation-proposal.pdf)
 
 ## Use the comparison
