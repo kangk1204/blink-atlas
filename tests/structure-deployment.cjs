@@ -30,6 +30,18 @@ const directory = path.resolve(__dirname, '..', 'docs', 'data', 'structure-pk');
     }
     await work.locator('#pk-evaluation > summary').click();
     assert.match(await work.locator('#pk-evaluation').innerText(), /Yale676sb reverses/);
+    const transferDir = path.join(directory, '..', 'structure-transfer');
+    const next = JSON.parse(await fs.readFile(path.join(transferDir, 'benchmark.json')));
+    await work.locator('#pk-transfer > summary').click();
+    const readout = await work.locator('#pk-transfer').innerText();
+    for (const f of [next.folds[0], next.folds[1], next.newParents]) {
+      for (const m of ['nearest', 'kernel', 'coreDonor', 'trainMean']) assert.ok(readout.includes(f.summary.metrics[m].mae.toFixed(3)));
+    }
+    for (const filename of await fs.readdir(transferDir)) {
+      const res = await session.request.get(new URL('data/structure-transfer/' + filename, base).href);
+      assert.ok(res.ok(), filename);
+      assert.deepEqual(await res.body(), await fs.readFile(path.join(transferDir,filename)));
+    }
     await work.locator('#pk-import > summary').click();
     async function upload(value, pattern) {
       await work.locator('#pk-file').setInputFiles({name: 'roundtrip.json', mimeType: 'application/json',
@@ -43,6 +55,14 @@ const directory = path.resolve(__dirname, '..', 'docs', 'data', 'structure-pk');
     const candidate = JSON.parse(await fs.readFile(path.join(directory, 'HM-SiR-CH2F.json')));
     await upload({...candidate, ridge: candidate.ridge + 0.5}, /disagree with the released model/);
     await upload({...candidate, modelId: 'old-release'}, /does not match/);
+    const forecast = next.candidates[0];
+    await upload(forecast, new RegExp('Core and donor ' + forecast.result.predictions.coreDonor.toFixed(2)));
+    const altered = JSON.parse(JSON.stringify(forecast));
+    altered.result.predictions.coreDonor += 0.5;
+    await upload(altered, /forecasts disagree/);
+    if (process.argv[6]) {
+      await upload(JSON.parse(await fs.readFile(process.argv[6])), /single midpoint is withheld/);
+    }
     if (process.argv[5]) {
       const complex = JSON.parse(await fs.readFile(process.argv[5]));
       await upload(complex, /single midpoint is withheld/);
@@ -58,6 +78,6 @@ const directory = path.resolve(__dirname, '..', 'docs', 'data', 'structure-pk');
       await page.screenshot({path:path.join(process.argv[4], 'structure-workbench.png')});
     }
     assert.deepEqual(errors, []);
-    console.log('Verified structure downloads, both models, holdout sensitivity, import integrity and mobile layout at ' + base);
+    console.log('Verified structure downloads, original and transfer forecasts, study tables, JSON import integrity and mobile layout at ' + base);
   } finally { await browser.close(); }
 })().catch(e => {console.error(e); process.exitCode = 1;});

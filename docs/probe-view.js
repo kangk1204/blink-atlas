@@ -1,5 +1,5 @@
 import {mountTrial} from './probe-form.js?v=unseen-1';
-import {mountStructure} from './structure-view.js';
+import {mountStructure} from './structure-view.js?v=transfer-1';
 
 const metrics = {
   useful: {label: 'Useful pixels', unit: '%', delta: 'percentage points'},

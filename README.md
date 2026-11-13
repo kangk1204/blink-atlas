@@ -1,5 +1,7 @@
 # Blink Atlas
 
+**Why did the model miss the Holland series?** Adding one measured azetidinyl Si-rhodamine reduces whole-study nearest-structure MAE from 6.492 to 2.392 pH units. The new core-and-donor regression scores 2.892 on the same six dyes and 0.617 versus 2.467 on three jointly held-out new parents. [Results, source decisions and CPU reproduction](analysis/structure-transfer.md) · [Per-dye errors](docs/data/structure-transfer/per-dye.csv)
+
 **Design a free dye for titration.** Probe design now accepts local structure-result JSON and includes two fluorinated Si-rhodamine candidates, downloadable SDFs, held-out study errors and the matched JF626b control. [Open the workbench](https://kangk1204.github.io/blink-atlas/#probe-design) · [Reproduce the structure benchmark](analysis/structure-pk.md) · [Paired titration protocol](validation/structure_pk/titration.md)
 
 An interactive research demo for selecting the first two spontaneously blinking HaloTag dyes to test in a fixed-cell SMLM experiment. Begin with fixed COS-7 cells expressing H2B–HaloTag, 647 nm excitation, a 25 ms exposure and a 27 ms camera cycle. The nine dyes, measured properties, site assets and scientific checks load without an account. [Open the comparison](https://kangk1204.github.io/blink-atlas/) · [Watch the two-minute walkthrough](https://kangk1204.github.io/blink-atlas/media/walkthrough.mp4) · [One-page collaboration proposal](https://kangk1204.github.io/blink-atlas/media/validation-proposal.pdf)

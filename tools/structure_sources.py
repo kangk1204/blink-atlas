@@ -37,7 +37,7 @@ FILES = {
 }
 
 
-def check(cache):
+def verify_files(cache, sources):
     cache.mkdir(parents=True, exist_ok=True)
 
     def obtain(item):
@@ -55,7 +55,11 @@ def check(cache):
             dest.write_bytes(body)
 
     with ThreadPoolExecutor(max_workers=3) as fetch:
-        list(fetch.map(obtain, FILES.items()))
+        list(fetch.map(obtain, sources.items()))
+
+
+def check(cache):
+    verify_files(cache, FILES)
     workbook = load_workbook(cache / "holland-4j.xlsx", read_only=True, data_only=True)
     try:
         table = list(workbook[SHEETS[10]].values)[2:8]
