@@ -17,7 +17,7 @@ from xml.etree import ElementTree
 import numpy as np
 from PIL import Image
 
-from analysis.analogue_benchmark import predict, score_predictions
+from analysis.analogue_benchmark import benchmark, predict, score_predictions
 from analysis.dyes import DATA
 from analysis.probe_design import published
 from analysis.ratio_audit import read_audit
@@ -174,6 +174,20 @@ def uno_rows(pdf, train):
     return result
 
 
+def uno_lifetime(records):
+    # These are measured, uncensored response times in seconds. The existing three
+    # algorithms accept any positive log response. Fit solely to this assay's dyes.
+    train = [{"id": r["dye"], "dye": r["dye"], "pKa": r["pKa"], "ratio": r["flashOpenLifetimeSeconds"]}
+             for r in records if isinstance(r.get("flashOpenLifetimeSeconds"), float) and r["pKa"] is not None]
+    result = benchmark("uno-flash-lifetime", "Uno · laser flash lifetime", "uno", "transfer-local", train)
+    result.update(endpoint="Open-state relaxation after a 308 nm pulse at pH 7.4",
+                  responseUnit="seconds", errorUnit="absolute log10 error", source=UNO_TABLE,
+                  chemistry="Aminomethyl and hydroxymethyl rhodamines, including slow components of biphasic decays.",
+                  censored=["MMSiR", "HySOx"], training="Other exact-value dyes in Uno Table 1, whole parent held out",
+                  rangePolicy="Withhold a prediction outside the remaining training range")
+    return result
+
+
 def build(cache, directory):
     cache.mkdir(parents=True, exist_ok=True)
     files = {k: original(cache, k) for k in FILES}
@@ -209,7 +223,7 @@ def build(cache, directory):
             "previouslyInHollandNine": sum(r["alsoInHollandNine"] for r in records),
             "matchedScored": 0,  # Both screened acquisition designs use other specimens.
             "frozenTransferScored": sum(r["absLogErrors"]["local"] is not None for r in records),
-            "records": records, "chenByCondition": chen_duties(render(pdf, 15)),
+            "records": records, "unoLifetime": uno_lifetime(records), "chenByCondition": chen_duties(render(pdf, 15)),
             "chenReadout": "Free-parent panel S3 descending half-heights read to 0.1 pH. Panel S7c uses a logarithmic duty axis. Each of ten readouts is from the same parent. Values are approximate.",
             "uncertaintyAudit": figure_check(files["holland.xml"], files["holland.jpg"], rows)}
 

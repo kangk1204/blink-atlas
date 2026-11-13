@@ -398,6 +398,163 @@
       }
     }
   ],
+  "unoLifetime": {
+    "id": "uno-flash-lifetime",
+    "label": "Uno · laser flash lifetime",
+    "study": "uno",
+    "mode": "transfer-local",
+    "rows": [
+      {
+        "id": "HMAcRG",
+        "dye": "HMAcRG",
+        "pKa": 5.3,
+        "observed": 0.0218,
+        "trainingIds": [
+          "HMSiR",
+          "AMAcRG",
+          "AMSiR"
+        ],
+        "status": "scored",
+        "range": [
+          3.7,
+          5.8
+        ],
+        "lower": [
+          "AMSiR"
+        ],
+        "upper": [
+          "HMSiR"
+        ],
+        "upperWeight": 0.545454545455,
+        "nearestDyes": [
+          "HMSiR"
+        ],
+        "predictions": {
+          "local": 0.00255532917848,
+          "nearest": 0.245,
+          "regression": 0.00436713878236
+        },
+        "errors": {
+          "local": 0.931009639549,
+          "nearest": 1.05070959076,
+          "regression": 0.698259500113
+        },
+        "delta": 0.119699951211,
+        "deltaVsRegression": -0.232750139436
+      },
+      {
+        "id": "HMSiR",
+        "dye": "HMSiR",
+        "pKa": 5.8,
+        "observed": 0.245,
+        "trainingIds": [
+          "HMAcRG",
+          "AMAcRG",
+          "AMSiR"
+        ],
+        "status": "outside training range",
+        "range": [
+          3.7,
+          5.3
+        ]
+      },
+      {
+        "id": "AMAcRG",
+        "dye": "AMAcRG",
+        "pKa": 3.7,
+        "observed": 3.09e-06,
+        "trainingIds": [
+          "HMAcRG",
+          "HMSiR",
+          "AMSiR"
+        ],
+        "status": "outside training range",
+        "range": [
+          4.7,
+          5.8
+        ]
+      },
+      {
+        "id": "AMSiR",
+        "dye": "AMSiR",
+        "pKa": 4.7,
+        "observed": 1.07e-05,
+        "trainingIds": [
+          "HMAcRG",
+          "HMSiR",
+          "AMAcRG"
+        ],
+        "status": "scored",
+        "range": [
+          3.7,
+          5.8
+        ],
+        "lower": [
+          "AMAcRG"
+        ],
+        "upper": [
+          "HMAcRG"
+        ],
+        "upperWeight": 0.625,
+        "nearestDyes": [
+          "HMAcRG"
+        ],
+        "predictions": {
+          "local": 0.000785723492306,
+          "nearest": 0.0218,
+          "regression": 0.000720092776539
+        },
+        "errors": {
+          "local": 1.8658859606,
+          "nearest": 3.30907271592,
+          "regression": 1.82800467672
+        },
+        "delta": 1.44318675532,
+        "deltaVsRegression": -0.03788128388
+      }
+    ],
+    "summary": {
+      "total": 4,
+      "scored": 2,
+      "mae": {
+        "local": 1.39844780007,
+        "nearest": 2.17989115334,
+        "regression": 1.26313208842
+      },
+      "delta": 0.781443353265,
+      "wins": 2,
+      "ties": 0,
+      "losses": 0,
+      "omitOneRange": [
+        0.119699951211,
+        1.44318675532
+      ],
+      "pairedBootstrap95": null,
+      "regressionVsNearest": {
+        "delta": 0.916759064924,
+        "wins": 2,
+        "pairedBootstrap95": null
+      },
+      "localVsRegression": {
+        "delta": -0.135315711658,
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "pairedBootstrap95": null
+      }
+    },
+    "endpoint": "Open-state relaxation after a 308 nm pulse at pH 7.4",
+    "responseUnit": "seconds",
+    "errorUnit": "absolute log10 error",
+    "source": "https://www.nature.com/articles/nchem.2002/tables/1",
+    "chemistry": "Aminomethyl and hydroxymethyl rhodamines, including slow components of biphasic decays.",
+    "censored": [
+      "MMSiR",
+      "HySOx"
+    ],
+    "training": "Other exact-value dyes in Uno Table 1, whole parent held out",
+    "rangePolicy": "Withhold a prediction outside the remaining training range"
+  },
   "chenByCondition": [
     {
       "dye": "SMI-NIR1",

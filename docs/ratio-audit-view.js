@@ -85,7 +85,10 @@ export function renderRatioAudit(root, data, evidence) {
 
 export function renderRatioEvidence(root, evidence) {
   root.innerHTML = '<h2>Which additional published dyes could be scored?</h2><p id="ratio-coverage"></p>' +
-    '<p id="ratio-examples"></p><details><summary>Inspect each parent dye and its eligibility</summary>' +
+    '<p id="ratio-examples"></p><details><summary>Uno solution lifetime · study-specific holdouts</summary>' +
+    '<p id="ratio-lifetime-metric"></p><div class="table-wrap"><table><thead><tr><th>Test parent</th><th>Measured lifetime (s)</th>' +
+    '<th>Local error</th><th>Nearest error</th><th>Regression error</th></tr></thead><tbody id="ratio-lifetime-rows"></tbody></table></div></details>' +
+    '<details><summary>Inspect each parent dye and its eligibility</summary>' +
     '<div class="table-wrap"><table><thead><tr><th>Study</th><th>Parent</th><th>Free-dye input</th><th>Measurement and score status</th>' +
     '</tr></thead><tbody id="ratio-screen-rows"></tbody></table></div></details>' +
     '<div class="unseen-links"><a href="data/ratio-evidence.json" download>Per-dye evidence and scores (JSON)</a>' +
@@ -100,6 +103,14 @@ export function renderRatioEvidence(root, evidence) {
     evidence.chenByCondition.length + ' duty measurements on one parent. Its free-dye optical midpoint is above the calibration range.';
   tableRows(root.querySelector('#ratio-screen-rows'), evidence.records.map(r => [r.study, r.dye,
     r.pKa ?? r.pKaBound ?? ('~' + r.opticalMidpointApproxPH.toFixed(1) + ' optical midpoint'), r.reason]));
+  const flash = evidence.unoLifetime;
+  root.querySelector('#ratio-lifetime-metric').textContent = 'Each algorithm is fitted to the other parents in Uno Table 1 to predict solution relaxation time after a 308 nm pulse. ' +
+    flash.summary.scored + ' of ' + flash.summary.total + ' exact-value dyes are in range. ' +
+    'Mean absolute log₁₀ errors · local ' + flash.summary.mae.local.toFixed(3) + ', nearest ' +
+    flash.summary.mae.nearest.toFixed(3) + ', regression ' + flash.summary.mae.regression.toFixed(3) +
+    '. The two additional censored lifetimes are excluded.';
+  tableRows(root.querySelector('#ratio-lifetime-rows'), flash.rows.map(r =>
+    [r.dye, science(r.observed), ...Object.keys(models).map(k => r.errors ? r.errors[k].toFixed(3) : 'Out of range')]));
   root.querySelector('#ratio-uno').href = evidence.articles['Uno 2014'].table;
   root.querySelector('#ratio-chen').href = evidence.articles['Chen 2024'].deposit;
 }

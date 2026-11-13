@@ -51,6 +51,9 @@ async function verifyUnseen(page, bytes) {
   await page.locator('#ratio-dye').selectOption('JF626b');
   await pairDetails.locator('summary').click();
   assert.equal(await page.locator('#ratio-screen-rows tr').count(), evidence.distinctScreened);
+  assert.equal(await page.locator('#ratio-lifetime-rows tr').count(), evidence.unoLifetime.summary.total);
+  assert.equal(await page.locator('#ratio-lifetime-rows tr').first().locator('td').nth(2).textContent(),
+    evidence.unoLifetime.rows[0].errors.local.toFixed(3));
   if (screenshotDir) {
     await auditCard.screenshot({path:path.join(screenshotDir, 'ratio-audit.png')});
   }

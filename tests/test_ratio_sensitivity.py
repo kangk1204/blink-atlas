@@ -68,6 +68,13 @@ class RatioSensitivity(unittest.TestCase):
         self.assertEqual((evidence["matchedScored"], evidence["frozenTransferScored"]), (0, 0))
         inside = [r for r in evidence["records"] if r["predictions"]]
         self.assertEqual([r["dye"] for r in inside], ["AMAcRG"])
+        flash = evidence["unoLifetime"]
+        self.assertEqual(flash["responseUnit"], "seconds")
+        self.assertEqual([r["dye"] for r in flash["rows"] if r.get("errors")], ["HMAcRG", "AMSiR"])
+        self.assertEqual([round(flash["summary"]["mae"][m], 3) for m in ("local", "nearest", "regression")],
+                         [1.398, 2.180, 1.263])
+        for r in flash["rows"]:
+            self.assertNotIn(r["id"], r["trainingIds"])
         self.assertTrue(all(v is None for row in evidence["records"] for v in row["absLogErrors"].values()))
         self.assertEqual({r["dye"] for r in evidence["chenByCondition"]}, {"SMI-NIR1"})
         self.assertEqual(len({(r["pH"], r["powerKwCm2"]) for r in evidence["chenByCondition"]}), 10)

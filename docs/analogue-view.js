@@ -1,4 +1,4 @@
-import {renderRatioAudit, renderRatioEvidence} from './ratio-audit-view.js?v=ratio-1';
+import {renderRatioAudit, renderRatioEvidence} from './ratio-audit-view.js?v=ratio-2';
 
 const $ = key => document.getElementById('unseen-' + key);
 const labels = {local:'Local interpolation', nearest:'Nearest pKa', regression:'Original regression'};
@@ -16,7 +16,7 @@ function link(text, href) {
   const node = el('a', text); node.href = href; return node;
 }
 async function load(name) {
-  const res = await fetch('data/' + name + '.json?v=ratio-1');
+  const res = await fetch('data/' + name + '.json?v=ratio-2');
   if (!res.ok) throw new Error('Could not read ' + name + ' (' + res.status + ').');
   return res.json();
 }
