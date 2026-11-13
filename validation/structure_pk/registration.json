@@ -1,0 +1,19 @@
+{
+  "schema": "blink-atlas/structure-pk-registration/1",
+  "endpoint": "Free-parent apparent spirocyclization midpoint in pH units",
+  "representation": "Neutral ring-closed parent, salts and solvents excluded, isotopic and stereochemical labels retained. Morgan radius 2, 2048 binary connectivity bits, chirality enabled.",
+  "nearest": "Maximum binary Tanimoto similarity. Average the chemical-identity labels of all exact similarity ties.",
+  "ridge": "Tanimoto kernel ridge, alpha 1, unpenalized training mean intercept (center kernel and labels). No tuning.",
+  "labels": "Prefer exact absorption values to fluorescence readouts of the same parent in one original study. Preserve limits, undetermined, complex traces, optical method and buffer separately. Average independent study labels within parent for equal chemical weights. Secondary quotations of an original measurement never add a training observation.",
+  "holdouts": ["Holland", "Tyson"],
+  "split": "Hold out all parent structures of the target paper, including ineligible and reference parents, across the entire training corpus. Targets are selected by reported assay eligibility before scoring, irrespective of pKcycl magnitude. Score exact free-parent midpoints. Report censored cases and coverage.",
+  "quantumComparison": "Compare Tachibana Table 1 with structure-only leave-one-parent-out predictions for identical exact parent measurements. Identify calibration, protocol-choice and corrected-hydration rows.",
+  "selection": "Prefer ridge only if its MAE is strictly lower in each primary study and remains lower after removing each individual scored test dye from that study's paired average. Otherwise prefer nearest structure.",
+  "hypothesis": "Within a fixed Holland hydroxymethyl Si-rhodamine parent, sequential fluorination of the carbon substituent at azetidine C3 will lower the free-dye midpoint. Predicted experimental order CH2F > CHF2 > CF3.",
+  "candidates": [
+    {"id": "HM-SiR-CH2F", "substituent": "3-(fluoromethyl)azetidine on both arms", "closedSmiles": "C[Si]1(C)c2cc(N3CC(CF)C3)ccc2C2(c3ccccc3CO2)c2ccc(N3CC(CF)C3)cc21", "buildingBlockCID": 66596287},
+    {"id": "HM-SiR-CHF2", "substituent": "3-(difluoromethyl)azetidine on both arms", "closedSmiles": "C[Si]1(C)c2cc(N3CC(C(F)F)C3)ccc2C2(c3ccccc3CO2)c2ccc(N3CC(C(F)F)C3)cc21", "buildingBlockCID": 55299483}
+  ],
+  "control": "JF626b with a trifluoromethyl group on each azetidine. Its published apparent pKa is 1.22.",
+  "experimentalUnit": "Independent preparation of the free parent measured in the Holland titration buffers. Three preparation days with both candidates and the control."
+}
