@@ -25,6 +25,35 @@ async function verifyUnseen(page, bytes) {
   await page.setViewportSize({width:1366,height:900});
   await page.locator('#view-probe-design .title-actions a[href="#unseen-dyes"]').click();
   await item('chart').locator('.unseen-bar').first().waitFor();
+  const ratios = JSON.parse(await bytes('data/ratio-sensitivity.json'));
+  const evidence = JSON.parse(await bytes('data/ratio-evidence.json'));
+  const auditCsv = (await bytes('data/ratio-audit.csv')).toString().trim().split('\n');
+  assert.equal(auditCsv.length, 10);
+  const archive = require('node:zlib').gunzipSync(await bytes('data/ratio-scenarios.csv.gz'));
+  assert.equal(archive.toString().trim().split('\n').length, ratios.pairings.scenarioCount + 1);
+  const rule = page.locator('#ratio-rule'), models = page.locator('#ratio-models tr');
+  assert.match(await page.locator('#ratio-rank').innerText(), /46,656/);
+  for (const [key, set] of Object.entries(ratios.estimands)) {
+    await rule.selectOption(key);
+    assert.equal(await models.first().locator('td').nth(1).innerText(), set.metrics.mae.local.toFixed(4));
+    assert.equal(await models.first().locator('td').nth(2).innerText(), set.cal.local.toExponential(3));
+  }
+  await rule.selectOption('exhaustive');
+  const auditCard = item('ratio-audit'), pairDetails = auditCard.locator('details').first();
+  await pairDetails.locator('summary').click();
+  for (const r of ratios.audit) {
+    await page.locator('#ratio-dye').selectOption(r.dye);
+    assert.match(await page.locator('#ratio-cells').innerText(), new RegExp(r.on_cells_ms));
+    assert.equal(await page.locator('#ratio-pairs tr').count(), 6);
+    assert.equal(await page.locator('#ratio-pairs tr').last().locator('td').nth(1).innerText(),
+      r.paired_DCB.toExponential(3));
+  }
+  await page.locator('#ratio-dye').selectOption('JF626b');
+  await pairDetails.locator('summary').click();
+  assert.equal(await page.locator('#ratio-screen-rows tr').count(), evidence.distinctScreened);
+  if (screenshotDir) {
+    await auditCard.screenshot({path:path.join(screenshotDir, 'ratio-audit.png')});
+  }
   assert.match(await item('counts').innerText(), /11 additional parent dyes, 25/);
   assert.match(await item('gate').innerText(), /validation is still open/);
   assert.match(await item('challenge-input').innerText(), /pKcycl of 3.2/);

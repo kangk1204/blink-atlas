@@ -1,0 +1,569 @@
+{
+  "schema": "blink-atlas/ratio-evidence/1",
+  "screened": "2026-11-13",
+  "sources": {
+    "holland.xml": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13167466.1/PMC13167466.1.xml",
+      "sha256": "b7de30fd6787ebb86aeec5b1d834c02905a6cea386e30ab1836f8bde476fb41b"
+    },
+    "holland.jpg": {
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13167466.1/41592_2026_3062_Fig6_ESM.jpg",
+      "sha256": "fde64e263e421570a508d385d24c334049610be12fa637ca6c36f576d3e7d4ea"
+    },
+    "uno.pdf": {
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fnchem.2002/MediaObjects/41557_2014_BFnchem2002_MOESM177_ESM.pdf",
+      "sha256": "e3766da0c4e314766309103715bf46355e69fb78c33f82ace9afc8bdeb929651"
+    },
+    "chen.pdf": {
+      "url": "https://ndownloader.figstatic.com/files/47124907",
+      "sha256": "ac0cd7c3b700d2f0fe8f907c1d4951a6ec712aedb0301b700ef587ee100b094f"
+    }
+  },
+  "articles": {
+    "Uno 2014": {
+      "url": "https://doi.org/10.1038/nchem.2002",
+      "table": "https://www.nature.com/articles/nchem.2002/tables/1",
+      "access": "Publisher Table 1, figure pages and complete supplement."
+    },
+    "Chen 2024": {
+      "url": "https://doi.org/10.1021/acs.analchem.4c02445",
+      "deposit": "https://doi.org/10.1021/acs.analchem.4c02445.s001",
+      "access": "Publisher abstract and complete author-deposited supplement. Subscription article body unavailable in this review."
+    }
+  },
+  "primaryProtocol": "Independent fixed COS-7 H2B–HaloTag under the registered acquisition",
+  "countsByStudy": {
+    "Uno 2014": 14,
+    "Chen 2024": 4
+  },
+  "distinctScreened": 18,
+  "previouslyInHollandNine": 1,
+  "matchedScored": 0,
+  "frozenTransferScored": 0,
+  "records": [
+    {
+      "study": "Uno 2014",
+      "dye": "HMAcRG",
+      "pKa": 5.3,
+      "pKaBound": null,
+      "siFluorescencePKcycl": 5.3,
+      "flashOpenLifetimeSeconds": 0.0218,
+      "meanDwellRatio": null,
+      "locator": "Table 1 and SI Figs. S2, S4",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Only open-state relaxation is paired with the titration. An independently measured mean OFF time is missing.",
+      "alsoInHollandNine": false,
+      "rangeStatus": "outside training range",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Uno 2014",
+      "dye": "HMSiR",
+      "pKa": 5.8,
+      "pKaBound": null,
+      "siFluorescencePKcycl": 5.9,
+      "flashOpenLifetimeSeconds": 0.245,
+      "meanDwellRatio": null,
+      "locator": "Table 1 and SI Figs. S2, S4",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Only open-state relaxation is paired with the titration. An independently measured mean OFF time is missing.",
+      "alsoInHollandNine": true,
+      "rangeStatus": "outside training range",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Uno 2014",
+      "dye": "AMAcRG",
+      "pKa": 3.7,
+      "pKaBound": null,
+      "siFluorescencePKcycl": 3.7,
+      "flashOpenLifetimeSeconds": 3.09e-06,
+      "meanDwellRatio": null,
+      "locator": "Table 1 and SI Figs. S2, S4",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Only open-state relaxation is paired with the titration. An independently measured mean OFF time is missing.",
+      "alsoInHollandNine": false,
+      "rangeStatus": "scored",
+      "predictions": {
+        "local": 0.00083252558951,
+        "nearest": 0.001012101,
+        "regression": 0.000587022449064
+      },
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Uno 2014",
+      "dye": "AMSiR",
+      "pKa": 4.7,
+      "pKaBound": null,
+      "siFluorescencePKcycl": 4.7,
+      "flashOpenLifetimeSeconds": 1.07e-05,
+      "meanDwellRatio": null,
+      "locator": "Table 1 and SI Figs. S2, S4",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Only open-state relaxation is paired with the titration. An independently measured mean OFF time is missing.",
+      "alsoInHollandNine": false,
+      "rangeStatus": "outside training range",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Uno 2014",
+      "dye": "MMSiR",
+      "pKa": null,
+      "pKaBound": "<2",
+      "siFluorescencePKcycl": "<2",
+      "flashOpenLifetimeSeconds": "<5e-8",
+      "meanDwellRatio": null,
+      "locator": "Table 1 and SI Figs. S2, S4",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Only open-state relaxation is paired with the titration. An independently measured mean OFF time is missing.",
+      "alsoInHollandNine": false,
+      "rangeStatus": "no exact free-parent pKa",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Uno 2014",
+      "dye": "2MeSiR",
+      "pKa": null,
+      "pKaBound": ">11",
+      "siFluorescencePKcycl": ">11",
+      "flashOpenLifetimeSeconds": null,
+      "meanDwellRatio": null,
+      "locator": "SI Fig. S2",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Free-parent titration only in the screened panel. No paired mean dwell ratio.",
+      "alsoInHollandNine": false,
+      "rangeStatus": "no exact free-parent pKa",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Uno 2014",
+      "dye": "HMTMR",
+      "pKa": 9.5,
+      "pKaBound": null,
+      "siFluorescencePKcycl": 9.5,
+      "flashOpenLifetimeSeconds": null,
+      "meanDwellRatio": null,
+      "locator": "SI Fig. S2",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Free-parent titration only in the screened panel. No paired mean dwell ratio.",
+      "alsoInHollandNine": false,
+      "rangeStatus": "outside training range",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Uno 2014",
+      "dye": "AMTMR",
+      "pKa": 7.8,
+      "pKaBound": null,
+      "siFluorescencePKcycl": 7.8,
+      "flashOpenLifetimeSeconds": null,
+      "meanDwellRatio": null,
+      "locator": "SI Fig. S2",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Free-parent titration only in the screened panel. No paired mean dwell ratio.",
+      "alsoInHollandNine": false,
+      "rangeStatus": "outside training range",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Uno 2014",
+      "dye": "HySOx",
+      "pKa": null,
+      "pKaBound": "<2",
+      "siFluorescencePKcycl": "<2",
+      "flashOpenLifetimeSeconds": "<5e-8",
+      "meanDwellRatio": null,
+      "locator": "Table 1 and SI Figs. S2, S4",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Only open-state relaxation is paired with the titration. An independently measured mean OFF time is missing.",
+      "alsoInHollandNine": false,
+      "rangeStatus": "no exact free-parent pKa",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Uno 2014",
+      "dye": "HMRG",
+      "pKa": 8.0,
+      "pKaBound": null,
+      "siFluorescencePKcycl": 8.0,
+      "flashOpenLifetimeSeconds": null,
+      "meanDwellRatio": null,
+      "locator": "SI Fig. S2",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Free-parent titration only in the screened panel. No paired mean dwell ratio.",
+      "alsoInHollandNine": false,
+      "rangeStatus": "outside training range",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Uno 2014",
+      "dye": "AMRG",
+      "pKa": 6.2,
+      "pKaBound": null,
+      "siFluorescencePKcycl": 6.2,
+      "flashOpenLifetimeSeconds": null,
+      "meanDwellRatio": null,
+      "locator": "SI Fig. S2",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Free-parent titration only in the screened panel. No paired mean dwell ratio.",
+      "alsoInHollandNine": false,
+      "rangeStatus": "outside training range",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Uno 2014",
+      "dye": "HMRB",
+      "pKa": 9.3,
+      "pKaBound": null,
+      "siFluorescencePKcycl": 9.3,
+      "flashOpenLifetimeSeconds": null,
+      "meanDwellRatio": null,
+      "locator": "SI Fig. S2",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Free-parent titration only in the screened panel. No paired mean dwell ratio.",
+      "alsoInHollandNine": false,
+      "rangeStatus": "outside training range",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Uno 2014",
+      "dye": "HMR6G",
+      "pKa": 10.0,
+      "pKaBound": null,
+      "siFluorescencePKcycl": 10.0,
+      "flashOpenLifetimeSeconds": null,
+      "meanDwellRatio": null,
+      "locator": "SI Fig. S2",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Free-parent titration only in the screened panel. No paired mean dwell ratio.",
+      "alsoInHollandNine": false,
+      "rangeStatus": "outside training range",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Uno 2014",
+      "dye": "HMR101",
+      "pKa": 10.8,
+      "pKaBound": null,
+      "siFluorescencePKcycl": 10.8,
+      "flashOpenLifetimeSeconds": null,
+      "meanDwellRatio": null,
+      "locator": "SI Fig. S2",
+      "assay": "Solution titration and, where listed, 308 nm flash photolysis at pH 7.4",
+      "reason": "Free-parent titration only in the screened panel. No paired mean dwell ratio.",
+      "alsoInHollandNine": false,
+      "rangeStatus": "outside training range",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Chen 2024",
+      "dye": "SMI-NIR1",
+      "pKa": null,
+      "opticalMidpointApproxPH": 6.6,
+      "meanDwellRatio": null,
+      "alsoInHollandNine": false,
+      "assay": "Free dye in citrate-phosphate buffer with cosolvent, single-molecule biotin conjugate at 721 nm",
+      "locator": "SI Fig. S3A, p. S11, and Fig. S7, p. S15",
+      "reason": "The plotted fluorescence half-height exceeds the Holland pKa range. An exact fitted parent pKa is unavailable in the inspected SI. Duty fraction is quantified at five powers in each of two buffers.",
+      "rangeStatus": "no exact free-parent pKa",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Chen 2024",
+      "dye": "SMI-NIR2",
+      "pKa": null,
+      "opticalMidpointApproxPH": 6.0,
+      "meanDwellRatio": null,
+      "alsoInHollandNine": false,
+      "assay": "Free dye in citrate-phosphate buffer with cosolvent, single-molecule biotin conjugate at 721 nm",
+      "locator": "SI Fig. S3C, p. S11, and Fig. S6, p. S15",
+      "reason": "The plotted fluorescence half-height exceeds the Holland pKa range. An exact fitted parent pKa is unavailable in the inspected SI. Figure S6 provides a representative intensity trace at 3.93 kW/cm².",
+      "rangeStatus": "no exact free-parent pKa",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Chen 2024",
+      "dye": "SMI-NIR3",
+      "pKa": null,
+      "opticalMidpointApproxPH": 6.2,
+      "meanDwellRatio": null,
+      "alsoInHollandNine": false,
+      "assay": "Free dye in citrate-phosphate buffer with cosolvent, single-molecule biotin conjugate at 721 nm",
+      "locator": "SI Fig. S3E, p. S11, and Fig. S6, p. S15",
+      "reason": "The plotted fluorescence half-height exceeds the Holland pKa range. An exact fitted parent pKa is unavailable in the inspected SI. Figure S6 provides a representative intensity trace at 3.93 kW/cm².",
+      "rangeStatus": "no exact free-parent pKa",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    },
+    {
+      "study": "Chen 2024",
+      "dye": "SMI-NIR4",
+      "pKa": null,
+      "opticalMidpointApproxPH": 5.8,
+      "meanDwellRatio": null,
+      "alsoInHollandNine": false,
+      "assay": "Free dye in citrate-phosphate buffer with cosolvent, single-molecule biotin conjugate at 721 nm",
+      "locator": "SI Fig. S3G, p. S11, and Fig. S6, p. S15",
+      "reason": "The plotted fluorescence half-height exceeds the Holland pKa range. An exact fitted parent pKa is unavailable in the inspected SI. Figure S6 provides a representative intensity trace at 3.93 kW/cm².",
+      "rangeStatus": "no exact free-parent pKa",
+      "predictions": null,
+      "absLogErrors": {
+        "local": null,
+        "nearest": null,
+        "regression": null
+      }
+    }
+  ],
+  "chenByCondition": [
+    {
+      "dye": "SMI-NIR1",
+      "conjugate": "Biotin",
+      "buffer": "PBS",
+      "pH": 7.4,
+      "wavelengthNm": 721,
+      "powerKwCm2": 0.1,
+      "dutyFractionApprox": 0.019,
+      "dutyOddsApprox": 0.02,
+      "locator": "Chen SI Fig. S7c, p. S15",
+      "endpoint": "pre-bleach single-molecule duty fraction"
+    },
+    {
+      "dye": "SMI-NIR1",
+      "conjugate": "Biotin",
+      "buffer": "PBS",
+      "pH": 7.4,
+      "wavelengthNm": 721,
+      "powerKwCm2": 0.27,
+      "dutyFractionApprox": 0.012,
+      "dutyOddsApprox": 0.012,
+      "locator": "Chen SI Fig. S7c, p. S15",
+      "endpoint": "pre-bleach single-molecule duty fraction"
+    },
+    {
+      "dye": "SMI-NIR1",
+      "conjugate": "Biotin",
+      "buffer": "PBS",
+      "pH": 7.4,
+      "wavelengthNm": 721,
+      "powerKwCm2": 0.65,
+      "dutyFractionApprox": 0.0039,
+      "dutyOddsApprox": 0.0039,
+      "locator": "Chen SI Fig. S7c, p. S15",
+      "endpoint": "pre-bleach single-molecule duty fraction"
+    },
+    {
+      "dye": "SMI-NIR1",
+      "conjugate": "Biotin",
+      "buffer": "PBS",
+      "pH": 7.4,
+      "wavelengthNm": 721,
+      "powerKwCm2": 1.49,
+      "dutyFractionApprox": 0.0024,
+      "dutyOddsApprox": 0.0024,
+      "locator": "Chen SI Fig. S7c, p. S15",
+      "endpoint": "pre-bleach single-molecule duty fraction"
+    },
+    {
+      "dye": "SMI-NIR1",
+      "conjugate": "Biotin",
+      "buffer": "PBS",
+      "pH": 7.4,
+      "wavelengthNm": 721,
+      "powerKwCm2": 3.93,
+      "dutyFractionApprox": 0.0019,
+      "dutyOddsApprox": 0.0019,
+      "locator": "Chen SI Fig. S7c, p. S15",
+      "endpoint": "pre-bleach single-molecule duty fraction"
+    },
+    {
+      "dye": "SMI-NIR1",
+      "conjugate": "Biotin",
+      "buffer": "MES",
+      "pH": 4.7,
+      "wavelengthNm": 721,
+      "powerKwCm2": 0.1,
+      "dutyFractionApprox": 0.25,
+      "dutyOddsApprox": 0.33,
+      "locator": "Chen SI Fig. S7c, p. S15",
+      "endpoint": "pre-bleach single-molecule duty fraction"
+    },
+    {
+      "dye": "SMI-NIR1",
+      "conjugate": "Biotin",
+      "buffer": "MES",
+      "pH": 4.7,
+      "wavelengthNm": 721,
+      "powerKwCm2": 0.27,
+      "dutyFractionApprox": 0.25,
+      "dutyOddsApprox": 0.33,
+      "locator": "Chen SI Fig. S7c, p. S15",
+      "endpoint": "pre-bleach single-molecule duty fraction"
+    },
+    {
+      "dye": "SMI-NIR1",
+      "conjugate": "Biotin",
+      "buffer": "MES",
+      "pH": 4.7,
+      "wavelengthNm": 721,
+      "powerKwCm2": 0.65,
+      "dutyFractionApprox": 0.24,
+      "dutyOddsApprox": 0.31,
+      "locator": "Chen SI Fig. S7c, p. S15",
+      "endpoint": "pre-bleach single-molecule duty fraction"
+    },
+    {
+      "dye": "SMI-NIR1",
+      "conjugate": "Biotin",
+      "buffer": "MES",
+      "pH": 4.7,
+      "wavelengthNm": 721,
+      "powerKwCm2": 1.49,
+      "dutyFractionApprox": 0.14,
+      "dutyOddsApprox": 0.17,
+      "locator": "Chen SI Fig. S7c, p. S15",
+      "endpoint": "pre-bleach single-molecule duty fraction"
+    },
+    {
+      "dye": "SMI-NIR1",
+      "conjugate": "Biotin",
+      "buffer": "MES",
+      "pH": 4.7,
+      "wavelengthNm": 721,
+      "powerKwCm2": 3.93,
+      "dutyFractionApprox": 0.083,
+      "dutyOddsApprox": 0.091,
+      "locator": "Chen SI Fig. S7c, p. S15",
+      "endpoint": "pre-bleach single-molecule duty fraction"
+    }
+  ],
+  "chenReadout": "Free-parent panel S3 descending half-heights read to 0.1 pH. Panel S7c uses a logarithmic duty axis. Each of ten readouts is from the same parent. Values are approximate.",
+  "uncertaintyAudit": {
+    "pairedPreparationIds": "No cross-acquisition preparation ID or pairing key in the workbook or Fig. 4 methods.",
+    "onExposureMs": 2,
+    "offExposureMs": 25,
+    "offConcentrationApproxFoldLower": 100,
+    "offInterpretation": "Upper bound under these acquisition conditions.",
+    "panelHi": "SD in both workbook and caption.",
+    "panelJ": "SD in workbook D2, SEM in the caption.",
+    "sharedSdCells": 6,
+    "axisTicksYPixels": [
+      594,
+      712
+    ],
+    "axisTickRatios": [
+      0.0015,
+      0
+    ],
+    "approxCapReadingPixels": 1,
+    "visibleWhiskers": [
+      {
+        "dye": "JFX650b",
+        "xPixel": 548,
+        "capYPixels": [
+          611,
+          643
+        ],
+        "approxHalfBar": 0.000203,
+        "workbookSD": 0.000354994,
+        "sdOverSqrtN": 0.000204955881461
+      },
+      {
+        "dye": "JF639b",
+        "xPixel": 538,
+        "capYPixels": [
+          622,
+          644
+        ],
+        "approxHalfBar": 0.00014,
+        "workbookSD": 0.000236,
+        "sdOverSqrtN": 0.000136254663529
+      }
+    ],
+    "panelNCheck": "In the rendered 4n table, 8HTL is 0.029% and 4HTL reads 0.10 ± 0.2%. For 4HTL the underlying 4h–i workbook SD is 0.0236 percentage points. The mean-based comparisons use the higher-precision source cells.",
+    "interpretation": "Two resolved whiskers agree to pixel precision with SD divided by sqrt(3). Smaller bars are unresolved. The scores use the means."
+  }
+}

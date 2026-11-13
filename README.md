@@ -4,6 +4,8 @@ An interactive research demo for selecting the first two spontaneously blinking 
 
 ## Use the comparison
 
+The time-ratio audit reconstructs nine source rows and compares three models under all 46,656 whole-dye pairing scenarios. It also records the screened Uno and Chen dyes, including each reason a score could not be calculated. [Methods, results and reproduction](analysis/ratio-audit.md) · [Open the validation screen](https://kangk1204.github.io/blink-atlas/#unseen-dyes)
+
 The probe workbench links the nine free-dye structures and pH titrations to the corresponding HaloTag-ligand measurements. Compare live and fixed cellular SOFI, then lock and score a new analogue’s predicted H2B ON:OFF time ratio. [Open Probe design](https://kangk1204.github.io/blink-atlas/#probe-design) · [Data and prospective protocol](analysis/probe-design.md)
 
 The unseen-dye benchmark adds 25 measurements across 11 additional parent dyes. On four eligible external IgG-conjugated dyes, the frozen local model had mean absolute log₁₀ error 0.293, nearest pKa 0.307 and the original regression 0.208. Local interpolation beat nearest for two dyes. Independent validation on new dyes in the fixed H2B assay remains open. [Explore all predictions and assay changes](https://kangk1204.github.io/blink-atlas/#unseen-dyes) · [Frozen benchmark, results and next experiments](analysis/analogue-benchmark.md)

@@ -6,6 +6,7 @@ import hashlib
 from pathlib import Path
 import re
 import subprocess
+from tempfile import TemporaryDirectory
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
 
@@ -25,10 +26,12 @@ FILES = {
 FIELDS = ["study", "dye_id", "dye", "condition", "pka", "bound_pka", "on_ms", "off_s", "duty", "duty_sd"]
 
 
-def sources(cache):
+def sources(cache, names=None):
     cache.mkdir(parents=True, exist_ok=True)
     files = []
     for name, (url, digest) in FILES.items():
+        if names is not None and name not in names:
+            continue
         path = cache / name
         if path.exists():
             body = path.read_bytes()
@@ -123,21 +126,48 @@ def tyson(xml):
                  pka=pka[1], on_ms=ton[1], off_s=toff[1])]
 
 
+def write_observations(path, rows):
+    with path.open("w", newline="", encoding="utf-8") as out:
+        writer = csv.DictWriter(out, fieldnames=FIELDS, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def verify_igg(cache, pdftotext):
+    from analysis.analogue_benchmark import benchmark, observations
+    from analysis.ratio_audit import read_audit
+    from analysis.ratio_sensitivity import roster
+
+    article, = sources(cache, {"remmel-small.pdf"})
+    with TemporaryDirectory() as tmp:
+        file = Path(tmp) / "igg.csv"
+        write_observations(file, remmel(pages(article, pdftotext)[3]))
+        targets = observations(file)["remmel", "IgG"]
+    train = roster([r for r in read_audit() if r["free_pka"] is not None], "j_reported")
+    metrics = benchmark("remmel-igg", "", "remmel", "transfer-frozen", targets, train)["summary"]
+    scores = [round(metrics["mae"][m], 3) for m in ("local", "nearest", "regression")]
+    if metrics["scored"] != 4 or scores != [.293, .307, .208]:
+        raise ValueError(f"Frozen IgG benchmark changed: {scores}")
+    print(f"Remmel IgG, {metrics['scored']}/{metrics['total']} dyes. Local, nearest, regression: {scores}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cache", type=Path, default=ROOT / ".cache/analogue-sources")
     parser.add_argument("--pdftotext", default="pdftotext")
     parser.add_argument("--output", type=Path, default=DATA / "analogue-observations.csv")
+    parser.add_argument("--verify-igg", action="store_true",
+                        help="Rebuild the legacy frozen IgG score directly from the primary Remmel and Holland files")
     args = parser.parse_args()
+    if args.verify_igg:
+        verify_igg(args.cache, args.pdftotext)
+        return
     article, conjugates, supplement, xml = sources(args.cache)
     supp_pages = pages(supplement, args.pdftotext)
     igg = remmel(pages(article, args.pdftotext)[3])
     rows = igg + remmel_conjugates(pages(conjugates, args.pdftotext)[7], igg)
     rows += zheng(supp_pages[8], supp_pages[15]) + tyson(xml)
-    with args.output.open("w", newline="", encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=FIELDS, lineterminator="\n")
-        writer.writeheader()
-        writer.writerows(rows)
+    write_observations(args.output, rows)
     print(f"Wrote {len(rows)} measurements from three studies to {args.output}")
 
 

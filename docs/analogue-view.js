@@ -1,3 +1,5 @@
+import {renderRatioAudit, renderRatioEvidence} from './ratio-audit-view.js?v=ratio-1';
+
 const $ = key => document.getElementById('unseen-' + key);
 const labels = {local:'Local interpolation', nearest:'Nearest pKa', regression:'Original regression'};
 const f3 = x => x == null ? '—' : x.toFixed(3);
@@ -14,7 +16,7 @@ function link(text, href) {
   const node = el('a', text); node.href = href; return node;
 }
 async function load(name) {
-  const res = await fetch('data/' + name + '.json?v=blind-h2b-1');
+  const res = await fetch('data/' + name + '.json?v=ratio-1');
   if (!res.ok) throw new Error('Could not read ' + name + ' (' + res.status + ').');
   return res.json();
 }
@@ -145,8 +147,8 @@ function showTitrations(analysis, source) {
 }
 
 export async function renderAnalogueBenchmark(root) {
-  const [result, meta, challenge] = await Promise.all([load('analogue-benchmark'), load('analogue-studies'),
-    load('h2b-cal664sb-lock')]);
+  const [result, meta, challenge, ratios, evidence] = await Promise.all([load('analogue-benchmark'), load('analogue-studies'),
+    load('h2b-cal664sb-lock'), load('ratio-sensitivity'), load('ratio-evidence')]);
   root.innerHTML = `
     <article class="card unseen-headline"><div><div class="eyebrow">PRIMARY ASSAY · FIXED H2B–HALOTAG</div>
       <h2 id="unseen-gate"></h2><p id="unseen-counts"></p></div>
@@ -158,6 +160,7 @@ export async function renderAnalogueBenchmark(root) {
       <tbody id="unseen-challenge-predictions"></tbody></table></div><p id="unseen-challenge-boundary"></p>
       <div class="unseen-links"><a id="unseen-registration">Dated registration ↗</a><a href="data/h2b-cal664sb-lock.json" download>Download locked forecasts</a>
       <a id="unseen-challenge-figure">Source titration ↗</a><a href="https://github.com/kangk1204/blink-atlas/tree/main/validation/h2b_blind">Run an independent panel ↗</a></div></article>
+    <article class="card unseen-audit" id="unseen-ratio-audit"></article>
     <div class="card unseen-selectors"><label>Test specimen<select id="unseen-assay"></select></label>
       <label>Training data<select id="unseen-training"></select></label><p id="unseen-scope"></p></div>
     <div class="unseen-grid">
@@ -182,11 +185,14 @@ export async function renderAnalogueBenchmark(root) {
       <p>Zheng and colleagues measured both free and HaloTag-bound titrations. We changed the pKa input and repeated the same within-study holdouts. Errors below are for occupancy odds over a 60 s recording.</p>
       <div class="table-wrap"><table><thead><tr><th>Power (W/cm²)</th><th>Dyes scored</th><th>Local · free</th><th>Local · bound</th><th>Nearest · free</th><th>Nearest · bound</th></tr></thead><tbody id="unseen-titrations"></tbody></table></div>
       <p id="unseen-titration-effect"></p><a id="unseen-titration-source" class="inline-link">Zheng et al., supporting tables S1 and S2 ↗</a></article>
+    <article class="card unseen-audit" id="unseen-ratio-evidence"></article>
     <article class="card unseen-audit"><h2>Evidence and exclusions</h2><p>The candidate interpolates the log ratios of two training dyes that bracket the measured pKa. The comparator copies the closest training dye. Both abstain outside the calibration range.</p>
       <p id="unseen-screen-date"></p><details><summary>Inspect screened sources and exclusions</summary><ul id="unseen-screen"></ul></details>
       <div class="unseen-links"><a href="data/analogue-observations.csv" download>Download source measurements (CSV)</a>
         <a href="data/analogue-benchmark.json" download>Download all predictions (JSON)</a><a id="unseen-freeze">Frozen evaluation protocol ↗</a>
         <a href="#probe-design">Lock a new H2B prediction →</a></div></article>`;
+  renderRatioAudit($('ratio-audit'), ratios, evidence);
+  renderRatioEvidence($('ratio-evidence'), evidence);
   const primary = result.sets.find(s => s.mode === 'primary');
   const candidate = challenge.dyes[0];
   $('challenge-input').textContent = 'Tyson et al. measured a free-parent pKcycl of ' + candidate.pKa +

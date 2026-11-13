@@ -1,5 +1,6 @@
 * text=auto eol=lf
 *.pdf binary
+*.gz binary
 *.xlsx binary
 *.mp4 binary
 *.webp binary
